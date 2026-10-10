@@ -1,0 +1,21 @@
+{
+  "_note": "Seed competitor sets (segment rivals) per BMW derivative and sales region. Model names only, no specs or sales figures: these are the starting point for web research (python -m pm_copilot research ...), which attaches sourced facts. Verify and extend before relying on them.",
+  "F70": {
+    "EU": ["Mercedes-Benz A-Class", "Audi A3 Sportback", "Volkswagen Golf", "Mercedes-Benz CLA"],
+    "RoW": ["Mercedes-Benz A-Class", "Audi A3 Sportback", "Volkswagen Golf"],
+    "CN": [],
+    "US": []
+  },
+  "G60": {
+    "EU": ["Mercedes-Benz E-Class", "Mercedes-Benz EQE", "Audi A6", "Audi A6 e-tron"],
+    "US": ["Mercedes-Benz E-Class", "Audi A6", "Genesis G80", "Lexus ES"],
+    "CN": ["Mercedes-Benz E-Class L", "Audi A6L", "Xiaomi SU7", "NIO ET7", "Zeekr 007"],
+    "RoW": ["Mercedes-Benz E-Class", "Audi A6", "Genesis G80", "Lexus ES"]
+  },
+  "G70": {
+    "EU": ["Mercedes-Benz S-Class", "Mercedes-Benz EQS", "Audi A8", "Porsche Panamera"],
+    "US": ["Mercedes-Benz S-Class", "Mercedes-Benz EQS", "Lexus LS", "Genesis G90", "Porsche Panamera"],
+    "CN": ["Mercedes-Benz S-Class / Maybach", "Audi A8L", "Hongqi H9", "NIO ET9", "Maextro S800"],
+    "RoW": ["Mercedes-Benz S-Class", "Lexus LS", "Genesis G90", "Audi A8"]
+  }
+}

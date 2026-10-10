@@ -145,9 +145,16 @@ One printed anomaly (F70 p.17) is kept as printed. 106 feedback features are lin
 | `data/processed/knowledge_graph.json`, `graph_schema.json` | Knowledge graph and its schema with the integrity checks |
 | `data/decisions.jsonl` | Decision log written by the app (git-ignored) |
 
+- There are **no China verbatims**: China rests on the customer study and web research.
+- EU coverage is thin for G60 and G70.
+- Equipment status is the **German** list only.
+- Sales are not split by powertrain.
+>>>>>>> ddce913 (Add PM cockpit and frontend prototype)
+
 ## Repository layout
 
 ```
+<<<<<<< HEAD
 bmw_feedback/     pipeline package, knowledge graph, agents and API
 frontend/         React + Vite web app (built into frontend/dist)
 tests/            graph, agent and API checks
@@ -157,3 +164,27 @@ BMW-Data/         raw hackathon data (not committed)
 ```
 
 This repository previously held **Demandra**, our procurement demand-prediction solution for Challenge 2 of the Unite x TUM.ai Hackathon (1st place). The original code is in git history.
+=======
+pm_copilot/        Python package
+  config.py        markets, vehicles, all weights and thresholds
+  taxonomy.py      signal / domain mapping, survey links, feature catalog, lexicons
+  ingest.py        raw workbooks -> data/processed/*.csv (+ manifest with file hashes)
+  equipment.py     price-list PDF parser
+  store.py         processed-data access + lookups
+  scoring.py       factors, Kano class, evidence, market recommendation, sales scenario
+  brief.py         Feature Explorer answers (Q1-Q8)
+  requirements.py  candidate generation, wording, sync, export
+  model.py         review intelligence model (train, explain, aspect extraction)
+  inquiry.py       inquiry agent: parse question, clarify, staged reasoning trace
+  research.py      competitor mining from reviews (+ optional, UI-unused Claude endpoints)
+  db.py            SQLite requirement store + audit trail
+  api.py           FastAPI backend; __main__.py = CLI
+frontend/          UI (plain HTML/CSS/JS): index.html + app.js, car.js (car sketches), common.js, report.html + report.js
+data/external/     competitors.json seed list; research/ cache of web research
+BMW-Data/          raw data (git-ignored)
+```
+
+Adding a vehicle or market means adding an entry to `DERIVATIVES` / `COUNTRY_TO_REGION`
+in `config.py` and dropping its files into `BMW-Data/`. New features for the explorer go
+into `FEATURES` in `taxonomy.py`; any VFC component already works via `component: <name>`.
+>>>>>>> ddce913 (Add PM cockpit and frontend prototype)
