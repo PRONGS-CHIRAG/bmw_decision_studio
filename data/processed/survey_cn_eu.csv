@@ -1,0 +1,186 @@
+attribute,market,model,mean
+Overall product satisfaction,CN,G68,8.7706445795833
+Overall product satisfaction,CN,G70,9.636490031781163
+Overall product satisfaction,EU,F70,8.46293728005414
+Overall product satisfaction,EU,G60,8.31904288980014
+Overall product satisfaction,EU,G70,7.98275529237247
+Exterior styling,CN,G68,8.1858673023132
+Exterior styling,CN,G70,8.78764324244623
+Exterior styling,EU,F70,9.00522249847548
+Exterior styling,EU,G60,9.82780908992323
+Exterior styling,EU,G70,8.37897575849001
+Interior styling,CN,G68,8.68689014872875
+Interior styling,CN,G70,8.56960449922768
+Interior styling,EU,F70,8.8966630547031
+Interior styling,EU,G60,8.54545386887505
+Interior styling,EU,G70,8.91989911042546
+Quality of interior and materials used,CN,G68,8.44460183781553
+Quality of interior and materials used,CN,G70,8.43443265451167
+Quality of interior and materials used,EU,F70,8.6495298567011
+Quality of interior and materials used,EU,G60,7.75055316450303
+Quality of interior and materials used,EU,G70,9.11294990714596
+Level of equipment,CN,G68,7.486459246795289
+Level of equipment,CN,G70,9.81635033575127
+Level of equipment,EU,F70,8.26008034179404
+Level of equipment,EU,G60,7.76904015988252
+Level of equipment,EU,G70,9.237450653811987
+Safety,CN,G68,8.16887944047338
+Safety,CN,G70,8.97453459189492
+Safety,EU,F70,9.03339671373618
+Safety,EU,G60,9.1540613998548
+Safety,EU,G70,9.279004785198
+Freedom from faults/ squeaks/ rattles,CN,G68,8.48462465516476
+Freedom from faults/ squeaks/ rattles,CN,G70,8.44496490014712
+Freedom from faults/ squeaks/ rattles,EU,F70,8.86336779288108
+Freedom from faults/ squeaks/ rattles,EU,G60,8.41095091748313
+Freedom from faults/ squeaks/ rattles,EU,G70,8.61382532315738
+Value for money,CN,G68,7.92009776553337
+Value for money,CN,G70,8.28659127746942
+Value for money,EU,F70,7.82292217163401
+Value for money,EU,G60,7.36043056243975
+Value for money,EU,G70,6.467800299811235
+Reliability,CN,G68,8.8375167544375
+Reliability,CN,G70,8.21847899479335
+Reliability,EU,F70,9.39761852860266
+Reliability,EU,G60,9.25127560152244
+Reliability,EU,G70,9.6738205613848
+All round visibility,CN,G68,8.69518496546784
+All round visibility,CN,G70,8.43120050948042
+All round visibility,EU,F70,8.89001311629909
+All round visibility,EU,G60,8.64285942014022
+All round visibility,EU,G70,8.29833855203945
+Easy to read and use instruments/ controls/ displays,CN,G68,8.33895866948215
+Easy to read and use instruments/ controls/ displays,CN,G70,8.4336744643418
+Easy to read and use instruments/ controls/ displays,EU,F70,8.41160112795338
+Easy to read and use instruments/ controls/ displays,EU,G60,8.06667744777904
+Easy to read and use instruments/ controls/ displays,EU,G70,8.19335808033315
+Smartphone integration/ connectivity,CN,G68,8.14168061471818
+Smartphone integration/ connectivity,CN,G70,8.42592668344567
+Smartphone integration/ connectivity,EU,F70,8.59053049943908
+Smartphone integration/ connectivity,EU,G60,8.46093275936274
+Smartphone integration/ connectivity,EU,G70,8.35598145647373
+Features of information and entertainment system including in-car apps,CN,G68,8.37122946195233
+Features of information and entertainment system including in-car apps,CN,G70,8.2077533984289
+Features of information and entertainment system including in-car apps,EU,F70,8.23458021415581
+Features of information and entertainment system including in-car apps,EU,G60,8.19248402420326
+Features of information and entertainment system including in-car apps,EU,G70,8.28958046094154
+Easy to use information and entertainment system including in-car apps,CN,G68,8.35106428973901
+Easy to use information and entertainment system including in-car apps,CN,G70,8.1002460900435
+Easy to use information and entertainment system including in-car apps,EU,F70,8.16381235218876
+Easy to use information and entertainment system including in-car apps,EU,G60,8.25662099633197
+Easy to use information and entertainment system including in-car apps,EU,G70,7.98580321485543
+Integrated navigation system,CN,G68,8.51722002673628
+Integrated navigation system,CN,G70,8.1781084082575
+Integrated navigation system,EU,F70,8.30289170780147
+Integrated navigation system,EU,G60,8.58953298388368
+Integrated navigation system,EU,G70,8.8222832386969
+Overall seating comfort,CN,G68,8.67354420155524
+Overall seating comfort,CN,G70,8.72228709354466
+Overall seating comfort,EU,F70,8.98127362248986
+Overall seating comfort,EU,G60,8.81353910382427
+Overall seating comfort,EU,G70,9.29465461270073
+Interior storage for small items,CN,G68,8.53196964595373
+Interior storage for small items,CN,G70,8.4080057244413
+Interior storage for small items,EU,F70,8.10335591073561
+Interior storage for small items,EU,G60,7.72263664336553
+Interior storage for small items,EU,G70,7.95986747151569
+Acceleration,CN,G68,8.60192824322318
+Acceleration,CN,G70,8.82718037998114
+Acceleration,EU,F70,8.21148275089275
+Acceleration,EU,G60,8.84599213063921
+Acceleration,EU,G70,8.94328835453708
+Roadholding,CN,G68,8.91521227939279
+Roadholding,CN,G70,8.59732674109439
+Roadholding,EU,F70,8.293397677858131
+Roadholding,EU,G60,8.15434726976329
+Roadholding,EU,G70,8.9362163866689
+Fuel economy/ energy efficiency,CN,G68,8.4256326825801
+Fuel economy/ energy efficiency,CN,G70,8.18378559380414
+Fuel economy/ energy efficiency,EU,F70,9.30364368500337
+Fuel economy/ energy efficiency,EU,G60,7.446173363075176
+Fuel economy/ energy efficiency,EU,G70,7.675428795486146
+Braking,CN,G68,7.375974799587368
+Braking,CN,G70,7.817952821154567
+Braking,EU,F70,8.89016616608062
+Braking,EU,G60,8.25007465485267
+Braking,EU,G70,9.60298244927321
+Sportiness,CN,G68,8.86145661822769
+Sportiness,CN,G70,8.64209894799428
+Sportiness,EU,F70,9.34085851086024
+Sportiness,EU,G60,7.635988882288308
+Sportiness,EU,G70,6.970762585839159
+Prestige/ manufacturer reputation,CN,G68,8.90472052409039
+Prestige/ manufacturer reputation,CN,G70,9.16511982319625
+Prestige/ manufacturer reputation,EU,F70,9.20867607607858
+Prestige/ manufacturer reputation,EU,G60,8.94937453607662
+Prestige/ manufacturer reputation,EU,G70,9.22570140470072
+Manoeuvrability,CN,G68,8.48208924291467
+Manoeuvrability,CN,G70,8.37891042093141
+Manoeuvrability,EU,F70,8.87090927607914
+Manoeuvrability,EU,G60,8.73100149438208
+Manoeuvrability,EU,G70,8.96820576858359
+Quality of ride,CN,G68,8.44538748463535
+Quality of ride,CN,G70,8.6227886036449
+Quality of ride,EU,F70,9.19627538691978
+Quality of ride,EU,G60,9.948057950438983
+Quality of ride,EU,G70,9.51636914366009
+Front interior roominess,CN,G68,7.77155553594874
+Front interior roominess,CN,G70,7.687074721460558
+Front interior roominess,EU,F70,9.19888860640865
+Front interior roominess,EU,G60,8.88134624156732
+Front interior roominess,EU,G70,9.68796202627636
+Rear interior roominess,CN,G68,8.705858893192
+Rear interior roominess,CN,G70,7.519175826731426
+Rear interior roominess,EU,F70,8.586643853621
+Rear interior roominess,EU,G60,7.463229937577184
+Rear interior roominess,EU,G70,9.40627172679266
+Ease of loading/ unloading luggage,CN,G68,7.25095629311599
+Ease of loading/ unloading luggage,CN,G70,7.45778266693796
+Ease of loading/ unloading luggage,EU,F70,7.502913533426304
+Ease of loading/ unloading luggage,EU,G60,7.242282359317842
+Ease of loading/ unloading luggage,EU,G70,8.66659040976406
+Luggage capacity,CN,G68,8.73399402593601
+Luggage capacity,CN,G70,7.65597043493483
+Luggage capacity,EU,F70,7.06968630529085
+Luggage capacity,EU,G60,7.538873331589424
+Luggage capacity,EU,G70,7.407256764295134
+Ease of entry into and out of car,CN,G68,8.51241876808565
+Ease of entry into and out of car,CN,G70,8.70839061298666
+Ease of entry into and out of car,EU,F70,8.76309042482256
+Ease of entry into and out of car,EU,G60,7.914765267170981
+Ease of entry into and out of car,EU,G70,9.24917492653559
+Environm. friendliness,CN,G68,7.49329380380448
+Environm. friendliness,CN,G70,7.439736822879236
+Environm. friendliness,EU,F70,7.554251974243151
+Environm. friendliness,EU,G60,7.594830284481226
+Environm. friendliness,EU,G70,7.513329006062493
+Heating/ ventilation/ air conditioning,CN,G68,7.577249397681415
+Heating/ ventilation/ air conditioning,CN,G70,8.82186444782996
+Heating/ ventilation/ air conditioning,EU,F70,7.304605625312719
+Heating/ ventilation/ air conditioning,EU,G60,7.465964560535308
+Heating/ ventilation/ air conditioning,EU,G70,8.79612550604069
+Overall build quality,CN,G68,8.80538286972215
+Overall build quality,CN,G70,9.359715893465708
+Overall build quality,EU,F70,7.949651395816747
+Overall build quality,EU,G60,7.671776488479211
+Overall build quality,EU,G70,8.77924061418355
+Quietness when driving,CN,G68,7.517470777488539
+Quietness when driving,CN,G70,9.386016302858817
+Quietness when driving,EU,F70,7.618807296439818
+Quietness when driving,EU,G60,7.794862566616727
+Quietness when driving,EU,G70,9.77944581898409
+Driving position,CN,G68,8.69136655118419
+Driving position,CN,G70,8.79711816072593
+Driving position,EU,F70,9.176016816299956
+Driving position,EU,G60,9.16784822586777
+Driving position,EU,G70,9.126358199616
+Connected services,CN,G68,7.34755098634995
+Connected services,CN,G70,7.31730973855508
+Connected services,EU,F70,7.355643860134849
+Connected services,EU,G60,7.370238314859959
+Connected services,EU,G70,7.86171755253507
+Interior versatility,CN,G68,8.35124846216181
+Interior versatility,CN,G70,8.04162576838629
+Interior versatility,EU,F70,8.57163714556617
+Interior versatility,EU,G60,8.13924643379727
+Interior versatility,EU,G70,8.32299590513145

@@ -1,0 +1,24 @@
+model,variant,powertrain,engine,page,transmission,power_kw,power_ps,base_price_eur,base_price_net_eur
+F70,116,Petrol,ICE,4,"7-Gang, automatisch",90.0,122.0,34250.0,28781.51
+F70,120,Petrol,ICE,4,"7-Gang, automatisch",125.0,170.0,39150.0,32899.16
+F70,123 xDrive,Petrol,ICE,4,"7-Gang, automatisch",160.0,218.0,45350.0,38109.24
+F70,M135 xDrive,Petrol,ICE,4,"7-Gang, automatisch",221.0,300.0,57150.0,48025.21
+F70,118d,Diesel,ICE,4,"7-Gang, automatisch",110.0,150.0,39350.0,33067.23
+F70,120d,Diesel,ICE,4,"7-Gang, automatisch",120.0,163.0,41750.0,35084.03
+G60,i5 eDrive40,Electric,BEV,4,"1-Gang, automatisch",250.0,340.0,70900.0,59579.83
+G60,i5 xDrive40,Electric,BEV,4,"1-Gang, automatisch",290.0,394.0,76300.0,64117.65
+G60,i5 M60 xDrive,Electric,BEV,4,"1-Gang, automatisch",442.0,601.0,100200.0,84201.68
+G60,530e,Plug-in hybrid,PHEV,4,8-Gang Steptronic mit Schaltwippen,220.0,299.0,66700.0,56050.42
+G60,530e xDrive,Plug-in hybrid,PHEV,4,8-Gang Steptronic mit Schaltwippen,220.0,299.0,69300.0,58235.29
+G60,550e xDrive,Plug-in hybrid,PHEV,4,8-Gang Steptronic mit Schaltwippen,360.0,489.0,78700.0,66134.45
+G60,520i,Petrol,ICE,5,8-Gang Steptronic mit Schaltwippen,153.0,208.0,60000.0,50420.17
+G60,520d,Diesel,ICE,5,8-Gang Steptronic mit Schaltwippen,145.0,197.0,62300.0,52352.94
+G60,520d xDrive,Diesel,ICE,5,8-Gang Steptronic mit Schaltwippen,145.0,197.0,64900.0,54537.82
+G60,540d xDrive,Diesel,ICE,5,8-Gang Steptronic mit Schaltwippen,223.0,303.0,71900.0,60420.17
+G70,i7 50xDrive,Electric,BEV,4,"1-Gang, automatisch",335.0,455.0,121400.0,102016.81
+G70,i7 60xDrive,Electric,BEV,4,"1-Gang, automatisch",400.0,544.0,140100.0,117731.09
+G70,i7 M70 xDrive,Electric,BEV,4,"1-Gang, automatisch",500.0,680.0,182400.0,153277.31
+G70,750e xDrive,Plug-in hybrid,PHEV,4,8-Gang Steptronic Sport,360.0,489.0,133900.0,112521.01
+G70,M760e xDrive,Plug-in hybrid,PHEV,4,8-Gang Steptronic Sport,450.0,612.0,159900.0,134369.75
+G70,740 xDrive,Petrol,ICE,5,8-Gang Steptronic,294.0,400.0,117900.0,99075.63
+G70,740d xDrive,Diesel,ICE,5,8-Gang Steptronic Sport,230.0,313.0,122900.0,103277.31

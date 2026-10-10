@@ -1,0 +1,1495 @@
+feature,model,variant,engine,status,price_min_eur,price_item,price_sa_code,price_page,via_package,standard_item,standard_page,base_price_eur
+(Active) cruise control,F70,116,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,34250.0
+(Active) cruise control,F70,120,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,39150.0
+(Active) cruise control,F70,123 xDrive,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,45350.0
+(Active) cruise control,F70,M135 xDrive,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,57150.0
+(Active) cruise control,F70,118d,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,39350.0
+(Active) cruise control,F70,120d,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,41750.0
+(Active) cruise control,G60,i5 eDrive40,BEV,optional,1000.0,Driving Assistant Plus,5AT,18.0,False,,,70900.0
+(Active) cruise control,G60,i5 xDrive40,BEV,optional,1000.0,Driving Assistant Plus,5AT,18.0,False,,,76300.0
+(Active) cruise control,G60,i5 M60 xDrive,BEV,optional,1000.0,Driving Assistant Plus,5AT,18.0,False,,,100200.0
+(Active) cruise control,G60,530e,PHEV,optional,1000.0,Driving Assistant Plus,5AT,18.0,False,,,66700.0
+(Active) cruise control,G60,530e xDrive,PHEV,optional,1000.0,Driving Assistant Plus,5AT,18.0,False,,,69300.0
+(Active) cruise control,G60,550e xDrive,PHEV,optional,1000.0,Driving Assistant Plus,5AT,18.0,False,,,78700.0
+(Active) cruise control,G60,520i,ICE,optional,1000.0,Driving Assistant Plus,5AT,18.0,False,,,60000.0
+(Active) cruise control,G60,520d,ICE,optional,1000.0,Driving Assistant Plus,5AT,18.0,False,,,62300.0
+(Active) cruise control,G60,520d xDrive,ICE,optional,1000.0,Driving Assistant Plus,5AT,18.0,False,,,64900.0
+(Active) cruise control,G60,540d xDrive,ICE,optional,1000.0,Driving Assistant Plus,5AT,18.0,False,,,71900.0
+(Active) cruise control,G70,i7 50xDrive,BEV,standard,,,,,,Geschwindigkeitsregelung mit Bremsfunktion,7.0,121400.0
+(Active) cruise control,G70,i7 60xDrive,BEV,standard,,,,,,Geschwindigkeitsregelung mit Bremsfunktion,7.0,140100.0
+(Active) cruise control,G70,i7 M70 xDrive,BEV,standard,,,,,,Geschwindigkeitsregelung mit Bremsfunktion,7.0,182400.0
+(Active) cruise control,G70,740 xDrive,ICE,standard,,,,,,Geschwindigkeitsregelung mit Bremsfunktion,7.0,117900.0
+Adjustment of lower lumbar support,G60,i5 eDrive40,BEV,standard,,,,,,Lordosenstütze für Fahrer und Beifahrer,8.0,70900.0
+Adjustment of lower lumbar support,G60,i5 xDrive40,BEV,standard,,,,,,Lordosenstütze für Fahrer und Beifahrer,8.0,76300.0
+Adjustment of lower lumbar support,G60,i5 M60 xDrive,BEV,standard,,,,,,Lordosenstütze für Fahrer und Beifahrer,8.0,100200.0
+Adjustment of lower lumbar support,G60,530e,PHEV,standard,,,,,,Lordosenstütze für Fahrer und Beifahrer,8.0,66700.0
+Adjustment of lower lumbar support,G60,530e xDrive,PHEV,standard,,,,,,Lordosenstütze für Fahrer und Beifahrer,8.0,69300.0
+Adjustment of lower lumbar support,G60,550e xDrive,PHEV,standard,,,,,,Lordosenstütze für Fahrer und Beifahrer,8.0,78700.0
+Adjustment of lower lumbar support,G60,520i,ICE,standard,,,,,,Lordosenstütze für Fahrer und Beifahrer,8.0,60000.0
+Adjustment of lower lumbar support,G60,520d,ICE,standard,,,,,,Lordosenstütze für Fahrer und Beifahrer,8.0,62300.0
+Adjustment of lower lumbar support,G60,520d xDrive,ICE,standard,,,,,,Lordosenstütze für Fahrer und Beifahrer,8.0,64900.0
+Adjustment of lower lumbar support,G60,540d xDrive,ICE,standard,,,,,,Lordosenstütze für Fahrer und Beifahrer,8.0,71900.0
+"Air conditioning, setting",F70,116,ICE,standard,,,,,,2-Zonen-Klimaautomatik mit erweiterten Umfängen,7.0,34250.0
+"Air conditioning, setting",F70,120,ICE,standard,,,,,,2-Zonen-Klimaautomatik mit erweiterten Umfängen,7.0,39150.0
+"Air conditioning, setting",F70,123 xDrive,ICE,standard,,,,,,2-Zonen-Klimaautomatik mit erweiterten Umfängen,7.0,45350.0
+"Air conditioning, setting",F70,M135 xDrive,ICE,standard,,,,,,2-Zonen-Klimaautomatik mit erweiterten Umfängen,7.0,57150.0
+"Air conditioning, setting",F70,118d,ICE,standard,,,,,,2-Zonen-Klimaautomatik mit erweiterten Umfängen,7.0,39350.0
+"Air conditioning, setting",F70,120d,ICE,standard,,,,,,2-Zonen-Klimaautomatik mit erweiterten Umfängen,7.0,41750.0
+"Air conditioning, setting",G60,i5 eDrive40,BEV,standard,,,,,,Klimaautomatik,8.0,70900.0
+"Air conditioning, setting",G60,i5 xDrive40,BEV,standard,,,,,,Klimaautomatik,8.0,76300.0
+"Air conditioning, setting",G60,i5 M60 xDrive,BEV,standard,,,,,,Klimaautomatik mit 4-Zonenregelung,8.0,100200.0
+"Air conditioning, setting",G60,530e,PHEV,standard,,,,,,Klimaautomatik,8.0,66700.0
+"Air conditioning, setting",G60,530e xDrive,PHEV,standard,,,,,,Klimaautomatik,8.0,69300.0
+"Air conditioning, setting",G60,550e xDrive,PHEV,standard,,,,,,Klimaautomatik,8.0,78700.0
+"Air conditioning, setting",G60,520i,ICE,standard,,,,,,Klimaautomatik,8.0,60000.0
+"Air conditioning, setting",G60,520d,ICE,standard,,,,,,Klimaautomatik,8.0,62300.0
+"Air conditioning, setting",G60,520d xDrive,ICE,standard,,,,,,Klimaautomatik,8.0,64900.0
+"Air conditioning, setting",G60,540d xDrive,ICE,standard,,,,,,Klimaautomatik,8.0,71900.0
+"Air conditioning, setting",G70,i7 50xDrive,BEV,standard,,,,,,Klimaautomatik mit 4-Zonen-Regelung,8.0,121400.0
+"Air conditioning, setting",G70,i7 60xDrive,BEV,standard,,,,,,Klimaautomatik mit 4-Zonen-Regelung,8.0,140100.0
+"Air conditioning, setting",G70,i7 M70 xDrive,BEV,standard,,,,,,Klimaautomatik mit 4-Zonen-Regelung,8.0,182400.0
+"Air conditioning, setting",G70,740 xDrive,ICE,standard,,,,,,Klimaautomatik mit 4-Zonen-Regelung,8.0,117900.0
+Airbags,F70,116,ICE,standard,,,,,,Deaktivierung Beifahrer Airbag,6.0,34250.0
+Airbags,F70,120,ICE,standard,,,,,,Deaktivierung Beifahrer Airbag,6.0,39150.0
+Airbags,F70,123 xDrive,ICE,standard,,,,,,Deaktivierung Beifahrer Airbag,6.0,45350.0
+Airbags,F70,M135 xDrive,ICE,standard,,,,,,Deaktivierung Beifahrer Airbag,6.0,57150.0
+Airbags,F70,118d,ICE,standard,,,,,,Deaktivierung Beifahrer Airbag,6.0,39350.0
+Airbags,F70,120d,ICE,standard,,,,,,Deaktivierung Beifahrer Airbag,6.0,41750.0
+Ambient light,G60,i5 eDrive40,BEV,standard,,,,,,Ambientes Licht,6.0,70900.0
+Ambient light,G60,i5 xDrive40,BEV,standard,,,,,,Ambientes Licht,6.0,76300.0
+Ambient light,G60,i5 M60 xDrive,BEV,standard,,,,,,Ambientes Licht,6.0,100200.0
+Ambient light,G60,530e,PHEV,standard,,,,,,Ambientes Licht,6.0,66700.0
+Ambient light,G60,530e xDrive,PHEV,standard,,,,,,Ambientes Licht,6.0,69300.0
+Ambient light,G60,550e xDrive,PHEV,standard,,,,,,Ambientes Licht,6.0,78700.0
+Ambient light,G60,520i,ICE,standard,,,,,,Ambientes Licht,6.0,60000.0
+Ambient light,G60,520d,ICE,standard,,,,,,Ambientes Licht,6.0,62300.0
+Ambient light,G60,520d xDrive,ICE,standard,,,,,,Ambientes Licht,6.0,64900.0
+Ambient light,G60,540d xDrive,ICE,standard,,,,,,Ambientes Licht,6.0,71900.0
+Ambient light,G70,i7 50xDrive,BEV,standard,,,,,,Ambientes Licht,6.0,121400.0
+Ambient light,G70,i7 60xDrive,BEV,standard,,,,,,Ambientes Licht,6.0,140100.0
+Ambient light,G70,i7 M70 xDrive,BEV,standard,,,,,,Ambientes Licht,6.0,182400.0
+Ambient light,G70,740 xDrive,ICE,standard,,,,,,Ambientes Licht,6.0,117900.0
+Android Auto,F70,116,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,34250.0
+Android Auto,F70,120,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39150.0
+Android Auto,F70,123 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,45350.0
+Android Auto,F70,M135 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,57150.0
+Android Auto,F70,118d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39350.0
+Android Auto,F70,120d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,41750.0
+Android Auto,G60,i5 eDrive40,BEV,standard,,,,,,Connected Package Professional,6.0,70900.0
+Android Auto,G60,i5 xDrive40,BEV,standard,,,,,,Connected Package Professional,6.0,76300.0
+Android Auto,G60,i5 M60 xDrive,BEV,standard,,,,,,Connected Package Professional,6.0,100200.0
+Android Auto,G60,530e,PHEV,standard,,,,,,Connected Package Professional,6.0,66700.0
+Android Auto,G60,530e xDrive,PHEV,standard,,,,,,Connected Package Professional,6.0,69300.0
+Android Auto,G60,550e xDrive,PHEV,standard,,,,,,Connected Package Professional,6.0,78700.0
+Android Auto,G60,520i,ICE,standard,,,,,,Connected Package Professional,6.0,60000.0
+Android Auto,G60,520d,ICE,standard,,,,,,Connected Package Professional,6.0,62300.0
+Android Auto,G60,520d xDrive,ICE,standard,,,,,,Connected Package Professional,6.0,64900.0
+Android Auto,G60,540d xDrive,ICE,standard,,,,,,Connected Package Professional,6.0,71900.0
+Anti-theft alarm system,F70,116,ICE,standard,,,,,,Alarmanlage,6.0,34250.0
+Anti-theft alarm system,F70,120,ICE,standard,,,,,,Alarmanlage,6.0,39150.0
+Anti-theft alarm system,F70,123 xDrive,ICE,standard,,,,,,Alarmanlage,6.0,45350.0
+Anti-theft alarm system,F70,M135 xDrive,ICE,standard,,,,,,Alarmanlage,6.0,57150.0
+Anti-theft alarm system,F70,118d,ICE,standard,,,,,,Alarmanlage,6.0,39350.0
+Anti-theft alarm system,F70,120d,ICE,standard,,,,,,Alarmanlage,6.0,41750.0
+Anti-theft alarm system,G60,i5 eDrive40,BEV,standard,,,,,,Alarmanlage,7.0,70900.0
+Anti-theft alarm system,G60,i5 xDrive40,BEV,standard,,,,,,Alarmanlage,7.0,76300.0
+Anti-theft alarm system,G60,i5 M60 xDrive,BEV,standard,,,,,,Alarmanlage,7.0,100200.0
+Anti-theft alarm system,G60,530e,PHEV,standard,,,,,,Alarmanlage,7.0,66700.0
+Anti-theft alarm system,G60,530e xDrive,PHEV,standard,,,,,,Alarmanlage,7.0,69300.0
+Anti-theft alarm system,G60,550e xDrive,PHEV,standard,,,,,,Alarmanlage,7.0,78700.0
+Anti-theft alarm system,G60,520i,ICE,standard,,,,,,Alarmanlage,7.0,60000.0
+Anti-theft alarm system,G60,520d,ICE,standard,,,,,,Alarmanlage,7.0,62300.0
+Anti-theft alarm system,G60,520d xDrive,ICE,standard,,,,,,Alarmanlage,7.0,64900.0
+Anti-theft alarm system,G60,540d xDrive,ICE,standard,,,,,,Alarmanlage,7.0,71900.0
+Anti-theft alarm system,G70,i7 50xDrive,BEV,standard,,,,,,Alarmanlage,8.0,121400.0
+Anti-theft alarm system,G70,i7 60xDrive,BEV,standard,,,,,,Alarmanlage,8.0,140100.0
+Anti-theft alarm system,G70,i7 M70 xDrive,BEV,standard,,,,,,Alarmanlage,8.0,182400.0
+Anti-theft alarm system,G70,740 xDrive,ICE,standard,,,,,,Alarmanlage,8.0,117900.0
+Apple CarPlay,F70,116,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,34250.0
+Apple CarPlay,F70,120,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39150.0
+Apple CarPlay,F70,123 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,45350.0
+Apple CarPlay,F70,M135 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,57150.0
+Apple CarPlay,F70,118d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39350.0
+Apple CarPlay,F70,120d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,41750.0
+Apple CarPlay,G60,i5 eDrive40,BEV,standard,,,,,,Connected Package Professional,6.0,70900.0
+Apple CarPlay,G60,i5 xDrive40,BEV,standard,,,,,,Connected Package Professional,6.0,76300.0
+Apple CarPlay,G60,i5 M60 xDrive,BEV,standard,,,,,,Connected Package Professional,6.0,100200.0
+Apple CarPlay,G60,530e,PHEV,standard,,,,,,Connected Package Professional,6.0,66700.0
+Apple CarPlay,G60,530e xDrive,PHEV,standard,,,,,,Connected Package Professional,6.0,69300.0
+Apple CarPlay,G60,550e xDrive,PHEV,standard,,,,,,Connected Package Professional,6.0,78700.0
+Apple CarPlay,G60,520i,ICE,standard,,,,,,Connected Package Professional,6.0,60000.0
+Apple CarPlay,G60,520d,ICE,standard,,,,,,Connected Package Professional,6.0,62300.0
+Apple CarPlay,G60,520d xDrive,ICE,standard,,,,,,Connected Package Professional,6.0,64900.0
+Apple CarPlay,G60,540d xDrive,ICE,standard,,,,,,Connected Package Professional,6.0,71900.0
+Apps (in-car),G60,i5 eDrive40,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,70900.0
+Apps (in-car),G60,i5 xDrive40,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,76300.0
+Apps (in-car),G60,i5 M60 xDrive,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,100200.0
+Apps (in-car),G60,530e,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,66700.0
+Apps (in-car),G60,530e xDrive,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,69300.0
+Apps (in-car),G60,550e xDrive,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,78700.0
+Apps (in-car),G60,520i,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,60000.0
+Apps (in-car),G60,520d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,62300.0
+Apps (in-car),G60,520d xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,64900.0
+Apps (in-car),G60,540d xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,71900.0
+"Audio mode, sound",F70,116,ICE,optional,600.0,HiFi Lautsprechersystem harman/kardon,674,17.0,False,,,34250.0
+"Audio mode, sound",F70,120,ICE,optional,600.0,HiFi Lautsprechersystem harman/kardon,674,17.0,False,,,39150.0
+"Audio mode, sound",F70,123 xDrive,ICE,optional,600.0,HiFi Lautsprechersystem harman/kardon,674,17.0,False,,,45350.0
+"Audio mode, sound",F70,M135 xDrive,ICE,standard,,,,,,HiFi Lautsprechersystem harman/kardon,6.0,57150.0
+"Audio mode, sound",F70,118d,ICE,optional,600.0,HiFi Lautsprechersystem harman/kardon,674,17.0,False,,,39350.0
+"Audio mode, sound",F70,120d,ICE,optional,600.0,HiFi Lautsprechersystem harman/kardon,674,17.0,False,,,41750.0
+"Audio mode, sound",G60,i5 eDrive40,BEV,standard,,,,,,HiFi Lautsprechersystem harman/kardon,7.0,70900.0
+"Audio mode, sound",G60,i5 xDrive40,BEV,standard,,,,,,HiFi Lautsprechersystem harman/kardon,7.0,76300.0
+"Audio mode, sound",G60,i5 M60 xDrive,BEV,standard,,,,,,HiFi Lautsprechersystem harman/kardon,7.0,100200.0
+"Audio mode, sound",G60,530e,PHEV,standard,,,,,,HiFi Lautsprechersystem harman/kardon,7.0,66700.0
+"Audio mode, sound",G60,530e xDrive,PHEV,standard,,,,,,HiFi Lautsprechersystem harman/kardon,7.0,69300.0
+"Audio mode, sound",G60,550e xDrive,PHEV,standard,,,,,,HiFi Lautsprechersystem harman/kardon,7.0,78700.0
+"Audio mode, sound",G60,520i,ICE,standard,,,,,,HiFi Lautsprechersystem harman/kardon,7.0,60000.0
+"Audio mode, sound",G60,520d,ICE,standard,,,,,,HiFi Lautsprechersystem harman/kardon,7.0,62300.0
+"Audio mode, sound",G60,520d xDrive,ICE,standard,,,,,,HiFi Lautsprechersystem harman/kardon,7.0,64900.0
+"Audio mode, sound",G60,540d xDrive,ICE,standard,,,,,,HiFi Lautsprechersystem harman/kardon,7.0,71900.0
+"Audio mode, sound",G70,i7 50xDrive,BEV,standard,,,,,,Bowers & Wilkins Surround Sound System,7.0,121400.0
+"Audio mode, sound",G70,i7 60xDrive,BEV,standard,,,,,,Bowers & Wilkins Surround Sound System,7.0,140100.0
+"Audio mode, sound",G70,i7 M70 xDrive,BEV,standard,,,,,,Bowers & Wilkins Surround Sound System,7.0,182400.0
+"Audio mode, sound",G70,740 xDrive,ICE,standard,,,,,,Bowers & Wilkins Surround Sound System,7.0,117900.0
+Automatic doors,G70,i7 50xDrive,BEV,optional,1600.0,Automatiktüren,3CD,22.0,False,,,121400.0
+Automatic doors,G70,i7 60xDrive,BEV,optional,1600.0,Automatiktüren,3CD,22.0,False,,,140100.0
+Automatic doors,G70,i7 M70 xDrive,BEV,optional,1600.0,Automatiktüren,3CD,22.0,False,,,182400.0
+Automatic doors,G70,740 xDrive,ICE,optional,1600.0,Automatiktüren,3CD,22.0,False,,,117900.0
+Auxiliary heater function,G60,i5 eDrive40,BEV,not_listed,,,,,,,,70900.0
+Auxiliary heater function,G60,i5 xDrive40,BEV,not_listed,,,,,,,,76300.0
+Auxiliary heater function,G60,i5 M60 xDrive,BEV,not_listed,,,,,,,,100200.0
+Auxiliary heater function,G60,530e,PHEV,not_listed,,,,,,,,66700.0
+Auxiliary heater function,G60,530e xDrive,PHEV,not_listed,,,,,,,,69300.0
+Auxiliary heater function,G60,550e xDrive,PHEV,not_listed,,,,,,,,78700.0
+Auxiliary heater function,G60,520i,ICE,optional,1450.0,Standheizung,536,19.0,False,,,60000.0
+Auxiliary heater function,G60,520d,ICE,optional,1450.0,Standheizung,536,19.0,False,,,62300.0
+Auxiliary heater function,G60,520d xDrive,ICE,optional,1450.0,Standheizung,536,19.0,False,,,64900.0
+Auxiliary heater function,G60,540d xDrive,ICE,optional,1450.0,Standheizung,536,19.0,False,,,71900.0
+BMW ConnectedDrive upgrades/ MINI CONNECTED upgrades,F70,116,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,34250.0
+BMW ConnectedDrive upgrades/ MINI CONNECTED upgrades,F70,120,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39150.0
+BMW ConnectedDrive upgrades/ MINI CONNECTED upgrades,F70,123 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,45350.0
+BMW ConnectedDrive upgrades/ MINI CONNECTED upgrades,F70,M135 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,57150.0
+BMW ConnectedDrive upgrades/ MINI CONNECTED upgrades,F70,118d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39350.0
+BMW ConnectedDrive upgrades/ MINI CONNECTED upgrades,F70,120d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,41750.0
+BMW ConnectedDrive upgrades/ MINI CONNECTED upgrades,G70,i7 50xDrive,BEV,standard,,,,,,BMW Digital Premium (laufzeitbegrenzt),7.0,121400.0
+BMW ConnectedDrive upgrades/ MINI CONNECTED upgrades,G70,i7 60xDrive,BEV,standard,,,,,,BMW Digital Premium (laufzeitbegrenzt),7.0,140100.0
+BMW ConnectedDrive upgrades/ MINI CONNECTED upgrades,G70,i7 M70 xDrive,BEV,standard,,,,,,BMW Digital Premium (laufzeitbegrenzt),7.0,182400.0
+BMW ConnectedDrive upgrades/ MINI CONNECTED upgrades,G70,740 xDrive,ICE,standard,,,,,,BMW Digital Premium (laufzeitbegrenzt),7.0,117900.0
+Back-up Assistant,F70,116,ICE,standard,,,,,,Parking Assistant,7.0,34250.0
+Back-up Assistant,F70,120,ICE,standard,,,,,,Parking Assistant,7.0,39150.0
+Back-up Assistant,F70,123 xDrive,ICE,standard,,,,,,Parking Assistant,7.0,45350.0
+Back-up Assistant,F70,M135 xDrive,ICE,standard,,,,,,Parking Assistant,7.0,57150.0
+Back-up Assistant,F70,118d,ICE,standard,,,,,,Parking Assistant,7.0,39350.0
+Back-up Assistant,F70,120d,ICE,standard,,,,,,Parking Assistant,7.0,41750.0
+Back-up Assistant,G60,i5 eDrive40,BEV,optional,350.0,Parking Assistant Professional,5DW,18.0,False,,,70900.0
+Back-up Assistant,G60,i5 xDrive40,BEV,optional,350.0,Parking Assistant Professional,5DW,18.0,False,,,76300.0
+Back-up Assistant,G60,i5 M60 xDrive,BEV,optional,350.0,Parking Assistant Professional,5DW,18.0,False,,,100200.0
+Back-up Assistant,G60,530e,PHEV,optional,350.0,Parking Assistant Professional,5DW,18.0,False,,,66700.0
+Back-up Assistant,G60,530e xDrive,PHEV,optional,350.0,Parking Assistant Professional,5DW,18.0,False,,,69300.0
+Back-up Assistant,G60,550e xDrive,PHEV,optional,350.0,Parking Assistant Professional,5DW,18.0,False,,,78700.0
+Back-up Assistant,G60,520i,ICE,optional,350.0,Parking Assistant Professional,5DW,18.0,False,,,60000.0
+Back-up Assistant,G60,520d,ICE,optional,350.0,Parking Assistant Professional,5DW,18.0,False,,,62300.0
+Back-up Assistant,G60,520d xDrive,ICE,optional,350.0,Parking Assistant Professional,5DW,18.0,False,,,64900.0
+Back-up Assistant,G60,540d xDrive,ICE,optional,350.0,Parking Assistant Professional,5DW,18.0,False,,,71900.0
+Back-up Assistant,G70,i7 50xDrive,BEV,standard,,,,,,Parking Assistant,8.0,121400.0
+Back-up Assistant,G70,i7 60xDrive,BEV,standard,,,,,,Parking Assistant,8.0,140100.0
+Back-up Assistant,G70,i7 M70 xDrive,BEV,standard,,,,,,Parking Assistant,8.0,182400.0
+Back-up Assistant,G70,740 xDrive,ICE,standard,,,,,,Parking Assistant,8.0,117900.0
+Blind spot monitoring,F70,116,ICE,standard,,,,,,Driving Assistant,7.0,34250.0
+Blind spot monitoring,F70,120,ICE,standard,,,,,,Driving Assistant,7.0,39150.0
+Blind spot monitoring,F70,123 xDrive,ICE,standard,,,,,,Driving Assistant,7.0,45350.0
+Blind spot monitoring,F70,M135 xDrive,ICE,standard,,,,,,Driving Assistant,7.0,57150.0
+Blind spot monitoring,F70,118d,ICE,standard,,,,,,Driving Assistant,7.0,39350.0
+Blind spot monitoring,F70,120d,ICE,standard,,,,,,Driving Assistant,7.0,41750.0
+Blind spot monitoring,G60,i5 eDrive40,BEV,standard,,,,,,Driving Assistant,7.0,70900.0
+Blind spot monitoring,G60,i5 xDrive40,BEV,standard,,,,,,Driving Assistant,7.0,76300.0
+Blind spot monitoring,G60,i5 M60 xDrive,BEV,standard,,,,,,Driving Assistant,7.0,100200.0
+Blind spot monitoring,G60,530e,PHEV,standard,,,,,,Driving Assistant,7.0,66700.0
+Blind spot monitoring,G60,530e xDrive,PHEV,standard,,,,,,Driving Assistant,7.0,69300.0
+Blind spot monitoring,G60,550e xDrive,PHEV,standard,,,,,,Driving Assistant,7.0,78700.0
+Blind spot monitoring,G60,520i,ICE,standard,,,,,,Driving Assistant,7.0,60000.0
+Blind spot monitoring,G60,520d,ICE,standard,,,,,,Driving Assistant,7.0,62300.0
+Blind spot monitoring,G60,520d xDrive,ICE,standard,,,,,,Driving Assistant,7.0,64900.0
+Blind spot monitoring,G60,540d xDrive,ICE,standard,,,,,,Driving Assistant,7.0,71900.0
+Blind spot monitoring,G70,i7 50xDrive,BEV,standard,,,,,,Driving Assistant Plus,8.0,121400.0
+Blind spot monitoring,G70,i7 60xDrive,BEV,standard,,,,,,Driving Assistant Plus,8.0,140100.0
+Blind spot monitoring,G70,i7 M70 xDrive,BEV,standard,,,,,,Driving Assistant Plus,8.0,182400.0
+Blind spot monitoring,G70,740 xDrive,ICE,standard,,,,,,Driving Assistant Plus,8.0,117900.0
+Braking,F70,116,ICE,not_listed,,,,,,,,34250.0
+Braking,F70,120,ICE,not_listed,,,,,,,,39150.0
+Braking,F70,123 xDrive,ICE,not_listed,,,,,,,,45350.0
+Braking,F70,M135 xDrive,ICE,optional,3950.0,M TECHNIK PAKET II,33F,16.0,True,,,57150.0
+Braking,F70,118d,ICE,not_listed,,,,,,,,39350.0
+Braking,F70,120d,ICE,not_listed,,,,,,,,41750.0
+Braking,G60,i5 eDrive40,BEV,not_listed,,,,,,,,70900.0
+Braking,G60,i5 xDrive40,BEV,not_listed,,,,,,,,76300.0
+Braking,G60,i5 M60 xDrive,BEV,standard,,,,,,M SPORTPAKET PRO,6.0,100200.0
+Braking,G60,530e,PHEV,not_listed,,,,,,,,66700.0
+Braking,G60,530e xDrive,PHEV,not_listed,,,,,,,,69300.0
+Braking,G60,550e xDrive,PHEV,not_listed,,,,,,,,78700.0
+Braking,G60,520i,ICE,not_listed,,,,,,,,60000.0
+Braking,G60,520d,ICE,not_listed,,,,,,,,62300.0
+Braking,G60,520d xDrive,ICE,not_listed,,,,,,,,64900.0
+Braking,G60,540d xDrive,ICE,not_listed,,,,,,,,71900.0
+Braking,G70,i7 50xDrive,BEV,optional,0.0,"M Sportbremse, dunkelblau metallic",3M1,21.0,False,,,121400.0
+Braking,G70,i7 60xDrive,BEV,optional,0.0,"M Sportbremse, dunkelblau metallic",3M1,21.0,False,,,140100.0
+Braking,G70,i7 M70 xDrive,BEV,standard,,,,,,"M Sportbremse, schwarz metallic",21.0,182400.0
+Braking,G70,740 xDrive,ICE,optional,0.0,"M Sportbremse, dunkelblau metallic",3M1,21.0,False,,,117900.0
+"Center armrest, front",F70,116,ICE,standard,,,,,,Armauflage vorne mit Ablagefach,5.0,34250.0
+"Center armrest, front",F70,120,ICE,standard,,,,,,Armauflage vorne mit Ablagefach,5.0,39150.0
+"Center armrest, front",F70,123 xDrive,ICE,standard,,,,,,Armauflage vorne mit Ablagefach,5.0,45350.0
+"Center armrest, front",F70,M135 xDrive,ICE,standard,,,,,,Armauflage vorne mit Ablagefach,5.0,57150.0
+"Center armrest, front",F70,118d,ICE,standard,,,,,,Armauflage vorne mit Ablagefach,5.0,39350.0
+"Center armrest, front",F70,120d,ICE,standard,,,,,,Armauflage vorne mit Ablagefach,5.0,41750.0
+Charge high-voltage battery,G60,i5 eDrive40,BEV,optional,1200.0,AC-Laden Professional (22 kW),4U6,19.0,False,,,70900.0
+Charge high-voltage battery,G60,i5 xDrive40,BEV,optional,1200.0,AC-Laden Professional (22 kW),4U6,19.0,False,,,76300.0
+Charge high-voltage battery,G60,i5 M60 xDrive,BEV,standard,,,,,,AC-Laden Professional (22 kW),7.0,100200.0
+Charge high-voltage battery,G60,530e,PHEV,not_listed,,,,,,,,66700.0
+Charge high-voltage battery,G60,530e xDrive,PHEV,not_listed,,,,,,,,69300.0
+Charge high-voltage battery,G60,550e xDrive,PHEV,not_listed,,,,,,,,78700.0
+Charge high-voltage battery,G60,520i,ICE,not_listed,,,,,,,,60000.0
+Charge high-voltage battery,G60,520d,ICE,not_listed,,,,,,,,62300.0
+Charge high-voltage battery,G60,520d xDrive,ICE,not_listed,,,,,,,,64900.0
+Charge high-voltage battery,G60,540d xDrive,ICE,not_listed,,,,,,,,71900.0
+Charge high-voltage battery,G70,i7 50xDrive,BEV,standard,,,,,,"AC-Laden Professional: AC Laden für zuhause und unterwegs (22 kW, 3-phasig)",7.0,121400.0
+Charge high-voltage battery,G70,i7 60xDrive,BEV,standard,,,,,,"AC-Laden Professional: AC Laden für zuhause und unterwegs (22 kW, 3-phasig)",7.0,140100.0
+Charge high-voltage battery,G70,i7 M70 xDrive,BEV,standard,,,,,,"AC-Laden Professional: AC Laden für zuhause und unterwegs (22 kW, 3-phasig)",7.0,182400.0
+Charge high-voltage battery,G70,740 xDrive,ICE,not_listed,,,,,,,,117900.0
+Charging cable,G60,i5 eDrive40,BEV,standard,,,,,,Ladekabel Professional (Mode 3) für öffentliches Laden,7.0,70900.0
+Charging cable,G60,i5 xDrive40,BEV,standard,,,,,,Ladekabel Professional (Mode 3) für öffentliches Laden,7.0,76300.0
+Charging cable,G60,i5 M60 xDrive,BEV,standard,,,,,,Ladekabel Professional (Mode 3) für öffentliches Laden,7.0,100200.0
+Charging cable,G60,530e,PHEV,standard,,,,,,Ladekabel Professional (Mode 3) für öffentliches Laden,7.0,66700.0
+Charging cable,G60,530e xDrive,PHEV,standard,,,,,,Ladekabel Professional (Mode 3) für öffentliches Laden,7.0,69300.0
+Charging cable,G60,550e xDrive,PHEV,standard,,,,,,Ladekabel Professional (Mode 3) für öffentliches Laden,7.0,78700.0
+Charging cable,G60,520i,ICE,not_listed,,,,,,,,60000.0
+Charging cable,G60,520d,ICE,not_listed,,,,,,,,62300.0
+Charging cable,G60,520d xDrive,ICE,not_listed,,,,,,,,64900.0
+Charging cable,G60,540d xDrive,ICE,not_listed,,,,,,,,71900.0
+Charging cable,G70,i7 50xDrive,BEV,optional,290.0,Ladekabel Professional (Mode 3) für öffentliches Laden,4T2,22.0,False,,,121400.0
+Charging cable,G70,i7 60xDrive,BEV,optional,290.0,Ladekabel Professional (Mode 3) für öffentliches Laden,4T2,22.0,False,,,140100.0
+Charging cable,G70,i7 M70 xDrive,BEV,optional,290.0,Ladekabel Professional (Mode 3) für öffentliches Laden,4T2,22.0,False,,,182400.0
+Charging cable,G70,740 xDrive,ICE,not_listed,,,,,,,,117900.0
+Child restraint seat,F70,116,ICE,standard,,,,,,Kindersitzbefestigung i-Sitze für Beifahrer,6.0,34250.0
+Child restraint seat,F70,120,ICE,standard,,,,,,Kindersitzbefestigung i-Sitze für Beifahrer,6.0,39150.0
+Child restraint seat,F70,123 xDrive,ICE,standard,,,,,,Kindersitzbefestigung i-Sitze für Beifahrer,6.0,45350.0
+Child restraint seat,F70,M135 xDrive,ICE,standard,,,,,,Kindersitzbefestigung i-Sitze für Beifahrer,6.0,57150.0
+Child restraint seat,F70,118d,ICE,standard,,,,,,Kindersitzbefestigung i-Sitze für Beifahrer,6.0,39350.0
+Child restraint seat,F70,120d,ICE,standard,,,,,,Kindersitzbefestigung i-Sitze für Beifahrer,6.0,41750.0
+Comfort Access,F70,116,ICE,optional,1900.0,PREMIUM PAKET,7EV,16.0,True,,,34250.0
+Comfort Access,F70,120,ICE,optional,1900.0,PREMIUM PAKET,7EV,16.0,True,,,39150.0
+Comfort Access,F70,123 xDrive,ICE,optional,1900.0,PREMIUM PAKET,7EV,16.0,True,,,45350.0
+Comfort Access,F70,M135 xDrive,ICE,optional,1900.0,PREMIUM PAKET,7EV,16.0,True,,,57150.0
+Comfort Access,F70,118d,ICE,optional,1900.0,PREMIUM PAKET,7EV,16.0,True,,,39350.0
+Comfort Access,F70,120d,ICE,optional,1900.0,PREMIUM PAKET,7EV,16.0,True,,,41750.0
+Comfort Access,G60,i5 eDrive40,BEV,optional,1900.0,TRAVEL PAKET,7LK,17.0,True,,,70900.0
+Comfort Access,G60,i5 xDrive40,BEV,optional,1900.0,TRAVEL PAKET,7LK,17.0,True,,,76300.0
+Comfort Access,G60,i5 M60 xDrive,BEV,optional,1900.0,TRAVEL PAKET,7LK,17.0,True,,,100200.0
+Comfort Access,G60,530e,PHEV,optional,1900.0,TRAVEL PAKET,7LK,17.0,True,,,66700.0
+Comfort Access,G60,530e xDrive,PHEV,optional,1900.0,TRAVEL PAKET,7LK,17.0,True,,,69300.0
+Comfort Access,G60,550e xDrive,PHEV,optional,1900.0,TRAVEL PAKET,7LK,17.0,True,,,78700.0
+Comfort Access,G60,520i,ICE,optional,1900.0,TRAVEL PAKET,7LK,17.0,True,,,60000.0
+Comfort Access,G60,520d,ICE,optional,1900.0,TRAVEL PAKET,7LK,17.0,True,,,62300.0
+Comfort Access,G60,520d xDrive,ICE,optional,1900.0,TRAVEL PAKET,7LK,17.0,True,,,64900.0
+Comfort Access,G60,540d xDrive,ICE,optional,1900.0,TRAVEL PAKET,7LK,17.0,True,,,71900.0
+Comfort Access,G70,i7 50xDrive,BEV,standard,,,,,,Komfortzugang,9.0,121400.0
+Comfort Access,G70,i7 60xDrive,BEV,standard,,,,,,Komfortzugang,9.0,140100.0
+Comfort Access,G70,i7 M70 xDrive,BEV,standard,,,,,,Komfortzugang,9.0,182400.0
+Comfort Access,G70,740 xDrive,ICE,standard,,,,,,Komfortzugang,9.0,117900.0
+ConnectedDrive services (smartphone) technology overall,G60,i5 eDrive40,BEV,standard,,,,,,ConnectedDrive Services,6.0,70900.0
+ConnectedDrive services (smartphone) technology overall,G60,i5 xDrive40,BEV,standard,,,,,,ConnectedDrive Services,6.0,76300.0
+ConnectedDrive services (smartphone) technology overall,G60,i5 M60 xDrive,BEV,standard,,,,,,ConnectedDrive Services,6.0,100200.0
+ConnectedDrive services (smartphone) technology overall,G60,530e,PHEV,standard,,,,,,ConnectedDrive Services,6.0,66700.0
+ConnectedDrive services (smartphone) technology overall,G60,530e xDrive,PHEV,standard,,,,,,ConnectedDrive Services,6.0,69300.0
+ConnectedDrive services (smartphone) technology overall,G60,550e xDrive,PHEV,standard,,,,,,ConnectedDrive Services,6.0,78700.0
+ConnectedDrive services (smartphone) technology overall,G60,520i,ICE,standard,,,,,,ConnectedDrive Services,6.0,60000.0
+ConnectedDrive services (smartphone) technology overall,G60,520d,ICE,standard,,,,,,ConnectedDrive Services,6.0,62300.0
+ConnectedDrive services (smartphone) technology overall,G60,520d xDrive,ICE,standard,,,,,,ConnectedDrive Services,6.0,64900.0
+ConnectedDrive services (smartphone) technology overall,G60,540d xDrive,ICE,standard,,,,,,ConnectedDrive Services,6.0,71900.0
+Controller operation,G60,i5 eDrive40,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,70900.0
+Controller operation,G60,i5 xDrive40,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,76300.0
+Controller operation,G60,i5 M60 xDrive,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,100200.0
+Controller operation,G60,530e,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,66700.0
+Controller operation,G60,530e xDrive,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,69300.0
+Controller operation,G60,550e xDrive,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,78700.0
+Controller operation,G60,520i,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,60000.0
+Controller operation,G60,520d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,62300.0
+Controller operation,G60,520d xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,64900.0
+Controller operation,G60,540d xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,71900.0
+Cross Traffic Warning Rear with Brake Intervention,F70,116,ICE,standard,,,,,,Driving Assistant,7.0,34250.0
+Cross Traffic Warning Rear with Brake Intervention,F70,120,ICE,standard,,,,,,Driving Assistant,7.0,39150.0
+Cross Traffic Warning Rear with Brake Intervention,F70,123 xDrive,ICE,standard,,,,,,Driving Assistant,7.0,45350.0
+Cross Traffic Warning Rear with Brake Intervention,F70,M135 xDrive,ICE,standard,,,,,,Driving Assistant,7.0,57150.0
+Cross Traffic Warning Rear with Brake Intervention,F70,118d,ICE,standard,,,,,,Driving Assistant,7.0,39350.0
+Cross Traffic Warning Rear with Brake Intervention,F70,120d,ICE,standard,,,,,,Driving Assistant,7.0,41750.0
+Cross Traffic Warning Rear with Brake Intervention,G60,i5 eDrive40,BEV,standard,,,,,,Driving Assistant,7.0,70900.0
+Cross Traffic Warning Rear with Brake Intervention,G60,i5 xDrive40,BEV,standard,,,,,,Driving Assistant,7.0,76300.0
+Cross Traffic Warning Rear with Brake Intervention,G60,i5 M60 xDrive,BEV,standard,,,,,,Driving Assistant,7.0,100200.0
+Cross Traffic Warning Rear with Brake Intervention,G60,530e,PHEV,standard,,,,,,Driving Assistant,7.0,66700.0
+Cross Traffic Warning Rear with Brake Intervention,G60,530e xDrive,PHEV,standard,,,,,,Driving Assistant,7.0,69300.0
+Cross Traffic Warning Rear with Brake Intervention,G60,550e xDrive,PHEV,standard,,,,,,Driving Assistant,7.0,78700.0
+Cross Traffic Warning Rear with Brake Intervention,G60,520i,ICE,standard,,,,,,Driving Assistant,7.0,60000.0
+Cross Traffic Warning Rear with Brake Intervention,G60,520d,ICE,standard,,,,,,Driving Assistant,7.0,62300.0
+Cross Traffic Warning Rear with Brake Intervention,G60,520d xDrive,ICE,standard,,,,,,Driving Assistant,7.0,64900.0
+Cross Traffic Warning Rear with Brake Intervention,G60,540d xDrive,ICE,standard,,,,,,Driving Assistant,7.0,71900.0
+Cross Traffic Warning Rear with Brake Intervention,G70,i7 50xDrive,BEV,standard,,,,,,Driving Assistant Plus,8.0,121400.0
+Cross Traffic Warning Rear with Brake Intervention,G70,i7 60xDrive,BEV,standard,,,,,,Driving Assistant Plus,8.0,140100.0
+Cross Traffic Warning Rear with Brake Intervention,G70,i7 M70 xDrive,BEV,standard,,,,,,Driving Assistant Plus,8.0,182400.0
+Cross Traffic Warning Rear with Brake Intervention,G70,740 xDrive,ICE,standard,,,,,,Driving Assistant Plus,8.0,117900.0
+Cupholder,F70,116,ICE,standard,,,,,,Cupholder in Mittelkonsole,5.0,34250.0
+Cupholder,F70,120,ICE,standard,,,,,,Cupholder in Mittelkonsole,5.0,39150.0
+Cupholder,F70,123 xDrive,ICE,standard,,,,,,Cupholder in Mittelkonsole,5.0,45350.0
+Cupholder,F70,M135 xDrive,ICE,standard,,,,,,Cupholder in Mittelkonsole,5.0,57150.0
+Cupholder,F70,118d,ICE,standard,,,,,,Cupholder in Mittelkonsole,5.0,39350.0
+Cupholder,F70,120d,ICE,standard,,,,,,Cupholder in Mittelkonsole,5.0,41750.0
+Cushioning / damping vehicle,F70,116,ICE,not_listed,,,,,,,,34250.0
+Cushioning / damping vehicle,F70,120,ICE,not_listed,,,,,,,,39150.0
+Cushioning / damping vehicle,F70,123 xDrive,ICE,not_listed,,,,,,,,45350.0
+Cushioning / damping vehicle,F70,M135 xDrive,ICE,standard,,,,,,Adaptives M Fahrwerk,6.0,57150.0
+Cushioning / damping vehicle,F70,118d,ICE,not_listed,,,,,,,,39350.0
+Cushioning / damping vehicle,F70,120d,ICE,not_listed,,,,,,,,41750.0
+Cushioning / damping vehicle,G60,i5 eDrive40,BEV,optional,1990.0,Adaptives Fahrwerk Professional,2VV,18.0,False,,,70900.0
+Cushioning / damping vehicle,G60,i5 xDrive40,BEV,standard,,,,,,Adaptives Fahrwerk Professional,7.0,76300.0
+Cushioning / damping vehicle,G60,i5 M60 xDrive,BEV,standard,,,,,,Adaptives Fahrwerk Professional,7.0,100200.0
+Cushioning / damping vehicle,G60,530e,PHEV,optional,1990.0,Adaptives Fahrwerk Professional,2VV,18.0,False,,,66700.0
+Cushioning / damping vehicle,G60,530e xDrive,PHEV,optional,1990.0,Adaptives Fahrwerk Professional,2VV,18.0,False,,,69300.0
+Cushioning / damping vehicle,G60,550e xDrive,PHEV,standard,,,,,,Adaptives Fahrwerk Professional,7.0,78700.0
+Cushioning / damping vehicle,G60,520i,ICE,optional,1990.0,Adaptives Fahrwerk Professional,2VV,18.0,False,,,60000.0
+Cushioning / damping vehicle,G60,520d,ICE,optional,1990.0,Adaptives Fahrwerk Professional,2VV,18.0,False,,,62300.0
+Cushioning / damping vehicle,G60,520d xDrive,ICE,optional,1990.0,Adaptives Fahrwerk Professional,2VV,18.0,False,,,64900.0
+Cushioning / damping vehicle,G60,540d xDrive,ICE,optional,1990.0,Adaptives Fahrwerk Professional,2VV,18.0,False,,,71900.0
+Cushioning / damping vehicle,G70,i7 50xDrive,BEV,not_listed,,,,,,,,121400.0
+Cushioning / damping vehicle,G70,i7 60xDrive,BEV,optional,4300.0,Adaptive Chassis Control Professional,2Z2,21.0,False,,,140100.0
+Cushioning / damping vehicle,G70,i7 M70 xDrive,BEV,standard,,,,,,Adaptive M Chassis Control Professional,7.0,182400.0
+Cushioning / damping vehicle,G70,740 xDrive,ICE,not_listed,,,,,,,,117900.0
+Digital Key,G60,i5 eDrive40,BEV,standard,,,,,,BMW Digital Key,8.0,70900.0
+Digital Key,G60,i5 xDrive40,BEV,standard,,,,,,BMW Digital Key,8.0,76300.0
+Digital Key,G60,i5 M60 xDrive,BEV,standard,,,,,,BMW Digital Key,8.0,100200.0
+Digital Key,G60,530e,PHEV,standard,,,,,,BMW Digital Key,8.0,66700.0
+Digital Key,G60,530e xDrive,PHEV,standard,,,,,,BMW Digital Key,8.0,69300.0
+Digital Key,G60,550e xDrive,PHEV,standard,,,,,,BMW Digital Key,8.0,78700.0
+Digital Key,G60,520i,ICE,standard,,,,,,BMW Digital Key,8.0,60000.0
+Digital Key,G60,520d,ICE,standard,,,,,,BMW Digital Key,8.0,62300.0
+Digital Key,G60,520d xDrive,ICE,standard,,,,,,BMW Digital Key,8.0,64900.0
+Digital Key,G60,540d xDrive,ICE,standard,,,,,,BMW Digital Key,8.0,71900.0
+"Door, open / close",G70,i7 50xDrive,BEV,standard,,,,,,Soft-Close-Automatik für Türen,9.0,121400.0
+"Door, open / close",G70,i7 60xDrive,BEV,standard,,,,,,Soft-Close-Automatik für Türen,9.0,140100.0
+"Door, open / close",G70,i7 M70 xDrive,BEV,standard,,,,,,Soft-Close-Automatik für Türen,9.0,182400.0
+"Door, open / close",G70,740 xDrive,ICE,standard,,,,,,Soft-Close-Automatik für Türen,9.0,117900.0
+Drive Recorder,G60,i5 eDrive40,BEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,70900.0
+Drive Recorder,G60,i5 xDrive40,BEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,76300.0
+Drive Recorder,G60,i5 M60 xDrive,BEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,100200.0
+Drive Recorder,G60,530e,PHEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,66700.0
+Drive Recorder,G60,530e xDrive,PHEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,69300.0
+Drive Recorder,G60,550e xDrive,PHEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,78700.0
+Drive Recorder,G60,520i,ICE,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,60000.0
+Drive Recorder,G60,520d,ICE,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,62300.0
+Drive Recorder,G60,520d xDrive,ICE,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,64900.0
+Drive Recorder,G60,540d xDrive,ICE,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,71900.0
+Emergency Stop Assistant,F70,116,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,34250.0
+Emergency Stop Assistant,F70,120,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,39150.0
+Emergency Stop Assistant,F70,123 xDrive,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,45350.0
+Emergency Stop Assistant,F70,M135 xDrive,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,57150.0
+Emergency Stop Assistant,F70,118d,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,39350.0
+Emergency Stop Assistant,F70,120d,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,41750.0
+Emergency Stop Assistant,G60,i5 eDrive40,BEV,optional,2100.0,Driving Assistant Professional,5AU,18.0,False,,,70900.0
+Emergency Stop Assistant,G60,i5 xDrive40,BEV,optional,2100.0,Driving Assistant Professional,5AU,18.0,False,,,76300.0
+Emergency Stop Assistant,G60,i5 M60 xDrive,BEV,optional,2100.0,Driving Assistant Professional,5AU,18.0,False,,,100200.0
+Emergency Stop Assistant,G60,530e,PHEV,optional,2100.0,Driving Assistant Professional,5AU,18.0,False,,,66700.0
+Emergency Stop Assistant,G60,530e xDrive,PHEV,optional,2100.0,Driving Assistant Professional,5AU,18.0,False,,,69300.0
+Emergency Stop Assistant,G60,550e xDrive,PHEV,optional,2100.0,Driving Assistant Professional,5AU,18.0,False,,,78700.0
+Emergency Stop Assistant,G60,520i,ICE,optional,2100.0,Driving Assistant Professional,5AU,18.0,False,,,60000.0
+Emergency Stop Assistant,G60,520d,ICE,optional,2100.0,Driving Assistant Professional,5AU,18.0,False,,,62300.0
+Emergency Stop Assistant,G60,520d xDrive,ICE,optional,2100.0,Driving Assistant Professional,5AU,18.0,False,,,64900.0
+Emergency Stop Assistant,G60,540d xDrive,ICE,optional,2100.0,Driving Assistant Professional,5AU,18.0,False,,,71900.0
+Emergency request,F70,116,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,34250.0
+Emergency request,F70,120,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39150.0
+Emergency request,F70,123 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,45350.0
+Emergency request,F70,M135 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,57150.0
+Emergency request,F70,118d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39350.0
+Emergency request,F70,120d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,41750.0
+Emergency request,G70,i7 50xDrive,BEV,standard,,,,,,Gesetzlicher Notruf inkl. Teleservices und BMW Unfallhilfe,8.0,121400.0
+Emergency request,G70,i7 60xDrive,BEV,standard,,,,,,Gesetzlicher Notruf inkl. Teleservices und BMW Unfallhilfe,8.0,140100.0
+Emergency request,G70,i7 M70 xDrive,BEV,standard,,,,,,Gesetzlicher Notruf inkl. Teleservices und BMW Unfallhilfe,8.0,182400.0
+Emergency request,G70,740 xDrive,ICE,standard,,,,,,Gesetzlicher Notruf inkl. Teleservices und BMW Unfallhilfe,8.0,117900.0
+Engine acoustics / engine sound,G60,i5 eDrive40,BEV,standard,,,,,,BMW IconicSounds Electric,7.0,70900.0
+Engine acoustics / engine sound,G60,i5 xDrive40,BEV,standard,,,,,,BMW IconicSounds Electric,7.0,76300.0
+Engine acoustics / engine sound,G60,i5 M60 xDrive,BEV,standard,,,,,,BMW IconicSounds Electric,7.0,100200.0
+Engine acoustics / engine sound,G60,530e,PHEV,standard,,,,,,BMW IconicSounds Electric,7.0,66700.0
+Engine acoustics / engine sound,G60,530e xDrive,PHEV,standard,,,,,,BMW IconicSounds Electric,7.0,69300.0
+Engine acoustics / engine sound,G60,550e xDrive,PHEV,standard,,,,,,BMW IconicSounds Electric,7.0,78700.0
+Engine acoustics / engine sound,G60,520i,ICE,not_listed,,,,,,,,60000.0
+Engine acoustics / engine sound,G60,520d,ICE,not_listed,,,,,,,,62300.0
+Engine acoustics / engine sound,G60,520d xDrive,ICE,not_listed,,,,,,,,64900.0
+Engine acoustics / engine sound,G60,540d xDrive,ICE,not_listed,,,,,,,,71900.0
+Engine acoustics / engine sound,G70,i7 50xDrive,BEV,standard,,,,,,BMW IconicSounds Electric,9.0,121400.0
+Engine acoustics / engine sound,G70,i7 60xDrive,BEV,standard,,,,,,BMW IconicSounds Electric,9.0,140100.0
+Engine acoustics / engine sound,G70,i7 M70 xDrive,BEV,standard,,,,,,BMW IconicSounds Electric,9.0,182400.0
+Engine acoustics / engine sound,G70,740 xDrive,ICE,not_listed,,,,,,,,117900.0
+Exterior lighting,F70,116,ICE,standard,,,,,,LED-Scheinwerfer,6.0,34250.0
+Exterior lighting,F70,120,ICE,standard,,,,,,LED-Scheinwerfer,6.0,39150.0
+Exterior lighting,F70,123 xDrive,ICE,standard,,,,,,LED-Scheinwerfer,6.0,45350.0
+Exterior lighting,F70,M135 xDrive,ICE,standard,,,,,,LED-Scheinwerfer,6.0,57150.0
+Exterior lighting,F70,118d,ICE,standard,,,,,,LED-Scheinwerfer,6.0,39350.0
+Exterior lighting,F70,120d,ICE,standard,,,,,,LED-Scheinwerfer,6.0,41750.0
+Exterior lighting,G60,i5 eDrive40,BEV,standard,,,,,,Adaptiver LED-Scheinwerfer,8.0,70900.0
+Exterior lighting,G60,i5 xDrive40,BEV,standard,,,,,,Adaptiver LED-Scheinwerfer,8.0,76300.0
+Exterior lighting,G60,i5 M60 xDrive,BEV,standard,,,,,,BMW Iconic Glow Exterieurpaket,6.0,100200.0
+Exterior lighting,G60,530e,PHEV,standard,,,,,,Adaptiver LED-Scheinwerfer,8.0,66700.0
+Exterior lighting,G60,530e xDrive,PHEV,standard,,,,,,Adaptiver LED-Scheinwerfer,8.0,69300.0
+Exterior lighting,G60,550e xDrive,PHEV,standard,,,,,,Adaptiver LED-Scheinwerfer,8.0,78700.0
+Exterior lighting,G60,520i,ICE,standard,,,,,,Adaptiver LED-Scheinwerfer,8.0,60000.0
+Exterior lighting,G60,520d,ICE,standard,,,,,,Adaptiver LED-Scheinwerfer,8.0,62300.0
+Exterior lighting,G60,520d xDrive,ICE,standard,,,,,,Adaptiver LED-Scheinwerfer,8.0,64900.0
+Exterior lighting,G60,540d xDrive,ICE,standard,,,,,,Adaptiver LED-Scheinwerfer,8.0,71900.0
+Exterior lighting,G70,i7 50xDrive,BEV,standard,,,,,,Adaptiver LED-Scheinwerfer,6.0,121400.0
+Exterior lighting,G70,i7 60xDrive,BEV,standard,,,,,,Adaptiver LED-Scheinwerfer,6.0,140100.0
+Exterior lighting,G70,i7 M70 xDrive,BEV,standard,,,,,,Adaptiver LED-Scheinwerfer,6.0,182400.0
+Exterior lighting,G70,740 xDrive,ICE,standard,,,,,,Adaptiver LED-Scheinwerfer,6.0,117900.0
+Exterior rearview mirror,F70,116,ICE,standard,,,,,,M Hochglanz Shadow Line,5.0,34250.0
+Exterior rearview mirror,F70,120,ICE,standard,,,,,,M Hochglanz Shadow Line,5.0,39150.0
+Exterior rearview mirror,F70,123 xDrive,ICE,standard,,,,,,M Hochglanz Shadow Line,5.0,45350.0
+Exterior rearview mirror,F70,M135 xDrive,ICE,standard,,,,,,M Hochglanz Shadow Line,5.0,57150.0
+Exterior rearview mirror,F70,118d,ICE,standard,,,,,,M Hochglanz Shadow Line,5.0,39350.0
+Exterior rearview mirror,F70,120d,ICE,standard,,,,,,M Hochglanz Shadow Line,5.0,41750.0
+Exterior rearview mirror,G60,i5 eDrive40,BEV,standard,,,,,,Erweitertes Außenspiegelpaket,8.0,70900.0
+Exterior rearview mirror,G60,i5 xDrive40,BEV,standard,,,,,,Erweitertes Außenspiegelpaket,8.0,76300.0
+Exterior rearview mirror,G60,i5 M60 xDrive,BEV,standard,,,,,,Erweitertes Außenspiegelpaket,8.0,100200.0
+Exterior rearview mirror,G60,530e,PHEV,standard,,,,,,Erweitertes Außenspiegelpaket,8.0,66700.0
+Exterior rearview mirror,G60,530e xDrive,PHEV,standard,,,,,,Erweitertes Außenspiegelpaket,8.0,69300.0
+Exterior rearview mirror,G60,550e xDrive,PHEV,standard,,,,,,Erweitertes Außenspiegelpaket,8.0,78700.0
+Exterior rearview mirror,G60,520i,ICE,standard,,,,,,Erweitertes Außenspiegelpaket,8.0,60000.0
+Exterior rearview mirror,G60,520d,ICE,standard,,,,,,Erweitertes Außenspiegelpaket,8.0,62300.0
+Exterior rearview mirror,G60,520d xDrive,ICE,standard,,,,,,Erweitertes Außenspiegelpaket,8.0,64900.0
+Exterior rearview mirror,G60,540d xDrive,ICE,standard,,,,,,Erweitertes Außenspiegelpaket,8.0,71900.0
+Exterior rearview mirror,G70,i7 50xDrive,BEV,standard,,,,,,Erweitertes Außenspiegelpaket,6.0,121400.0
+Exterior rearview mirror,G70,i7 60xDrive,BEV,standard,,,,,,Erweitertes Außenspiegelpaket,6.0,140100.0
+Exterior rearview mirror,G70,i7 M70 xDrive,BEV,standard,,,,,,Erweitertes Außenspiegelpaket,6.0,182400.0
+Exterior rearview mirror,G70,740 xDrive,ICE,standard,,,,,,Erweitertes Außenspiegelpaket,6.0,117900.0
+Fatigue Alert,F70,116,ICE,standard,,,,,,Aufmerksamkeitsassistent,7.0,34250.0
+Fatigue Alert,F70,120,ICE,standard,,,,,,Aufmerksamkeitsassistent,7.0,39150.0
+Fatigue Alert,F70,123 xDrive,ICE,standard,,,,,,Aufmerksamkeitsassistent,7.0,45350.0
+Fatigue Alert,F70,M135 xDrive,ICE,standard,,,,,,Aufmerksamkeitsassistent,7.0,57150.0
+Fatigue Alert,F70,118d,ICE,standard,,,,,,Aufmerksamkeitsassistent,7.0,39350.0
+Fatigue Alert,F70,120d,ICE,standard,,,,,,Aufmerksamkeitsassistent,7.0,41750.0
+Floor mat,F70,116,ICE,standard,,,,,,Fußmatten vorne und hinten in Anthrazit,5.0,34250.0
+Floor mat,F70,120,ICE,standard,,,,,,Fußmatten vorne und hinten in Anthrazit,5.0,39150.0
+Floor mat,F70,123 xDrive,ICE,standard,,,,,,Fußmatten vorne und hinten in Anthrazit,5.0,45350.0
+Floor mat,F70,M135 xDrive,ICE,standard,,,,,,Fußmatten vorne und hinten in Anthrazit,5.0,57150.0
+Floor mat,F70,118d,ICE,standard,,,,,,Fußmatten vorne und hinten in Anthrazit,5.0,39350.0
+Floor mat,F70,120d,ICE,standard,,,,,,Fußmatten vorne und hinten in Anthrazit,5.0,41750.0
+Floor mat,G70,i7 50xDrive,BEV,standard,,,,,,Fußmatten in Velours,6.0,121400.0
+Floor mat,G70,i7 60xDrive,BEV,standard,,,,,,Fußmatten in Velours,6.0,140100.0
+Floor mat,G70,i7 M70 xDrive,BEV,standard,,,,,,Fußmatten in Velours,6.0,182400.0
+Floor mat,G70,740 xDrive,ICE,standard,,,,,,Fußmatten in Velours,6.0,117900.0
+Front collision warning,F70,116,ICE,standard,,,,,,Active Guard,6.0,34250.0
+Front collision warning,F70,120,ICE,standard,,,,,,Active Guard,6.0,39150.0
+Front collision warning,F70,123 xDrive,ICE,standard,,,,,,Active Guard,6.0,45350.0
+Front collision warning,F70,M135 xDrive,ICE,standard,,,,,,Active Guard,6.0,57150.0
+Front collision warning,F70,118d,ICE,standard,,,,,,Active Guard,6.0,39350.0
+Front collision warning,F70,120d,ICE,standard,,,,,,Active Guard,6.0,41750.0
+Front collision warning,G60,i5 eDrive40,BEV,standard,,,,,,"Frontkollisionswarnung mit Bremsfunktion, Ausweichhilfe und Bremseingriff",7.0,70900.0
+Front collision warning,G60,i5 xDrive40,BEV,standard,,,,,,"Frontkollisionswarnung mit Bremsfunktion, Ausweichhilfe und Bremseingriff",7.0,76300.0
+Front collision warning,G60,i5 M60 xDrive,BEV,standard,,,,,,"Frontkollisionswarnung mit Bremsfunktion, Ausweichhilfe und Bremseingriff",7.0,100200.0
+Front collision warning,G60,530e,PHEV,standard,,,,,,"Frontkollisionswarnung mit Bremsfunktion, Ausweichhilfe und Bremseingriff",7.0,66700.0
+Front collision warning,G60,530e xDrive,PHEV,standard,,,,,,"Frontkollisionswarnung mit Bremsfunktion, Ausweichhilfe und Bremseingriff",7.0,69300.0
+Front collision warning,G60,550e xDrive,PHEV,standard,,,,,,"Frontkollisionswarnung mit Bremsfunktion, Ausweichhilfe und Bremseingriff",7.0,78700.0
+Front collision warning,G60,520i,ICE,standard,,,,,,"Frontkollisionswarnung mit Bremsfunktion, Ausweichhilfe und Bremseingriff",7.0,60000.0
+Front collision warning,G60,520d,ICE,standard,,,,,,"Frontkollisionswarnung mit Bremsfunktion, Ausweichhilfe und Bremseingriff",7.0,62300.0
+Front collision warning,G60,520d xDrive,ICE,standard,,,,,,"Frontkollisionswarnung mit Bremsfunktion, Ausweichhilfe und Bremseingriff",7.0,64900.0
+Front collision warning,G60,540d xDrive,ICE,standard,,,,,,"Frontkollisionswarnung mit Bremsfunktion, Ausweichhilfe und Bremseingriff",7.0,71900.0
+Front collision warning,G70,i7 50xDrive,BEV,standard,,,,,,Driving Assistant Plus,8.0,121400.0
+Front collision warning,G70,i7 60xDrive,BEV,standard,,,,,,Driving Assistant Plus,8.0,140100.0
+Front collision warning,G70,i7 M70 xDrive,BEV,standard,,,,,,Driving Assistant Plus,8.0,182400.0
+Front collision warning,G70,740 xDrive,ICE,standard,,,,,,Driving Assistant Plus,8.0,117900.0
+Garage door opener,G70,i7 50xDrive,BEV,standard,,,,,,"Garagentoröffner, integriert",9.0,121400.0
+Garage door opener,G70,i7 60xDrive,BEV,standard,,,,,,"Garagentoröffner, integriert",9.0,140100.0
+Garage door opener,G70,i7 M70 xDrive,BEV,standard,,,,,,"Garagentoröffner, integriert",9.0,182400.0
+Garage door opener,G70,740 xDrive,ICE,standard,,,,,,"Garagentoröffner, integriert",9.0,117900.0
+Head-Up Display,F70,116,ICE,optional,3800.0,INNOVATIONSPAKET,7EW,16.0,True,,,34250.0
+Head-Up Display,F70,120,ICE,optional,3800.0,INNOVATIONSPAKET,7EW,16.0,True,,,39150.0
+Head-Up Display,F70,123 xDrive,ICE,optional,3800.0,INNOVATIONSPAKET,7EW,16.0,True,,,45350.0
+Head-Up Display,F70,M135 xDrive,ICE,optional,3800.0,INNOVATIONSPAKET,7EW,16.0,True,,,57150.0
+Head-Up Display,F70,118d,ICE,optional,3800.0,INNOVATIONSPAKET,7EW,16.0,True,,,39350.0
+Head-Up Display,F70,120d,ICE,optional,3800.0,INNOVATIONSPAKET,7EW,16.0,True,,,41750.0
+Head-Up Display,G60,i5 eDrive40,BEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,70900.0
+Head-Up Display,G60,i5 xDrive40,BEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,76300.0
+Head-Up Display,G60,i5 M60 xDrive,BEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,100200.0
+Head-Up Display,G60,530e,PHEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,66700.0
+Head-Up Display,G60,530e xDrive,PHEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,69300.0
+Head-Up Display,G60,550e xDrive,PHEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,78700.0
+Head-Up Display,G60,520i,ICE,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,60000.0
+Head-Up Display,G60,520d,ICE,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,62300.0
+Head-Up Display,G60,520d xDrive,ICE,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,64900.0
+Head-Up Display,G60,540d xDrive,ICE,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,71900.0
+Head-Up Display,G70,i7 50xDrive,BEV,standard,,,,,,BMW 3D Head-Up Display,7.0,121400.0
+Head-Up Display,G70,i7 60xDrive,BEV,standard,,,,,,BMW 3D Head-Up Display,7.0,140100.0
+Head-Up Display,G70,i7 M70 xDrive,BEV,standard,,,,,,BMW 3D Head-Up Display,7.0,182400.0
+Head-Up Display,G70,740 xDrive,ICE,standard,,,,,,BMW 3D Head-Up Display,7.0,117900.0
+Heated steering wheel,F70,116,ICE,optional,250.0,Lenkradheizung,248,17.0,False,,,34250.0
+Heated steering wheel,F70,120,ICE,optional,250.0,Lenkradheizung,248,17.0,False,,,39150.0
+Heated steering wheel,F70,123 xDrive,ICE,optional,250.0,Lenkradheizung,248,17.0,False,,,45350.0
+Heated steering wheel,F70,M135 xDrive,ICE,optional,250.0,Lenkradheizung,248,17.0,False,,,57150.0
+Heated steering wheel,F70,118d,ICE,optional,250.0,Lenkradheizung,248,17.0,False,,,39350.0
+Heated steering wheel,F70,120d,ICE,optional,250.0,Lenkradheizung,248,17.0,False,,,41750.0
+Heated steering wheel,G60,i5 eDrive40,BEV,optional,350.0,Lenkradheizung,248,17.0,False,,,70900.0
+Heated steering wheel,G60,i5 xDrive40,BEV,optional,350.0,Lenkradheizung,248,17.0,False,,,76300.0
+Heated steering wheel,G60,i5 M60 xDrive,BEV,optional,350.0,Lenkradheizung,248,17.0,False,,,100200.0
+Heated steering wheel,G60,530e,PHEV,optional,350.0,Lenkradheizung,248,17.0,False,,,66700.0
+Heated steering wheel,G60,530e xDrive,PHEV,optional,350.0,Lenkradheizung,248,17.0,False,,,69300.0
+Heated steering wheel,G60,550e xDrive,PHEV,optional,350.0,Lenkradheizung,248,17.0,False,,,78700.0
+Heated steering wheel,G60,520i,ICE,optional,350.0,Lenkradheizung,248,17.0,False,,,60000.0
+Heated steering wheel,G60,520d,ICE,optional,350.0,Lenkradheizung,248,17.0,False,,,62300.0
+Heated steering wheel,G60,520d xDrive,ICE,optional,350.0,Lenkradheizung,248,17.0,False,,,64900.0
+Heated steering wheel,G60,540d xDrive,ICE,optional,350.0,Lenkradheizung,248,17.0,False,,,71900.0
+Heated steering wheel,G70,i7 50xDrive,BEV,standard,,,,,,Lenkradheizung,8.0,121400.0
+Heated steering wheel,G70,i7 60xDrive,BEV,standard,,,,,,Lenkradheizung,8.0,140100.0
+Heated steering wheel,G70,i7 M70 xDrive,BEV,standard,,,,,,Lenkradheizung,8.0,182400.0
+Heated steering wheel,G70,740 xDrive,ICE,standard,,,,,,Lenkradheizung,8.0,117900.0
+High-beam assistant,F70,116,ICE,optional,1900.0,PREMIUM PAKET,7EV,16.0,True,,,34250.0
+High-beam assistant,F70,120,ICE,optional,1900.0,PREMIUM PAKET,7EV,16.0,True,,,39150.0
+High-beam assistant,F70,123 xDrive,ICE,optional,1900.0,PREMIUM PAKET,7EV,16.0,True,,,45350.0
+High-beam assistant,F70,M135 xDrive,ICE,optional,1900.0,PREMIUM PAKET,7EV,16.0,True,,,57150.0
+High-beam assistant,F70,118d,ICE,optional,1900.0,PREMIUM PAKET,7EV,16.0,True,,,39350.0
+High-beam assistant,F70,120d,ICE,optional,1900.0,PREMIUM PAKET,7EV,16.0,True,,,41750.0
+High-beam assistant,G60,i5 eDrive40,BEV,standard,,,,,,"Fernlichtassistent ""BMW Selective Beam""",8.0,70900.0
+High-beam assistant,G60,i5 xDrive40,BEV,standard,,,,,,"Fernlichtassistent ""BMW Selective Beam""",8.0,76300.0
+High-beam assistant,G60,i5 M60 xDrive,BEV,standard,,,,,,"Fernlichtassistent ""BMW Selective Beam""",8.0,100200.0
+High-beam assistant,G60,530e,PHEV,standard,,,,,,"Fernlichtassistent ""BMW Selective Beam""",8.0,66700.0
+High-beam assistant,G60,530e xDrive,PHEV,standard,,,,,,"Fernlichtassistent ""BMW Selective Beam""",8.0,69300.0
+High-beam assistant,G60,550e xDrive,PHEV,standard,,,,,,"Fernlichtassistent ""BMW Selective Beam""",8.0,78700.0
+High-beam assistant,G60,520i,ICE,standard,,,,,,"Fernlichtassistent ""BMW Selective Beam""",8.0,60000.0
+High-beam assistant,G60,520d,ICE,standard,,,,,,"Fernlichtassistent ""BMW Selective Beam""",8.0,62300.0
+High-beam assistant,G60,520d xDrive,ICE,standard,,,,,,"Fernlichtassistent ""BMW Selective Beam""",8.0,64900.0
+High-beam assistant,G60,540d xDrive,ICE,standard,,,,,,"Fernlichtassistent ""BMW Selective Beam""",8.0,71900.0
+Highway assistant,G60,i5 eDrive40,BEV,optional,850.0,Autobahnassistent,5AX,18.0,False,,,70900.0
+Highway assistant,G60,i5 xDrive40,BEV,optional,850.0,Autobahnassistent,5AX,18.0,False,,,76300.0
+Highway assistant,G60,i5 M60 xDrive,BEV,optional,850.0,Autobahnassistent,5AX,18.0,False,,,100200.0
+Highway assistant,G60,530e,PHEV,optional,850.0,Autobahnassistent,5AX,18.0,False,,,66700.0
+Highway assistant,G60,530e xDrive,PHEV,optional,850.0,Autobahnassistent,5AX,18.0,False,,,69300.0
+Highway assistant,G60,550e xDrive,PHEV,optional,850.0,Autobahnassistent,5AX,18.0,False,,,78700.0
+Highway assistant,G60,520i,ICE,optional,850.0,Autobahnassistent,5AX,18.0,False,,,60000.0
+Highway assistant,G60,520d,ICE,optional,850.0,Autobahnassistent,5AX,18.0,False,,,62300.0
+Highway assistant,G60,520d xDrive,ICE,optional,850.0,Autobahnassistent,5AX,18.0,False,,,64900.0
+Highway assistant,G60,540d xDrive,ICE,optional,850.0,Autobahnassistent,5AX,18.0,False,,,71900.0
+Highway assistant,G70,i7 50xDrive,BEV,optional,1980.0,Autobahn- & City-Assistent (laufzeitbegrenzt),5BB,22.0,False,,,121400.0
+Highway assistant,G70,i7 60xDrive,BEV,optional,1980.0,Autobahn- & City-Assistent (laufzeitbegrenzt),5BB,22.0,False,,,140100.0
+Highway assistant,G70,i7 M70 xDrive,BEV,optional,1980.0,Autobahn- & City-Assistent (laufzeitbegrenzt),5BB,22.0,False,,,182400.0
+Highway assistant,G70,740 xDrive,ICE,optional,1980.0,Autobahn- & City-Assistent (laufzeitbegrenzt),5BB,22.0,False,,,117900.0
+Instrument cluster,F70,116,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,34250.0
+Instrument cluster,F70,120,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39150.0
+Instrument cluster,F70,123 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,45350.0
+Instrument cluster,F70,M135 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,57150.0
+Instrument cluster,F70,118d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39350.0
+Instrument cluster,F70,120d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,41750.0
+Instrument cluster,G60,i5 eDrive40,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,70900.0
+Instrument cluster,G60,i5 xDrive40,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,76300.0
+Instrument cluster,G60,i5 M60 xDrive,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,100200.0
+Instrument cluster,G60,530e,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,66700.0
+Instrument cluster,G60,530e xDrive,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,69300.0
+Instrument cluster,G60,550e xDrive,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,78700.0
+Instrument cluster,G60,520i,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,60000.0
+Instrument cluster,G60,520d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,62300.0
+Instrument cluster,G60,520d xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,64900.0
+Instrument cluster,G60,540d xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,71900.0
+Instrument cluster,G70,i7 50xDrive,BEV,standard,,,,,,BMW Panoramic Vision,7.0,121400.0
+Instrument cluster,G70,i7 60xDrive,BEV,standard,,,,,,BMW Panoramic Vision,7.0,140100.0
+Instrument cluster,G70,i7 M70 xDrive,BEV,standard,,,,,,BMW Panoramic Vision,7.0,182400.0
+Instrument cluster,G70,740 xDrive,ICE,standard,,,,,,BMW Panoramic Vision,7.0,117900.0
+Intelligent Personal Assistant,F70,116,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,34250.0
+Intelligent Personal Assistant,F70,120,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39150.0
+Intelligent Personal Assistant,F70,123 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,45350.0
+Intelligent Personal Assistant,F70,M135 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,57150.0
+Intelligent Personal Assistant,F70,118d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39350.0
+Intelligent Personal Assistant,F70,120d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,41750.0
+Intelligent Personal Assistant,G60,i5 eDrive40,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,70900.0
+Intelligent Personal Assistant,G60,i5 xDrive40,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,76300.0
+Intelligent Personal Assistant,G60,i5 M60 xDrive,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,100200.0
+Intelligent Personal Assistant,G60,530e,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,66700.0
+Intelligent Personal Assistant,G60,530e xDrive,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,69300.0
+Intelligent Personal Assistant,G60,550e xDrive,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,78700.0
+Intelligent Personal Assistant,G60,520i,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,60000.0
+Intelligent Personal Assistant,G60,520d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,62300.0
+Intelligent Personal Assistant,G60,520d xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,64900.0
+Intelligent Personal Assistant,G60,540d xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,71900.0
+Interior acoustics,G70,i7 50xDrive,BEV,optional,3200.0,CONNOISSEUR PAKET,9DC,20.0,True,,,121400.0
+Interior acoustics,G70,i7 60xDrive,BEV,optional,3200.0,CONNOISSEUR PAKET,9DC,20.0,True,,,140100.0
+Interior acoustics,G70,i7 M70 xDrive,BEV,optional,3200.0,CONNOISSEUR PAKET,9DC,20.0,True,,,182400.0
+Interior acoustics,G70,740 xDrive,ICE,optional,3200.0,CONNOISSEUR PAKET,9DC,20.0,True,,,117900.0
+Interior camera,G60,i5 eDrive40,BEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,70900.0
+Interior camera,G60,i5 xDrive40,BEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,76300.0
+Interior camera,G60,i5 M60 xDrive,BEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,100200.0
+Interior camera,G60,530e,PHEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,66700.0
+Interior camera,G60,530e xDrive,PHEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,69300.0
+Interior camera,G60,550e xDrive,PHEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,78700.0
+Interior camera,G60,520i,ICE,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,60000.0
+Interior camera,G60,520d,ICE,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,62300.0
+Interior camera,G60,520d xDrive,ICE,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,64900.0
+Interior camera,G60,540d xDrive,ICE,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,71900.0
+"Interior mirror, garage door opener",G70,i7 50xDrive,BEV,standard,,,,,,"Garagentoröffner, integriert",9.0,121400.0
+"Interior mirror, garage door opener",G70,i7 60xDrive,BEV,standard,,,,,,"Garagentoröffner, integriert",9.0,140100.0
+"Interior mirror, garage door opener",G70,i7 M70 xDrive,BEV,standard,,,,,,"Garagentoröffner, integriert",9.0,182400.0
+"Interior mirror, garage door opener",G70,740 xDrive,ICE,standard,,,,,,"Garagentoröffner, integriert",9.0,117900.0
+Interior rearview mirror,F70,116,ICE,optional,1900.0,PREMIUM PAKET,7EV,16.0,True,,,34250.0
+Interior rearview mirror,F70,120,ICE,optional,1900.0,PREMIUM PAKET,7EV,16.0,True,,,39150.0
+Interior rearview mirror,F70,123 xDrive,ICE,optional,1900.0,PREMIUM PAKET,7EV,16.0,True,,,45350.0
+Interior rearview mirror,F70,M135 xDrive,ICE,optional,1900.0,PREMIUM PAKET,7EV,16.0,True,,,57150.0
+Interior rearview mirror,F70,118d,ICE,optional,1900.0,PREMIUM PAKET,7EV,16.0,True,,,39350.0
+Interior rearview mirror,F70,120d,ICE,optional,1900.0,PREMIUM PAKET,7EV,16.0,True,,,41750.0
+Intersection Warning with Brake Intervention,F70,116,ICE,standard,,,,,,Active Guard,6.0,34250.0
+Intersection Warning with Brake Intervention,F70,120,ICE,standard,,,,,,Active Guard,6.0,39150.0
+Intersection Warning with Brake Intervention,F70,123 xDrive,ICE,standard,,,,,,Active Guard,6.0,45350.0
+Intersection Warning with Brake Intervention,F70,M135 xDrive,ICE,standard,,,,,,Active Guard,6.0,57150.0
+Intersection Warning with Brake Intervention,F70,118d,ICE,standard,,,,,,Active Guard,6.0,39350.0
+Intersection Warning with Brake Intervention,F70,120d,ICE,standard,,,,,,Active Guard,6.0,41750.0
+Intersection Warning with Brake Intervention,G60,i5 eDrive40,BEV,standard,,,,,,Linksabbiegewarnung (Fahrzeug) mit Bremsfunktion,7.0,70900.0
+Intersection Warning with Brake Intervention,G60,i5 xDrive40,BEV,standard,,,,,,Linksabbiegewarnung (Fahrzeug) mit Bremsfunktion,7.0,76300.0
+Intersection Warning with Brake Intervention,G60,i5 M60 xDrive,BEV,standard,,,,,,Linksabbiegewarnung (Fahrzeug) mit Bremsfunktion,7.0,100200.0
+Intersection Warning with Brake Intervention,G60,530e,PHEV,standard,,,,,,Linksabbiegewarnung (Fahrzeug) mit Bremsfunktion,7.0,66700.0
+Intersection Warning with Brake Intervention,G60,530e xDrive,PHEV,standard,,,,,,Linksabbiegewarnung (Fahrzeug) mit Bremsfunktion,7.0,69300.0
+Intersection Warning with Brake Intervention,G60,550e xDrive,PHEV,standard,,,,,,Linksabbiegewarnung (Fahrzeug) mit Bremsfunktion,7.0,78700.0
+Intersection Warning with Brake Intervention,G60,520i,ICE,standard,,,,,,Linksabbiegewarnung (Fahrzeug) mit Bremsfunktion,7.0,60000.0
+Intersection Warning with Brake Intervention,G60,520d,ICE,standard,,,,,,Linksabbiegewarnung (Fahrzeug) mit Bremsfunktion,7.0,62300.0
+Intersection Warning with Brake Intervention,G60,520d xDrive,ICE,standard,,,,,,Linksabbiegewarnung (Fahrzeug) mit Bremsfunktion,7.0,64900.0
+Intersection Warning with Brake Intervention,G60,540d xDrive,ICE,standard,,,,,,Linksabbiegewarnung (Fahrzeug) mit Bremsfunktion,7.0,71900.0
+Intersection Warning with Brake Intervention,G70,i7 50xDrive,BEV,optional,1980.0,Autobahn- & City-Assistent (laufzeitbegrenzt),5BB,22.0,False,,,121400.0
+Intersection Warning with Brake Intervention,G70,i7 60xDrive,BEV,optional,1980.0,Autobahn- & City-Assistent (laufzeitbegrenzt),5BB,22.0,False,,,140100.0
+Intersection Warning with Brake Intervention,G70,i7 M70 xDrive,BEV,optional,1980.0,Autobahn- & City-Assistent (laufzeitbegrenzt),5BB,22.0,False,,,182400.0
+Intersection Warning with Brake Intervention,G70,740 xDrive,ICE,optional,1980.0,Autobahn- & City-Assistent (laufzeitbegrenzt),5BB,22.0,False,,,117900.0
+Lane Change Assistant,F70,116,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,34250.0
+Lane Change Assistant,F70,120,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,39150.0
+Lane Change Assistant,F70,123 xDrive,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,45350.0
+Lane Change Assistant,F70,M135 xDrive,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,57150.0
+Lane Change Assistant,F70,118d,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,39350.0
+Lane Change Assistant,F70,120d,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,41750.0
+Lane Change Assistant,G60,i5 eDrive40,BEV,optional,850.0,Autobahnassistent,5AX,18.0,False,,,70900.0
+Lane Change Assistant,G60,i5 xDrive40,BEV,optional,850.0,Autobahnassistent,5AX,18.0,False,,,76300.0
+Lane Change Assistant,G60,i5 M60 xDrive,BEV,optional,850.0,Autobahnassistent,5AX,18.0,False,,,100200.0
+Lane Change Assistant,G60,530e,PHEV,optional,850.0,Autobahnassistent,5AX,18.0,False,,,66700.0
+Lane Change Assistant,G60,530e xDrive,PHEV,optional,850.0,Autobahnassistent,5AX,18.0,False,,,69300.0
+Lane Change Assistant,G60,550e xDrive,PHEV,optional,850.0,Autobahnassistent,5AX,18.0,False,,,78700.0
+Lane Change Assistant,G60,520i,ICE,optional,850.0,Autobahnassistent,5AX,18.0,False,,,60000.0
+Lane Change Assistant,G60,520d,ICE,optional,850.0,Autobahnassistent,5AX,18.0,False,,,62300.0
+Lane Change Assistant,G60,520d xDrive,ICE,optional,850.0,Autobahnassistent,5AX,18.0,False,,,64900.0
+Lane Change Assistant,G60,540d xDrive,ICE,optional,850.0,Autobahnassistent,5AX,18.0,False,,,71900.0
+Lane Change Assistant,G70,i7 50xDrive,BEV,optional,1980.0,Autobahn- & City-Assistent (laufzeitbegrenzt),5BB,22.0,False,,,121400.0
+Lane Change Assistant,G70,i7 60xDrive,BEV,optional,1980.0,Autobahn- & City-Assistent (laufzeitbegrenzt),5BB,22.0,False,,,140100.0
+Lane Change Assistant,G70,i7 M70 xDrive,BEV,optional,1980.0,Autobahn- & City-Assistent (laufzeitbegrenzt),5BB,22.0,False,,,182400.0
+Lane Change Assistant,G70,740 xDrive,ICE,optional,1980.0,Autobahn- & City-Assistent (laufzeitbegrenzt),5BB,22.0,False,,,117900.0
+Lane departure warning,F70,116,ICE,standard,,,,,,Active Guard,6.0,34250.0
+Lane departure warning,F70,120,ICE,standard,,,,,,Active Guard,6.0,39150.0
+Lane departure warning,F70,123 xDrive,ICE,standard,,,,,,Active Guard,6.0,45350.0
+Lane departure warning,F70,M135 xDrive,ICE,standard,,,,,,Active Guard,6.0,57150.0
+Lane departure warning,F70,118d,ICE,standard,,,,,,Active Guard,6.0,39350.0
+Lane departure warning,F70,120d,ICE,standard,,,,,,Active Guard,6.0,41750.0
+Lane departure warning,G60,i5 eDrive40,BEV,standard,,,,,,Spurverlassenswarnung mit aktiver Rückführung,7.0,70900.0
+Lane departure warning,G60,i5 xDrive40,BEV,standard,,,,,,Spurverlassenswarnung mit aktiver Rückführung,7.0,76300.0
+Lane departure warning,G60,i5 M60 xDrive,BEV,standard,,,,,,Spurverlassenswarnung mit aktiver Rückführung,7.0,100200.0
+Lane departure warning,G60,530e,PHEV,standard,,,,,,Spurverlassenswarnung mit aktiver Rückführung,7.0,66700.0
+Lane departure warning,G60,530e xDrive,PHEV,standard,,,,,,Spurverlassenswarnung mit aktiver Rückführung,7.0,69300.0
+Lane departure warning,G60,550e xDrive,PHEV,standard,,,,,,Spurverlassenswarnung mit aktiver Rückführung,7.0,78700.0
+Lane departure warning,G60,520i,ICE,standard,,,,,,Spurverlassenswarnung mit aktiver Rückführung,7.0,60000.0
+Lane departure warning,G60,520d,ICE,standard,,,,,,Spurverlassenswarnung mit aktiver Rückführung,7.0,62300.0
+Lane departure warning,G60,520d xDrive,ICE,standard,,,,,,Spurverlassenswarnung mit aktiver Rückführung,7.0,64900.0
+Lane departure warning,G60,540d xDrive,ICE,standard,,,,,,Spurverlassenswarnung mit aktiver Rückführung,7.0,71900.0
+Lane departure warning,G70,i7 50xDrive,BEV,standard,,,,,,Driving Assistant Plus,8.0,121400.0
+Lane departure warning,G70,i7 60xDrive,BEV,standard,,,,,,Driving Assistant Plus,8.0,140100.0
+Lane departure warning,G70,i7 M70 xDrive,BEV,standard,,,,,,Driving Assistant Plus,8.0,182400.0
+Lane departure warning,G70,740 xDrive,ICE,standard,,,,,,Driving Assistant Plus,8.0,117900.0
+Launch Control,G60,i5 eDrive40,BEV,not_listed,,,,,,,,70900.0
+Launch Control,G60,i5 xDrive40,BEV,not_listed,,,,,,,,76300.0
+Launch Control,G60,i5 M60 xDrive,BEV,standard,,,,,,M SPORTPAKET PRO,6.0,100200.0
+Launch Control,G60,530e,PHEV,not_listed,,,,,,,,66700.0
+Launch Control,G60,530e xDrive,PHEV,not_listed,,,,,,,,69300.0
+Launch Control,G60,550e xDrive,PHEV,not_listed,,,,,,,,78700.0
+Launch Control,G60,520i,ICE,not_listed,,,,,,,,60000.0
+Launch Control,G60,520d,ICE,not_listed,,,,,,,,62300.0
+Launch Control,G60,520d xDrive,ICE,not_listed,,,,,,,,64900.0
+Launch Control,G60,540d xDrive,ICE,not_listed,,,,,,,,71900.0
+Luggage compartment,F70,116,ICE,optional,200.0,Gepäckraumtrennnetz,413,18.0,False,,,34250.0
+Luggage compartment,F70,120,ICE,optional,200.0,Gepäckraumtrennnetz,413,18.0,False,,,39150.0
+Luggage compartment,F70,123 xDrive,ICE,optional,200.0,Gepäckraumtrennnetz,413,18.0,False,,,45350.0
+Luggage compartment,F70,M135 xDrive,ICE,optional,200.0,Gepäckraumtrennnetz,413,18.0,False,,,57150.0
+Luggage compartment,F70,118d,ICE,optional,200.0,Gepäckraumtrennnetz,413,18.0,False,,,39350.0
+Luggage compartment,F70,120d,ICE,optional,200.0,Gepäckraumtrennnetz,413,18.0,False,,,41750.0
+Manage / pair mobile device (Bluetooth),F70,116,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,34250.0
+Manage / pair mobile device (Bluetooth),F70,120,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39150.0
+Manage / pair mobile device (Bluetooth),F70,123 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,45350.0
+Manage / pair mobile device (Bluetooth),F70,M135 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,57150.0
+Manage / pair mobile device (Bluetooth),F70,118d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39350.0
+Manage / pair mobile device (Bluetooth),F70,120d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,41750.0
+Manage / pair mobile device (Bluetooth),G60,i5 eDrive40,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,70900.0
+Manage / pair mobile device (Bluetooth),G60,i5 xDrive40,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,76300.0
+Manage / pair mobile device (Bluetooth),G60,i5 M60 xDrive,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,100200.0
+Manage / pair mobile device (Bluetooth),G60,530e,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,66700.0
+Manage / pair mobile device (Bluetooth),G60,530e xDrive,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,69300.0
+Manage / pair mobile device (Bluetooth),G60,550e xDrive,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,78700.0
+Manage / pair mobile device (Bluetooth),G60,520i,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,60000.0
+Manage / pair mobile device (Bluetooth),G60,520d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,62300.0
+Manage / pair mobile device (Bluetooth),G60,520d xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,64900.0
+Manage / pair mobile device (Bluetooth),G60,540d xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,71900.0
+Map update,G60,i5 eDrive40,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,70900.0
+Map update,G60,i5 xDrive40,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,76300.0
+Map update,G60,i5 M60 xDrive,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,100200.0
+Map update,G60,530e,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,66700.0
+Map update,G60,530e xDrive,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,69300.0
+Map update,G60,550e xDrive,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,78700.0
+Map update,G60,520i,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,60000.0
+Map update,G60,520d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,62300.0
+Map update,G60,520d xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,64900.0
+Map update,G60,540d xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,71900.0
+"Mobile device, wireless charging",F70,116,ICE,optional,1900.0,PREMIUM PAKET,7EV,16.0,True,,,34250.0
+"Mobile device, wireless charging",F70,120,ICE,optional,1900.0,PREMIUM PAKET,7EV,16.0,True,,,39150.0
+"Mobile device, wireless charging",F70,123 xDrive,ICE,optional,1900.0,PREMIUM PAKET,7EV,16.0,True,,,45350.0
+"Mobile device, wireless charging",F70,M135 xDrive,ICE,optional,1900.0,PREMIUM PAKET,7EV,16.0,True,,,57150.0
+"Mobile device, wireless charging",F70,118d,ICE,optional,1900.0,PREMIUM PAKET,7EV,16.0,True,,,39350.0
+"Mobile device, wireless charging",F70,120d,ICE,optional,1900.0,PREMIUM PAKET,7EV,16.0,True,,,41750.0
+"Mobile device, wireless charging",G60,i5 eDrive40,BEV,standard,,,,,,Wireless Charging Ablage,7.0,70900.0
+"Mobile device, wireless charging",G60,i5 xDrive40,BEV,standard,,,,,,Wireless Charging Ablage,7.0,76300.0
+"Mobile device, wireless charging",G60,i5 M60 xDrive,BEV,standard,,,,,,Wireless Charging Ablage,7.0,100200.0
+"Mobile device, wireless charging",G60,530e,PHEV,standard,,,,,,Wireless Charging Ablage,7.0,66700.0
+"Mobile device, wireless charging",G60,530e xDrive,PHEV,standard,,,,,,Wireless Charging Ablage,7.0,69300.0
+"Mobile device, wireless charging",G60,550e xDrive,PHEV,standard,,,,,,Wireless Charging Ablage,7.0,78700.0
+"Mobile device, wireless charging",G60,520i,ICE,standard,,,,,,Wireless Charging Ablage,7.0,60000.0
+"Mobile device, wireless charging",G60,520d,ICE,standard,,,,,,Wireless Charging Ablage,7.0,62300.0
+"Mobile device, wireless charging",G60,520d xDrive,ICE,standard,,,,,,Wireless Charging Ablage,7.0,64900.0
+"Mobile device, wireless charging",G60,540d xDrive,ICE,standard,,,,,,Wireless Charging Ablage,7.0,71900.0
+"Mobile device, wireless charging",G70,i7 50xDrive,BEV,standard,,,,,,Wireless Charging Ablage,9.0,121400.0
+"Mobile device, wireless charging",G70,i7 60xDrive,BEV,standard,,,,,,Wireless Charging Ablage,9.0,140100.0
+"Mobile device, wireless charging",G70,i7 M70 xDrive,BEV,standard,,,,,,Wireless Charging Ablage,9.0,182400.0
+"Mobile device, wireless charging",G70,740 xDrive,ICE,standard,,,,,,Wireless Charging Ablage,9.0,117900.0
+My Modes / driving experience,F70,116,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,34250.0
+My Modes / driving experience,F70,120,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39150.0
+My Modes / driving experience,F70,123 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,45350.0
+My Modes / driving experience,F70,M135 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,57150.0
+My Modes / driving experience,F70,118d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39350.0
+My Modes / driving experience,F70,120d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,41750.0
+My Modes / driving experience,G70,i7 50xDrive,BEV,standard,,,,,,Fahrerlebnisschalter,7.0,121400.0
+My Modes / driving experience,G70,i7 60xDrive,BEV,standard,,,,,,Fahrerlebnisschalter,7.0,140100.0
+My Modes / driving experience,G70,i7 M70 xDrive,BEV,standard,,,,,,Fahrerlebnisschalter,7.0,182400.0
+My Modes / driving experience,G70,740 xDrive,ICE,standard,,,,,,Fahrerlebnisschalter,7.0,117900.0
+Navigation,F70,116,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,34250.0
+Navigation,F70,120,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39150.0
+Navigation,F70,123 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,45350.0
+Navigation,F70,M135 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,57150.0
+Navigation,F70,118d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39350.0
+Navigation,F70,120d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,41750.0
+Navigation,G60,i5 eDrive40,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,70900.0
+Navigation,G60,i5 xDrive40,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,76300.0
+Navigation,G60,i5 M60 xDrive,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,100200.0
+Navigation,G60,530e,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,66700.0
+Navigation,G60,530e xDrive,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,69300.0
+Navigation,G60,550e xDrive,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,78700.0
+Navigation,G60,520i,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,60000.0
+Navigation,G60,520d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,62300.0
+Navigation,G60,520d xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,64900.0
+Navigation,G60,540d xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,71900.0
+Navigation,G70,i7 50xDrive,BEV,standard,,,,,,BMW Digital Premium (laufzeitbegrenzt),7.0,121400.0
+Navigation,G70,i7 60xDrive,BEV,standard,,,,,,BMW Digital Premium (laufzeitbegrenzt),7.0,140100.0
+Navigation,G70,i7 M70 xDrive,BEV,standard,,,,,,BMW Digital Premium (laufzeitbegrenzt),7.0,182400.0
+Navigation,G70,740 xDrive,ICE,standard,,,,,,BMW Digital Premium (laufzeitbegrenzt),7.0,117900.0
+"Operating concept, operating system",F70,116,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,34250.0
+"Operating concept, operating system",F70,120,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39150.0
+"Operating concept, operating system",F70,123 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,45350.0
+"Operating concept, operating system",F70,M135 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,57150.0
+"Operating concept, operating system",F70,118d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39350.0
+"Operating concept, operating system",F70,120d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,41750.0
+"Operating concept, operating system",G60,i5 eDrive40,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,70900.0
+"Operating concept, operating system",G60,i5 xDrive40,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,76300.0
+"Operating concept, operating system",G60,i5 M60 xDrive,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,100200.0
+"Operating concept, operating system",G60,530e,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,66700.0
+"Operating concept, operating system",G60,530e xDrive,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,69300.0
+"Operating concept, operating system",G60,550e xDrive,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,78700.0
+"Operating concept, operating system",G60,520i,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,60000.0
+"Operating concept, operating system",G60,520d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,62300.0
+"Operating concept, operating system",G60,520d xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,64900.0
+"Operating concept, operating system",G60,540d xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,71900.0
+"Operating concept, operating system",G70,i7 50xDrive,BEV,standard,,,,,,BMW Panoramic iDrive,7.0,121400.0
+"Operating concept, operating system",G70,i7 60xDrive,BEV,standard,,,,,,BMW Panoramic iDrive,7.0,140100.0
+"Operating concept, operating system",G70,i7 M70 xDrive,BEV,standard,,,,,,BMW Panoramic iDrive,7.0,182400.0
+"Operating concept, operating system",G70,740 xDrive,ICE,standard,,,,,,BMW Panoramic iDrive,7.0,117900.0
+"Outer door handle, front",G70,i7 50xDrive,BEV,standard,,,,,,Flächenintegrierte Türgriffe,6.0,121400.0
+"Outer door handle, front",G70,i7 60xDrive,BEV,standard,,,,,,Flächenintegrierte Türgriffe,6.0,140100.0
+"Outer door handle, front",G70,i7 M70 xDrive,BEV,standard,,,,,,Flächenintegrierte Türgriffe,6.0,182400.0
+"Outer door handle, front",G70,740 xDrive,ICE,standard,,,,,,Flächenintegrierte Türgriffe,6.0,117900.0
+"Outer door handle, rear",G70,i7 50xDrive,BEV,standard,,,,,,Flächenintegrierte Türgriffe,6.0,121400.0
+"Outer door handle, rear",G70,i7 60xDrive,BEV,standard,,,,,,Flächenintegrierte Türgriffe,6.0,140100.0
+"Outer door handle, rear",G70,i7 M70 xDrive,BEV,standard,,,,,,Flächenintegrierte Türgriffe,6.0,182400.0
+"Outer door handle, rear",G70,740 xDrive,ICE,standard,,,,,,Flächenintegrierte Türgriffe,6.0,117900.0
+Panel heating,G70,i7 50xDrive,BEV,standard,,,,,,Wärmekomfortpaket,8.0,121400.0
+Panel heating,G70,i7 60xDrive,BEV,standard,,,,,,Wärmekomfortpaket,8.0,140100.0
+Panel heating,G70,i7 M70 xDrive,BEV,standard,,,,,,Wärmekomfortpaket,8.0,182400.0
+Panel heating,G70,740 xDrive,ICE,standard,,,,,,Wärmekomfortpaket,8.0,117900.0
+Panorama glass roof,F70,116,ICE,optional,1180.0,Panorama Glasdach,402,17.0,False,,,34250.0
+Panorama glass roof,F70,120,ICE,optional,1180.0,Panorama Glasdach,402,17.0,False,,,39150.0
+Panorama glass roof,F70,123 xDrive,ICE,optional,1180.0,Panorama Glasdach,402,17.0,False,,,45350.0
+Panorama glass roof,F70,M135 xDrive,ICE,optional,1180.0,Panorama Glasdach,402,17.0,False,,,57150.0
+Panorama glass roof,F70,118d,ICE,optional,1180.0,Panorama Glasdach,402,17.0,False,,,39350.0
+Panorama glass roof,F70,120d,ICE,optional,1180.0,Panorama Glasdach,402,17.0,False,,,41750.0
+Panorama glass roof,G60,i5 eDrive40,BEV,optional,1630.0,Panorama Glasdach inkl. Dachlackierung in Schwarz Hochglanz,402,19.0,False,,,70900.0
+Panorama glass roof,G60,i5 xDrive40,BEV,optional,1630.0,Panorama Glasdach inkl. Dachlackierung in Schwarz Hochglanz,402,19.0,False,,,76300.0
+Panorama glass roof,G60,i5 M60 xDrive,BEV,optional,1630.0,Panorama Glasdach inkl. Dachlackierung in Schwarz Hochglanz,402,19.0,False,,,100200.0
+Panorama glass roof,G60,530e,PHEV,optional,1630.0,Panorama Glasdach inkl. Dachlackierung in Schwarz Hochglanz,402,19.0,False,,,66700.0
+Panorama glass roof,G60,530e xDrive,PHEV,optional,1630.0,Panorama Glasdach inkl. Dachlackierung in Schwarz Hochglanz,402,19.0,False,,,69300.0
+Panorama glass roof,G60,550e xDrive,PHEV,optional,1630.0,Panorama Glasdach inkl. Dachlackierung in Schwarz Hochglanz,402,19.0,False,,,78700.0
+Panorama glass roof,G60,520i,ICE,optional,1630.0,Panorama Glasdach inkl. Dachlackierung in Schwarz Hochglanz,402,19.0,False,,,60000.0
+Panorama glass roof,G60,520d,ICE,optional,1630.0,Panorama Glasdach inkl. Dachlackierung in Schwarz Hochglanz,402,19.0,False,,,62300.0
+Panorama glass roof,G60,520d xDrive,ICE,optional,1630.0,Panorama Glasdach inkl. Dachlackierung in Schwarz Hochglanz,402,19.0,False,,,64900.0
+Panorama glass roof,G60,540d xDrive,ICE,optional,1630.0,Panorama Glasdach inkl. Dachlackierung in Schwarz Hochglanz,402,19.0,False,,,71900.0
+Panorama glass roof,G70,i7 50xDrive,BEV,standard,,,,,,Panorama-Glasdach,6.0,121400.0
+Panorama glass roof,G70,i7 60xDrive,BEV,standard,,,,,,Panorama-Glasdach,6.0,140100.0
+Panorama glass roof,G70,i7 M70 xDrive,BEV,standard,,,,,,Panorama-Glasdach,6.0,182400.0
+Panorama glass roof,G70,740 xDrive,ICE,standard,,,,,,Panorama-Glasdach,6.0,117900.0
+Park Distance Control (PDC),F70,116,ICE,standard,,,,,,Parking Assistant,7.0,34250.0
+Park Distance Control (PDC),F70,120,ICE,standard,,,,,,Parking Assistant,7.0,39150.0
+Park Distance Control (PDC),F70,123 xDrive,ICE,standard,,,,,,Parking Assistant,7.0,45350.0
+Park Distance Control (PDC),F70,M135 xDrive,ICE,standard,,,,,,Parking Assistant,7.0,57150.0
+Park Distance Control (PDC),F70,118d,ICE,standard,,,,,,Parking Assistant,7.0,39350.0
+Park Distance Control (PDC),F70,120d,ICE,standard,,,,,,Parking Assistant,7.0,41750.0
+Park Distance Control (PDC),G60,i5 eDrive40,BEV,standard,,,,,,Parking Assistant,7.0,70900.0
+Park Distance Control (PDC),G60,i5 xDrive40,BEV,standard,,,,,,Parking Assistant,7.0,76300.0
+Park Distance Control (PDC),G60,i5 M60 xDrive,BEV,standard,,,,,,Parking Assistant,7.0,100200.0
+Park Distance Control (PDC),G60,530e,PHEV,standard,,,,,,Parking Assistant,7.0,66700.0
+Park Distance Control (PDC),G60,530e xDrive,PHEV,standard,,,,,,Parking Assistant,7.0,69300.0
+Park Distance Control (PDC),G60,550e xDrive,PHEV,standard,,,,,,Parking Assistant,7.0,78700.0
+Park Distance Control (PDC),G60,520i,ICE,standard,,,,,,Parking Assistant,7.0,60000.0
+Park Distance Control (PDC),G60,520d,ICE,standard,,,,,,Parking Assistant,7.0,62300.0
+Park Distance Control (PDC),G60,520d xDrive,ICE,standard,,,,,,Parking Assistant,7.0,64900.0
+Park Distance Control (PDC),G60,540d xDrive,ICE,standard,,,,,,Parking Assistant,7.0,71900.0
+Park Distance Control (PDC),G70,i7 50xDrive,BEV,standard,,,,,,Parking Assistant,8.0,121400.0
+Park Distance Control (PDC),G70,i7 60xDrive,BEV,standard,,,,,,Parking Assistant,8.0,140100.0
+Park Distance Control (PDC),G70,i7 M70 xDrive,BEV,standard,,,,,,Parking Assistant,8.0,182400.0
+Park Distance Control (PDC),G70,740 xDrive,ICE,standard,,,,,,Parking Assistant,8.0,117900.0
+Parking Assistant,F70,116,ICE,standard,,,,,,Parking Assistant,7.0,34250.0
+Parking Assistant,F70,120,ICE,standard,,,,,,Parking Assistant,7.0,39150.0
+Parking Assistant,F70,123 xDrive,ICE,standard,,,,,,Parking Assistant,7.0,45350.0
+Parking Assistant,F70,M135 xDrive,ICE,standard,,,,,,Parking Assistant,7.0,57150.0
+Parking Assistant,F70,118d,ICE,standard,,,,,,Parking Assistant,7.0,39350.0
+Parking Assistant,F70,120d,ICE,standard,,,,,,Parking Assistant,7.0,41750.0
+Parking Assistant,G60,i5 eDrive40,BEV,standard,,,,,,Parking Assistant,7.0,70900.0
+Parking Assistant,G60,i5 xDrive40,BEV,standard,,,,,,Parking Assistant,7.0,76300.0
+Parking Assistant,G60,i5 M60 xDrive,BEV,standard,,,,,,Parking Assistant,7.0,100200.0
+Parking Assistant,G60,530e,PHEV,standard,,,,,,Parking Assistant,7.0,66700.0
+Parking Assistant,G60,530e xDrive,PHEV,standard,,,,,,Parking Assistant,7.0,69300.0
+Parking Assistant,G60,550e xDrive,PHEV,standard,,,,,,Parking Assistant,7.0,78700.0
+Parking Assistant,G60,520i,ICE,standard,,,,,,Parking Assistant,7.0,60000.0
+Parking Assistant,G60,520d,ICE,standard,,,,,,Parking Assistant,7.0,62300.0
+Parking Assistant,G60,520d xDrive,ICE,standard,,,,,,Parking Assistant,7.0,64900.0
+Parking Assistant,G60,540d xDrive,ICE,standard,,,,,,Parking Assistant,7.0,71900.0
+Parking Assistant,G70,i7 50xDrive,BEV,standard,,,,,,Parking Assistant,8.0,121400.0
+Parking Assistant,G70,i7 60xDrive,BEV,standard,,,,,,Parking Assistant,8.0,140100.0
+Parking Assistant,G70,i7 M70 xDrive,BEV,standard,,,,,,Parking Assistant,8.0,182400.0
+Parking Assistant,G70,740 xDrive,ICE,standard,,,,,,Parking Assistant,8.0,117900.0
+Personal eSIM,G60,i5 eDrive40,BEV,standard,,,,,,Personal eSIM,7.0,70900.0
+Personal eSIM,G60,i5 xDrive40,BEV,standard,,,,,,Personal eSIM,7.0,76300.0
+Personal eSIM,G60,i5 M60 xDrive,BEV,standard,,,,,,Personal eSIM,7.0,100200.0
+Personal eSIM,G60,530e,PHEV,standard,,,,,,Personal eSIM,7.0,66700.0
+Personal eSIM,G60,530e xDrive,PHEV,standard,,,,,,Personal eSIM,7.0,69300.0
+Personal eSIM,G60,550e xDrive,PHEV,standard,,,,,,Personal eSIM,7.0,78700.0
+Personal eSIM,G60,520i,ICE,standard,,,,,,Personal eSIM,7.0,60000.0
+Personal eSIM,G60,520d,ICE,standard,,,,,,Personal eSIM,7.0,62300.0
+Personal eSIM,G60,520d xDrive,ICE,standard,,,,,,Personal eSIM,7.0,64900.0
+Personal eSIM,G60,540d xDrive,ICE,standard,,,,,,Personal eSIM,7.0,71900.0
+Radiator grille,F70,116,ICE,standard,,,,,,M Hochglanz Shadow Line,5.0,34250.0
+Radiator grille,F70,120,ICE,standard,,,,,,M Hochglanz Shadow Line,5.0,39150.0
+Radiator grille,F70,123 xDrive,ICE,standard,,,,,,M Hochglanz Shadow Line,5.0,45350.0
+Radiator grille,F70,M135 xDrive,ICE,standard,,,,,,M Hochglanz Shadow Line,5.0,57150.0
+Radiator grille,F70,118d,ICE,standard,,,,,,M Hochglanz Shadow Line,5.0,39350.0
+Radiator grille,F70,120d,ICE,standard,,,,,,M Hochglanz Shadow Line,5.0,41750.0
+Radiator grille,G70,i7 50xDrive,BEV,standard,,,,,,BMW Niere Iconic,6.0,121400.0
+Radiator grille,G70,i7 60xDrive,BEV,standard,,,,,,BMW Niere Iconic,6.0,140100.0
+Radiator grille,G70,i7 M70 xDrive,BEV,standard,,,,,,BMW Niere Iconic,6.0,182400.0
+Radiator grille,G70,740 xDrive,ICE,standard,,,,,,BMW Niere Iconic,6.0,117900.0
+Radio function,F70,116,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,34250.0
+Radio function,F70,120,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39150.0
+Radio function,F70,123 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,45350.0
+Radio function,F70,M135 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,57150.0
+Radio function,F70,118d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39350.0
+Radio function,F70,120d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,41750.0
+Radio function,G60,i5 eDrive40,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,70900.0
+Radio function,G60,i5 xDrive40,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,76300.0
+Radio function,G60,i5 M60 xDrive,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,100200.0
+Radio function,G60,530e,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,66700.0
+Radio function,G60,530e xDrive,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,69300.0
+Radio function,G60,550e xDrive,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,78700.0
+Radio function,G60,520i,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,60000.0
+Radio function,G60,520d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,62300.0
+Radio function,G60,520d xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,64900.0
+Radio function,G60,540d xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,71900.0
+Radio function,G70,i7 50xDrive,BEV,standard,,,,,,DAB-Tuner,7.0,121400.0
+Radio function,G70,i7 60xDrive,BEV,standard,,,,,,DAB-Tuner,7.0,140100.0
+Radio function,G70,i7 M70 xDrive,BEV,standard,,,,,,DAB-Tuner,7.0,182400.0
+Radio function,G70,740 xDrive,ICE,standard,,,,,,DAB-Tuner,7.0,117900.0
+Rear seat entertainment,G70,i7 50xDrive,BEV,optional,7450.0,EXECUTIVE LOUNGE PAKET,9DB,20.0,True,,,121400.0
+Rear seat entertainment,G70,i7 60xDrive,BEV,optional,7450.0,EXECUTIVE LOUNGE PAKET,9DB,20.0,True,,,140100.0
+Rear seat entertainment,G70,i7 M70 xDrive,BEV,optional,7450.0,EXECUTIVE LOUNGE PAKET,9DB,20.0,True,,,182400.0
+Rear seat entertainment,G70,740 xDrive,ICE,optional,7450.0,EXECUTIVE LOUNGE PAKET,9DB,20.0,True,,,117900.0
+Rear view camera,F70,116,ICE,standard,,,,,,Parking Assistant,7.0,34250.0
+Rear view camera,F70,120,ICE,standard,,,,,,Parking Assistant,7.0,39150.0
+Rear view camera,F70,123 xDrive,ICE,standard,,,,,,Parking Assistant,7.0,45350.0
+Rear view camera,F70,M135 xDrive,ICE,standard,,,,,,Parking Assistant,7.0,57150.0
+Rear view camera,F70,118d,ICE,standard,,,,,,Parking Assistant,7.0,39350.0
+Rear view camera,F70,120d,ICE,standard,,,,,,Parking Assistant,7.0,41750.0
+Rear view camera,G60,i5 eDrive40,BEV,standard,,,,,,Parking Assistant,7.0,70900.0
+Rear view camera,G60,i5 xDrive40,BEV,standard,,,,,,Parking Assistant,7.0,76300.0
+Rear view camera,G60,i5 M60 xDrive,BEV,standard,,,,,,Parking Assistant,7.0,100200.0
+Rear view camera,G60,530e,PHEV,standard,,,,,,Parking Assistant,7.0,66700.0
+Rear view camera,G60,530e xDrive,PHEV,standard,,,,,,Parking Assistant,7.0,69300.0
+Rear view camera,G60,550e xDrive,PHEV,standard,,,,,,Parking Assistant,7.0,78700.0
+Rear view camera,G60,520i,ICE,standard,,,,,,Parking Assistant,7.0,60000.0
+Rear view camera,G60,520d,ICE,standard,,,,,,Parking Assistant,7.0,62300.0
+Rear view camera,G60,520d xDrive,ICE,standard,,,,,,Parking Assistant,7.0,64900.0
+Rear view camera,G60,540d xDrive,ICE,standard,,,,,,Parking Assistant,7.0,71900.0
+Rear view camera,G70,i7 50xDrive,BEV,standard,,,,,,Parking Assistant,8.0,121400.0
+Rear view camera,G70,i7 60xDrive,BEV,standard,,,,,,Parking Assistant,8.0,140100.0
+Rear view camera,G70,i7 M70 xDrive,BEV,standard,,,,,,Parking Assistant,8.0,182400.0
+Rear view camera,G70,740 xDrive,ICE,standard,,,,,,Parking Assistant,8.0,117900.0
+Rear-end collision warning,F70,116,ICE,standard,,,,,,Driving Assistant,7.0,34250.0
+Rear-end collision warning,F70,120,ICE,standard,,,,,,Driving Assistant,7.0,39150.0
+Rear-end collision warning,F70,123 xDrive,ICE,standard,,,,,,Driving Assistant,7.0,45350.0
+Rear-end collision warning,F70,M135 xDrive,ICE,standard,,,,,,Driving Assistant,7.0,57150.0
+Rear-end collision warning,F70,118d,ICE,standard,,,,,,Driving Assistant,7.0,39350.0
+Rear-end collision warning,F70,120d,ICE,standard,,,,,,Driving Assistant,7.0,41750.0
+Rear-end collision warning,G60,i5 eDrive40,BEV,standard,,,,,,Driving Assistant,7.0,70900.0
+Rear-end collision warning,G60,i5 xDrive40,BEV,standard,,,,,,Driving Assistant,7.0,76300.0
+Rear-end collision warning,G60,i5 M60 xDrive,BEV,standard,,,,,,Driving Assistant,7.0,100200.0
+Rear-end collision warning,G60,530e,PHEV,standard,,,,,,Driving Assistant,7.0,66700.0
+Rear-end collision warning,G60,530e xDrive,PHEV,standard,,,,,,Driving Assistant,7.0,69300.0
+Rear-end collision warning,G60,550e xDrive,PHEV,standard,,,,,,Driving Assistant,7.0,78700.0
+Rear-end collision warning,G60,520i,ICE,standard,,,,,,Driving Assistant,7.0,60000.0
+Rear-end collision warning,G60,520d,ICE,standard,,,,,,Driving Assistant,7.0,62300.0
+Rear-end collision warning,G60,520d xDrive,ICE,standard,,,,,,Driving Assistant,7.0,64900.0
+Rear-end collision warning,G60,540d xDrive,ICE,standard,,,,,,Driving Assistant,7.0,71900.0
+Remote 3D View (My BMW App / MINI App),F70,116,ICE,optional,3800.0,INNOVATIONSPAKET,7EW,16.0,True,,,34250.0
+Remote 3D View (My BMW App / MINI App),F70,120,ICE,optional,3800.0,INNOVATIONSPAKET,7EW,16.0,True,,,39150.0
+Remote 3D View (My BMW App / MINI App),F70,123 xDrive,ICE,optional,3800.0,INNOVATIONSPAKET,7EW,16.0,True,,,45350.0
+Remote 3D View (My BMW App / MINI App),F70,M135 xDrive,ICE,optional,3800.0,INNOVATIONSPAKET,7EW,16.0,True,,,57150.0
+Remote 3D View (My BMW App / MINI App),F70,118d,ICE,optional,3800.0,INNOVATIONSPAKET,7EW,16.0,True,,,39350.0
+Remote 3D View (My BMW App / MINI App),F70,120d,ICE,optional,3800.0,INNOVATIONSPAKET,7EW,16.0,True,,,41750.0
+Remote 3D View (My BMW App / MINI App),G60,i5 eDrive40,BEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,70900.0
+Remote 3D View (My BMW App / MINI App),G60,i5 xDrive40,BEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,76300.0
+Remote 3D View (My BMW App / MINI App),G60,i5 M60 xDrive,BEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,100200.0
+Remote 3D View (My BMW App / MINI App),G60,530e,PHEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,66700.0
+Remote 3D View (My BMW App / MINI App),G60,530e xDrive,PHEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,69300.0
+Remote 3D View (My BMW App / MINI App),G60,550e xDrive,PHEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,78700.0
+Remote 3D View (My BMW App / MINI App),G60,520i,ICE,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,60000.0
+Remote 3D View (My BMW App / MINI App),G60,520d,ICE,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,62300.0
+Remote 3D View (My BMW App / MINI App),G60,520d xDrive,ICE,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,64900.0
+Remote 3D View (My BMW App / MINI App),G60,540d xDrive,ICE,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,71900.0
+Remote 3D View (My BMW App / MINI App),G70,i7 50xDrive,BEV,standard,,,,,,Parking Assistant Plus,8.0,121400.0
+Remote 3D View (My BMW App / MINI App),G70,i7 60xDrive,BEV,standard,,,,,,Parking Assistant Plus,8.0,140100.0
+Remote 3D View (My BMW App / MINI App),G70,i7 M70 xDrive,BEV,standard,,,,,,Parking Assistant Plus,8.0,182400.0
+Remote 3D View (My BMW App / MINI App),G70,740 xDrive,ICE,standard,,,,,,Parking Assistant Plus,8.0,117900.0
+Remote Services & Remote Keyless Entry (My BMW App/MINI App),G60,i5 eDrive40,BEV,standard,,,,,,Connected Package Professional,6.0,70900.0
+Remote Services & Remote Keyless Entry (My BMW App/MINI App),G60,i5 xDrive40,BEV,standard,,,,,,Connected Package Professional,6.0,76300.0
+Remote Services & Remote Keyless Entry (My BMW App/MINI App),G60,i5 M60 xDrive,BEV,standard,,,,,,Connected Package Professional,6.0,100200.0
+Remote Services & Remote Keyless Entry (My BMW App/MINI App),G60,530e,PHEV,standard,,,,,,Connected Package Professional,6.0,66700.0
+Remote Services & Remote Keyless Entry (My BMW App/MINI App),G60,530e xDrive,PHEV,standard,,,,,,Connected Package Professional,6.0,69300.0
+Remote Services & Remote Keyless Entry (My BMW App/MINI App),G60,550e xDrive,PHEV,standard,,,,,,Connected Package Professional,6.0,78700.0
+Remote Services & Remote Keyless Entry (My BMW App/MINI App),G60,520i,ICE,standard,,,,,,Connected Package Professional,6.0,60000.0
+Remote Services & Remote Keyless Entry (My BMW App/MINI App),G60,520d,ICE,standard,,,,,,Connected Package Professional,6.0,62300.0
+Remote Services & Remote Keyless Entry (My BMW App/MINI App),G60,520d xDrive,ICE,standard,,,,,,Connected Package Professional,6.0,64900.0
+Remote Services & Remote Keyless Entry (My BMW App/MINI App),G60,540d xDrive,ICE,standard,,,,,,Connected Package Professional,6.0,71900.0
+Remote Software Upgrade/RSU,F70,116,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,34250.0
+Remote Software Upgrade/RSU,F70,120,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39150.0
+Remote Software Upgrade/RSU,F70,123 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,45350.0
+Remote Software Upgrade/RSU,F70,M135 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,57150.0
+Remote Software Upgrade/RSU,F70,118d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39350.0
+Remote Software Upgrade/RSU,F70,120d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,41750.0
+Remote Software Upgrade/RSU,G60,i5 eDrive40,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,70900.0
+Remote Software Upgrade/RSU,G60,i5 xDrive40,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,76300.0
+Remote Software Upgrade/RSU,G60,i5 M60 xDrive,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,100200.0
+Remote Software Upgrade/RSU,G60,530e,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,66700.0
+Remote Software Upgrade/RSU,G60,530e xDrive,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,69300.0
+Remote Software Upgrade/RSU,G60,550e xDrive,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,78700.0
+Remote Software Upgrade/RSU,G60,520i,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,60000.0
+Remote Software Upgrade/RSU,G60,520d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,62300.0
+Remote Software Upgrade/RSU,G60,520d xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,64900.0
+Remote Software Upgrade/RSU,G60,540d xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,71900.0
+Remote controlled parking,F70,116,ICE,not_listed,,,,,,,,34250.0
+Remote controlled parking,F70,120,ICE,optional,250.0,Parking Assistant Professional,5DW,17.0,False,,,39150.0
+Remote controlled parking,F70,123 xDrive,ICE,optional,250.0,Parking Assistant Professional,5DW,17.0,False,,,45350.0
+Remote controlled parking,F70,M135 xDrive,ICE,not_listed,,,,,,,,57150.0
+Remote controlled parking,F70,118d,ICE,not_listed,,,,,,,,39350.0
+Remote controlled parking,F70,120d,ICE,optional,250.0,Parking Assistant Professional,5DW,17.0,False,,,41750.0
+Seat belts,F70,116,ICE,not_listed,,,,,,,,34250.0
+Seat belts,F70,120,ICE,not_listed,,,,,,,,39150.0
+Seat belts,F70,123 xDrive,ICE,not_listed,,,,,,,,45350.0
+Seat belts,F70,M135 xDrive,ICE,optional,3950.0,M TECHNIK PAKET II,33F,16.0,True,,,57150.0
+Seat belts,F70,118d,ICE,not_listed,,,,,,,,39350.0
+Seat belts,F70,120d,ICE,not_listed,,,,,,,,41750.0
+Seat belts,G60,i5 eDrive40,BEV,not_listed,,,,,,,,70900.0
+Seat belts,G60,i5 xDrive40,BEV,not_listed,,,,,,,,76300.0
+Seat belts,G60,i5 M60 xDrive,BEV,standard,,,,,,M SPORTPAKET PRO,6.0,100200.0
+Seat belts,G60,530e,PHEV,not_listed,,,,,,,,66700.0
+Seat belts,G60,530e xDrive,PHEV,not_listed,,,,,,,,69300.0
+Seat belts,G60,550e xDrive,PHEV,not_listed,,,,,,,,78700.0
+Seat belts,G60,520i,ICE,not_listed,,,,,,,,60000.0
+Seat belts,G60,520d,ICE,not_listed,,,,,,,,62300.0
+Seat belts,G60,520d xDrive,ICE,not_listed,,,,,,,,64900.0
+Seat belts,G60,540d xDrive,ICE,not_listed,,,,,,,,71900.0
+Seat belts,G70,i7 50xDrive,BEV,optional,350.0,M Sicherheitsgurte,4GQ,22.0,False,,,121400.0
+Seat belts,G70,i7 60xDrive,BEV,optional,350.0,M Sicherheitsgurte,4GQ,22.0,False,,,140100.0
+Seat belts,G70,i7 M70 xDrive,BEV,optional,350.0,M Sicherheitsgurte,4GQ,22.0,False,,,182400.0
+Seat belts,G70,740 xDrive,ICE,optional,350.0,M Sicherheitsgurte,4GQ,22.0,False,,,117900.0
+Seat massage,G70,i7 50xDrive,BEV,optional,3200.0,CONNOISSEUR PAKET,9DC,20.0,True,,,121400.0
+Seat massage,G70,i7 60xDrive,BEV,optional,3200.0,CONNOISSEUR PAKET,9DC,20.0,True,,,140100.0
+Seat massage,G70,i7 M70 xDrive,BEV,optional,3200.0,CONNOISSEUR PAKET,9DC,20.0,True,,,182400.0
+Seat massage,G70,740 xDrive,ICE,optional,3200.0,CONNOISSEUR PAKET,9DC,20.0,True,,,117900.0
+Seat memory,F70,116,ICE,optional,850.0,"Sitzverstellung, elektrisch, mit Memory",459,18.0,False,,,34250.0
+Seat memory,F70,120,ICE,optional,850.0,"Sitzverstellung, elektrisch, mit Memory",459,18.0,False,,,39150.0
+Seat memory,F70,123 xDrive,ICE,optional,850.0,"Sitzverstellung, elektrisch, mit Memory",459,18.0,False,,,45350.0
+Seat memory,F70,M135 xDrive,ICE,optional,850.0,"Sitzverstellung, elektrisch, mit Memory",459,18.0,False,,,57150.0
+Seat memory,F70,118d,ICE,optional,850.0,"Sitzverstellung, elektrisch, mit Memory",459,18.0,False,,,39350.0
+Seat memory,F70,120d,ICE,optional,850.0,"Sitzverstellung, elektrisch, mit Memory",459,18.0,False,,,41750.0
+Seat memory,G60,i5 eDrive40,BEV,optional,2750.0,COMFORT PAKET,7VB,17.0,True,,,70900.0
+Seat memory,G60,i5 xDrive40,BEV,optional,2750.0,COMFORT PAKET,7VB,17.0,True,,,76300.0
+Seat memory,G60,i5 M60 xDrive,BEV,standard,,,,,,"Sitzverstellung, elektrisch, mit Memory für Fahrersitz",8.0,100200.0
+Seat memory,G60,530e,PHEV,optional,2750.0,COMFORT PAKET,7VB,17.0,True,,,66700.0
+Seat memory,G60,530e xDrive,PHEV,optional,2750.0,COMFORT PAKET,7VB,17.0,True,,,69300.0
+Seat memory,G60,550e xDrive,PHEV,optional,2750.0,COMFORT PAKET,7VB,17.0,True,,,78700.0
+Seat memory,G60,520i,ICE,optional,2750.0,COMFORT PAKET,7VB,17.0,True,,,60000.0
+Seat memory,G60,520d,ICE,optional,2750.0,COMFORT PAKET,7VB,17.0,True,,,62300.0
+Seat memory,G60,520d xDrive,ICE,optional,2750.0,COMFORT PAKET,7VB,17.0,True,,,64900.0
+Seat memory,G60,540d xDrive,ICE,optional,2750.0,COMFORT PAKET,7VB,17.0,True,,,71900.0
+Seat memory,G70,i7 50xDrive,BEV,standard,,,,,,"Sitzverstellung, elektrisch, mit Memory",8.0,121400.0
+Seat memory,G70,i7 60xDrive,BEV,standard,,,,,,"Sitzverstellung, elektrisch, mit Memory",8.0,140100.0
+Seat memory,G70,i7 M70 xDrive,BEV,standard,,,,,,"Sitzverstellung, elektrisch, mit Memory",8.0,182400.0
+Seat memory,G70,740 xDrive,ICE,standard,,,,,,"Sitzverstellung, elektrisch, mit Memory",8.0,117900.0
+"Seating, ventilate / heat",F70,116,ICE,standard,,,,,,Sitzheizung für Fahrer und Beifahrer,5.0,34250.0
+"Seating, ventilate / heat",F70,120,ICE,standard,,,,,,Sitzheizung für Fahrer und Beifahrer,5.0,39150.0
+"Seating, ventilate / heat",F70,123 xDrive,ICE,standard,,,,,,Sitzheizung für Fahrer und Beifahrer,5.0,45350.0
+"Seating, ventilate / heat",F70,M135 xDrive,ICE,standard,,,,,,Sitzheizung für Fahrer und Beifahrer,5.0,57150.0
+"Seating, ventilate / heat",F70,118d,ICE,standard,,,,,,Sitzheizung für Fahrer und Beifahrer,5.0,39350.0
+"Seating, ventilate / heat",F70,120d,ICE,standard,,,,,,Sitzheizung für Fahrer und Beifahrer,5.0,41750.0
+"Seating, ventilate / heat",G60,i5 eDrive40,BEV,standard,,,,,,Sitzheizung für Fahrer und Beifahrer,8.0,70900.0
+"Seating, ventilate / heat",G60,i5 xDrive40,BEV,standard,,,,,,Sitzheizung für Fahrer und Beifahrer,8.0,76300.0
+"Seating, ventilate / heat",G60,i5 M60 xDrive,BEV,standard,,,,,,Sitzheizung für Fahrer und Beifahrer,8.0,100200.0
+"Seating, ventilate / heat",G60,530e,PHEV,standard,,,,,,Sitzheizung für Fahrer und Beifahrer,8.0,66700.0
+"Seating, ventilate / heat",G60,530e xDrive,PHEV,standard,,,,,,Sitzheizung für Fahrer und Beifahrer,8.0,69300.0
+"Seating, ventilate / heat",G60,550e xDrive,PHEV,standard,,,,,,Sitzheizung für Fahrer und Beifahrer,8.0,78700.0
+"Seating, ventilate / heat",G60,520i,ICE,standard,,,,,,Sitzheizung für Fahrer und Beifahrer,8.0,60000.0
+"Seating, ventilate / heat",G60,520d,ICE,standard,,,,,,Sitzheizung für Fahrer und Beifahrer,8.0,62300.0
+"Seating, ventilate / heat",G60,520d xDrive,ICE,standard,,,,,,Sitzheizung für Fahrer und Beifahrer,8.0,64900.0
+"Seating, ventilate / heat",G60,540d xDrive,ICE,standard,,,,,,Sitzheizung für Fahrer und Beifahrer,8.0,71900.0
+"Seating, ventilate / heat",G70,i7 50xDrive,BEV,standard,,,,,,Sitzheizung vorn und hinten,8.0,121400.0
+"Seating, ventilate / heat",G70,i7 60xDrive,BEV,standard,,,,,,Sitzheizung vorn und hinten,8.0,140100.0
+"Seating, ventilate / heat",G70,i7 M70 xDrive,BEV,standard,,,,,,Sitzheizung vorn und hinten,8.0,182400.0
+"Seating, ventilate / heat",G70,740 xDrive,ICE,standard,,,,,,Sitzheizung vorn und hinten,8.0,117900.0
+Seats,F70,116,ICE,standard,,,,,,Seriensitz für Fahrer und Beifahrer,5.0,34250.0
+Seats,F70,120,ICE,standard,,,,,,Seriensitz für Fahrer und Beifahrer,5.0,39150.0
+Seats,F70,123 xDrive,ICE,standard,,,,,,Seriensitz für Fahrer und Beifahrer,5.0,45350.0
+Seats,F70,M135 xDrive,ICE,standard,,,,,,Sportsitze für Fahrer und Beifahrer,5.0,57150.0
+Seats,F70,118d,ICE,standard,,,,,,Seriensitz für Fahrer und Beifahrer,5.0,39350.0
+Seats,F70,120d,ICE,standard,,,,,,Seriensitz für Fahrer und Beifahrer,5.0,41750.0
+Seats,G60,i5 eDrive40,BEV,standard,,,,,,Sportsitze für Fahrer und Beifahrer,8.0,70900.0
+Seats,G60,i5 xDrive40,BEV,standard,,,,,,Sportsitze für Fahrer und Beifahrer,8.0,76300.0
+Seats,G60,i5 M60 xDrive,BEV,standard,,,,,,Sportsitze für Fahrer und Beifahrer,8.0,100200.0
+Seats,G60,530e,PHEV,standard,,,,,,Sportsitze für Fahrer und Beifahrer,8.0,66700.0
+Seats,G60,530e xDrive,PHEV,standard,,,,,,Sportsitze für Fahrer und Beifahrer,8.0,69300.0
+Seats,G60,550e xDrive,PHEV,standard,,,,,,Sportsitze für Fahrer und Beifahrer,8.0,78700.0
+Seats,G60,520i,ICE,standard,,,,,,Sportsitze für Fahrer und Beifahrer,8.0,60000.0
+Seats,G60,520d,ICE,standard,,,,,,Sportsitze für Fahrer und Beifahrer,8.0,62300.0
+Seats,G60,520d xDrive,ICE,standard,,,,,,Sportsitze für Fahrer und Beifahrer,8.0,64900.0
+Seats,G60,540d xDrive,ICE,standard,,,,,,Sportsitze für Fahrer und Beifahrer,8.0,71900.0
+Seats,G70,i7 50xDrive,BEV,standard,,,,,,Multifunktionssitze für Fahrer und Beifahrer,6.0,121400.0
+Seats,G70,i7 60xDrive,BEV,standard,,,,,,Multifunktionssitze für Fahrer und Beifahrer,6.0,140100.0
+Seats,G70,i7 M70 xDrive,BEV,standard,,,,,,Multifunktionssitze für Fahrer und Beifahrer,6.0,182400.0
+Seats,G70,740 xDrive,ICE,standard,,,,,,Multifunktionssitze für Fahrer und Beifahrer,6.0,117900.0
+Shift paddle,F70,116,ICE,optional,0.0,Steptronic Getriebe mit Doppelkupplung und Schaltwippen,2TE,17.0,False,,,34250.0
+Shift paddle,F70,120,ICE,optional,0.0,Steptronic Getriebe mit Doppelkupplung und Schaltwippen,2TE,17.0,False,,,39150.0
+Shift paddle,F70,123 xDrive,ICE,optional,0.0,Steptronic Getriebe mit Doppelkupplung und Schaltwippen,2TE,17.0,False,,,45350.0
+Shift paddle,F70,M135 xDrive,ICE,standard,,,,,,Steptronic Getriebe mit Doppelkupplung und Schaltwippen,6.0,57150.0
+Shift paddle,F70,118d,ICE,optional,0.0,Steptronic Getriebe mit Doppelkupplung und Schaltwippen,2TE,17.0,False,,,39350.0
+Shift paddle,F70,120d,ICE,optional,0.0,Steptronic Getriebe mit Doppelkupplung und Schaltwippen,2TE,17.0,False,,,41750.0
+Shift paddle,G60,i5 eDrive40,BEV,not_listed,,,,,,,,70900.0
+Shift paddle,G60,i5 xDrive40,BEV,not_listed,,,,,,,,76300.0
+Shift paddle,G60,i5 M60 xDrive,BEV,not_listed,,,,,,,,100200.0
+Shift paddle,G60,530e,PHEV,standard,,,,,,Steptronic Getriebe mit Schaltwippen,7.0,66700.0
+Shift paddle,G60,530e xDrive,PHEV,standard,,,,,,Steptronic Getriebe mit Schaltwippen,7.0,69300.0
+Shift paddle,G60,550e xDrive,PHEV,standard,,,,,,Steptronic Getriebe mit Schaltwippen,7.0,78700.0
+Shift paddle,G60,520i,ICE,standard,,,,,,Steptronic Getriebe mit Schaltwippen,7.0,60000.0
+Shift paddle,G60,520d,ICE,standard,,,,,,Steptronic Getriebe mit Schaltwippen,7.0,62300.0
+Shift paddle,G60,520d xDrive,ICE,standard,,,,,,Steptronic Getriebe mit Schaltwippen,7.0,64900.0
+Shift paddle,G60,540d xDrive,ICE,standard,,,,,,Steptronic Getriebe mit Schaltwippen,7.0,71900.0
+Speed Limit Assistant,F70,116,ICE,standard,,,,,,Active Guard,6.0,34250.0
+Speed Limit Assistant,F70,120,ICE,standard,,,,,,Active Guard,6.0,39150.0
+Speed Limit Assistant,F70,123 xDrive,ICE,standard,,,,,,Active Guard,6.0,45350.0
+Speed Limit Assistant,F70,M135 xDrive,ICE,standard,,,,,,Active Guard,6.0,57150.0
+Speed Limit Assistant,F70,118d,ICE,standard,,,,,,Active Guard,6.0,39350.0
+Speed Limit Assistant,F70,120d,ICE,standard,,,,,,Active Guard,6.0,41750.0
+Speed Limit Assistant,G60,i5 eDrive40,BEV,standard,,,,,,Speed Limit Info,7.0,70900.0
+Speed Limit Assistant,G60,i5 xDrive40,BEV,standard,,,,,,Speed Limit Info,7.0,76300.0
+Speed Limit Assistant,G60,i5 M60 xDrive,BEV,standard,,,,,,Speed Limit Info,7.0,100200.0
+Speed Limit Assistant,G60,530e,PHEV,standard,,,,,,Speed Limit Info,7.0,66700.0
+Speed Limit Assistant,G60,530e xDrive,PHEV,standard,,,,,,Speed Limit Info,7.0,69300.0
+Speed Limit Assistant,G60,550e xDrive,PHEV,standard,,,,,,Speed Limit Info,7.0,78700.0
+Speed Limit Assistant,G60,520i,ICE,standard,,,,,,Speed Limit Info,7.0,60000.0
+Speed Limit Assistant,G60,520d,ICE,standard,,,,,,Speed Limit Info,7.0,62300.0
+Speed Limit Assistant,G60,520d xDrive,ICE,standard,,,,,,Speed Limit Info,7.0,64900.0
+Speed Limit Assistant,G60,540d xDrive,ICE,standard,,,,,,Speed Limit Info,7.0,71900.0
+Speed Limit Assistant,G70,i7 50xDrive,BEV,standard,,,,,,Driving Assistant Plus,8.0,121400.0
+Speed Limit Assistant,G70,i7 60xDrive,BEV,standard,,,,,,Driving Assistant Plus,8.0,140100.0
+Speed Limit Assistant,G70,i7 M70 xDrive,BEV,standard,,,,,,Driving Assistant Plus,8.0,182400.0
+Speed Limit Assistant,G70,740 xDrive,ICE,standard,,,,,,Driving Assistant Plus,8.0,117900.0
+Steering,G60,i5 eDrive40,BEV,optional,1990.0,Adaptives Fahrwerk Professional,2VV,18.0,False,,,70900.0
+Steering,G60,i5 xDrive40,BEV,standard,,,,,,Adaptives Fahrwerk Professional,18.0,76300.0
+Steering,G60,i5 M60 xDrive,BEV,standard,,,,,,Adaptives Fahrwerk Professional,18.0,100200.0
+Steering,G60,530e,PHEV,optional,1990.0,Adaptives Fahrwerk Professional,2VV,18.0,False,,,66700.0
+Steering,G60,530e xDrive,PHEV,optional,1990.0,Adaptives Fahrwerk Professional,2VV,18.0,False,,,69300.0
+Steering,G60,550e xDrive,PHEV,standard,,,,,,Adaptives Fahrwerk Professional,18.0,78700.0
+Steering,G60,520i,ICE,optional,1990.0,Adaptives Fahrwerk Professional,2VV,18.0,False,,,60000.0
+Steering,G60,520d,ICE,optional,1990.0,Adaptives Fahrwerk Professional,2VV,18.0,False,,,62300.0
+Steering,G60,520d xDrive,ICE,optional,1990.0,Adaptives Fahrwerk Professional,2VV,18.0,False,,,64900.0
+Steering,G60,540d xDrive,ICE,optional,1990.0,Adaptives Fahrwerk Professional,2VV,18.0,False,,,71900.0
+Steering,G70,i7 50xDrive,BEV,standard,,,,,,Integral-Aktivlenkung,7.0,121400.0
+Steering,G70,i7 60xDrive,BEV,standard,,,,,,Integral-Aktivlenkung,7.0,140100.0
+Steering,G70,i7 M70 xDrive,BEV,standard,,,,,,Integral-Aktivlenkung,7.0,182400.0
+Steering,G70,740 xDrive,ICE,standard,,,,,,Integral-Aktivlenkung,7.0,117900.0
+Steering and lane guide assist,F70,116,ICE,optional,700.0,Driving Assistant Plus,5AT,17.0,False,,,34250.0
+Steering and lane guide assist,F70,120,ICE,optional,700.0,Driving Assistant Plus,5AT,17.0,False,,,39150.0
+Steering and lane guide assist,F70,123 xDrive,ICE,optional,700.0,Driving Assistant Plus,5AT,17.0,False,,,45350.0
+Steering and lane guide assist,F70,M135 xDrive,ICE,optional,700.0,Driving Assistant Plus,5AT,17.0,False,,,57150.0
+Steering and lane guide assist,F70,118d,ICE,optional,700.0,Driving Assistant Plus,5AT,17.0,False,,,39350.0
+Steering and lane guide assist,F70,120d,ICE,optional,700.0,Driving Assistant Plus,5AT,17.0,False,,,41750.0
+Steering and lane guide assist,G60,i5 eDrive40,BEV,optional,1000.0,Driving Assistant Plus,5AT,18.0,False,,,70900.0
+Steering and lane guide assist,G60,i5 xDrive40,BEV,optional,1000.0,Driving Assistant Plus,5AT,18.0,False,,,76300.0
+Steering and lane guide assist,G60,i5 M60 xDrive,BEV,optional,1000.0,Driving Assistant Plus,5AT,18.0,False,,,100200.0
+Steering and lane guide assist,G60,530e,PHEV,optional,1000.0,Driving Assistant Plus,5AT,18.0,False,,,66700.0
+Steering and lane guide assist,G60,530e xDrive,PHEV,optional,1000.0,Driving Assistant Plus,5AT,18.0,False,,,69300.0
+Steering and lane guide assist,G60,550e xDrive,PHEV,optional,1000.0,Driving Assistant Plus,5AT,18.0,False,,,78700.0
+Steering and lane guide assist,G60,520i,ICE,optional,1000.0,Driving Assistant Plus,5AT,18.0,False,,,60000.0
+Steering and lane guide assist,G60,520d,ICE,optional,1000.0,Driving Assistant Plus,5AT,18.0,False,,,62300.0
+Steering and lane guide assist,G60,520d xDrive,ICE,optional,1000.0,Driving Assistant Plus,5AT,18.0,False,,,64900.0
+Steering and lane guide assist,G60,540d xDrive,ICE,optional,1000.0,Driving Assistant Plus,5AT,18.0,False,,,71900.0
+Steering and lane guide assist,G70,i7 50xDrive,BEV,standard,,,,,,Driving Assistant Plus,8.0,121400.0
+Steering and lane guide assist,G70,i7 60xDrive,BEV,standard,,,,,,Driving Assistant Plus,8.0,140100.0
+Steering and lane guide assist,G70,i7 M70 xDrive,BEV,standard,,,,,,Driving Assistant Plus,8.0,182400.0
+Steering and lane guide assist,G70,740 xDrive,ICE,standard,,,,,,Driving Assistant Plus,8.0,117900.0
+Steering wheel,F70,116,ICE,standard,,,,,,Sportlenkrad,5.0,34250.0
+Steering wheel,F70,120,ICE,standard,,,,,,Sportlenkrad,5.0,39150.0
+Steering wheel,F70,123 xDrive,ICE,standard,,,,,,Sportlenkrad,5.0,45350.0
+Steering wheel,F70,M135 xDrive,ICE,standard,,,,,,Sportlenkrad,5.0,57150.0
+Steering wheel,F70,118d,ICE,standard,,,,,,Sportlenkrad,5.0,39350.0
+Steering wheel,F70,120d,ICE,standard,,,,,,Sportlenkrad,5.0,41750.0
+Steering wheel,G60,i5 eDrive40,BEV,not_listed,,,,,,,,70900.0
+Steering wheel,G60,i5 xDrive40,BEV,not_listed,,,,,,,,76300.0
+Steering wheel,G60,i5 M60 xDrive,BEV,standard,,,,,,M Lederlenkrad,8.0,100200.0
+Steering wheel,G60,530e,PHEV,not_listed,,,,,,,,66700.0
+Steering wheel,G60,530e xDrive,PHEV,not_listed,,,,,,,,69300.0
+Steering wheel,G60,550e xDrive,PHEV,not_listed,,,,,,,,78700.0
+Steering wheel,G60,520i,ICE,not_listed,,,,,,,,60000.0
+Steering wheel,G60,520d,ICE,not_listed,,,,,,,,62300.0
+Steering wheel,G60,520d xDrive,ICE,not_listed,,,,,,,,64900.0
+Steering wheel,G60,540d xDrive,ICE,not_listed,,,,,,,,71900.0
+Steering wheel,G70,i7 50xDrive,BEV,standard,,,,,,Lenksäulenverstellung,6.0,121400.0
+Steering wheel,G70,i7 60xDrive,BEV,standard,,,,,,Lenksäulenverstellung,6.0,140100.0
+Steering wheel,G70,i7 M70 xDrive,BEV,standard,,,,,,Lenksäulenverstellung,6.0,182400.0
+Steering wheel,G70,740 xDrive,ICE,standard,,,,,,Lenksäulenverstellung,6.0,117900.0
+Storage compartments,F70,116,ICE,standard,,,,,,Armauflage vorne mit Ablagefach,5.0,34250.0
+Storage compartments,F70,120,ICE,standard,,,,,,Armauflage vorne mit Ablagefach,5.0,39150.0
+Storage compartments,F70,123 xDrive,ICE,standard,,,,,,Armauflage vorne mit Ablagefach,5.0,45350.0
+Storage compartments,F70,M135 xDrive,ICE,standard,,,,,,Armauflage vorne mit Ablagefach,5.0,57150.0
+Storage compartments,F70,118d,ICE,standard,,,,,,Armauflage vorne mit Ablagefach,5.0,39350.0
+Storage compartments,F70,120d,ICE,standard,,,,,,Armauflage vorne mit Ablagefach,5.0,41750.0
+Storage compartments,G70,i7 50xDrive,BEV,standard,,,,,,Ablagemöglichkeiten,6.0,121400.0
+Storage compartments,G70,i7 60xDrive,BEV,standard,,,,,,Ablagemöglichkeiten,6.0,140100.0
+Storage compartments,G70,i7 M70 xDrive,BEV,standard,,,,,,Ablagemöglichkeiten,6.0,182400.0
+Storage compartments,G70,740 xDrive,ICE,standard,,,,,,Ablagemöglichkeiten,6.0,117900.0
+Sun protection,F70,116,ICE,optional,360.0,Sonnenschutzverglasung,420,18.0,False,,,34250.0
+Sun protection,F70,120,ICE,optional,360.0,Sonnenschutzverglasung,420,18.0,False,,,39150.0
+Sun protection,F70,123 xDrive,ICE,optional,360.0,Sonnenschutzverglasung,420,18.0,False,,,45350.0
+Sun protection,F70,M135 xDrive,ICE,standard,,,,,,Sonnenschutzverglasung,6.0,57150.0
+Sun protection,F70,118d,ICE,optional,360.0,Sonnenschutzverglasung,420,18.0,False,,,39350.0
+Sun protection,F70,120d,ICE,optional,360.0,Sonnenschutzverglasung,420,18.0,False,,,41750.0
+Sun protection,G60,i5 eDrive40,BEV,optional,480.0,Sonnenschutzverglasung,420,19.0,False,,,70900.0
+Sun protection,G60,i5 xDrive40,BEV,optional,480.0,Sonnenschutzverglasung,420,19.0,False,,,76300.0
+Sun protection,G60,i5 M60 xDrive,BEV,standard,,,,,,Sonnenschutzverglasung,19.0,100200.0
+Sun protection,G60,530e,PHEV,optional,480.0,Sonnenschutzverglasung,420,19.0,False,,,66700.0
+Sun protection,G60,530e xDrive,PHEV,optional,480.0,Sonnenschutzverglasung,420,19.0,False,,,69300.0
+Sun protection,G60,550e xDrive,PHEV,optional,480.0,Sonnenschutzverglasung,420,19.0,False,,,78700.0
+Sun protection,G60,520i,ICE,optional,480.0,Sonnenschutzverglasung,420,19.0,False,,,60000.0
+Sun protection,G60,520d,ICE,optional,480.0,Sonnenschutzverglasung,420,19.0,False,,,62300.0
+Sun protection,G60,520d xDrive,ICE,optional,480.0,Sonnenschutzverglasung,420,19.0,False,,,64900.0
+Sun protection,G60,540d xDrive,ICE,optional,480.0,Sonnenschutzverglasung,420,19.0,False,,,71900.0
+Sun protection,G70,i7 50xDrive,BEV,standard,,,,,,Sonnenschutzrollos,9.0,121400.0
+Sun protection,G70,i7 60xDrive,BEV,standard,,,,,,Sonnenschutzrollos,9.0,140100.0
+Sun protection,G70,i7 M70 xDrive,BEV,standard,,,,,,Sonnenschutzverglasung,6.0,182400.0
+Sun protection,G70,740 xDrive,ICE,standard,,,,,,Sonnenschutzrollos,9.0,117900.0
+Surround View,G60,i5 eDrive40,BEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,70900.0
+Surround View,G60,i5 xDrive40,BEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,76300.0
+Surround View,G60,i5 M60 xDrive,BEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,100200.0
+Surround View,G60,530e,PHEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,66700.0
+Surround View,G60,530e xDrive,PHEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,69300.0
+Surround View,G60,550e xDrive,PHEV,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,78700.0
+Surround View,G60,520i,ICE,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,60000.0
+Surround View,G60,520d,ICE,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,62300.0
+Surround View,G60,520d xDrive,ICE,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,64900.0
+Surround View,G60,540d xDrive,ICE,optional,2400.0,INNOVATIONSPAKET,7EW,17.0,True,,,71900.0
+Surround View,G70,i7 50xDrive,BEV,standard,,,,,,Parking Assistant Plus,8.0,121400.0
+Surround View,G70,i7 60xDrive,BEV,standard,,,,,,Parking Assistant Plus,8.0,140100.0
+Surround View,G70,i7 M70 xDrive,BEV,standard,,,,,,Parking Assistant Plus,8.0,182400.0
+Surround View,G70,740 xDrive,ICE,standard,,,,,,Parking Assistant Plus,8.0,117900.0
+Teleservices,F70,116,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,34250.0
+Teleservices,F70,120,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39150.0
+Teleservices,F70,123 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,45350.0
+Teleservices,F70,M135 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,57150.0
+Teleservices,F70,118d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39350.0
+Teleservices,F70,120d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,41750.0
+Teleservices,G60,i5 eDrive40,BEV,standard,,,,,,Teleservices,6.0,70900.0
+Teleservices,G60,i5 xDrive40,BEV,standard,,,,,,Teleservices,6.0,76300.0
+Teleservices,G60,i5 M60 xDrive,BEV,standard,,,,,,Teleservices,6.0,100200.0
+Teleservices,G60,530e,PHEV,standard,,,,,,Teleservices,6.0,66700.0
+Teleservices,G60,530e xDrive,PHEV,standard,,,,,,Teleservices,6.0,69300.0
+Teleservices,G60,550e xDrive,PHEV,standard,,,,,,Teleservices,6.0,78700.0
+Teleservices,G60,520i,ICE,standard,,,,,,Teleservices,6.0,60000.0
+Teleservices,G60,520d,ICE,standard,,,,,,Teleservices,6.0,62300.0
+Teleservices,G60,520d xDrive,ICE,standard,,,,,,Teleservices,6.0,64900.0
+Teleservices,G60,540d xDrive,ICE,standard,,,,,,Teleservices,6.0,71900.0
+Teleservices,G70,i7 50xDrive,BEV,standard,,,,,,Gesetzlicher Notruf inkl. Teleservices und BMW Unfallhilfe,8.0,121400.0
+Teleservices,G70,i7 60xDrive,BEV,standard,,,,,,Gesetzlicher Notruf inkl. Teleservices und BMW Unfallhilfe,8.0,140100.0
+Teleservices,G70,i7 M70 xDrive,BEV,standard,,,,,,Gesetzlicher Notruf inkl. Teleservices und BMW Unfallhilfe,8.0,182400.0
+Teleservices,G70,740 xDrive,ICE,standard,,,,,,Gesetzlicher Notruf inkl. Teleservices und BMW Unfallhilfe,8.0,117900.0
+Through-loading facility,F70,116,ICE,optional,200.0,"Fondsitzlehne, Teilung 40 : 20 : 40",465,18.0,False,,,34250.0
+Through-loading facility,F70,120,ICE,optional,200.0,"Fondsitzlehne, Teilung 40 : 20 : 40",465,18.0,False,,,39150.0
+Through-loading facility,F70,123 xDrive,ICE,optional,200.0,"Fondsitzlehne, Teilung 40 : 20 : 40",465,18.0,False,,,45350.0
+Through-loading facility,F70,M135 xDrive,ICE,optional,200.0,"Fondsitzlehne, Teilung 40 : 20 : 40",465,18.0,False,,,57150.0
+Through-loading facility,F70,118d,ICE,optional,200.0,"Fondsitzlehne, Teilung 40 : 20 : 40",465,18.0,False,,,39350.0
+Through-loading facility,F70,120d,ICE,optional,200.0,"Fondsitzlehne, Teilung 40 : 20 : 40",465,18.0,False,,,41750.0
+Through-loading facility,G60,i5 eDrive40,BEV,standard,,,,,,Durchladesystem 40:20:40,8.0,70900.0
+Through-loading facility,G60,i5 xDrive40,BEV,standard,,,,,,Durchladesystem 40:20:40,8.0,76300.0
+Through-loading facility,G60,i5 M60 xDrive,BEV,standard,,,,,,Durchladesystem 40:20:40,8.0,100200.0
+Through-loading facility,G60,530e,PHEV,standard,,,,,,Durchladesystem 40:20:40,8.0,66700.0
+Through-loading facility,G60,530e xDrive,PHEV,standard,,,,,,Durchladesystem 40:20:40,8.0,69300.0
+Through-loading facility,G60,550e xDrive,PHEV,standard,,,,,,Durchladesystem 40:20:40,8.0,78700.0
+Through-loading facility,G60,520i,ICE,standard,,,,,,Durchladesystem 40:20:40,8.0,60000.0
+Through-loading facility,G60,520d,ICE,standard,,,,,,Durchladesystem 40:20:40,8.0,62300.0
+Through-loading facility,G60,520d xDrive,ICE,standard,,,,,,Durchladesystem 40:20:40,8.0,64900.0
+Through-loading facility,G60,540d xDrive,ICE,standard,,,,,,Durchladesystem 40:20:40,8.0,71900.0
+Through-loading facility,G70,i7 50xDrive,BEV,standard,,,,,,Durchladesystem,9.0,121400.0
+Through-loading facility,G70,i7 60xDrive,BEV,standard,,,,,,Durchladesystem,9.0,140100.0
+Through-loading facility,G70,i7 M70 xDrive,BEV,standard,,,,,,Durchladesystem,9.0,182400.0
+Through-loading facility,G70,740 xDrive,ICE,standard,,,,,,Durchladesystem,9.0,117900.0
+Tire pressure control,F70,116,ICE,standard,,,,,,Reifendruck-Kontrolle,6.0,34250.0
+Tire pressure control,F70,120,ICE,standard,,,,,,Reifendruck-Kontrolle,6.0,39150.0
+Tire pressure control,F70,123 xDrive,ICE,standard,,,,,,Reifendruck-Kontrolle,6.0,45350.0
+Tire pressure control,F70,M135 xDrive,ICE,standard,,,,,,Reifendruck-Kontrolle,6.0,57150.0
+Tire pressure control,F70,118d,ICE,standard,,,,,,Reifendruck-Kontrolle,6.0,39350.0
+Tire pressure control,F70,120d,ICE,standard,,,,,,Reifendruck-Kontrolle,6.0,41750.0
+Tire pressure control,G60,i5 eDrive40,BEV,standard,,,,,,Reifendruck-Kontrolle,7.0,70900.0
+Tire pressure control,G60,i5 xDrive40,BEV,standard,,,,,,Reifendruck-Kontrolle,7.0,76300.0
+Tire pressure control,G60,i5 M60 xDrive,BEV,standard,,,,,,Reifendruck-Kontrolle,7.0,100200.0
+Tire pressure control,G60,530e,PHEV,standard,,,,,,Reifendruck-Kontrolle,7.0,66700.0
+Tire pressure control,G60,530e xDrive,PHEV,standard,,,,,,Reifendruck-Kontrolle,7.0,69300.0
+Tire pressure control,G60,550e xDrive,PHEV,standard,,,,,,Reifendruck-Kontrolle,7.0,78700.0
+Tire pressure control,G60,520i,ICE,standard,,,,,,Reifendruck-Kontrolle,7.0,60000.0
+Tire pressure control,G60,520d,ICE,standard,,,,,,Reifendruck-Kontrolle,7.0,62300.0
+Tire pressure control,G60,520d xDrive,ICE,standard,,,,,,Reifendruck-Kontrolle,7.0,64900.0
+Tire pressure control,G60,540d xDrive,ICE,standard,,,,,,Reifendruck-Kontrolle,7.0,71900.0
+Tire pressure control,G70,i7 50xDrive,BEV,standard,,,,,,Reifendruck-Kontrolle,8.0,121400.0
+Tire pressure control,G70,i7 60xDrive,BEV,standard,,,,,,Reifendruck-Kontrolle,8.0,140100.0
+Tire pressure control,G70,i7 M70 xDrive,BEV,standard,,,,,,Reifendruck-Kontrolle,8.0,182400.0
+Tire pressure control,G70,740 xDrive,ICE,standard,,,,,,Reifendruck-Kontrolle,8.0,117900.0
+Tirefit,F70,116,ICE,standard,,,,,,Reifenpannenset Plus,6.0,34250.0
+Tirefit,F70,120,ICE,standard,,,,,,Reifenpannenset Plus,6.0,39150.0
+Tirefit,F70,123 xDrive,ICE,standard,,,,,,Reifenpannenset Plus,6.0,45350.0
+Tirefit,F70,M135 xDrive,ICE,standard,,,,,,Reifenpannenset Plus,6.0,57150.0
+Tirefit,F70,118d,ICE,standard,,,,,,Reifenpannenset Plus,6.0,39350.0
+Tirefit,F70,120d,ICE,standard,,,,,,Reifenpannenset Plus,6.0,41750.0
+Tirefit,G60,i5 eDrive40,BEV,standard,,,,,,Reifenreparatur Set oder Reifenpannenset Plus,7.0,70900.0
+Tirefit,G60,i5 xDrive40,BEV,standard,,,,,,Reifenreparatur Set oder Reifenpannenset Plus,7.0,76300.0
+Tirefit,G60,i5 M60 xDrive,BEV,standard,,,,,,Reifenreparatur Set oder Reifenpannenset Plus,7.0,100200.0
+Tirefit,G60,530e,PHEV,standard,,,,,,Reifenreparatur Set oder Reifenpannenset Plus,7.0,66700.0
+Tirefit,G60,530e xDrive,PHEV,standard,,,,,,Reifenreparatur Set oder Reifenpannenset Plus,7.0,69300.0
+Tirefit,G60,550e xDrive,PHEV,standard,,,,,,Reifenreparatur Set oder Reifenpannenset Plus,7.0,78700.0
+Tirefit,G60,520i,ICE,standard,,,,,,Reifenreparatur Set oder Reifenpannenset Plus,7.0,60000.0
+Tirefit,G60,520d,ICE,standard,,,,,,Reifenreparatur Set oder Reifenpannenset Plus,7.0,62300.0
+Tirefit,G60,520d xDrive,ICE,standard,,,,,,Reifenreparatur Set oder Reifenpannenset Plus,7.0,64900.0
+Tirefit,G60,540d xDrive,ICE,standard,,,,,,Reifenreparatur Set oder Reifenpannenset Plus,7.0,71900.0
+Tirefit,G70,i7 50xDrive,BEV,standard,,,,,,Reifenpannenset Plus,8.0,121400.0
+Tirefit,G70,i7 60xDrive,BEV,standard,,,,,,Reifenpannenset Plus,8.0,140100.0
+Tirefit,G70,i7 M70 xDrive,BEV,standard,,,,,,Reifenpannenset Plus,8.0,182400.0
+Tirefit,G70,740 xDrive,ICE,standard,,,,,,Reifenpannenset Plus,8.0,117900.0
+Touch Command,G70,i7 50xDrive,BEV,standard,,,,,,BMW Touch Command,8.0,121400.0
+Touch Command,G70,i7 60xDrive,BEV,standard,,,,,,BMW Touch Command,8.0,140100.0
+Touch Command,G70,i7 M70 xDrive,BEV,standard,,,,,,BMW Touch Command,8.0,182400.0
+Touch Command,G70,740 xDrive,ICE,standard,,,,,,BMW Touch Command,8.0,117900.0
+"Touch screen, operation",F70,116,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,34250.0
+"Touch screen, operation",F70,120,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39150.0
+"Touch screen, operation",F70,123 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,45350.0
+"Touch screen, operation",F70,M135 xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,57150.0
+"Touch screen, operation",F70,118d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,39350.0
+"Touch screen, operation",F70,120d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,41750.0
+"Touch screen, operation",G60,i5 eDrive40,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,70900.0
+"Touch screen, operation",G60,i5 xDrive40,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,76300.0
+"Touch screen, operation",G60,i5 M60 xDrive,BEV,standard,,,,,,BMW Live Cockpit Plus,6.0,100200.0
+"Touch screen, operation",G60,530e,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,66700.0
+"Touch screen, operation",G60,530e xDrive,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,69300.0
+"Touch screen, operation",G60,550e xDrive,PHEV,standard,,,,,,BMW Live Cockpit Plus,6.0,78700.0
+"Touch screen, operation",G60,520i,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,60000.0
+"Touch screen, operation",G60,520d,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,62300.0
+"Touch screen, operation",G60,520d xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,64900.0
+"Touch screen, operation",G60,540d xDrive,ICE,standard,,,,,,BMW Live Cockpit Plus,6.0,71900.0
+"Touch screen, operation",G70,i7 50xDrive,BEV,standard,,,,,,BMW Panoramic iDrive,7.0,121400.0
+"Touch screen, operation",G70,i7 60xDrive,BEV,standard,,,,,,BMW Panoramic iDrive,7.0,140100.0
+"Touch screen, operation",G70,i7 M70 xDrive,BEV,standard,,,,,,BMW Panoramic iDrive,7.0,182400.0
+"Touch screen, operation",G70,740 xDrive,ICE,standard,,,,,,BMW Panoramic iDrive,7.0,117900.0
+Traffic Jam Assistant,F70,116,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,34250.0
+Traffic Jam Assistant,F70,120,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,39150.0
+Traffic Jam Assistant,F70,123 xDrive,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,45350.0
+Traffic Jam Assistant,F70,M135 xDrive,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,57150.0
+Traffic Jam Assistant,F70,118d,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,39350.0
+Traffic Jam Assistant,F70,120d,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,41750.0
+Traffic Light And Sign Warning,F70,116,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,34250.0
+Traffic Light And Sign Warning,F70,120,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,39150.0
+Traffic Light And Sign Warning,F70,123 xDrive,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,45350.0
+Traffic Light And Sign Warning,F70,M135 xDrive,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,57150.0
+Traffic Light And Sign Warning,F70,118d,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,39350.0
+Traffic Light And Sign Warning,F70,120d,ICE,optional,2280.0,Driving Assistant Professional,5AU,17.0,False,,,41750.0
+Traffic Light And Sign Warning,G60,i5 eDrive40,BEV,optional,2100.0,Driving Assistant Professional,5AU,18.0,False,,,70900.0
+Traffic Light And Sign Warning,G60,i5 xDrive40,BEV,optional,2100.0,Driving Assistant Professional,5AU,18.0,False,,,76300.0
+Traffic Light And Sign Warning,G60,i5 M60 xDrive,BEV,optional,2100.0,Driving Assistant Professional,5AU,18.0,False,,,100200.0
+Traffic Light And Sign Warning,G60,530e,PHEV,optional,2100.0,Driving Assistant Professional,5AU,18.0,False,,,66700.0
+Traffic Light And Sign Warning,G60,530e xDrive,PHEV,optional,2100.0,Driving Assistant Professional,5AU,18.0,False,,,69300.0
+Traffic Light And Sign Warning,G60,550e xDrive,PHEV,optional,2100.0,Driving Assistant Professional,5AU,18.0,False,,,78700.0
+Traffic Light And Sign Warning,G60,520i,ICE,optional,2100.0,Driving Assistant Professional,5AU,18.0,False,,,60000.0
+Traffic Light And Sign Warning,G60,520d,ICE,optional,2100.0,Driving Assistant Professional,5AU,18.0,False,,,62300.0
+Traffic Light And Sign Warning,G60,520d xDrive,ICE,optional,2100.0,Driving Assistant Professional,5AU,18.0,False,,,64900.0
+Traffic Light And Sign Warning,G60,540d xDrive,ICE,optional,2100.0,Driving Assistant Professional,5AU,18.0,False,,,71900.0
+Traffic Light And Sign Warning,G70,i7 50xDrive,BEV,optional,1980.0,Autobahn- & City-Assistent (laufzeitbegrenzt),5BB,22.0,False,,,121400.0
+Traffic Light And Sign Warning,G70,i7 60xDrive,BEV,optional,1980.0,Autobahn- & City-Assistent (laufzeitbegrenzt),5BB,22.0,False,,,140100.0
+Traffic Light And Sign Warning,G70,i7 M70 xDrive,BEV,optional,1980.0,Autobahn- & City-Assistent (laufzeitbegrenzt),5BB,22.0,False,,,182400.0
+Traffic Light And Sign Warning,G70,740 xDrive,ICE,optional,1980.0,Autobahn- & City-Assistent (laufzeitbegrenzt),5BB,22.0,False,,,117900.0
+"Trailer, use",F70,116,ICE,standard,,,,,,Parking Assistant,7.0,34250.0
+"Trailer, use",F70,120,ICE,standard,,,,,,Parking Assistant,7.0,39150.0
+"Trailer, use",F70,123 xDrive,ICE,standard,,,,,,Parking Assistant,7.0,45350.0
+"Trailer, use",F70,M135 xDrive,ICE,standard,,,,,,Parking Assistant,7.0,57150.0
+"Trailer, use",F70,118d,ICE,standard,,,,,,Parking Assistant,7.0,39350.0
+"Trailer, use",F70,120d,ICE,standard,,,,,,Parking Assistant,7.0,41750.0
+"Trailer, use",G60,i5 eDrive40,BEV,standard,,,,,,Parking Assistant,7.0,70900.0
+"Trailer, use",G60,i5 xDrive40,BEV,standard,,,,,,Parking Assistant,7.0,76300.0
+"Trailer, use",G60,i5 M60 xDrive,BEV,standard,,,,,,Parking Assistant,7.0,100200.0
+"Trailer, use",G60,530e,PHEV,standard,,,,,,Parking Assistant,7.0,66700.0
+"Trailer, use",G60,530e xDrive,PHEV,standard,,,,,,Parking Assistant,7.0,69300.0
+"Trailer, use",G60,550e xDrive,PHEV,standard,,,,,,Parking Assistant,7.0,78700.0
+"Trailer, use",G60,520i,ICE,standard,,,,,,Parking Assistant,7.0,60000.0
+"Trailer, use",G60,520d,ICE,standard,,,,,,Parking Assistant,7.0,62300.0
+"Trailer, use",G60,520d xDrive,ICE,standard,,,,,,Parking Assistant,7.0,64900.0
+"Trailer, use",G60,540d xDrive,ICE,standard,,,,,,Parking Assistant,7.0,71900.0
+"Trailer, use",G70,i7 50xDrive,BEV,optional,1350.0,Anhängerkupplung,3AC,22.0,False,,,121400.0
+"Trailer, use",G70,i7 60xDrive,BEV,optional,1350.0,Anhängerkupplung,3AC,22.0,False,,,140100.0
+"Trailer, use",G70,i7 M70 xDrive,BEV,not_listed,,,,,,,,182400.0
+"Trailer, use",G70,740 xDrive,ICE,optional,1350.0,Anhängerkupplung,3AC,22.0,False,,,117900.0
+Transmission,F70,116,ICE,standard,,,,,,Steptronic Getriebe mit Doppelkupplung,6.0,34250.0
+Transmission,F70,120,ICE,standard,,,,,,Steptronic Getriebe mit Doppelkupplung,6.0,39150.0
+Transmission,F70,123 xDrive,ICE,standard,,,,,,Steptronic Getriebe mit Doppelkupplung,6.0,45350.0
+Transmission,F70,M135 xDrive,ICE,standard,,,,,,Steptronic Getriebe mit Doppelkupplung und Schaltwippen,6.0,57150.0
+Transmission,F70,118d,ICE,standard,,,,,,Steptronic Getriebe mit Doppelkupplung,6.0,39350.0
+Transmission,F70,120d,ICE,standard,,,,,,Steptronic Getriebe mit Doppelkupplung,6.0,41750.0
+Transmission,G60,i5 eDrive40,BEV,not_listed,,,,,,,,70900.0
+Transmission,G60,i5 xDrive40,BEV,not_listed,,,,,,,,76300.0
+Transmission,G60,i5 M60 xDrive,BEV,not_listed,,,,,,,,100200.0
+Transmission,G60,530e,PHEV,standard,,,,,,Steptronic Getriebe mit Schaltwippen,7.0,66700.0
+Transmission,G60,530e xDrive,PHEV,standard,,,,,,Steptronic Getriebe mit Schaltwippen,7.0,69300.0
+Transmission,G60,550e xDrive,PHEV,standard,,,,,,Steptronic Getriebe mit Schaltwippen,7.0,78700.0
+Transmission,G60,520i,ICE,standard,,,,,,Steptronic Getriebe mit Schaltwippen,7.0,60000.0
+Transmission,G60,520d,ICE,standard,,,,,,Steptronic Getriebe mit Schaltwippen,7.0,62300.0
+Transmission,G60,520d xDrive,ICE,standard,,,,,,Steptronic Getriebe mit Schaltwippen,7.0,64900.0
+Transmission,G60,540d xDrive,ICE,standard,,,,,,Steptronic Getriebe mit Schaltwippen,7.0,71900.0
+Transmission,G70,i7 50xDrive,BEV,not_listed,,,,,,,,121400.0
+Transmission,G70,i7 60xDrive,BEV,not_listed,,,,,,,,140100.0
+Transmission,G70,i7 M70 xDrive,BEV,not_listed,,,,,,,,182400.0
+Transmission,G70,740 xDrive,ICE,standard,,,,,,Steptronic Sport Getriebe Steptronic Sport Getriebe,7.0,117900.0
+"Trunk lid, open / close",F70,116,ICE,optional,450.0,Automatische Heckklappenbetätigung,316,18.0,False,,,34250.0
+"Trunk lid, open / close",F70,120,ICE,optional,450.0,Automatische Heckklappenbetätigung,316,18.0,False,,,39150.0
+"Trunk lid, open / close",F70,123 xDrive,ICE,optional,450.0,Automatische Heckklappenbetätigung,316,18.0,False,,,45350.0
+"Trunk lid, open / close",F70,M135 xDrive,ICE,optional,450.0,Automatische Heckklappenbetätigung,316,18.0,False,,,57150.0
+"Trunk lid, open / close",F70,118d,ICE,optional,450.0,Automatische Heckklappenbetätigung,316,18.0,False,,,39350.0
+"Trunk lid, open / close",F70,120d,ICE,optional,450.0,Automatische Heckklappenbetätigung,316,18.0,False,,,41750.0
+"Trunk lid, open / close",G60,i5 eDrive40,BEV,optional,1900.0,TRAVEL PAKET,7LK,17.0,True,,,70900.0
+"Trunk lid, open / close",G60,i5 xDrive40,BEV,optional,1900.0,TRAVEL PAKET,7LK,17.0,True,,,76300.0
+"Trunk lid, open / close",G60,i5 M60 xDrive,BEV,optional,1900.0,TRAVEL PAKET,7LK,17.0,True,,,100200.0
+"Trunk lid, open / close",G60,530e,PHEV,optional,1900.0,TRAVEL PAKET,7LK,17.0,True,,,66700.0
+"Trunk lid, open / close",G60,530e xDrive,PHEV,optional,1900.0,TRAVEL PAKET,7LK,17.0,True,,,69300.0
+"Trunk lid, open / close",G60,550e xDrive,PHEV,optional,1900.0,TRAVEL PAKET,7LK,17.0,True,,,78700.0
+"Trunk lid, open / close",G60,520i,ICE,optional,1900.0,TRAVEL PAKET,7LK,17.0,True,,,60000.0
+"Trunk lid, open / close",G60,520d,ICE,optional,1900.0,TRAVEL PAKET,7LK,17.0,True,,,62300.0
+"Trunk lid, open / close",G60,520d xDrive,ICE,optional,1900.0,TRAVEL PAKET,7LK,17.0,True,,,64900.0
+"Trunk lid, open / close",G60,540d xDrive,ICE,optional,1900.0,TRAVEL PAKET,7LK,17.0,True,,,71900.0
+"Trunk lid, open / close",G70,i7 50xDrive,BEV,standard,,,,,,Automatische Heckklappenbetätigung,9.0,121400.0
+"Trunk lid, open / close",G70,i7 60xDrive,BEV,standard,,,,,,Automatische Heckklappenbetätigung,9.0,140100.0
+"Trunk lid, open / close",G70,i7 M70 xDrive,BEV,standard,,,,,,Automatische Heckklappenbetätigung,9.0,182400.0
+"Trunk lid, open / close",G70,740 xDrive,ICE,standard,,,,,,Automatische Heckklappenbetätigung,9.0,117900.0
+USB port,F70,116,ICE,standard,,,,,,2 USB-C Anschlüsse in Mittelkonsole vorne (Ladefunktion),5.0,34250.0
+USB port,F70,120,ICE,standard,,,,,,2 USB-C Anschlüsse in Mittelkonsole vorne (Ladefunktion),5.0,39150.0
+USB port,F70,123 xDrive,ICE,standard,,,,,,2 USB-C Anschlüsse in Mittelkonsole vorne (Ladefunktion),5.0,45350.0
+USB port,F70,M135 xDrive,ICE,standard,,,,,,2 USB-C Anschlüsse in Mittelkonsole vorne (Ladefunktion),5.0,57150.0
+USB port,F70,118d,ICE,standard,,,,,,2 USB-C Anschlüsse in Mittelkonsole vorne (Ladefunktion),5.0,39350.0
+USB port,F70,120d,ICE,standard,,,,,,2 USB-C Anschlüsse in Mittelkonsole vorne (Ladefunktion),5.0,41750.0
+USB port,G70,i7 50xDrive,BEV,standard,,,,,,Travel & Comfort System,9.0,121400.0
+USB port,G70,i7 60xDrive,BEV,standard,,,,,,Travel & Comfort System,9.0,140100.0
+USB port,G70,i7 M70 xDrive,BEV,standard,,,,,,Travel & Comfort System,9.0,182400.0
+USB port,G70,740 xDrive,ICE,standard,,,,,,Travel & Comfort System,9.0,117900.0
+"Vehicle interior, lighting",F70,116,ICE,standard,,,,,,Interieur Lichtpaket,5.0,34250.0
+"Vehicle interior, lighting",F70,120,ICE,standard,,,,,,Interieur Lichtpaket,5.0,39150.0
+"Vehicle interior, lighting",F70,123 xDrive,ICE,standard,,,,,,Interieur Lichtpaket,5.0,45350.0
+"Vehicle interior, lighting",F70,M135 xDrive,ICE,standard,,,,,,Interieur Lichtpaket,5.0,57150.0
+"Vehicle interior, lighting",F70,118d,ICE,standard,,,,,,Interieur Lichtpaket,5.0,39350.0
+"Vehicle interior, lighting",F70,120d,ICE,standard,,,,,,Interieur Lichtpaket,5.0,41750.0
+"Vehicle, climatization",F70,116,ICE,standard,,,,,,2-Zonen-Klimaautomatik mit erweiterten Umfängen,7.0,34250.0
+"Vehicle, climatization",F70,120,ICE,standard,,,,,,2-Zonen-Klimaautomatik mit erweiterten Umfängen,7.0,39150.0
+"Vehicle, climatization",F70,123 xDrive,ICE,standard,,,,,,2-Zonen-Klimaautomatik mit erweiterten Umfängen,7.0,45350.0
+"Vehicle, climatization",F70,M135 xDrive,ICE,standard,,,,,,2-Zonen-Klimaautomatik mit erweiterten Umfängen,7.0,57150.0
+"Vehicle, climatization",F70,118d,ICE,standard,,,,,,2-Zonen-Klimaautomatik mit erweiterten Umfängen,7.0,39350.0
+"Vehicle, climatization",F70,120d,ICE,standard,,,,,,2-Zonen-Klimaautomatik mit erweiterten Umfängen,7.0,41750.0
+"Vehicle, climatization",G60,i5 eDrive40,BEV,standard,,,,,,Klimaautomatik,8.0,70900.0
+"Vehicle, climatization",G60,i5 xDrive40,BEV,standard,,,,,,Klimaautomatik,8.0,76300.0
+"Vehicle, climatization",G60,i5 M60 xDrive,BEV,standard,,,,,,Klimaautomatik mit 4-Zonenregelung,8.0,100200.0
+"Vehicle, climatization",G60,530e,PHEV,standard,,,,,,Klimaautomatik,8.0,66700.0
+"Vehicle, climatization",G60,530e xDrive,PHEV,standard,,,,,,Klimaautomatik,8.0,69300.0
+"Vehicle, climatization",G60,550e xDrive,PHEV,standard,,,,,,Klimaautomatik,8.0,78700.0
+"Vehicle, climatization",G60,520i,ICE,standard,,,,,,Klimaautomatik,8.0,60000.0
+"Vehicle, climatization",G60,520d,ICE,standard,,,,,,Klimaautomatik,8.0,62300.0
+"Vehicle, climatization",G60,520d xDrive,ICE,standard,,,,,,Klimaautomatik,8.0,64900.0
+"Vehicle, climatization",G60,540d xDrive,ICE,standard,,,,,,Klimaautomatik,8.0,71900.0
+"Vehicle, climatization",G70,i7 50xDrive,BEV,standard,,,,,,Klimaautomatik mit 4-Zonen-Regelung,8.0,121400.0
+"Vehicle, climatization",G70,i7 60xDrive,BEV,standard,,,,,,Klimaautomatik mit 4-Zonen-Regelung,8.0,140100.0
+"Vehicle, climatization",G70,i7 M70 xDrive,BEV,standard,,,,,,Klimaautomatik mit 4-Zonen-Regelung,8.0,182400.0
+"Vehicle, climatization",G70,740 xDrive,ICE,standard,,,,,,Klimaautomatik mit 4-Zonen-Regelung,8.0,117900.0
+Video: playback / streaming,G60,i5 eDrive40,BEV,standard,,,,,,Connected Package Professional,6.0,70900.0
+Video: playback / streaming,G60,i5 xDrive40,BEV,standard,,,,,,Connected Package Professional,6.0,76300.0
+Video: playback / streaming,G60,i5 M60 xDrive,BEV,standard,,,,,,Connected Package Professional,6.0,100200.0
+Video: playback / streaming,G60,530e,PHEV,standard,,,,,,Connected Package Professional,6.0,66700.0
+Video: playback / streaming,G60,530e xDrive,PHEV,standard,,,,,,Connected Package Professional,6.0,69300.0
+Video: playback / streaming,G60,550e xDrive,PHEV,standard,,,,,,Connected Package Professional,6.0,78700.0
+Video: playback / streaming,G60,520i,ICE,standard,,,,,,Connected Package Professional,6.0,60000.0
+Video: playback / streaming,G60,520d,ICE,standard,,,,,,Connected Package Professional,6.0,62300.0
+Video: playback / streaming,G60,520d xDrive,ICE,standard,,,,,,Connected Package Professional,6.0,64900.0
+Video: playback / streaming,G60,540d xDrive,ICE,standard,,,,,,Connected Package Professional,6.0,71900.0
+"Wallbox, charging / home charging",G70,i7 50xDrive,BEV,standard,,,,,,"AC-Laden Professional: AC Laden für zuhause und unterwegs (22 kW, 3-phasig)",7.0,121400.0
+"Wallbox, charging / home charging",G70,i7 60xDrive,BEV,standard,,,,,,"AC-Laden Professional: AC Laden für zuhause und unterwegs (22 kW, 3-phasig)",7.0,140100.0
+"Wallbox, charging / home charging",G70,i7 M70 xDrive,BEV,standard,,,,,,"AC-Laden Professional: AC Laden für zuhause und unterwegs (22 kW, 3-phasig)",7.0,182400.0
+"Wallbox, charging / home charging",G70,740 xDrive,ICE,not_listed,,,,,,,,117900.0
+Welcome Light Carpet,G70,i7 50xDrive,BEV,standard,,,,,,Ceremonial Light Carpet,6.0,121400.0
+Welcome Light Carpet,G70,i7 60xDrive,BEV,standard,,,,,,Ceremonial Light Carpet,6.0,140100.0
+Welcome Light Carpet,G70,i7 M70 xDrive,BEV,standard,,,,,,Ceremonial Light Carpet,6.0,182400.0
+Welcome Light Carpet,G70,740 xDrive,ICE,standard,,,,,,Ceremonial Light Carpet,6.0,117900.0
+Wheels / tires,F70,116,ICE,standard,,,,,,"17"" Leichtmetallräder Y-Speiche 971",5.0,34250.0
+Wheels / tires,F70,120,ICE,standard,,,,,,"17"" Leichtmetallräder Y-Speiche 971",5.0,39150.0
+Wheels / tires,F70,123 xDrive,ICE,standard,,,,,,"17"" Leichtmetallräder Y-Speiche 971",5.0,45350.0
+Wheels / tires,F70,M135 xDrive,ICE,standard,,,,,,"18"" Leichtmetallräder Y-Speiche 975 M Bicolor",5.0,57150.0
+Wheels / tires,F70,118d,ICE,standard,,,,,,"17"" Leichtmetallräder Y-Speiche 971",5.0,39350.0
+Wheels / tires,F70,120d,ICE,standard,,,,,,"17"" Leichtmetallräder Y-Speiche 971",5.0,41750.0
+Wheels / tires,G60,i5 eDrive40,BEV,standard,,,,,,"19"" Leichtmetallräder Triplex-Speiche 933",6.0,70900.0
+Wheels / tires,G60,i5 xDrive40,BEV,standard,,,,,,"19"" Leichtmetallräder Triplex-Speiche 933",6.0,76300.0
+Wheels / tires,G60,i5 M60 xDrive,BEV,standard,,,,,,"19"" M Leichtmetallräder Doppelspeiche 935 M Bicolor mit Mischbereifung",6.0,100200.0
+Wheels / tires,G60,530e,PHEV,standard,,,,,,"19"" Leichtmetallräder Triplex-Speiche 933",6.0,66700.0
+Wheels / tires,G60,530e xDrive,PHEV,standard,,,,,,"19"" Leichtmetallräder Triplex-Speiche 933",6.0,69300.0
+Wheels / tires,G60,550e xDrive,PHEV,standard,,,,,,"19"" Leichtmetallräder Triplex-Speiche 933",6.0,78700.0
+Wheels / tires,G60,520i,ICE,standard,,,,,,"18"" Leichtmetallräder Y-Speiche 932",6.0,60000.0
+Wheels / tires,G60,520d,ICE,standard,,,,,,"18"" Leichtmetallräder Y-Speiche 932",6.0,62300.0
+Wheels / tires,G60,520d xDrive,ICE,standard,,,,,,"18"" Leichtmetallräder Y-Speiche 932",6.0,64900.0
+Wheels / tires,G60,540d xDrive,ICE,standard,,,,,,"18"" Leichtmetallräder Y-Speiche 932",6.0,71900.0
+Wheels / tires,G70,i7 50xDrive,BEV,standard,,,,,,"20"" Aerodynamikräder 1097 Bicolor",6.0,121400.0
+Wheels / tires,G70,i7 60xDrive,BEV,standard,,,,,,"20"" Aerodynamikräder 1097 Bicolor",6.0,140100.0
+Wheels / tires,G70,i7 M70 xDrive,BEV,standard,,,,,,"21"" M Aerodynamikräder 909 M Multicolor 3D-Glanzschliff mit Mischbereifung",6.0,182400.0
+Wheels / tires,G70,740 xDrive,ICE,standard,,,,,,"20"" Leichtmetallräder Sternspeiche 905 Bicolor",6.0,117900.0

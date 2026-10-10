@@ -1,0 +1,224 @@
+feature,model,n_variants,n_standard,n_optional,tier,price_item,price_sa_code,price_via_package,share_standard,share_offered,price_min_eur,price_max_eur,price_pct_of_base
+(Active) cruise control,F70,6,0,6,optional,Driving Assistant Professional,5AU,False,0.0,1.0,2280.0,2280.0,3.9895013123359577
+(Active) cruise control,G60,10,0,10,optional,Driving Assistant Plus,5AT,False,0.0,1.0,1000.0,1000.0,0.998003992015968
+(Active) cruise control,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Adjustment of lower lumbar support,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+"Air conditioning, setting",F70,6,6,0,standard_all,,,,1.0,1.0,,,
+"Air conditioning, setting",G60,10,10,0,standard_all,,,,1.0,1.0,,,
+"Air conditioning, setting",G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Airbags,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Ambient light,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Ambient light,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Android Auto,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Android Auto,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Anti-theft alarm system,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Anti-theft alarm system,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Anti-theft alarm system,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Apple CarPlay,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Apple CarPlay,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Apps (in-car),G60,10,10,0,standard_all,,,,1.0,1.0,,,
+"Audio mode, sound",F70,6,1,5,standard_some,HiFi Lautsprechersystem harman/kardon,674,False,0.16666666666666666,1.0,600.0,600.0,1.3230429988974641
+"Audio mode, sound",G60,10,10,0,standard_all,,,,1.0,1.0,,,
+"Audio mode, sound",G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Automatic doors,G70,4,0,4,optional,Automatiktüren,3CD,False,0.0,1.0,1600.0,1600.0,0.8771929824561403
+Auxiliary heater function,G60,10,0,4,optional,Standheizung,536,False,0.0,0.4,1450.0,1450.0,2.0166898470097356
+BMW ConnectedDrive upgrades/ MINI CONNECTED upgrades,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+BMW ConnectedDrive upgrades/ MINI CONNECTED upgrades,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Back-up Assistant,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Back-up Assistant,G60,10,0,10,optional,Parking Assistant Professional,5DW,False,0.0,1.0,350.0,350.0,0.34930139720558884
+Back-up Assistant,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Blind spot monitoring,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Blind spot monitoring,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Blind spot monitoring,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Braking,F70,6,0,1,optional,M TECHNIK PAKET II,33F,True,0.0,0.16666666666666666,3950.0,3950.0,6.911636045494313
+Braking,G60,10,1,0,standard_some,,,,0.1,0.1,,,
+Braking,G70,4,1,3,standard_some,"M Sportbremse, dunkelblau metallic",3M1,False,0.25,1.0,0.0,0.0,0.0
+"Center armrest, front",F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Charge high-voltage battery,G60,10,1,2,standard_some,AC-Laden Professional (22 kW),4U6,False,0.1,0.3,1200.0,1200.0,1.5727391874180863
+Charge high-voltage battery,G70,4,3,0,standard_some,,,,0.75,0.75,,,
+Charging cable,G60,10,6,0,standard_some,,,,0.6,0.6,,,
+Charging cable,G70,4,0,3,optional,Ladekabel Professional (Mode 3) für öffentliches Laden,4T2,False,0.0,0.75,290.0,290.0,0.15899122807017543
+Child restraint seat,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Comfort Access,F70,6,0,6,optional,PREMIUM PAKET,7EV,True,0.0,1.0,1900.0,1900.0,3.3245844269466316
+Comfort Access,G60,10,0,10,optional,TRAVEL PAKET,7LK,True,0.0,1.0,1900.0,1900.0,1.8962075848303395
+Comfort Access,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+ConnectedDrive services (smartphone) technology overall,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Controller operation,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Cross Traffic Warning Rear with Brake Intervention,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Cross Traffic Warning Rear with Brake Intervention,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Cross Traffic Warning Rear with Brake Intervention,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Cupholder,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Cushioning / damping vehicle,F70,6,1,0,standard_some,,,,0.16666666666666666,0.16666666666666666,,,
+Cushioning / damping vehicle,G60,10,3,7,standard_some,Adaptives Fahrwerk Professional,2VV,False,0.3,1.0,1990.0,1990.0,2.767732962447844
+Cushioning / damping vehicle,G70,4,1,1,standard_some,Adaptive Chassis Control Professional,2Z2,False,0.25,0.5,4300.0,4300.0,3.0692362598144185
+Digital Key,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+"Door, open / close",G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Drive Recorder,G60,10,0,10,optional,INNOVATIONSPAKET,7EW,True,0.0,1.0,2400.0,2400.0,2.3952095808383236
+Emergency Stop Assistant,F70,6,0,6,optional,Driving Assistant Professional,5AU,False,0.0,1.0,2280.0,2280.0,3.9895013123359577
+Emergency Stop Assistant,G60,10,0,10,optional,Driving Assistant Professional,5AU,False,0.0,1.0,2100.0,2100.0,2.095808383233533
+Emergency request,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Emergency request,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Engine acoustics / engine sound,G60,10,6,0,standard_some,,,,0.6,0.6,,,
+Engine acoustics / engine sound,G70,4,3,0,standard_some,,,,0.75,0.75,,,
+Exterior lighting,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Exterior lighting,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Exterior lighting,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Exterior rearview mirror,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Exterior rearview mirror,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Exterior rearview mirror,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Fatigue Alert,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Floor mat,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Floor mat,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Front collision warning,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Front collision warning,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Front collision warning,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Garage door opener,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Head-Up Display,F70,6,0,6,optional,INNOVATIONSPAKET,7EW,True,0.0,1.0,3800.0,3800.0,6.649168853893263
+Head-Up Display,G60,10,0,10,optional,INNOVATIONSPAKET,7EW,True,0.0,1.0,2400.0,2400.0,2.3952095808383236
+Head-Up Display,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Heated steering wheel,F70,6,0,6,optional,Lenkradheizung,248,False,0.0,1.0,250.0,250.0,0.4374453193350831
+Heated steering wheel,G60,10,0,10,optional,Lenkradheizung,248,False,0.0,1.0,350.0,350.0,0.34930139720558884
+Heated steering wheel,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+High-beam assistant,F70,6,0,6,optional,PREMIUM PAKET,7EV,True,0.0,1.0,1900.0,1900.0,3.3245844269466316
+High-beam assistant,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Highway assistant,G60,10,0,10,optional,Autobahnassistent,5AX,False,0.0,1.0,850.0,850.0,0.8483033932135728
+Highway assistant,G70,4,0,4,optional,Autobahn- & City-Assistent (laufzeitbegrenzt),5BB,False,0.0,1.0,1980.0,1980.0,1.0855263157894737
+Instrument cluster,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Instrument cluster,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Instrument cluster,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Intelligent Personal Assistant,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Intelligent Personal Assistant,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Interior acoustics,G70,4,0,4,optional,CONNOISSEUR PAKET,9DC,True,0.0,1.0,3200.0,3200.0,1.7543859649122806
+Interior camera,G60,10,0,10,optional,INNOVATIONSPAKET,7EW,True,0.0,1.0,2400.0,2400.0,2.3952095808383236
+"Interior mirror, garage door opener",G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Interior rearview mirror,F70,6,0,6,optional,PREMIUM PAKET,7EV,True,0.0,1.0,1900.0,1900.0,3.3245844269466316
+Intersection Warning with Brake Intervention,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Intersection Warning with Brake Intervention,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Intersection Warning with Brake Intervention,G70,4,0,4,optional,Autobahn- & City-Assistent (laufzeitbegrenzt),5BB,False,0.0,1.0,1980.0,1980.0,1.0855263157894737
+Lane Change Assistant,F70,6,0,6,optional,Driving Assistant Professional,5AU,False,0.0,1.0,2280.0,2280.0,3.9895013123359577
+Lane Change Assistant,G60,10,0,10,optional,Autobahnassistent,5AX,False,0.0,1.0,850.0,850.0,0.8483033932135728
+Lane Change Assistant,G70,4,0,4,optional,Autobahn- & City-Assistent (laufzeitbegrenzt),5BB,False,0.0,1.0,1980.0,1980.0,1.0855263157894737
+Lane departure warning,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Lane departure warning,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Lane departure warning,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Launch Control,G60,10,1,0,standard_some,,,,0.1,0.1,,,
+Luggage compartment,F70,6,0,6,optional,Gepäckraumtrennnetz,413,False,0.0,1.0,200.0,200.0,0.3499562554680665
+Manage / pair mobile device (Bluetooth),F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Manage / pair mobile device (Bluetooth),G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Map update,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+"Mobile device, wireless charging",F70,6,0,6,optional,PREMIUM PAKET,7EV,True,0.0,1.0,1900.0,1900.0,3.3245844269466316
+"Mobile device, wireless charging",G60,10,10,0,standard_all,,,,1.0,1.0,,,
+"Mobile device, wireless charging",G70,4,4,0,standard_all,,,,1.0,1.0,,,
+My Modes / driving experience,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+My Modes / driving experience,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Navigation,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Navigation,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Navigation,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+"Operating concept, operating system",F70,6,6,0,standard_all,,,,1.0,1.0,,,
+"Operating concept, operating system",G60,10,10,0,standard_all,,,,1.0,1.0,,,
+"Operating concept, operating system",G70,4,4,0,standard_all,,,,1.0,1.0,,,
+"Outer door handle, front",G70,4,4,0,standard_all,,,,1.0,1.0,,,
+"Outer door handle, rear",G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Panel heating,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Panorama glass roof,F70,6,0,6,optional,Panorama Glasdach,402,False,0.0,1.0,1180.0,1180.0,2.0647419072615922
+Panorama glass roof,G60,10,0,10,optional,Panorama Glasdach inkl. Dachlackierung in Schwarz Hochglanz,402,False,0.0,1.0,1630.0,1630.0,1.6267465069860279
+Panorama glass roof,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Park Distance Control (PDC),F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Park Distance Control (PDC),G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Park Distance Control (PDC),G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Parking Assistant,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Parking Assistant,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Parking Assistant,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Personal eSIM,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Radiator grille,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Radiator grille,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Radio function,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Radio function,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Radio function,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Rear seat entertainment,G70,4,0,4,optional,EXECUTIVE LOUNGE PAKET,9DB,True,0.0,1.0,7450.0,7450.0,4.084429824561404
+Rear view camera,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Rear view camera,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Rear view camera,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Rear-end collision warning,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Rear-end collision warning,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Remote 3D View (My BMW App / MINI App),F70,6,0,6,optional,INNOVATIONSPAKET,7EW,True,0.0,1.0,3800.0,3800.0,6.649168853893263
+Remote 3D View (My BMW App / MINI App),G60,10,0,10,optional,INNOVATIONSPAKET,7EW,True,0.0,1.0,2400.0,2400.0,2.3952095808383236
+Remote 3D View (My BMW App / MINI App),G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Remote Services & Remote Keyless Entry (My BMW App/MINI App),G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Remote Software Upgrade/RSU,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Remote Software Upgrade/RSU,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Remote controlled parking,F70,6,0,3,optional,Parking Assistant Professional,5DW,False,0.0,0.5,250.0,250.0,0.5512679162072767
+Seat belts,F70,6,0,1,optional,M TECHNIK PAKET II,33F,True,0.0,0.16666666666666666,3950.0,3950.0,6.911636045494313
+Seat belts,G60,10,1,0,standard_some,,,,0.1,0.1,,,
+Seat belts,G70,4,0,4,optional,M Sicherheitsgurte,4GQ,False,0.0,1.0,350.0,350.0,0.1918859649122807
+Seat massage,G70,4,0,4,optional,CONNOISSEUR PAKET,9DC,True,0.0,1.0,3200.0,3200.0,1.7543859649122806
+Seat memory,F70,6,0,6,optional,"Sitzverstellung, elektrisch, mit Memory",459,False,0.0,1.0,850.0,850.0,1.4873140857392826
+Seat memory,G60,10,1,9,standard_some,COMFORT PAKET,7VB,True,0.1,1.0,2750.0,2750.0,3.49428208386277
+Seat memory,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+"Seating, ventilate / heat",F70,6,6,0,standard_all,,,,1.0,1.0,,,
+"Seating, ventilate / heat",G60,10,10,0,standard_all,,,,1.0,1.0,,,
+"Seating, ventilate / heat",G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Seats,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Seats,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Seats,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Shift paddle,F70,6,1,5,standard_some,Steptronic Getriebe mit Doppelkupplung und Schaltwippen,2TE,False,0.16666666666666666,1.0,0.0,0.0,0.0
+Shift paddle,G60,10,7,0,standard_some,,,,0.7,0.7,,,
+Speed Limit Assistant,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Speed Limit Assistant,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Speed Limit Assistant,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Steering,G60,10,3,7,standard_some,Adaptives Fahrwerk Professional,2VV,False,0.3,1.0,1990.0,1990.0,2.767732962447844
+Steering,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Steering and lane guide assist,F70,6,0,6,optional,Driving Assistant Plus,5AT,False,0.0,1.0,700.0,700.0,1.2248468941382327
+Steering and lane guide assist,G60,10,0,10,optional,Driving Assistant Plus,5AT,False,0.0,1.0,1000.0,1000.0,0.998003992015968
+Steering and lane guide assist,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Steering wheel,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Steering wheel,G60,10,1,0,standard_some,,,,0.1,0.1,,,
+Steering wheel,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Storage compartments,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Storage compartments,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Sun protection,F70,6,1,5,standard_some,Sonnenschutzverglasung,420,False,0.16666666666666666,1.0,360.0,360.0,0.7938257993384785
+Sun protection,G60,10,1,9,standard_some,Sonnenschutzverglasung,420,False,0.1,1.0,480.0,480.0,0.6099110546378653
+Sun protection,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Surround View,G60,10,0,10,optional,INNOVATIONSPAKET,7EW,True,0.0,1.0,2400.0,2400.0,2.3952095808383236
+Surround View,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Teleservices,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Teleservices,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Teleservices,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Through-loading facility,F70,6,0,6,optional,"Fondsitzlehne, Teilung 40 : 20 : 40",465,False,0.0,1.0,200.0,200.0,0.3499562554680665
+Through-loading facility,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Through-loading facility,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Tire pressure control,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Tire pressure control,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Tire pressure control,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Tirefit,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Tirefit,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Tirefit,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Touch Command,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+"Touch screen, operation",F70,6,6,0,standard_all,,,,1.0,1.0,,,
+"Touch screen, operation",G60,10,10,0,standard_all,,,,1.0,1.0,,,
+"Touch screen, operation",G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Traffic Jam Assistant,F70,6,0,6,optional,Driving Assistant Professional,5AU,False,0.0,1.0,2280.0,2280.0,3.9895013123359577
+Traffic Light And Sign Warning,F70,6,0,6,optional,Driving Assistant Professional,5AU,False,0.0,1.0,2280.0,2280.0,3.9895013123359577
+Traffic Light And Sign Warning,G60,10,0,10,optional,Driving Assistant Professional,5AU,False,0.0,1.0,2100.0,2100.0,2.095808383233533
+Traffic Light And Sign Warning,G70,4,0,4,optional,Autobahn- & City-Assistent (laufzeitbegrenzt),5BB,False,0.0,1.0,1980.0,1980.0,1.0855263157894737
+"Trailer, use",F70,6,6,0,standard_all,,,,1.0,1.0,,,
+"Trailer, use",G60,10,10,0,standard_all,,,,1.0,1.0,,,
+"Trailer, use",G70,4,0,3,optional,Anhängerkupplung,3AC,False,0.0,0.75,1350.0,1350.0,0.9635974304068522
+Transmission,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Transmission,G60,10,7,0,standard_some,,,,0.7,0.7,,,
+Transmission,G70,4,1,0,standard_some,,,,0.25,0.25,,,
+"Trunk lid, open / close",F70,6,0,6,optional,Automatische Heckklappenbetätigung,316,False,0.0,1.0,450.0,450.0,0.7874015748031495
+"Trunk lid, open / close",G60,10,0,10,optional,TRAVEL PAKET,7LK,True,0.0,1.0,1900.0,1900.0,1.8962075848303395
+"Trunk lid, open / close",G70,4,4,0,standard_all,,,,1.0,1.0,,,
+USB port,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+USB port,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+"Vehicle interior, lighting",F70,6,6,0,standard_all,,,,1.0,1.0,,,
+"Vehicle, climatization",F70,6,6,0,standard_all,,,,1.0,1.0,,,
+"Vehicle, climatization",G60,10,10,0,standard_all,,,,1.0,1.0,,,
+"Vehicle, climatization",G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Video: playback / streaming,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+"Wallbox, charging / home charging",G70,4,3,0,standard_some,,,,0.75,0.75,,,
+Welcome Light Carpet,G70,4,4,0,standard_all,,,,1.0,1.0,,,
+Wheels / tires,F70,6,6,0,standard_all,,,,1.0,1.0,,,
+Wheels / tires,G60,10,10,0,standard_all,,,,1.0,1.0,,,
+Wheels / tires,G70,4,4,0,standard_all,,,,1.0,1.0,,,
