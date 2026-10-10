@@ -1,0 +1,107 @@
+{
+  "raw_rows": 13771,
+  "raw_unique_comments": 10128,
+  "dropped_constant_columns": [
+    "brand",
+    "sales_description",
+    "vfc_l2_l3",
+    "file_model"
+  ],
+  "feature_labels_with_nbsp": 19,
+  "reason_labels_with_nbsp": 0,
+  "source_c_problem_prefix_stripped": 571,
+  "source_c_prompt_stripped": 126,
+  "source_d_template_stripped": 273,
+  "source_b_comments": 5479,
+  "text_was_all_lowercase_share_by_source": {
+    "Source A": 0.99,
+    "Source B": 0.0,
+    "Source C": 0.0,
+    "Source D": 0.0
+  },
+  "rows_without_any_vfc_label": 400,
+  "rows_no_class_found": 2082,
+  "feedback_type_imputed_from_reason": 18,
+  "wants_rows_with_complaint_reason": 111,
+  "ev_feature_on_ice_rows": 36,
+  "label_rows": 11289,
+  "feature_label_rows": 11214,
+  "comments_by_label_status": {
+    "labeled": 8948,
+    "no_class_found_only": 780,
+    "unlabeled": 400
+  },
+  "labels_per_labeled_comment": {
+    "count": 8948.0,
+    "mean": 1.26,
+    "std": 0.93,
+    "min": 1.0,
+    "25%": 1.0,
+    "50%": 1.0,
+    "75%": 1.0,
+    "max": 17.0
+  },
+  "short_comments_under_4_words": 126,
+  "non_english_or_symbol_text": 10,
+  "exact_duplicate_rows": 0,
+  "duplicate_texts_across_comment_ids": 45,
+  "option_catalog": {
+    "table_pages": 32,
+    "glyphs_assigned": 1889,
+    "option_price_pairs_checked": 1128,
+    "source_price_anomalies": [
+      {
+        "model": "F70",
+        "page": 17,
+        "item_id": "F70-p17-08",
+        "gross": 2280.0,
+        "net": 1915.67,
+        "net_x_1_19": 2279.65
+      }
+    ],
+    "base_prices_checked": 23,
+    "power_cross_checked": 23
+  },
+  "source_baselines_all_features": {
+    "Source A": {
+      "positive": 0.523,
+      "negative": 0.367,
+      "request": 0.11
+    },
+    "Source B": {
+      "positive": 0.511,
+      "negative": 0.341,
+      "request": 0.148
+    },
+    "Source C": {
+      "positive": 0.0,
+      "negative": 1.0,
+      "request": 0.0
+    }
+  },
+  "source_baselines_specific_features": {
+    "Source A": {
+      "positive": 0.213,
+      "negative": 0.61,
+      "request": 0.177
+    },
+    "Source B": {
+      "positive": 0.34,
+      "negative": 0.459,
+      "request": 0.201
+    },
+    "Source C": {
+      "positive": 0.0,
+      "negative": 1.0,
+      "request": 0.0
+    }
+  },
+  "verdicts_specific_features": {
+    "Mixed": 82,
+    "Leaning bad": 49,
+    "Not enough data": 42,
+    "Leaning good": 17,
+    "Bad": 9,
+    "Good": 9
+  }
+}

@@ -1,0 +1,20 @@
+pandas>=2.2
+numpy>=1.26
+scikit-learn>=1.4
+scipy>=1.11
+joblib>=1.3
+openpyxl>=3.1
+matplotlib>=3.8
+# parses the German option-list PDFs (coordinates + glyphs)
+pymupdf>=1.24
+# explainable boosting machine (complaint drivers)
+interpret-core[ebm]>=0.6
+# knowledge graph + agents
+networkx>=3.2
+openai>=3.28
+# web app backend
+fastapi>=0.110
+uvicorn>=0.29
+# tests (FastAPI TestClient needs httpx)
+pytest>=8
+httpx>=0.27

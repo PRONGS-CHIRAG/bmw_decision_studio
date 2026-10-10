@@ -1,0 +1,1081 @@
+{
+  "complaint_risk_ebm": {
+    "all_features": {
+      "n_units": 11133,
+      "n_features": 224,
+      "complaint_rate": 0.387,
+      "folds": 5,
+      "variants": {
+        "context_only": {
+          "auc_mean": 0.7928,
+          "auc_sd": 0.0348,
+          "auc_by_fold": [
+            0.7915,
+            0.8067,
+            0.7893,
+            0.7343,
+            0.842
+          ],
+          "log_loss_mean": 0.5318
+        },
+        "context_plus_pdf": {
+          "auc_mean": 0.792,
+          "auc_sd": 0.0362,
+          "auc_by_fold": [
+            0.7943,
+            0.8067,
+            0.7848,
+            0.7313,
+            0.8428
+          ],
+          "log_loss_mean": 0.5325
+        }
+      },
+      "pdf_auc_gain_mean": -0.0008,
+      "pdf_auc_gain_by_fold": [
+        0.0028,
+        0.0,
+        -0.0045,
+        -0.003,
+        0.0008
+      ],
+      "pdf_gain_positive_folds": 2
+    },
+    "linked_features_only": {
+      "n_units": 4399,
+      "n_features": 106,
+      "complaint_rate": 0.516,
+      "folds": 5,
+      "variants": {
+        "context_only": {
+          "auc_mean": 0.6389,
+          "auc_sd": 0.045,
+          "auc_by_fold": [
+            0.6633,
+            0.6869,
+            0.591,
+            0.6748,
+            0.5787
+          ],
+          "log_loss_mean": 0.6409
+        },
+        "context_plus_pdf": {
+          "auc_mean": 0.6334,
+          "auc_sd": 0.0505,
+          "auc_by_fold": [
+            0.6605,
+            0.6919,
+            0.564,
+            0.668,
+            0.5827
+          ],
+          "log_loss_mean": 0.6427
+        }
+      },
+      "pdf_auc_gain_mean": -0.0055,
+      "pdf_auc_gain_by_fold": [
+        -0.0028,
+        0.005,
+        -0.027,
+        -0.0068,
+        0.004
+      ],
+      "pdf_gain_positive_folds": 2
+    },
+    "production_inputs": [
+      "source",
+      "market",
+      "model",
+      "engine",
+      "domain",
+      "is_umbrella"
+    ],
+    "audit_only_inputs": [
+      "source",
+      "market",
+      "model",
+      "engine",
+      "domain",
+      "is_umbrella",
+      "fitment_tier",
+      "option_price_eur",
+      "option_price_pct_of_base",
+      "share_standard",
+      "base_price_eur"
+    ],
+    "global_production": [
+      {
+        "term": "source",
+        "importance": 1.0243,
+        "shape": [
+          {
+            "bin": "Source A",
+            "score": -0.1855
+          },
+          {
+            "bin": "Source B",
+            "score": -0.8698
+          },
+          {
+            "bin": "Source C",
+            "score": 9.9686
+          }
+        ]
+      },
+      {
+        "term": "is_umbrella",
+        "importance": 0.8429,
+        "shape": [
+          {
+            "bin": "no",
+            "score": 0.7293
+          },
+          {
+            "bin": "yes",
+            "score": -0.9985
+          }
+        ]
+      },
+      {
+        "term": "domain",
+        "importance": 0.4442,
+        "shape": [
+          {
+            "bin": "Chassis & Driving Dynamics",
+            "score": -0.8748
+          },
+          {
+            "bin": "Connected Apps & Digital Services",
+            "score": 0.9091
+          },
+          {
+            "bin": "Doors, Access & Keys",
+            "score": 0.5371
+          },
+          {
+            "bin": "Driver Assistance & Safety",
+            "score": 0.2773
+          },
+          {
+            "bin": "Drivetrain & Performance",
+            "score": -0.0977
+          },
+          {
+            "bin": "EV Charging & Range",
+            "score": 0.1676
+          },
+          {
+            "bin": "Exterior Design & Body",
+            "score": 0.3549
+          },
+          {
+            "bin": "Infotainment & HMI",
+            "score": 0.5712
+          },
+          {
+            "bin": "Interior Design & Storage",
+            "score": -0.2009
+          },
+          {
+            "bin": "Ownership & Service",
+            "score": 0.6435
+          },
+          {
+            "bin": "Seats, Comfort & Climate",
+            "score": -0.3211
+          }
+        ]
+      },
+      {
+        "term": "market",
+        "importance": 0.0397,
+        "shape": [
+          {
+            "bin": "EU",
+            "score": 0.0627
+          },
+          {
+            "bin": "RoW",
+            "score": -0.1848
+          },
+          {
+            "bin": "US",
+            "score": 0.01
+          }
+        ]
+      },
+      {
+        "term": "engine",
+        "importance": 0.0211,
+        "shape": [
+          {
+            "bin": "BEV",
+            "score": -0.0446
+          },
+          {
+            "bin": "ICE",
+            "score": 0.0106
+          },
+          {
+            "bin": "PHEV",
+            "score": 0.048
+          }
+        ]
+      },
+      {
+        "term": "model",
+        "importance": 0.0165,
+        "shape": [
+          {
+            "bin": "F70",
+            "score": 0.0069
+          },
+          {
+            "bin": "G60",
+            "score": -0.0217
+          },
+          {
+            "bin": "G70",
+            "score": 0.0181
+          }
+        ]
+      }
+    ],
+    "global_audit_with_pdf": [
+      {
+        "term": "is_umbrella",
+        "importance": 0.9508,
+        "shape": [
+          {
+            "bin": "no",
+            "score": 0.8226
+          },
+          {
+            "bin": "yes",
+            "score": -1.1263
+          }
+        ]
+      },
+      {
+        "term": "source",
+        "importance": 0.9083,
+        "shape": [
+          {
+            "bin": "Source A",
+            "score": -0.1431
+          },
+          {
+            "bin": "Source B",
+            "score": -0.7912
+          },
+          {
+            "bin": "Source C",
+            "score": 8.8394
+          }
+        ]
+      },
+      {
+        "term": "domain",
+        "importance": 0.4749,
+        "shape": [
+          {
+            "bin": "Chassis & Driving Dynamics",
+            "score": -0.9631
+          },
+          {
+            "bin": "Connected Apps & Digital Services",
+            "score": 0.8742
+          },
+          {
+            "bin": "Doors, Access & Keys",
+            "score": 0.5233
+          },
+          {
+            "bin": "Driver Assistance & Safety",
+            "score": 0.4178
+          },
+          {
+            "bin": "Drivetrain & Performance",
+            "score": -0.1359
+          },
+          {
+            "bin": "EV Charging & Range",
+            "score": -0.0214
+          },
+          {
+            "bin": "Exterior Design & Body",
+            "score": 0.3596
+          },
+          {
+            "bin": "Infotainment & HMI",
+            "score": 0.6764
+          },
+          {
+            "bin": "Interior Design & Storage",
+            "score": -0.2777
+          },
+          {
+            "bin": "Ownership & Service",
+            "score": 0.4559
+          },
+          {
+            "bin": "Seats, Comfort & Climate",
+            "score": -0.1724
+          }
+        ]
+      },
+      {
+        "term": "fitment_tier",
+        "importance": 0.2351,
+        "shape": [
+          {
+            "bin": "no_link",
+            "score": 0.1928
+          },
+          {
+            "bin": "not_covered",
+            "score": 0.0979
+          },
+          {
+            "bin": "not_listed",
+            "score": -0.0383
+          },
+          {
+            "bin": "optional",
+            "score": -0.3961
+          },
+          {
+            "bin": "standard_all",
+            "score": -0.3943
+          },
+          {
+            "bin": "standard_some",
+            "score": 0.0953
+          }
+        ]
+      },
+      {
+        "term": "share_standard",
+        "importance": 0.058,
+        "shape": [
+          {
+            "bin": "missing",
+            "score": -0.0424
+          },
+          {
+            "bin": "\u2212\u221e \u2013 0.08",
+            "low": null,
+            "high": 0.08,
+            "score": 0.0073
+          },
+          {
+            "bin": "0.08 \u2013 0.25",
+            "low": 0.08,
+            "high": 0.25,
+            "score": 0.0322
+          },
+          {
+            "bin": "0.25 \u2013 0.50",
+            "low": 0.25,
+            "high": 0.5,
+            "score": 0.0654
+          },
+          {
+            "bin": "0.50 \u2013 0.83",
+            "low": 0.5,
+            "high": 0.83,
+            "score": 0.086
+          },
+          {
+            "bin": "0.83 \u2013 \u221e",
+            "low": 0.83,
+            "high": null,
+            "score": 0.1195
+          }
+        ]
+      },
+      {
+        "term": "market",
+        "importance": 0.0359,
+        "shape": [
+          {
+            "bin": "EU",
+            "score": 0.0703
+          },
+          {
+            "bin": "RoW",
+            "score": -0.167
+          },
+          {
+            "bin": "US",
+            "score": 0.0049
+          }
+        ]
+      },
+      {
+        "term": "option_price_eur",
+        "importance": 0.0315,
+        "shape": [
+          {
+            "bin": "missing",
+            "score": 0.003
+          },
+          {
+            "bin": "\u2212\u221e \u2013 100.00",
+            "low": null,
+            "high": 100.0,
+            "score": 1.0431
+          },
+          {
+            "bin": "100.00 \u2013 225.00",
+            "low": 100.0,
+            "high": 225.0,
+            "score": 0.9445
+          },
+          {
+            "bin": "225.00 \u2013 270.00",
+            "low": 225.0,
+            "high": 270.0,
+            "score": 0.3296
+          },
+          {
+            "bin": "270.00 \u2013 320.00",
+            "low": 270.0,
+            "high": 320.0,
+            "score": 0.2957
+          },
+          {
+            "bin": "320.00 \u2013 400.00",
+            "low": 320.0,
+            "high": 400.0,
+            "score": 0.2891
+          },
+          {
+            "bin": "400.00 \u2013 465.00",
+            "low": 400.0,
+            "high": 465.0,
+            "score": 0.2622
+          },
+          {
+            "bin": "465.00 \u2013 540.00",
+            "low": 465.0,
+            "high": 540.0,
+            "score": 0.236
+          },
+          {
+            "bin": "540.00 \u2013 725.00",
+            "low": 540.0,
+            "high": 725.0,
+            "score": 0.2349
+          },
+          {
+            "bin": "725.00 \u2013 925.00",
+            "low": 725.0,
+            "high": 925.0,
+            "score": 0.2286
+          },
+          {
+            "bin": "925.00 \u2013 1,090.00",
+            "low": 925.0,
+            "high": 1090.0,
+            "score": 0.2263
+          },
+          {
+            "bin": "1,090.00 \u2013 1,190.00",
+            "low": 1090.0,
+            "high": 1190.0,
+            "score": 0.3071
+          },
+          {
+            "bin": "1,190.00 \u2013 1,275.00",
+            "low": 1190.0,
+            "high": 1275.0,
+            "score": 0.3042
+          },
+          {
+            "bin": "1,275.00 \u2013 1,400.00",
+            "low": 1275.0,
+            "high": 1400.0,
+            "score": 0.3015
+          },
+          {
+            "bin": "1,400.00 \u2013 1,525.00",
+            "low": 1400.0,
+            "high": 1525.0,
+            "score": 0.2983
+          },
+          {
+            "bin": "1,525.00 \u2013 1,615.00",
+            "low": 1525.0,
+            "high": 1615.0,
+            "score": 0.2101
+          },
+          {
+            "bin": "1,615.00 \u2013 1,765.00",
+            "low": 1615.0,
+            "high": 1765.0,
+            "score": 0.0855
+          },
+          {
+            "bin": "1,765.00 \u2013 1,940.00",
+            "low": 1765.0,
+            "high": 1940.0,
+            "score": 0.1009
+          },
+          {
+            "bin": "1,940.00 \u2013 1,985.00",
+            "low": 1940.0,
+            "high": 1985.0,
+            "score": 0.091
+          },
+          {
+            "bin": "1,985.00 \u2013 2,045.00",
+            "low": 1985.0,
+            "high": 2045.0,
+            "score": 0.1276
+          },
+          {
+            "bin": "2,045.00 \u2013 2,190.00",
+            "low": 2045.0,
+            "high": 2190.0,
+            "score": 0.2075
+          },
+          {
+            "bin": "2,190.00 \u2013 2,340.00",
+            "low": 2190.0,
+            "high": 2340.0,
+            "score": -0.0683
+          },
+          {
+            "bin": "2,340.00 \u2013 2,575.00",
+            "low": 2340.0,
+            "high": 2575.0,
+            "score": -0.5545
+          },
+          {
+            "bin": "2,575.00 \u2013 2,975.00",
+            "low": 2575.0,
+            "high": 2975.0,
+            "score": -0.5867
+          },
+          {
+            "bin": "2,975.00 \u2013 3,500.00",
+            "low": 2975.0,
+            "high": 3500.0,
+            "score": -0.9491
+          },
+          {
+            "bin": "3,500.00 \u2013 3,875.00",
+            "low": 3500.0,
+            "high": 3875.0,
+            "score": -0.9481
+          },
+          {
+            "bin": "3,875.00 \u2013 4,125.00",
+            "low": 3875.0,
+            "high": 4125.0,
+            "score": -0.734
+          },
+          {
+            "bin": "4,125.00 \u2013 5,875.00",
+            "low": 4125.0,
+            "high": 5875.0,
+            "score": -0.7498
+          },
+          {
+            "bin": "5,875.00 \u2013 \u221e",
+            "low": 5875.0,
+            "high": null,
+            "score": -0.7618
+          }
+        ]
+      },
+      {
+        "term": "model",
+        "importance": 0.0236,
+        "shape": [
+          {
+            "bin": "F70",
+            "score": -0.0027
+          },
+          {
+            "bin": "G60",
+            "score": -0.0291
+          },
+          {
+            "bin": "G70",
+            "score": 0.033
+          }
+        ]
+      },
+      {
+        "term": "option_price_pct_of_base",
+        "importance": 0.0231,
+        "shape": [
+          {
+            "bin": "missing",
+            "score": -0.0028
+          },
+          {
+            "bin": "\u2212\u221e \u2013 0.08",
+            "low": null,
+            "high": 0.08,
+            "score": 0.2722
+          },
+          {
+            "bin": "0.08 \u2013 0.18",
+            "low": 0.08,
+            "high": 0.18,
+            "score": 0.1915
+          },
+          {
+            "bin": "0.18 \u2013 0.24",
+            "low": 0.18,
+            "high": 0.24,
+            "score": 0.1824
+          },
+          {
+            "bin": "0.24 \u2013 0.32",
+            "low": 0.24,
+            "high": 0.32,
+            "score": 0.0181
+          },
+          {
+            "bin": "0.32 \u2013 0.35",
+            "low": 0.32,
+            "high": 0.35,
+            "score": -0.011
+          },
+          {
+            "bin": "0.35 \u2013 0.39",
+            "low": 0.35,
+            "high": 0.39,
+            "score": -0.0108
+          },
+          {
+            "bin": "0.39 \u2013 0.44",
+            "low": 0.39,
+            "high": 0.44,
+            "score": -0.0117
+          },
+          {
+            "bin": "0.44 \u2013 0.47",
+            "low": 0.44,
+            "high": 0.47,
+            "score": 0.0113
+          },
+          {
+            "bin": "0.47 \u2013 0.56",
+            "low": 0.47,
+            "high": 0.56,
+            "score": 0.063
+          },
+          {
+            "bin": "0.56 \u2013 0.65",
+            "low": 0.56,
+            "high": 0.65,
+            "score": 0.0234
+          },
+          {
+            "bin": "0.65 \u2013 0.73",
+            "low": 0.65,
+            "high": 0.73,
+            "score": -0.4832
+          },
+          {
+            "bin": "0.73 \u2013 0.82",
+            "low": 0.73,
+            "high": 0.82,
+            "score": -0.5375
+          },
+          {
+            "bin": "0.82 \u2013 0.86",
+            "low": 0.82,
+            "high": 0.86,
+            "score": -0.5386
+          },
+          {
+            "bin": "0.86 \u2013 0.92",
+            "low": 0.86,
+            "high": 0.92,
+            "score": -0.4611
+          },
+          {
+            "bin": "0.92 \u2013 0.98",
+            "low": 0.92,
+            "high": 0.98,
+            "score": -0.4612
+          },
+          {
+            "bin": "0.98 \u2013 1.04",
+            "low": 0.98,
+            "high": 1.04,
+            "score": -0.4541
+          },
+          {
+            "bin": "1.04 \u2013 1.08",
+            "low": 1.04,
+            "high": 1.08,
+            "score": -0.3942
+          },
+          {
+            "bin": "1.08 \u2013 1.13",
+            "low": 1.08,
+            "high": 1.13,
+            "score": -0.4039
+          },
+          {
+            "bin": "1.13 \u2013 1.23",
+            "low": 1.13,
+            "high": 1.23,
+            "score": -0.4727
+          },
+          {
+            "bin": "1.23 \u2013 1.30",
+            "low": 1.23,
+            "high": 1.3,
+            "score": -0.4777
+          },
+          {
+            "bin": "1.30 \u2013 1.34",
+            "low": 1.3,
+            "high": 1.34,
+            "score": -0.4642
+          },
+          {
+            "bin": "1.34 \u2013 1.37",
+            "low": 1.34,
+            "high": 1.37,
+            "score": -0.4518
+          },
+          {
+            "bin": "1.37 \u2013 1.48",
+            "low": 1.37,
+            "high": 1.48,
+            "score": -0.2554
+          },
+          {
+            "bin": "1.48 \u2013 1.60",
+            "low": 1.48,
+            "high": 1.6,
+            "score": -0.094
+          },
+          {
+            "bin": "1.60 \u2013 1.65",
+            "low": 1.6,
+            "high": 1.65,
+            "score": -0.0957
+          },
+          {
+            "bin": "1.65 \u2013 1.72",
+            "low": 1.65,
+            "high": 1.72,
+            "score": -0.0982
+          },
+          {
+            "bin": "1.72 \u2013 1.83",
+            "low": 1.72,
+            "high": 1.83,
+            "score": -0.0996
+          },
+          {
+            "bin": "1.83 \u2013 1.96",
+            "low": 1.83,
+            "high": 1.96,
+            "score": -0.1011
+          },
+          {
+            "bin": "1.96 \u2013 2.04",
+            "low": 1.96,
+            "high": 2.04,
+            "score": 0.024
+          },
+          {
+            "bin": "2.04 \u2013 2.07",
+            "low": 2.04,
+            "high": 2.07,
+            "score": 0.0214
+          },
+          {
+            "bin": "2.07 \u2013 2.08",
+            "low": 2.07,
+            "high": 2.08,
+            "score": 0.0143
+          },
+          {
+            "bin": "2.08 \u2013 2.18",
+            "low": 2.08,
+            "high": 2.18,
+            "score": 0.0125
+          },
+          {
+            "bin": "2.18 \u2013 2.33",
+            "low": 2.18,
+            "high": 2.33,
+            "score": 0.01
+          },
+          {
+            "bin": "2.33 \u2013 2.40",
+            "low": 2.33,
+            "high": 2.4,
+            "score": 0.1059
+          },
+          {
+            "bin": "2.40 \u2013 2.53",
+            "low": 2.4,
+            "high": 2.53,
+            "score": 0.1289
+          },
+          {
+            "bin": "2.53 \u2013 2.66",
+            "low": 2.53,
+            "high": 2.66,
+            "score": 0.1281
+          },
+          {
+            "bin": "2.66 \u2013 2.69",
+            "low": 2.66,
+            "high": 2.69,
+            "score": 0.1251
+          },
+          {
+            "bin": "2.69 \u2013 2.74",
+            "low": 2.69,
+            "high": 2.74,
+            "score": 0.1213
+          },
+          {
+            "bin": "2.74 \u2013 2.79",
+            "low": 2.74,
+            "high": 2.79,
+            "score": 0.2952
+          },
+          {
+            "bin": "2.79 \u2013 2.84",
+            "low": 2.79,
+            "high": 2.84,
+            "score": 0.2968
+          },
+          {
+            "bin": "2.84 \u2013 2.90",
+            "low": 2.84,
+            "high": 2.9,
+            "score": 0.2995
+          },
+          {
+            "bin": "2.90 \u2013 2.99",
+            "low": 2.9,
+            "high": 2.99,
+            "score": 0.3034
+          },
+          {
+            "bin": "2.99 \u2013 3.06",
+            "low": 2.99,
+            "high": 3.06,
+            "score": 0.3054
+          },
+          {
+            "bin": "3.06 \u2013 3.20",
+            "low": 3.06,
+            "high": 3.2,
+            "score": 0.2994
+          },
+          {
+            "bin": "3.20 \u2013 3.33",
+            "low": 3.2,
+            "high": 3.33,
+            "score": 0.1885
+          },
+          {
+            "bin": "3.33 \u2013 3.42",
+            "low": 3.33,
+            "high": 3.42,
+            "score": 0.1823
+          },
+          {
+            "bin": "3.42 \u2013 3.55",
+            "low": 3.42,
+            "high": 3.55,
+            "score": 0.1915
+          },
+          {
+            "bin": "3.55 \u2013 3.71",
+            "low": 3.55,
+            "high": 3.71,
+            "score": 0.1942
+          },
+          {
+            "bin": "3.71 \u2013 3.91",
+            "low": 3.71,
+            "high": 3.91,
+            "score": 0.1985
+          },
+          {
+            "bin": "3.91 \u2013 4.04",
+            "low": 3.91,
+            "high": 4.04,
+            "score": 0.2065
+          },
+          {
+            "bin": "4.04 \u2013 5.20",
+            "low": 4.04,
+            "high": 5.2,
+            "score": 0.2103
+          },
+          {
+            "bin": "5.20 \u2013 6.48",
+            "low": 5.2,
+            "high": 6.48,
+            "score": 0.2147
+          },
+          {
+            "bin": "6.48 \u2013 6.78",
+            "low": 6.48,
+            "high": 6.78,
+            "score": 0.2231
+          },
+          {
+            "bin": "6.78 \u2013 \u221e",
+            "low": 6.78,
+            "high": null,
+            "score": 2.0628
+          }
+        ]
+      },
+      {
+        "term": "engine",
+        "importance": 0.0173,
+        "shape": [
+          {
+            "bin": "BEV",
+            "score": -0.0365
+          },
+          {
+            "bin": "ICE",
+            "score": 0.0117
+          },
+          {
+            "bin": "PHEV",
+            "score": 0.0073
+          }
+        ]
+      },
+      {
+        "term": "base_price_eur",
+        "importance": 0.0054,
+        "shape": [
+          {
+            "bin": "missing",
+            "score": 0.0
+          },
+          {
+            "bin": "\u2212\u221e \u2013 52,075.00",
+            "low": null,
+            "high": 52075.0,
+            "score": 0.005
+          },
+          {
+            "bin": "52,075.00 \u2013 66,450.00",
+            "low": 52075.0,
+            "high": 66450.0,
+            "score": 0.0033
+          },
+          {
+            "bin": "66,450.00 \u2013 72,800.00",
+            "low": 66450.0,
+            "high": 72800.0,
+            "score": -0.0004
+          },
+          {
+            "bin": "72,800.00 \u2013 98,350.00",
+            "low": 72800.0,
+            "high": 98350.0,
+            "score": -0.0036
+          },
+          {
+            "bin": "98,350.00 \u2013 130,250.00",
+            "low": 98350.0,
+            "high": 130250.0,
+            "score": -0.0097
+          },
+          {
+            "bin": "130,250.00 \u2013 143,500.00",
+            "low": 130250.0,
+            "high": 143500.0,
+            "score": -0.0003
+          },
+          {
+            "bin": "143,500.00 \u2013 \u221e",
+            "low": 143500.0,
+            "high": null,
+            "score": 0.023
+          }
+        ]
+      }
+    ]
+  },
+  "poor_value_check": {
+    "n_labels": 74,
+    "by_sentiment": {
+      "request": 74
+    },
+    "by_reason": {
+      "Dislike: price-performance ratio": 53,
+      "Vehicle equipment: not available": 16,
+      "Vehicle equipment: not standard / too costly": 5
+    },
+    "by_fitment_tier": {
+      "no_link": 65,
+      "standard_all": 4,
+      "optional": 2,
+      "not_listed": 2,
+      "not_covered": 1
+    }
+  },
+  "feature_classifier_fitment": {
+    "n_comments": 8211,
+    "candidates_per_comment": 10,
+    "variants": {
+      "text": {
+        "top1_hit": 0.678,
+        "top3_hit": 0.8663,
+        "top1_hit_linked": 0.6495,
+        "top3_hit_linked": 0.8505
+      },
+      "text_plus_car_prior": {
+        "top1_hit": 0.678,
+        "top3_hit": 0.8663,
+        "top1_hit_linked": 0.6495,
+        "top3_hit_linked": 0.8505
+      },
+      "text_plus_car_prior_plus_fitment": {
+        "top1_hit": 0.6791,
+        "top3_hit": 0.8665,
+        "top1_hit_linked": 0.6558,
+        "top3_hit_linked": 0.8511
+      }
+    },
+    "n_comments_true_feature_linked": 3512,
+    "car_prior_alone_top1_hit": 0.1559,
+    "uniform_top1_hit": 0.0095,
+    "fitment_reranker_coefficients": {
+      "logp": 1.5995,
+      "rank": -0.085,
+      "logprior": 0.0061,
+      "tier_standard_all": 0.1289,
+      "tier_standard_some": 0.0012,
+      "tier_optional": 0.379,
+      "tier_not_listed": 0.1059,
+      "tier_not_covered": 0.084,
+      "tier_no_link": 0.0386
+    },
+    "fitment_gain_top1": 0.0011,
+    "fitment_gain_top1_linked": 0.0063,
+    "mcnemar_linked": {
+      "fitment_fixes": 26,
+      "fitment_breaks": 4,
+      "p_value": 0.0001,
+      "significant_at_0_05": true
+    }
+  }
+}
