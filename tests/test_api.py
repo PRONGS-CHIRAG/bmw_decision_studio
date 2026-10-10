@@ -192,3 +192,16 @@ def test_graph_endpoints(client):
     assert node["type"] == "Feature" and node["prov"]["ref"] == "reports/feature_scorecard.csv"
     assert any(n["rel"] == "LINKED_TO" for n in node["neighbours"])
     assert client.get("/api/graph/node/feature:Nope").status_code == 404
+
+
+def test_graph_full_has_every_node_and_edge(client):
+    r = client.get("/api/graph/full", headers={"Accept-Encoding": "gzip"})
+    assert r.headers.get("content-encoding") == "gzip"
+    full = r.json()
+    schema = client.get("/api/graph/schema").json()
+    assert full["n_nodes"] == schema["n_nodes"] == len(full["nodes"])
+    assert full["n_edges"] == schema["n_edges"] == len(full["edges"])
+    n = len(full["nodes"])
+    assert all(0 <= u < n and 0 <= v < n for u, v, _ in full["edges"])
+    assert all(isinstance(x, float) and isinstance(y, float) for *_, x, y in full["nodes"])
+    assert len({(x, y) for *_, x, y in full["nodes"]}) > 0.99 * n          # leaves do not pile up on one point

@@ -319,3 +319,12 @@ export interface NodeView {
   attributes: Record<string, unknown>;
   neighbours: { rel: string; direction: "in" | "out"; total: number; items: { id: string; type: string; label: string }[] }[];
 }
+
+/** /api/graph/full: every node with a precomputed position; edges as index pairs into `nodes`. */
+export interface FullGraph {
+  built_at: string;
+  n_nodes: number;
+  n_edges: number;
+  nodes: [id: string, type: string, group: string, label: string, x: number, y: number][];
+  edges: [source: number, target: number, rel: string][];
+}

@@ -15,6 +15,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
@@ -60,6 +61,7 @@ async def lifespan(_app):
 
 
 app = FastAPI(title="BMW Product Decision Studio API", lifespan=lifespan)
+app.add_middleware(GZipMiddleware, minimum_size=4096)       # the entire-graph payload is ~2.6 MB raw
 
 
 def _json(name):
@@ -382,6 +384,14 @@ def graph_schema():
     meta = STATE["pipeline"].graph_meta
     return jsonable({k: meta.get(k) for k in ("n_nodes", "n_edges", "node_types", "edge_types", "checks", "built_at",
                                                "not_in_graph")})
+
+
+@app.get("/api/graph/full")
+def graph_full():
+    """Every node with a precomputed position and every edge, for the full-screen "Entire graph" view."""
+    from .graph.layout import overview
+    pipe = STATE["pipeline"]
+    return JSONResponse(overview(pipe.g, pipe.graph_meta))
 
 
 @app.get("/api/graph/node/{node_id:path}")

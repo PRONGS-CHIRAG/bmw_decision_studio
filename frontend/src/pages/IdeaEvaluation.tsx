@@ -13,8 +13,9 @@ import SpecReview from "../components/SpecReview";
 import VerificationReport from "../components/VerificationReport";
 import { REC_INFO, REC_ORDER, bottomLine, groupCells } from "../plain";
 
-// cytoscape is large: load the graph view only when its tab is opened
+// cytoscape is large: load the graph view only when its tab or the full-screen page is opened
 const EvidenceGraph = lazy(() => import("../components/EvidenceGraph"));
+const GraphPage = lazy(() => import("../components/GraphPage"));
 
 type Tab = "summary" | "markets" | "equipment" | "graph" | "verification";
 const TABS: { id: Tab; label: string }[] = [
@@ -56,6 +57,9 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
   const [panel, setPanel] = useState<StepId>("retriever");   // side panel; follows each real step transition
   const [tab, setTab] = useState<Tab>("summary");
   const shown = useRef<string | null>(null);          // evaluation id on screen; late agent answers for others are dropped
+  const [graphOpen, setGraphOpen] = useState(false);  // the knowledge graph on a page of its own
+  const [pdfBusy, setPdfBusy] = useState(false);
+  const [pdfError, setPdfError] = useState<string | null>(null);
   const policyEdited = useRef(false);
 
   useEffect(() => {
@@ -209,6 +213,37 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
     requestAnimationFrame(() => document.getElementById("report")?.scrollIntoView({ behavior: "smooth", block: "start" }));
   };
 
+  // The graph page gets a history entry, so the browser's Back closes it instead of leaving the app.
+  const openGraph = useCallback(() => {
+    window.history.pushState({ graphPage: true }, "", "#knowledge-graph");
+    setGraphOpen(true);
+  }, []);
+  const closeGraph = useCallback(() => {
+    if (window.history.state?.graphPage) window.history.back();
+    else setGraphOpen(false);
+  }, []);
+  useEffect(() => {
+    if (!graphOpen) return;
+    const pop = () => setGraphOpen(false);
+    window.addEventListener("popstate", pop);
+    return () => window.removeEventListener("popstate", pop);
+  }, [graphOpen]);
+
+  async function exportPdf() {
+    if (!evaluation) return;
+    setPdfBusy(true);
+    setPdfError(null);
+    try {
+      const { downloadReport } = await import("../pdf/exportReport");
+      await downloadReport({ evaluation, explained, explainState, explainError, status });
+      log("system", "Report exported as PDF", `Evaluation ${evaluation.evaluation_id}${explainState === "done" ? ", with the verified brief" : ", without the written brief"}`);
+    } catch (e) {
+      setPdfError((e as Error).message);
+    } finally {
+      setPdfBusy(false);
+    }
+  }
+
   const features = evaluation?.result.features ?? [];
   const fr = features[featIdx] ?? null;
   const firstCell = fr?.cells.find((c) => c.recommendation !== "Not sold" && c.recommendation !== "Insufficient evidence") ?? fr?.cells[0];
@@ -255,6 +290,17 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
         <section id="report" className="ws__report anchor" aria-labelledby="report-title">
           <div className="report__top">
             <h2 id="report-title" className="report__title">Report</h2>
+            {evaluation && (
+              <div className="report__actions">
+                <button type="button" className="btn btn--outline btn--small" onClick={openGraph}>
+                  <GraphIcon /> Open knowledge graph
+                </button>
+                <button type="button" className="btn btn--small" onClick={exportPdf} disabled={pdfBusy}
+                  title={explainState === "running" ? "The written brief is still being prepared; export now leaves it out" : undefined}>
+                  <DownloadIcon /> {pdfBusy ? "Preparing PDF…" : "Export PDF"}
+                </button>
+              </div>
+            )}
             {features.length > 1 && (
               <div className="chips" role="group" aria-label="Feature">
                 {features.map((f, i) => (
@@ -265,6 +311,7 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
               </div>
             )}
           </div>
+          {pdfError && <p className="note note--error small">The PDF could not be created: {pdfError}</p>}
           {!evaluation ? (
             <div className="report__empty">
               <p><strong>The report appears here once the evidence is computed.</strong></p>
@@ -316,7 +363,7 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
                 ) : <p className="small muted">No feature was evaluated.</p>)}
                 {tab === "graph" && (
                   <Suspense fallback={<div className="skeleton" style={{ height: 320 }} />}>
-                    <EvidenceGraph evaluation={evaluation} focus={focus} onFocus={setFocus} />
+                    <EvidenceGraph evaluation={evaluation} focus={focus} onFocus={setFocus} onOpenFull={openGraph} />
                   </Suspense>
                 )}
                 {tab === "verification" && <VerificationReport explained={explained} facts={evaluation.facts} />}
@@ -325,6 +372,12 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
           )}
         </section>
       </div>
+
+      {graphOpen && evaluation && (
+        <Suspense fallback={<div className="gpage gpage--loading" role="status"><span className="spinner" aria-hidden /></div>}>
+          <GraphPage evaluation={evaluation} focus={focus} onFocus={setFocus} onClose={closeGraph} onExport={exportPdf} exporting={pdfBusy} exportError={pdfError} />
+        </Suspense>
+      )}
 
       <aside className="ws__side side" aria-label="Side panel">
         <div className="side__head">
@@ -453,6 +506,23 @@ function IdeaBar({ idea, setIdea, onSubmit, busy }: { idea: string; setIdea: (v:
       <input id="idea" className="input ideabar__input" value={idea} onChange={(e) => setIdea(e.target.value)} placeholder={`Try another idea, for example: ${EXAMPLES[0]}`} autoComplete="off" maxLength={2000} />
       <button className="btn btn--small ideabar__btn" type="submit" disabled={busy || !idea.trim()}>{busy ? "Working…" : "Evaluate"}</button>
     </form>
+  );
+}
+
+function GraphIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
+      <circle cx="3.5" cy="8" r="2" /><circle cx="12.5" cy="3.5" r="2" /><circle cx="12.5" cy="12.5" r="2" />
+      <path d="M5.3 7.1 10.7 4.4M5.3 8.9l5.4 2.7" />
+    </svg>
+  );
+}
+
+function DownloadIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden>
+      <path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M2.5 13.5h11" />
+    </svg>
   );
 }
 
