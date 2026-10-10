@@ -157,3 +157,4 @@ BMW-Data/         raw hackathon data (not committed)
 ```
 
 This repository previously held **Demandra**, our procurement demand-prediction solution for Challenge 2 of the Unite x TUM.ai Hackathon (1st place). The original code is in git history.
+>>>>>>> 6f85e34 (Initial project setup and data exploration scaffold)
