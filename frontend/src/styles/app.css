@@ -56,22 +56,6 @@
 .bullets { margin: 6px 0 0; padding-left: 18px; }
 .bullets li + li { margin-top: 4px; }
 
-/* ------------------------------------------------------------------ in-page content navigation (bmw.de cmp-contentnavigation) */
-.contentnav { position: sticky; top: var(--nav-h); z-index: 20; background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
-.contentnav__inner { display: flex; align-items: center; gap: var(--s-5); min-height: 56px; }
-.contentnav__tabs { display: flex; gap: var(--s-5); overflow-x: auto; scrollbar-width: none; flex: 1; align-self: stretch; }
-.contentnav__tab { display: flex; align-items: center; position: relative; white-space: nowrap; text-decoration: none; font-size: var(--fs-ui); color: var(--disclaimer); font-weight: var(--w-input); }
-.contentnav__tab:hover { color: var(--heading); }
-.contentnav__tab[aria-current="true"] { color: var(--cta); font-weight: var(--w-clickable); }
-.contentnav__tab[aria-current="true"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; border-radius: 2px; background: var(--cta); }
-@media (max-width: 767px) { .contentnav__cta { display: none; } .contentnav__inner { min-height: 60px; } }
-.anchor { scroll-margin-top: calc(var(--nav-h) + 64px); }
-
-/* ------------------------------------------------------------------ key figures */
-.keyfigs { padding: var(--s-5) 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-.keyfigs .verdict { font-size: var(--fs-h3); font-weight: var(--w-clickable); gap: 10px; }
-.keyfigs .verdict__mark { width: 14px; height: 14px; }
-
 /* ------------------------------------------------------------------ explanation */
 .explain { display: flex; flex-direction: column; gap: var(--s-6); }
 .explain__headline .claim__text { font-size: var(--fs-h2); line-height: 1.4; color: var(--heading); font-weight: 500; letter-spacing: -0.015em; max-width: 60ch; }
@@ -180,10 +164,5 @@
 @media (max-width: 767px) { .decision-form__grid { grid-template-columns: 1fr; } .decision-form { padding: var(--s-5) var(--s-4); } }
 .tile--compact { padding: 12px 20px; min-height: 52px; justify-content: center; }
 
-/* ------------------------------------------------------------------ footer (bmw.de: soft grey, 23px light headings) */
-.footer { background: var(--surface-background-secondary); border-top: 1px solid var(--border); padding: var(--s-7) 0 var(--s-6); margin-top: var(--s-8); }
-.footer__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s-6); }
-@media (max-width: 1024px) { .footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 560px) { .footer__grid { grid-template-columns: 1fr; } }
-.footer__title { font-size: var(--fs-sub2); line-height: 28px; font-weight: var(--w-clickable); }
-.footer__legal { margin-top: var(--s-6); padding-top: var(--s-5); border-top: 1px solid var(--border); }
+
+.anchor { scroll-margin-top: calc(var(--nav-h) + 16px); }

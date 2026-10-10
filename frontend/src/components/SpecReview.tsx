@@ -12,12 +12,16 @@ export default function SpecReview({
   setDraft,
   onEvaluate,
   busy,
+  compact = false,
+  confirmed = false,
 }: {
   interp: InterpretResult;
   draft: IdeaSpec;
   setDraft: (s: IdeaSpec) => void;
   onEvaluate: () => void;
   busy: boolean;
+  compact?: boolean;
+  confirmed?: boolean;
 }) {
   const chosen = new Set(draft.features.map((f) => f.feature));
   const failed = interp.attempts.filter((a) => !a.ok);
@@ -36,18 +40,19 @@ export default function SpecReview({
     setDraft({ ...draft, [key]: draft[key].includes(v) ? draft[key].filter((x) => x !== v) : [...draft[key], v] });
 
   return (
-    <div className="review stack-lg">
+    <div className={`review stack-lg ${compact ? "review--compact" : ""}`}>
       <div className="stack">
-        <p className="eyebrow">Step 1 · Retriever agent</p>
-        <h2 className="section-title">Is this what you want to evaluate?</h2>
+        {!compact && <p className="eyebrow">Step 1 · Retriever agent</p>}
+        {!compact && <h2 className="section-title">Is this what you want to evaluate?</h2>}
+        {compact && <p className="small muted">Is this what you want to evaluate? Change anything below, then confirm.</p>}
         <p className="lead">{draft.summary}</p>
-        <p className="caption">
+        {!compact && <p className="caption">
           {byLLM ? `Read by ${interp.method.slice(4)}` : "Read by transparent rules (no language model)"}. Candidates come from feature
           names and aliases, the trained feature classifier and the {interp.semantic_method} index over the knowledge graph;{" "}
           {byLLM
             ? "the agent may only choose among them and its answer is validated before you see it."
             : "features matched with a score of 0.5 or more are preselected. Set OPENAI_API_KEY to let the retriever agent read the idea."}
-        </p>
+        </p>}
         {failed.length > 0 && (
           <p className="note note--warn">
             <strong>Validation caught {failed.length} invalid answer{failed.length > 1 ? "s" : ""}.</strong>{" "}
@@ -165,7 +170,7 @@ export default function SpecReview({
 
       <div className="row">
         <button className="btn" type="button" onClick={onEvaluate} disabled={busy}>
-          {busy ? "Evaluating…" : "Evaluate this idea"}
+          {busy ? "Evaluating…" : confirmed ? "Evaluate again with these changes" : compact ? "Confirm and evaluate" : "Evaluate this idea"}
         </button>
         <span className="caption measure">
           The decision engine computes every number from the processed data and model outputs. No language model is involved in this step.

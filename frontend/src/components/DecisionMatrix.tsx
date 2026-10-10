@@ -1,3 +1,4 @@
+import type React from "react";
 import { MARKET_NAMES, MODEL_NAMES, fmtNum } from "../api";
 import type { Cell } from "../types";
 import { Recommendation } from "./marks";
@@ -18,7 +19,7 @@ export default function DecisionMatrix({
 }) {
   const byKey = new Map(cells.map((c) => [`${c.model}|${c.market}`, c]));
   return (
-    <div className="matrix" style={{ gridTemplateColumns: `minmax(120px, 0.8fr) repeat(${markets.length}, minmax(130px, 1fr))` }} role="grid" aria-label="Recommendation by model and market">
+    <div className="matrix" style={{ "--n": markets.length, gridTemplateColumns: `minmax(72px, 0.7fr) repeat(${markets.length}, minmax(0, 1fr))` } as React.CSSProperties} role="grid" aria-label="Recommendation by model and market">
       <div className="matrix__corner" role="columnheader" />
       {markets.map((m) => (
         <div key={m} className="matrix__colhead" role="columnheader">

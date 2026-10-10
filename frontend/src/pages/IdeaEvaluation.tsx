@@ -1,35 +1,35 @@
 import { Suspense, lazy, useCallback, useEffect, useRef, useState } from "react";
-import { ApiError, MARKET_NAMES, MODEL_NAMES, MOVE_LABELS, fmtInt, postJSON, useApi } from "../api";
-import type { AgentEvaluation, AgentStatus, Explained, IdeaSpec, InterpretResult, Policy } from "../types";
-import ProcessFlow, { type Actor, type ExplainState, type Phase, type RunKey, type Runs, type TraceEvent } from "../components/ProcessFlow";
-import ContentNav from "../components/ContentNav";
+import { ApiError, MARKET_NAMES, MODEL_NAMES, MOVE_LABELS, fmtInt, fmtNum, postJSON, useApi } from "../api";
+import type { AgentEvaluation, AgentStatus, Explained, FeatureResult, IdeaSpec, InterpretResult, Policy } from "../types";
+import ProcessFlow, { ACTOR_LABEL, ActorIcon, type Actor, type ExplainState, type Phase, type RunKey, type Runs, type StepId, type TraceEvent } from "../components/ProcessFlow";
 import DecisionForm from "../components/DecisionForm";
 import DecisionMatrix from "../components/DecisionMatrix";
 import EvidencePanel from "../components/EvidencePanel";
-import ExplanationView from "../components/ExplanationView";
-import IdeaHero from "../components/IdeaHero";
-import KeyFigures from "../components/KeyFigures";
+import IdeaHero, { EXAMPLES } from "../components/IdeaHero";
+import PlainReport from "../components/PlainReport";
 import PolicyPanel from "../components/PolicyPanel";
 import PriceLadder from "../components/PriceLadder";
 import SpecReview from "../components/SpecReview";
 import VerificationReport from "../components/VerificationReport";
-import { Verdict } from "../components/marks";
+import { REC_INFO, REC_ORDER, bottomLine, groupCells } from "../plain";
 
-// cytoscape is large: load the graph view only when an evaluation exists
+// cytoscape is large: load the graph view only when its tab is opened
 const EvidenceGraph = lazy(() => import("../components/EvidenceGraph"));
 
-const SECTIONS = [
-  { id: "overview", label: "Overview" },
-  { id: "explanation", label: "Explanation" },
+type Tab = "summary" | "markets" | "equipment" | "graph" | "verification";
+const TABS: { id: Tab; label: string }[] = [
+  { id: "summary", label: "Summary" },
   { id: "markets", label: "Series × markets" },
   { id: "equipment", label: "Price & equipment" },
   { id: "graph", label: "Knowledge graph" },
   { id: "verification", label: "Verification" },
-  { id: "decision", label: "Decision" },
 ];
-
-const scrollTo = (id: string) =>
-  requestAnimationFrame(() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" }));
+const STEPS: StepId[] = ["retriever", "you", "engine", "explainer", "verifier", "brief"];
+const STEP_TITLE: Record<StepId, string> = {
+  retriever: "Match the idea", you: "Confirm the scope", engine: "Compute the evidence", explainer: "Write the brief",
+  verifier: "Check every sentence", brief: "Your decision",
+};
+const STEP_TAB: Partial<Record<StepId, Tab>> = { engine: "summary", explainer: "summary", verifier: "verification", brief: "summary" };
 
 export default function IdeaEvaluation({ status }: { status: AgentStatus | null }) {
   const { data: policyData } = useApi<{ default: Policy }>("/api/policy");
@@ -53,6 +53,8 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
   const [focus, setFocus] = useState<string | null>(null);
   const [featIdx, setFeatIdx] = useState(0);
   const [cellKey, setCellKey] = useState<string | null>(null);
+  const [panel, setPanel] = useState<StepId>("retriever");   // side panel; follows each real step transition
+  const [tab, setTab] = useState<Tab>("summary");
   const shown = useRef<string | null>(null);          // evaluation id on screen; late agent answers for others are dropped
   const policyEdited = useRef(false);
 
@@ -88,7 +90,8 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
     setExplainState("idle");
     setFocus(null);
     shown.current = null;
-    scrollTo("pipeline");
+    setPanel("retriever");
+    setTab("summary");
     const t = performance.now();
     try {
       const r = await postJSON<InterpretResult>("/api/agent/interpret", { idea: text });
@@ -101,7 +104,7 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
       if (r.spec.ambiguities.length) log("retriever", `${r.spec.ambiguities.length} ambiguity noted`, r.spec.ambiguities.join(" "));
       log("you", "Waiting for you to confirm the scope", "Check features, series, markets and move, then run the evaluation.", "wait");
       setPhase("review");
-      scrollTo("pipeline");
+      setPanel("you");
     } catch (e) {
       endRun("interpret", true);
       const msg = (e as Error).message;
@@ -117,6 +120,7 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
     setExplainError(null);
     setExplained(null);
     log("explainer", "Request sent: write and verify the brief", `POST /api/agent/explain, evaluation ${eid}`);
+    setPanel("explainer");
     startRun("explain");
     const t = performance.now();
     try {
@@ -130,6 +134,7 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
       log("brief", `Brief ready in ${((performance.now() - t) / 1000).toFixed(1)} s`, `${x.seconds.toFixed(1)} s spent by the agents on the server`);
       setExplained(x);
       setExplainState("done");
+      setPanel("brief");
     } catch (e) {
       if (shown.current !== eid) return;
       endRun("explain", true);
@@ -138,6 +143,7 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
       log("explainer", off ? "Explainer not available" : "Explainer failed", err.message, "error");
       setExplainError(err.message);
       setExplainState(off ? "unavailable" : "error");
+      setPanel("brief");
     }
   }
 
@@ -155,7 +161,7 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
     log("engine", "Request sent: compute the evidence", "POST /api/agent/evaluate");
     startRun("evaluate");
     setPhase("evaluating");
-    if (withAgents) scrollTo("pipeline");
+    if (withAgents) setPanel("engine");
     const t = performance.now();
     try {
       const r = await postJSON<AgentEvaluation>("/api/agent/evaluate", { spec, policy: pol ?? undefined });
@@ -199,7 +205,8 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
   };
   const showNode = (id: string) => {
     setFocus(id);
-    scrollTo("graph");
+    setTab("graph");
+    requestAnimationFrame(() => document.getElementById("report")?.scrollIntoView({ behavior: "smooth", block: "start" }));
   };
 
   const features = evaluation?.result.features ?? [];
@@ -208,222 +215,274 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
   const cell = fr?.cells.find((c) => `${c.model}|${c.market}` === cellKey) ?? firstCell;
   const busy = phase === "interpreting" || phase === "evaluating";
 
-  return (
-    <>
-      <IdeaHero idea={idea} setIdea={setIdea} onSubmit={interpret} busy={busy} status={status} />
-      <div className="sourceline">
-        <div className="wrap">
-          <p className="disclaimer">
-            Sources: customer feedback exports for the F70, G60 and G70 ({status ? `${fmtInt(status.graph.nodes)} graph nodes, ` : ""}10,128
-            comments), customer studies 2025 (CN/EU and US), sales volumes 2024–2030 and the German price lists of July 2026, plus the
-            outputs of the trained classifiers and complaint model.
-          </p>
-          {error && <p className="error small">Something went wrong: {error}</p>}
+  // The step the process is actually at (the side panel returns here on every transition).
+  const current: StepId = phase === "interpreting" || (phase === "idle" && interpretError) ? "retriever" : phase === "review" ? "you"
+    : phase === "evaluating" && !evaluation ? "engine" : explainState === "running" ? "explainer" : evaluation ? "brief" : "retriever";
+
+  if (trace.length === 0)
+    return (
+      <div className="landing">
+        <IdeaHero idea={idea} setIdea={setIdea} onSubmit={interpret} busy={busy} status={status} />
+        <div className="sourceline">
+          <div className="wrap">
+            <p className="disclaimer">
+              Sources: customer feedback exports for the F70, G60 and G70 ({status ? `${fmtInt(status.graph.nodes)} graph nodes, ` : ""}10,128
+              comments), customer studies 2025 (CN/EU and US), sales volumes 2024–2030 and the German price lists of July 2026, plus the
+              outputs of the trained classifiers and complaint model.
+            </p>
+          </div>
         </div>
       </div>
+    );
 
-      {trace.length > 0 && (
-        <section id="pipeline" className="band band--tight anchor" aria-label="Process">
-          <div className="wrap">
-            <ProcessFlow status={status} idea={submitted} phase={phase} interp={interp} draft={draft} evaluation={evaluation}
-              explained={explained} explainState={explainState} explainError={explainError} interpretError={interpretError}
-              evaluateError={evaluateError} runs={runs} trace={trace} onJump={scrollTo} />
-          </div>
+  const selectStep = (id: StepId) => {
+    setPanel(id);
+    const t = STEP_TAB[id];
+    if (t && evaluation) setTab(t);
+  };
+
+  return (
+    <div className="ws">
+      <div className="ws__main">
+        <IdeaBar idea={idea} setIdea={setIdea} onSubmit={interpret} busy={busy} />
+        {error && <p className="note note--error small">Something went wrong: {error}</p>}
+        <section aria-label="Process" className="ws__flow">
+          <ProcessFlow status={status} idea={submitted} phase={phase} interp={interp} draft={draft} evaluation={evaluation}
+            explained={explained} explainState={explainState} explainError={explainError} interpretError={interpretError}
+            evaluateError={evaluateError} runs={runs} trace={trace} selected={panel} onSelect={selectStep} />
         </section>
-      )}
 
-      {interp && draft && (
-        <section id="review" className="band band--soft anchor" aria-label="What will be evaluated">
-          <div className="wrap">
-            <SpecReview interp={interp} draft={draft} setDraft={setDraft} busy={phase === "evaluating"} onEvaluate={() => evaluate(draft, policy, true)} />
+        <section id="report" className="ws__report anchor" aria-labelledby="report-title">
+          <div className="report__top">
+            <h2 id="report-title" className="report__title">Report</h2>
+            {features.length > 1 && (
+              <div className="chips" role="group" aria-label="Feature">
+                {features.map((f, i) => (
+                  <button key={f.feature} type="button" className="chip" aria-pressed={i === featIdx} onClick={() => { setFeatIdx(i); setCellKey(null); }}>
+                    {f.feature}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
-        </section>
-      )}
-
-      {evaluation && (
-        <>
-          <ContentNav sections={SECTIONS} cta="Evaluate another idea" onCta={() => {
-            scrollTo("top");
-            document.getElementById("idea")?.focus();
-          }} />
-
-          <section id="overview" className="band anchor">
-            <div className="wrap stack-lg">
-              <div className="stack">
-                <p className="eyebrow">Step 2 · Decision engine</p>
-                <h2 className="section-title">{fr ? "The evidence at a glance" : "No direct customer evidence"}</h2>
-              </div>
-              {features.length > 1 && (
-                <div className="tabs" role="tablist" aria-label="Features">
-                  {features.map((f, i) => (
-                    <button key={f.feature} className="tab" role="tab" aria-selected={i === featIdx} onClick={() => {
-                      setFeatIdx(i);
-                      setCellKey(null);
-                    }}>
-                      {f.feature}
-                    </button>
-                  ))}
-                </div>
-              )}
-              {fr ? (
-                <KeyFigures feature={fr} explained={explained} policyHash={evaluation.result.policy_hash} dataHash={evaluation.result.data_hash} />
-              ) : (
-                <NoEvidence evaluation={evaluation} />
-              )}
+          {!evaluation ? (
+            <div className="report__empty">
+              <p><strong>The report appears here once the evidence is computed.</strong></p>
+              <p className="small muted">{phase === "review" ? "Confirm the scope in the side panel to start step 3." : "Steps 1 and 2 come first: matching your idea and confirming what to evaluate."}</p>
             </div>
-          </section>
-
-          <section id="explanation" className="band band--soft anchor">
-            <div className="wrap stack-lg">
-              <div className="stack">
-                <p className="eyebrow">Steps 3 and 4 · Explainer and verifier agents</p>
-                <h2 className="section-title">The brief for product management</h2>
+          ) : (
+            <>
+              <div className="tabs" role="tablist" aria-label="Report sections">
+                {TABS.map((t) => (
+                  <button key={t.id} id={`tab-${t.id}`} className="tab" role="tab" aria-selected={tab === t.id} aria-controls="report-panel" onClick={() => setTab(t.id)}>
+                    {t.label}
+                  </button>
+                ))}
               </div>
-              <ExplanationView explained={explained} state={explainState} error={explainError} facts={evaluation.facts}
-                onExplain={() => explain(evaluation.evaluation_id)} onShowNode={showNode} />
-            </div>
-          </section>
-
-          <section id="markets" className="band anchor">
-            <div className="wrap stack-lg">
-              <div className="stack">
-                <p className="eyebrow">Decision engine</p>
-                <h2 className="section-title">Where it matters</h2>
-                <p className="small muted measure">
-                  One recommendation per series and market from complaints, breadth, requests and customer-study weakness, weighted by the
-                  decision policy. Select a cell for its evidence.
-                </p>
-              </div>
-              {fr && cell ? (
-                <div className="decision-grid">
-                  <DecisionMatrix cells={fr.cells} models={evaluation.result.models} markets={evaluation.result.markets}
-                    selected={`${cell.model}|${cell.market}`} onSelect={setCellKey} />
-                  <EvidencePanel cell={cell} fitment={fr.price_ladder.find((l) => l.model === cell.model)} />
-                </div>
-              ) : (
-                <p className="small muted">No feature was evaluated, so there is no series × market evidence.</p>
-              )}
-            </div>
-          </section>
-
-          <section id="equipment" className="band band--soft anchor">
-            <div className="wrap stack-lg">
-              <div className="stack">
-                <p className="eyebrow">German price lists, July 2026</p>
-                <h2 className="section-title">Price and equipment today</h2>
-                <p className="small muted measure">EUR incl. 19% VAT. Prices for other markets are not in the data.</p>
-              </div>
-              {fr ? <PriceLadder ladder={fr.price_ladder} /> : <p className="small muted">No feature was evaluated.</p>}
-              {fr && fr.specs.length > 0 && (
-                <details>
-                  <summary>Technical data linked to {fr.feature} ({fr.specs.length} values)</summary>
-                  <div className="table-scroll" style={{ marginTop: 12 }}>
-                    <table className="table">
-                      <thead>
-                        <tr>
-                          <th>Series</th>
-                          <th>Variant</th>
-                          <th>Attribute (as printed)</th>
-                          <th>Value</th>
-                          <th>Page</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {fr.specs.map((s, i) => (
-                          <tr key={i}>
-                            <td>{MODEL_NAMES[s.model]}</td>
-                            <td>{s.variant}</td>
-                            <td>{s.attribute}</td>
-                            <td className="num">{s.value}</td>
-                            <td className="caption">{s.model} p.{s.page}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
+              <div id="report-panel" role="tabpanel" aria-labelledby={`tab-${tab}`} className="report__panel">
+                {tab === "summary" && (
+                  <PlainReport evaluation={evaluation} feature={fr} explained={explained} explainState={explainState} explainError={explainError}
+                    onExplain={() => explain(evaluation.evaluation_id)} onShowNode={showNode} />
+                )}
+                {tab === "markets" && (fr && cell ? (
+                  <div className="stack">
+                    <p className="small muted measure">One recommendation per series and market, from complaints, how often it comes up, requests and customer-study weakness. Select a cell to see its evidence.</p>
+                    <div className="decision-grid">
+                      <DecisionMatrix cells={fr.cells} models={evaluation.result.models} markets={evaluation.result.markets} selected={`${cell.model}|${cell.market}`} onSelect={setCellKey} />
+                      <EvidencePanel cell={cell} fitment={fr.price_ladder.find((l) => l.model === cell.model)} />
+                    </div>
                   </div>
-                </details>
-              )}
-            </div>
-          </section>
+                ) : <p className="small muted">No feature was evaluated, so there is no series × market evidence.</p>)}
+                {tab === "equipment" && (fr ? (
+                  <div className="stack">
+                    <p className="small muted">German price lists, July 2026. EUR incl. 19% VAT. Prices for other markets are not in the data.</p>
+                    <PriceLadder ladder={fr.price_ladder} />
+                    {fr.specs.length > 0 && (
+                      <details>
+                        <summary>Technical data linked to {fr.feature} ({fr.specs.length} values)</summary>
+                        <div className="table-scroll" style={{ marginTop: 12 }}>
+                          <table className="table">
+                            <thead><tr><th>Series</th><th>Variant</th><th>Attribute (as printed)</th><th>Value</th><th>Page</th></tr></thead>
+                            <tbody>
+                              {fr.specs.map((s, i) => (
+                                <tr key={i}><td>{MODEL_NAMES[s.model]}</td><td>{s.variant}</td><td>{s.attribute}</td><td className="num">{s.value}</td><td className="caption">{s.model} p.{s.page}</td></tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      </details>
+                    )}
+                  </div>
+                ) : <p className="small muted">No feature was evaluated.</p>)}
+                {tab === "graph" && (
+                  <Suspense fallback={<div className="skeleton" style={{ height: 320 }} />}>
+                    <EvidenceGraph evaluation={evaluation} focus={focus} onFocus={setFocus} />
+                  </Suspense>
+                )}
+                {tab === "verification" && <VerificationReport explained={explained} facts={evaluation.facts} />}
+              </div>
+            </>
+          )}
+        </section>
+      </div>
 
-          <section id="graph" className="band anchor">
-            <div className="wrap stack-lg">
+      <aside className="ws__side side" aria-label="Side panel">
+        <div className="side__head">
+          <ol className="side__steps" aria-label="Steps">
+            {STEPS.map((id, i) => (
+              <li key={id}>
+                <button type="button" className={`side__step ${id === panel ? "side__step--on" : ""} ${id === current ? "side__step--now" : ""}`}
+                  aria-current={id === panel ? "step" : undefined} aria-label={`Step ${i + 1}: ${STEP_TITLE[id]}`} onClick={() => selectStep(id)}>
+                  <ActorIcon actor={id} size={14} />
+                </button>
+              </li>
+            ))}
+          </ol>
+          <p className="side__eyebrow">Step {STEPS.indexOf(panel) + 1} of 6, {ACTOR_LABEL[panel]}</p>
+          <h2 className="side__title">{STEP_TITLE[panel]}</h2>
+          {panel !== current && (
+            <button type="button" className="side__back" onClick={() => selectStep(current)}>
+              Back to the current step: {STEP_TITLE[current]}
+            </button>
+          )}
+        </div>
+        <div className="side__body">
+          {panel === "retriever" && (
+            phase === "interpreting" ? (
+              <Working title="Reading your idea">
+                A text classifier and an embedding search score every feature in the knowledge graph. The language model then picks from those
+                candidates only and its answer is checked against a schema. Takes about 5 seconds.
+              </Working>
+            ) : interpretError ? (
               <div className="stack">
-                <p className="eyebrow">Knowledge graph</p>
-                <h2 className="section-title">How the evidence connects</h2>
-                <p className="small muted measure">
-                  The idea, the features it matched, one recommendation node per series × market and every graph node a fact cites: verdict
-                  cells, survey scores, sales volumes, price-list items, customer comments, model terms and caveats. Switch to the schema to
-                  see how all the processed data and model outputs connect.
+                <p className="note note--error">The idea could not be matched: {interpretError}</p>
+                <button className="btn btn--small" onClick={() => interpret(submitted)}>Try again</button>
+              </div>
+            ) : interp ? (
+              <div className="stack">
+                <p>{interp.spec.summary}</p>
+                <p className="small muted">
+                  Picked {interp.spec.features.length ? interp.spec.features.map((f) => f.feature).join(", ") : "no feature"} from {interp.candidates.length} candidates.
+                  Click the nodes under step 1 for details.
                 </p>
+                {phase === "review" && <button className="btn btn--small" onClick={() => setPanel("you")}>Next: confirm the scope</button>}
               </div>
-              <Suspense fallback={<div className="skeleton" style={{ height: 320 }} />}>
-                <EvidenceGraph evaluation={evaluation} focus={focus} onFocus={setFocus} />
-              </Suspense>
-            </div>
-          </section>
+            ) : null
+          )}
 
-          <section id="verification" className="band band--soft anchor">
-            <div className="wrap stack-lg">
-              <div className="stack">
-                <p className="eyebrow">Step 4 · Verifier agent</p>
-                <h2 className="section-title">Verification report</h2>
-              </div>
-              <VerificationReport explained={explained} facts={evaluation.facts} />
-            </div>
-          </section>
+          {panel === "you" && (
+            interp && draft ? (
+              <SpecReview compact interp={interp} draft={draft} setDraft={setDraft} busy={phase === "evaluating"}
+                onEvaluate={() => evaluate(draft, policy, true)} confirmed={phase === "evaluating" || phase === "done"} />
+            ) : <Waiting>This step opens when the retriever has matched your idea.</Waiting>
+          )}
 
-          <section id="decision" className="band anchor">
-            <div className="wrap stack-lg">
+          {panel === "engine" && (
+            evaluation ? (
               <div className="stack">
-                <p className="eyebrow">Your call</p>
-                <h2 className="section-title">Decision and policy</h2>
-              </div>
-              {policy && policyData && (
-                <div className="stack">
-                  <div className="row">
+                {fr ? <EngineSummary feature={fr} /> : <p className="small">No feature matched directly, so there is nothing to score. See the report for the nearest features.</p>}
+                {policy && policyData && (
+                  <div className="stack">
                     <button className="btn btn--outline btn--small" onClick={() => setShowPolicy((s) => !s)} aria-expanded={showPolicy}>
-                      {showPolicy ? "Hide decision policy" : "Adjust decision policy"}
+                      {showPolicy ? "Hide the decision policy" : "Adjust the decision policy"}
                     </button>
-                    <span className="small muted">Policy {evaluation.result.policy_hash}. Changing it recomputes the numbers instantly.</span>
+                    <p className="caption">Changing the policy recomputes the numbers instantly. The written brief is then marked out of date.</p>
+                    {showPolicy && (
+                      <PolicyPanel policy={policy} defaults={policyData.default} hash={evaluation.result.policy_hash} onChange={editPolicy}
+                        onReset={() => editPolicy(policyData.default)} />
+                    )}
                   </div>
-                  {showPolicy && (
-                    <PolicyPanel policy={policy} defaults={policyData.default} hash={evaluation.result.policy_hash} onChange={editPolicy}
-                      onReset={() => editPolicy(policyData.default)} />
-                  )}
-                </div>
-              )}
-              {features.map((f) => (
-                <DecisionForm key={f.feature} result={evaluation.result} feature={f} />
-              ))}
-              {!fr && <p className="small muted">Select a related feature in step 1 to record a decision against the evidence.</p>}
-            </div>
-          </section>
-        </>
-      )}
-    </>
+                )}
+              </div>
+            ) : phase === "evaluating" ? (
+              <Working title="Computing the evidence">The decision engine scores every series and market from the data. No language model is used.</Working>
+            ) : <Waiting>This step starts when you confirm the scope.</Waiting>
+          )}
+
+          {(panel === "explainer" || panel === "verifier") && (
+            explainState === "running" ? (
+              <Working title={panel === "explainer" ? "Writing the brief" : "Checking every sentence"}>
+                The explainer writes the brief from the facts only, citing a fact for every sentence. The verifier then checks numbers, labels,
+                quotes and scope by rule and asks a second model whether the facts support each sentence. A failing sentence is rewritten once,
+                then removed. Both run in one request of about 20 to 50 seconds.
+              </Working>
+            ) : explained ? (
+              <div className="stack">
+                <p>
+                  <strong>{explained.verification.n_verified} sentences</strong> passed every check
+                  {explained.verification.n_removed ? `, ${explained.verification.n_removed} were removed` : ", none were removed"}
+                  {explained.verification.rewritten.length ? `. ${explained.verification.rewritten.length} were sent back once and fixed.` : "."}
+                </p>
+                <p className="small muted">Click the nodes under steps 4 and 5 to see each section and each check.</p>
+                <button className="btn btn--outline btn--small" onClick={() => setTab("verification")}>Open the verification report</button>
+              </div>
+            ) : explainState === "stale" || explainState === "error" ? (
+              <div className="stack">
+                <p className="note note--warn">{explainState === "stale" ? "The policy changed, so the brief is out of date." : `The brief failed: ${explainError}`}</p>
+                {evaluation && <button className="btn btn--small" onClick={() => explain(evaluation.evaluation_id)}>Write the brief again</button>}
+              </div>
+            ) : explainState === "unavailable" ? (
+              <p className="note note--warn">The writing agents are not available. {explainError}</p>
+            ) : <Waiting>This step starts after the evidence is computed.</Waiting>
+          )}
+
+          {panel === "brief" && (
+            evaluation ? (
+              <div className="stack-lg">
+                {features.map((f) => (
+                  <div key={f.feature} className="stack">
+                    <p className="side__answer">{bottomLine(f).text}</p>
+                    <DecisionForm result={evaluation.result} feature={f} />
+                  </div>
+                ))}
+                {features.length === 0 && <p className="small muted">Pick a related feature in step 2 to record a decision against its evidence.</p>}
+                {explainState === "running" && <p className="caption">The written brief is still being prepared; you can read the numbers in the report already.</p>}
+              </div>
+            ) : <Waiting>Your decision comes last, after the report is ready.</Waiting>
+          )}
+        </div>
+      </aside>
+    </div>
   );
 }
 
-function NoEvidence({ evaluation }: { evaluation: AgentEvaluation }) {
+function IdeaBar({ idea, setIdea, onSubmit, busy }: { idea: string; setIdea: (v: string) => void; onSubmit: (t: string) => void; busy: boolean }) {
+  return (
+    <form className="ideabar" onSubmit={(e) => { e.preventDefault(); if (idea.trim()) onSubmit(idea.trim()); }}>
+      <label htmlFor="idea" className="sr-only">Your feature idea</label>
+      <input id="idea" className="input ideabar__input" value={idea} onChange={(e) => setIdea(e.target.value)} placeholder={`Try another idea, for example: ${EXAMPLES[0]}`} autoComplete="off" maxLength={2000} />
+      <button className="btn btn--small ideabar__btn" type="submit" disabled={busy || !idea.trim()}>{busy ? "Working…" : "Evaluate"}</button>
+    </form>
+  );
+}
+
+function Working({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <div className="side__working" role="status">
+      <p className="side__working-title"><span className="spinner" aria-hidden /> {title}</p>
+      <p className="small">{children}</p>
+    </div>
+  );
+}
+
+function Waiting({ children }: { children: React.ReactNode }) {
+  return <p className="side__waiting">{children}</p>;
+}
+
+function EngineSummary({ feature }: { feature: FeatureResult }) {
+  const g = groupCells(feature);
   return (
     <div className="stack">
-      <p className="note note--warn">
-        <strong>No feature in the customer data matches this idea directly.</strong> The data holds no customer comments, survey
-        attributes or price-list items for it. The nearest features are below; choose one in step 1 to see related evidence.
-      </p>
-      <div className="tiles">
-        {evaluation.candidates.slice(0, 6).map((c) => (
-          <div key={c.feature} className="tile tile--static">
-            <span className="tile__title">{c.feature}</span>
-            <span className="caption">{c.domain}</span>
-            <span className="row small" style={{ gap: 12 }}>
-              <Verdict verdict={c.verdict} />
-              <span className="muted num">{fmtInt(c.n_comments)} comments</span>
-            </span>
-          </div>
+      <p className="side__answer">{bottomLine(feature).text}</p>
+      <ul className="side__groups">
+        {REC_ORDER.filter((k) => g.get(k)?.length).map((k) => (
+          <li key={k} className={`side__group side__group--${REC_INFO[k].tone}`}>
+            <span>{REC_INFO[k].label}</span>
+            <span className="num">{g.get(k)!.length}</span>
+          </li>
         ))}
-      </div>
+      </ul>
+      {feature.rollup.score !== null && <p className="small muted">Priority score {fmtNum(feature.rollup.score)} on a scale from 0 to 1.</p>}
     </div>
   );
 }
