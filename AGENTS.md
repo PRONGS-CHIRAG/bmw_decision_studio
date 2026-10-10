@@ -48,7 +48,7 @@ The data is confidential BMW material and **the GitHub repo is public**:
 - Never commit anything from `BMW-Data/` or `BMW_Hackathon_Briefing_Short.pdf`. Both are in `.gitignore`. Never paste raw rows into commits, issues, PRs or docs.
 - The app may send excerpts to its configured OpenAI API. Do not send data to any other external service, such as pastebins, other AI APIs or analytics tools.
 - Load the data from `BMW-Data/` at runtime. Do not copy it into the source tree.
-- **Already tracked before these rules existed** (pushed by teammates): `BMW_Hackathon_Briefing_Short.pdf`, `data/processed/*.csv`, `data_exploration_summary.json`, and the cleaning scripts in `scripts/`. Don't add more derived data files and don't delete these yourself. Flag them to the user, because removing them from a public repo needs a decision about history.
+- **Already tracked in the public repo** (pushed by teammates): `BMW_Hackathon_Briefing_Short.pdf`, `data/processed/*.csv`, `data_exploration_summary.json` and the cleaning scripts in `scripts/`. The user has decided to leave them there, so don't remove or re-flag them. Keep new work minimal: don't commit raw `BMW-Data/` files, and don't add further derived data files without asking.
 
 Gotchas found while profiling:
 
