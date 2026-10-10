@@ -3,6 +3,7 @@ feature brief and the requirement builder."""
 from __future__ import annotations
 
 import json
+import hashlib
 import re
 from dataclasses import dataclass
 from functools import lru_cache
@@ -10,7 +11,7 @@ from functools import lru_cache
 import pandas as pd
 
 from . import taxonomy as tx
-from .config import DERIVATIVES, MIN_REGION_BASE, PROCESSED_DIR, REGIONS
+from .config import DERIVATIVES, MIN_REGION_BASE, PROCESSED_DIR, RAW_DIR, REGIONS
 from .equipment import equipment_status
 
 
@@ -153,4 +154,50 @@ def load() -> Data:
 def reload() -> Data:
     load.cache_clear()
     return load()
+
+
+_runtime_cache: dict = {}
+
+
+def load_runtime() -> Data:
+    """Read private source files in memory, with exact provenance and no model or writes.
+
+    Hashes are checked on each access, so a changed workbook creates a new input snapshot.
+    The legacy build command is not used and tracked processed files are never refreshed.
+    """
+    from . import ingest
+    from .equipment import parse_option_list
+
+    if not RAW_DIR.is_dir():
+        raise DataNotBuilt("BMW-Data is missing. Supply the original private BMW data directory.")
+    paths = sorted(p for p in RAW_DIR.iterdir()
+                   if p.is_file() and p.suffix.lower() in {".xlsx", ".pdf"})
+    required = {"F70_G60_G68_G70_customer_studies.xlsx", "sales_volumes.xlsx"}
+    missing = sorted(required - {p.name for p in paths})
+    if missing or not list(RAW_DIR.glob("*_feedback_hackathon.xlsx")):
+        raise DataNotBuilt("Required BMW source data is missing: " + ", ".join(missing or ["feedback workbooks"]))
+    hashes = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
+    key = tuple(hashes.items())
+    if _runtime_cache.get("key") == key:
+        return _runtime_cache["data"]
+    try:
+        findings = ingest.load_feedback()
+        survey = ingest.load_survey()
+        sales = ingest.load_sales()
+        equipment, specs = [], []
+        for code in DERIVATIVES:
+            path = RAW_DIR / f"{code}_OptionList.PDF"
+            if path.exists():
+                items, values = parse_option_list(path, code)
+                equipment.append(items)
+                specs.append(values)
+    except Exception as exc:
+        raise DataNotBuilt(f"BMW source ingestion failed: {type(exc).__name__}: {exc}") from exc
+    manifest = {"sources": hashes, "reader_version": "raw-evidence-1",
+                "ingestion_report": findings.attrs.get("ingestion_report", {})}
+    data = Data(findings=findings, survey=survey, sales=sales,
+                equipment=pd.concat(equipment, ignore_index=True) if equipment else pd.DataFrame(),
+                specs=pd.concat(specs, ignore_index=True) if specs else pd.DataFrame(), manifest=manifest)
+    _runtime_cache.update(key=key, data=data)
+    return data
 

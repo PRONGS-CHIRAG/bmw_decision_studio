@@ -89,8 +89,8 @@ def _select(data: Data, res: Resolution, derivative: str | None, powertrain: str
     label = f["component"].isin(res.components)
     if res.feature and res.feature.component_text_filter:
         narrowed = label & f["text"].str.contains(res.feature.component_text_filter, case=False, regex=True)
-        if f.loc[narrowed, "verbatim_id"].nunique() >= 3:
-            label = narrowed
+        # Sparse subfeature evidence stays sparse; parent-component reviews are context.
+        label = narrowed
     labelled = f[label]
     rx = "|".join(re.escape(t) for t in res.terms)
     text_hit = f["text"].str.contains(rx, case=False, regex=True) if rx else pd.Series(False, index=f.index)

@@ -15,8 +15,10 @@ from .brief import feature_brief, resolve
 from .config import (DECISION_SENSITIVITY, DEFAULT_HORIZON, DERIVATIVES, EVIDENCE_LEVELS, FRONTEND_DIR, HORIZONS,
                      PRIORITY_WEIGHTS, REGION_NAMES, REGIONS, TIERS, WEIGHTS_VERSION)
 from .store import DataNotBuilt, load
+from .decision_api import router as decision_router
 
 app = FastAPI(title="BMW Requirements Cockpit", version="1.0")
+app.include_router(decision_router)
 
 
 def _data():

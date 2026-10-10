@@ -31,9 +31,7 @@ const FACTORS = ['customer_signal', 'market_reach', 'survey_gap', 'competitive',
 const FACTOR_LABEL = { customer_signal: 'Customer signal', market_reach: 'Market reach', survey_gap: 'Survey agrees', competitive: 'Competitive', feasibility: 'Feasibility' };
 const FACTOR_COLOR = { customer_signal: '#2f6fed', market_reach: '#0284c7', survey_gap: '#7c3aed', competitive: '#d97706', feasibility: '#059669' };
 const tierTone = (t) => (t === 'P1' ? 'tone-danger' : t === 'P2' ? 'tone-warning' : 'tone-neutral');
-const sleep = (ms) => new Promise((r) => setTimeout(r, REDUCED_MOTION ? 0 : ms));
-
-const app = { meta: null, card: null, view: 'ask' };
+const app = { meta: null, card: null, view: 'decision', metadataError: null };
 const ask = { run: 0, text: '', overrides: {}, parsed: null, result: null, status: {}, viewing: null, t0: 0, count: 0, seen: new Set(), clarified: false, busy: false };
 
 /* ================================================================ boot */
@@ -43,20 +41,28 @@ async function boot() {
   actor.value = store.get('actor', '');
   actor.addEventListener('input', () => store.set('actor', actor.value.trim()));
   $$('.nav [data-view]').forEach((b) => b.addEventListener('click', () => showView(b.dataset.view)));
+  window.DecisionWorkspace.init();
+  const q = new URLSearchParams(location.search);
+  showView(q.get('view') || (q.get('q') ? 'ask' : 'decision'));
   try {
     [app.meta, app.card] = await Promise.all([api('/api/meta'), api('/api/model').catch(() => null)]);
-  } catch (e) { $('#hero').innerHTML = `<div class="pending"><span>${esc(e.message)}</span></div>`; return; }
-  if (app.card) $('#model-badge').textContent = `Review model · ${pct(app.card.metrics.category.top1_accuracy)} category accuracy`;
+  } catch (e) { app.metadataError = e.message; $('#hero').innerHTML = `<div class="pending" role="alert"><span>${esc(e.message)}</span></div>`; if (['reqs', 'model'].includes(app.view)) showView(app.view); return; }
   renderHero();
-  const q = new URLSearchParams(location.search);
-  if (q.get('view')) showView(q.get('view'));
+  if (['reqs', 'model'].includes(app.view)) showView(app.view);
   if (q.get('q')) startAsk(q.get('q'));
 }
 
 function showView(v) {
+  if (!['decision', 'ask', 'reqs', 'model'].includes(v)) v = 'decision';
+  if (app.view === 'ask' && v !== 'ask' && ask.busy) resetAsk();
   app.view = v;
   $$('.nav [data-view]').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.view === v)));
   $$('#app > .view').forEach((s) => { s.hidden = s.id !== `view-${v}`; });
+  window.DecisionWorkspace.setActive(v === 'decision');
+  if (['reqs', 'model'].includes(v) && !app.meta) {
+    $(`#view-${v}`).innerHTML = app.metadataError ? `<div class="pending" role="alert">${esc(app.metadataError)}</div>` : pending('Loading source metadata', 'This view will open when source metadata is available.');
+    return;
+  }
   if (v === 'reqs') renderReqs();
   if (v === 'model') renderModel();
 }
@@ -107,6 +113,7 @@ function renderHero() {
 
 /* ================================================================ inquiry flow */
 function resetAsk() {
+  ask.controller?.abort();
   ask.run += 1;
   Object.assign(ask, { text: '', overrides: {}, parsed: null, result: null, status: {}, viewing: null, count: 0, seen: new Set(), clarified: false, busy: false });
   $('#feed').innerHTML = '';
@@ -134,14 +141,16 @@ async function startAsk(text) {
 
 async function callAsk() {
   const run = ask.run;
+  ask.controller?.abort();
+  ask.controller = new AbortController();
   ask.busy = true; renderBottom();
   let resp;
   try {
-    resp = await api('/api/ask', { method: 'POST', body: JSON.stringify({ text: ask.text, overrides: ask.overrides, horizon: app.meta.default_horizon }) });
-  } catch (e) { $('#canvas').innerHTML = pending(`Something went wrong: ${e.message}`, ''); ask.busy = false; renderBottom(); return; }
+    resp = await api('/api/ask', { method: 'POST', signal: ask.controller.signal, body: JSON.stringify({ text: ask.text, overrides: ask.overrides, horizon: app.meta.default_horizon }) });
+  } catch (e) { if (run !== ask.run || e.name === 'AbortError') return; $('#canvas').innerHTML = `<div class="pending" role="alert"><div><b>Analysis unavailable</b><p>${esc(e.message)}</p></div></div>`; ask.busy = false; renderBottom(); return; }
   if (run !== ask.run) return;
   ask.parsed = resp.parsed;
-  for (const ev of resp.parsed.events) { await sleep(220); if (run !== ask.run) return; pushFeed(ev.agent, ev.title, ev.detail); }
+  for (const ev of resp.parsed.events) pushFeed(ev.agent, ev.title, ev.detail);
   setStage('question', 'done');
   if (!resp.parsed.ready) {
     setStage('clarify', 'wait');
@@ -153,17 +162,11 @@ async function callAsk() {
   setStage('clarify', ask.clarified ? 'done' : 'skipped');
   if (!ask.clarified) pushFeed('clarify', 'Nothing missing - no clarification needed', '');
   ask.result = resp.result;
-  view('question');
-  await sleep(900);
   for (const st of ['filter', 'read', 'compute', 'decide', 'recommend']) {
-    if (run !== ask.run) return;
-    setStage(st, 'active');
-    await sleep(450);
-    for (const ev of stage(st).events || []) { pushFeed(ev.agent, ev.title, ev.detail); await sleep(160); }
+    for (const ev of stage(st).events || []) pushFeed(ev.agent, ev.title, ev.detail);
     setStage(st, 'done');
-    view(st);
-    if (st !== 'recommend') await sleep(1200);
   }
+  view('recommend');
   pushFeed('system', 'Analysis complete', 'click any stage above to revisit its reasoning');
   ask.busy = false; renderBottom();
 }
@@ -198,15 +201,14 @@ function pushFeed(agent, title, detail = '', wait = false) {
   if (ask.seen.has(key)) return;
   ask.seen.add(key);
   const a = AGENTS[agent] || AGENTS.system;
-  const el = ((performance.now() - ask.t0) / 1000).toFixed(1);
   const li = document.createElement('li');
   li.className = `feed-row ${wait ? 'wait' : ''}`;
   li.innerHTML = `<span class="glyph" style="background:${a.bg};color:${a.fg}">${a.glyph}</span>
-    <div style="min-width:0;flex:1"><div class="fw" style="color:${a.fg}">${esc(a.label)}<span class="el">+${el}s</span></div>
+    <div style="min-width:0;flex:1"><div class="fw" style="color:${a.fg}">${esc(a.label)}</div>
     <div class="t">${esc(title)}</div>${detail ? `<div class="d">${esc(detail)}</div>` : ''}</div>`;
   $('#feed').appendChild(li);
   ask.count += 1;
-  $('#feed-count').innerHTML = `<span class="live-dot"></span>${ask.count} events`;
+  $('#feed-count').textContent = `${ask.count} recorded steps`;
 }
 
 function view(id) {

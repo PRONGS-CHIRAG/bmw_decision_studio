@@ -15,13 +15,28 @@ const store = {
 };
 
 async function api(path, opts = {}) {
-  const res = await fetch(path, { headers: { 'Content-Type': 'application/json' }, ...opts });
-  if (!res.ok) {
-    let msg = res.statusText;
-    try { const body = await res.json(); msg = typeof body.detail === 'string' ? body.detail : JSON.stringify(body.detail); } catch { /* not json */ }
-    throw new Error(msg);
+  const { timeout = 90000, signal, ...request } = opts;
+  const controller = new AbortController();
+  let timedOut = false;
+  const cancel = () => controller.abort();
+  if (signal?.aborted) controller.abort();
+  signal?.addEventListener('abort', cancel, { once: true });
+  const timer = setTimeout(() => { timedOut = true; controller.abort(); }, timeout);
+  try {
+    const res = await fetch(path, { ...request, headers: { 'Content-Type': 'application/json', ...(request.headers || {}) }, signal: controller.signal });
+    if (!res.ok) {
+      let msg = res.statusText;
+      try { const body = await res.json(); msg = typeof body.detail === 'string' ? body.detail : JSON.stringify(body.detail || body); } catch { /* not json */ }
+      throw new Error(msg || `Request failed (${res.status})`);
+    }
+    return await res.json();
+  } catch (error) {
+    if (timedOut) throw new Error('The request timed out. Your saved decisions are unchanged. Please retry.');
+    throw error;
+  } finally {
+    clearTimeout(timer);
+    signal?.removeEventListener('abort', cancel);
   }
-  return res.json();
 }
 
 /* ------------------------------------------------------------------ icons (24px stroke) */

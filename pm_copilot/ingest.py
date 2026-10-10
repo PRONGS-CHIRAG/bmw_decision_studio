@@ -16,9 +16,10 @@ import re
 from datetime import datetime, timezone
 
 import pandas as pd
+from openpyxl.utils import get_column_letter
 
 from . import taxonomy as tx
-from .config import DERIVATIVES, PROCESSED_DIR, RAW_DIR, SEVERITY_MULTIPLIER, SOURCE_KIND, region_of
+from .config import DERIVATIVES, PROCESSED_DIR, RAW_DIR, SEVERITY_MULTIPLIER, region_of
 from .equipment import parse_option_list
 
 FEEDBACK_COLUMNS = {
@@ -42,31 +43,43 @@ def _find_all(text: str, lexicon: dict[str, str]) -> str:
 # --------------------------------------------------------------------------
 def load_feedback() -> pd.DataFrame:
     frames = []
+    rejected = []
     for path in sorted(RAW_DIR.glob("*_feedback_hackathon.xlsx")):
-        df = pd.read_excel(path).rename(columns=FEEDBACK_COLUMNS)[list(FEEDBACK_COLUMNS.values())]
+        raw = pd.read_excel(path, sheet_name="Feedback_Explorer")
+        missing = sorted(set(FEEDBACK_COLUMNS) - set(raw.columns))
+        if missing:
+            raise ValueError(f"{path.name}: missing feedback columns: {', '.join(missing)}")
+        df = raw.rename(columns=FEEDBACK_COLUMNS)[list(FEEDBACK_COLUMNS.values())].copy()
         df["source_file"] = path.name
+        df["source_sheet"] = "Feedback_Explorer"
+        df["source_row"] = range(2, len(df) + 2)
+        invalid = df["verbatim_id"].isna() | df["text"].isna() | df["text"].astype(str).str.strip().eq("")
+        rejected.extend({"file": path.name, "sheet": "Feedback_Explorer", "row": int(row),
+                         "reason": "Missing feedback ID or customer text"}
+                        for row in df.loc[invalid, "source_row"])
+        df = df[~invalid].copy()
+        df["raw_record_id"] = df["verbatim_id"].astype(str)
+        # Source IDs are unique within a workbook; avoid collisions across vehicle files.
+        df["verbatim_id"] = path.name + ":" + df["raw_record_id"]
+        df["raw_text"] = df["text"].astype(str)
         frames.append(df)
+    if not frames:
+        raise ValueError("BMW-Data has no feedback workbooks.")
     df = pd.concat(frames, ignore_index=True)
 
     df["text"] = df["text"].fillna("").astype(str).str.replace(" ", " ").str.replace(r"\s+", " ", regex=True).str.strip()
     df["country"] = df["country"].fillna("??").astype(str).str.upper().str.strip()
     df["region"] = df["country"].map(region_of)
     df["powertrain"] = df["powertrain"].map(POWERTRAIN).fillna("Unknown")
-    df["source_kind"] = df["source"].map(SOURCE_KIND).fillna("other")
+    # A-D are anonymized source families, not documented channel types.
+    df["source"] = df["source"].fillna("Unknown source").astype(str)
+    df["source_kind"] = df["source"]
     for col in ("component", "issue"):  # labels contain non-breaking spaces
         df[col] = df[col].fillna("no_class_found" if col == "component" else "").astype(str)             .str.replace(r"\s+", " ", regex=True).str.strip()
     df["feedback_type"] = df["feedback_type"].fillna("").astype(str).str.strip()
-    df["signal"] = [tx.signal_of(f, i) for f, i in zip(df["feedback_type"], df["issue"])]
+    df["signal"] = df["feedback_type"].map({"Likes": "praise", "Defect": "defect",
+        "Difficult to Use": "usability", "Wants": "request"}).fillna("none")
     df["label_source"] = "vfc"
-
-    # Source D answers carry no label: classify "love most / could be improved about <aspect>".
-    is_d = (df["source"] == "Source D") & (df["signal"] == "none")
-    for idx in df.index[is_d]:
-        result = tx.classify_source_d(df.at[idx, "text"])
-        if result:
-            df.at[idx, "signal"], df.at[idx, "component"] = result
-            df.at[idx, "issue"] = "Like (loyalty survey)" if result[0] == "praise" else "Improvement wish (loyalty survey)"
-            df.at[idx, "label_source"] = "rule:source_d"
 
     df["severity"] = [tx.severity_of(t) if s == "Source C" else "" for t, s in zip(df["text"], df["source"])]
     df["severity_mult"] = df["severity"].map(SEVERITY_MULTIPLIER).fillna(1.0)
@@ -78,9 +91,13 @@ def load_feedback() -> pd.DataFrame:
     df["mentions_previous_bmw"] = df["text"].str.contains(tx.PREVIOUS_BMW)
     df["want_cue"] = df["text"].str.contains(tx.WANT_CUES)
 
-    # A verbatim classified twice with the same label is one finding, not two.
-    df = df.drop_duplicates(["verbatim_id", "component", "issue", "signal"]).reset_index(drop=True)
-    df["finding_id"] = df["verbatim_id"] + "#" + (df.groupby("verbatim_id").cumcount() + 1).astype(str)
+    # Keep source rows resolvable; counting deduplicates by verbatim ID at calculation time.
+    df["finding_id"] = df["source_file"] + ":Feedback_Explorer:" + df["source_row"].astype(str)
+    df.attrs["ingestion_report"] = {
+        "rejected_rows": rejected,
+        "unclassified_rows": int(df["component"].eq("no_class_found").sum()),
+        "unknown_signal_rows": int(df["signal"].eq("none").sum()),
+    }
     return df
 
 
@@ -114,7 +131,13 @@ def load_survey() -> pd.DataFrame:
                 if m and pd.notna(raw.iat[r, c]):
                     rows.append({"study": "CN_EU_2025", "region": region, "model": m.group(1),
                                  "attribute": attr, "score_0_10": float(raw.iat[r, c]),
-                                 "top2_box": None, "bottom3_box": None})
+                                 "top2_box": None, "bottom3_box": None,
+                                 "original_value": float(raw.iat[r, c]),
+                                 "original_scale": "Reported satisfaction mean; scale bounds not supplied",
+                                 "distribution": None, "source_file": path.name,
+                                 "source_cells": [{"sheet": "CN_EU_2025", "row": r + 1,
+                                     "column": c + 1, "cell": f"{get_column_letter(c + 1)}{r + 1}",
+                                     "value": str(raw.iat[r, c]), "response": "Mean"}]})
         else:
             attr = str(label).strip()  # row 2 doubles as the model header and first attribute
 
@@ -135,7 +158,12 @@ def load_survey() -> pd.DataFrame:
                 mean_1_7 = sum((i + 1) * v for i, v in enumerate(p)) / sum(p)
                 rows.append({"study": "US_2025", "region": "US", "model": model, "attribute": str(label).strip(),
                              "score_0_10": (mean_1_7 - 1) / 6 * 10, "top2_box": p[5] + p[6],
-                             "bottom3_box": p[0] + p[1] + p[2]})
+                             "bottom3_box": p[0] + p[1] + p[2], "original_value": None,
+                             "original_scale": "Seven response categories; workbook % of column",
+                             "distribution": dict(zip(US_SCALE, p)), "source_file": path.name,
+                             "source_cells": [{"sheet": "US_2025", "row": int(shares[s].name) + 1,
+                                 "column": c + 1, "cell": f"{get_column_letter(c + 1)}{int(shares[s].name) + 1}",
+                                 "value": str(shares[s][c]), "response": s} for s in US_SCALE]})
             r += 9
         else:
             r += 1
@@ -160,9 +188,14 @@ def load_sales() -> pd.DataFrame:
         df = pd.read_excel(path, sheet_name=sheet)
         df["derivative"] = sheet_to_deriv.get(sheet, sheet)
         df["sales_sheet"] = sheet
+        df["source_file"] = path.name
+        df["source_row"] = range(2, len(df) + 2)
+        df["source_columns"] = [{str(column): get_column_letter(i + 1)
+                                 for i, column in enumerate(df.columns)} for _ in range(len(df))]
         frames.append(df)
     df = pd.concat(frames, ignore_index=True).rename(columns={"market_code": "region"})
-    return df[["derivative", "sales_sheet", "region", "market", "volume_2024", "volume_2025", "volume_2030"]]
+    return df[["derivative", "sales_sheet", "region", "market", "volume_2024", "volume_2025", "volume_2030",
+               "source_file", "source_row", "source_columns"]]
 
 
 # --------------------------------------------------------------------------
