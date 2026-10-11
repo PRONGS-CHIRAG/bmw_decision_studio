@@ -1,0 +1,21 @@
+Explain be the logic and backend in very simple words with the scoring and what is priority and how it decides evrything
+
+---
+
+how can the pm change the rules? where
+
+---
+
+the signal weights cannot be changed by the user through the UI, implement a way in which the user can change the signal weights via a slider, make sure nothing breaks and put this nicely in the workflow, this feature should be optional not mandatory, it should ask if users wants to change the weights of the signals and make sure that the slider is well coordinated, the combined sum should always be equal to 1 and should not allow any other value for sum.
+
+Additional feature to add: Add a new tap that tracks all inquiries made over the yzears and have been compared and the final verdict that was saved bz the project manager and their status in the market, and once lets saz competitors introduce somethiing the prioritz or suitabilitz changes and the manager is informed that market has seen some changes, review new metrics
+
+---
+
+<task-notification>
+<task-id>bekxeltnk</task-id>
+<tool-use-id>toolu_01XMY37mSi3UNR3cnn9h16pn</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-chiragnvijay-Desktop-Projects-unite-hack-DataMining-Hack/5cd5e0d0-e7f3-45bd-a832-ed2352a27f70/tasks/bekxeltnk.output</output-file>
+<status>failed</status>
+<summary>Background command "Start test server on port 8010 without OpenAI key" failed with exit code 1</summary>
+</task-notification>
