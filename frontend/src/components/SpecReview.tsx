@@ -1,26 +1,10 @@
+import { useState } from "react";
 import { MARKET_NAMES, SERIES_LABELS, fmtInt } from "../api";
 import type { Candidate, IdeaSpec, InterpretResult } from "../types";
-import { VERDICT_COLORS, Verdict } from "./marks";
-import { complaintDiff, complaintReason } from "../plain";
+import { CalcPopup, VerdictDial, VerdictLabel } from "./VerdictCalc";
+import { complaintReason } from "../plain";
 
 const MAX_FEATURES = 3;
-const DARK_FILL = new Set(["Good", "Bad"]);
-
-/** The verdict, with the number behind it: complaints compared with a typical topic, in percent. */
-function VerdictDial({ c }: { c: Candidate }) {
-  const d = c.verdict !== "Not enough data" ? complaintDiff(c.complaint_index) : null;
-  const fill = VERDICT_COLORS[c.verdict] ?? "transparent";
-  return (
-    <span className="dial" aria-label={d ? `${c.verdict}: ${complaintReason(c.complaint_index)}` : "Too few comments to judge"}>
-      <span className={`dial__circle ${d ? "" : "dial__circle--empty"}`}
-        style={{ background: d ? fill : undefined, color: DARK_FILL.has(c.verdict) ? "#fff" : "var(--heading)" }}>
-        <span className="dial__num num">{!d ? "?" : d.dir === "same" ? "≈" : `${d.dir === "fewer" ? "−" : "+"}${d.pct}%`}</span>
-        <span className="dial__unit">{!d ? "" : d.dir === "same" ? "typical" : "complaints"}</span>
-      </span>
-    </span>
-  );
-}
-
 /** Step 1 output, editable: the PM confirms what the retriever read before anything is evaluated. */
 export default function SpecReview({
   interp,
@@ -43,6 +27,7 @@ export default function SpecReview({
   const failed = interp.attempts.filter((a) => !a.ok);
   const byLLM = interp.method.startsWith("llm:");
   const suggested = new Set(interp.spec.features.map((f) => f.feature));
+  const [calc, setCalc] = useState<Candidate | null>(null);
 
   function toggleFeature(c: Candidate) {
     let features = draft.features;
@@ -85,13 +70,13 @@ export default function SpecReview({
         <legend className="review__legend">
           Related topics customers talk about <span className="caption">choose up to {MAX_FEATURES}</span>
         </legend>
-        <p className="caption">Each topic shows what customers think of it today, and why: how many more or fewer complaints it gets than a
-          typical topic in the feedback.</p>
+        <p className="caption">Each topic shows what customers think of it today. Green: the percentage is how many fewer complaints it gets than a
+          typical topic, so higher is better. Red: how many more complaints, so higher is worse.</p>
         {interp.candidates.length === 0 && <p className="small muted">Nothing related was found in the customer feedback.</p>}
         <div className="tiles">
           {interp.candidates.map((c) => (
+            <div key={c.feature} className="tilebox">
             <button
-              key={c.feature}
               type="button"
               className="tile"
               aria-pressed={chosen.has(c.feature)}
@@ -105,7 +90,7 @@ export default function SpecReview({
                     <span className="tile__title">{c.feature}</span>
                   </span>
                   <span className="caption">{c.domain}</span>
-                  <span className="tile__verdict"><Verdict verdict={c.verdict} /></span>
+                  <span className="tile__verdict"><VerdictLabel verdict={c.verdict} /></span>
                   <span className="tile__why">{c.verdict === "Not enough data" ? "Too few comments to judge" : complaintReason(c.complaint_index)}</span>
                   <span className="caption num">Based on {fmtInt(c.n_comments)} customer comments</span>
                   {suggested.has(c.feature) && <span className="tile__tag">Suggested</span>}
@@ -114,6 +99,10 @@ export default function SpecReview({
                 <VerdictDial c={c} />
               </span>
             </button>
+            <button type="button" className="linkbtn tile__how" onClick={() => setCalc(c)} aria-haspopup="dialog">
+              How is this calculated?
+            </button>
+            </div>
           ))}
         </div>
         {draft.features.length === 0 && (
@@ -123,6 +112,8 @@ export default function SpecReview({
           </p>
         )}
       </fieldset>
+
+      {calc && <CalcPopup c={calc} rule={interp.verdict_rule} onClose={() => setCalc(null)} />}
 
       <div className="review__grid">
         <fieldset className="review__group">

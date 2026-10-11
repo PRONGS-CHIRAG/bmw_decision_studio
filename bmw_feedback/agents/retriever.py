@@ -20,13 +20,13 @@ from .contracts import MAX_FEATURES, Candidate, FeaturePick, IdeaSpec, IdeaSpecL
 from .llm import LLMError, LLMOutputInvalid
 
 
-def _index_or_none(v) -> float | None:
-    """A scorecard index as a rounded float; missing or NaN stays unknown."""
+def _index_or_none(v, digits: int = 2) -> float | None:
+    """A scorecard value as a rounded float; missing or NaN stays unknown."""
     try:
         f = float(v)
     except (TypeError, ValueError):
         return None
-    return None if f != f else round(f, 2)
+    return None if f != f else round(f, digits)
 
 MAX_ATTEMPTS = 3
 MAX_CANDIDATES = 12
@@ -79,7 +79,9 @@ class Retriever:
             row = feats.loc[f]
             out.append(Candidate(feature=f, node_id=f"feature:{f}", domain=row["domain"], verdict=row["verdict"],
                                  n_comments=int(row["n_comments"]),
-                                 complaint_index=_index_or_none(row.get("index_negative")),
+                                 complaint_index=_index_or_none(row.get("index_negative"), 3),
+                                 complaints_observed=None if _index_or_none(row.get("obs_negative")) is None else int(row["obs_negative"]),
+                                 complaints_expected=_index_or_none(row.get("exp_negative")),
                                  umbrella=bool(row["is_umbrella"]),
                                  methods=e["methods"], how=e["how"]))
         out.sort(key=lambda c: (-c.methods.get("name_or_alias", 0), -c.methods.get("classifier", 0),

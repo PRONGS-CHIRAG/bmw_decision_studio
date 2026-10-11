@@ -219,12 +219,50 @@
 .tile__text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .tile__verdict { font-size: var(--fs-small); font-weight: var(--w-clickable); color: var(--heading); }
 .tile__tag { align-self: flex-start; margin-top: 4px; font-size: 11px; font-weight: 500; color: var(--cta); border: 1px solid var(--cta-border); border-radius: var(--radius-pill); padding: 0 8px; }
-.dial { display: flex; flex-direction: column; align-items: center; gap: 4px; flex: none; width: 76px; }
-.dial__circle { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; border: 1px solid rgba(0, 0, 0, 0.08); }
-.dial__circle--empty { border: 2px dashed var(--muted-soft); background: transparent; color: var(--muted); }
-.dial__num { font-size: 19px; font-weight: 700; letter-spacing: -0.02em; }
-.dial__cap { font-size: 10.5px; line-height: 1.2; text-align: center; color: var(--disclaimer); }
 .tile__why { font-size: var(--fs-small); color: var(--copy-text); }
-.dial__circle { width: 72px; height: 72px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; }
-.dial__num { font-size: 18px; line-height: 1.1; }
-.dial__unit { font-size: 9.5px; line-height: 1.1; opacity: 0.85; }
+
+/* verdict colours for topic tiles: green = customers like it, red = customers complain; the number is how strongly */
+:root {
+  --v-good: #047857; --v-good-soft: #d1fae5; --v-leangood: #34d399;
+  --v-bad: #dc2626; --v-bad-soft: #fee2e2; --v-leanbad: #f87171;
+  --v-mixed: #e5e7eb;
+}
+.tilebox { position: relative; display: flex; }
+.tilebox > .tile { flex: 1; padding-bottom: 36px; }
+.tile__how { position: absolute; left: 18px; bottom: 12px; font-size: 12px; }
+.side .tile__how { left: 12px; bottom: 10px; }
+
+.dial { flex: none; }
+.dial__circle { width: 84px; height: 84px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 6px; }
+.dial__num { font-size: 22px; font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; }
+.dial__unit { font-size: 10px; line-height: 1.15; margin-top: 2px; }
+.dial--good .dial__circle { background: var(--v-good); color: #fff; }
+.dial--leangood .dial__circle { background: var(--v-good-soft); color: var(--v-good); border: 2px solid var(--v-leangood); }
+.dial--bad .dial__circle { background: var(--v-bad); color: #fff; }
+.dial--leanbad .dial__circle { background: var(--v-bad-soft); color: var(--v-bad); border: 2px solid var(--v-leanbad); }
+.dial--mixed .dial__circle { background: var(--v-mixed); color: var(--heading); }
+.dial--none .dial__circle { border: 2px dashed var(--muted-soft); color: var(--muted); }
+
+.vlabel { display: inline-block; font-size: 12.5px; font-weight: 600; border-radius: var(--radius-pill); padding: 1px 10px; white-space: nowrap; }
+.vlabel--good { background: var(--v-good); color: #fff; }
+.vlabel--leangood { background: var(--v-good-soft); color: var(--v-good); }
+.vlabel--bad { background: var(--v-bad); color: #fff; }
+.vlabel--leanbad { background: var(--v-bad-soft); color: var(--v-bad); }
+.vlabel--mixed { background: var(--v-mixed); color: var(--heading); }
+.vlabel--none { border: 1px dashed var(--muted-soft); color: var(--muted); }
+
+/* "how is this calculated" popup */
+.calc__backdrop { position: fixed; inset: 0; background: rgba(16, 24, 40, 0.35); display: grid; place-items: center; z-index: 200; padding: 16px; }
+.calc { background: #fff; border-radius: 14px; box-shadow: 0 20px 50px rgba(16, 24, 40, 0.25); width: min(560px, 100%); max-height: calc(100vh - 32px); overflow: auto; padding: 20px 22px; }
+.calc__head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.calc__eyebrow { font-size: 12px; color: var(--text-2); font-weight: 500; }
+.calc__title { font-size: 18px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.calc__steps { margin: 16px 0 0; padding-left: 20px; display: flex; flex-direction: column; gap: 12px; font-size: 14px; }
+.calc__steps li { display: flex; flex-direction: column; gap: 2px; }
+.calc__k { font-size: 12.5px; font-weight: 600; color: var(--heading); }
+.calc__result { padding: 10px 12px; border-radius: 10px; background: var(--surface-background-secondary); margin-left: -20px; padding-left: 20px; list-style: none; }
+.calc__rules { width: 100%; border-collapse: collapse; margin-top: 6px; font-size: 13px; }
+.calc__rules td { padding: 6px 8px; border-top: 1px solid var(--border); vertical-align: top; }
+.calc__rules td:first-child { width: 1%; white-space: nowrap; }
+.calc__rules--on td { background: var(--cta-soft); font-weight: 500; }
+.tag { display: inline-block; font-size: 10.5px; font-weight: 500; color: var(--text-2); border: 1px solid var(--border); border-radius: var(--radius-pill); padding: 0 6px; margin-left: 4px; vertical-align: 1px; }

@@ -73,7 +73,7 @@ export const VERDICT_WORDS: Record<string, string> = {
 /** The complaint index as a percentage difference from a typical topic: 0.48 -> 52% fewer, 1.4 -> 40% more. */
 export function complaintDiff(index: number | null): { pct: number; dir: "fewer" | "more" | "same" } | null {
   if (index === null) return null;
-  const pct = Math.round(Math.abs(index - 1) * 100);
+  const pct = Math.floor(Math.abs(index - 1) * 100 + 1e-9);   // rounded down: never past a threshold not reached
   return { pct, dir: pct < 5 ? "same" : index < 1 ? "fewer" : "more" };
 }
 

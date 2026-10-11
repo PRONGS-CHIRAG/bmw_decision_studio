@@ -37,6 +37,8 @@ class Candidate(BaseModel):
     verdict: str
     n_comments: int
     complaint_index: float | None = None   # observed complaints / expected for the channels (1.0 = typical); drives the verdict
+    complaints_observed: int | None = None     # complaint mentions found in the feedback
+    complaints_expected: float | None = None   # what a typical topic would get from the same channels
     umbrella: bool
     methods: dict[str, float]          # e.g. {"alias": 1.0, "classifier": 0.42, "semantic": 0.61}
     how: list[str]                     # human-readable match reasons
@@ -114,6 +116,13 @@ class IdeaSpec(BaseModel):
         return self
 
 
+def _verdict_rule() -> dict[str, float]:
+    """The verdict thresholds from config, so the UI can explain a label without restating them."""
+    from .. import config
+    return {"min_mentions": config.MIN_MENTIONS_FOR_VERDICT, "bad": config.BAD_INDEX, "lean_bad": config.LEAN_BAD_INDEX,
+            "good": config.GOOD_NEG_INDEX, "lean_good": config.LEAN_GOOD_NEG_INDEX, "prior_strength": config.PRIOR_STRENGTH}
+
+
 class InterpretResult(BaseModel):
     spec: IdeaSpec
     candidates: list[Candidate]
@@ -121,6 +130,7 @@ class InterpretResult(BaseModel):
     semantic_error: str | None = None
     method: str
     attempts: list[dict]
+    verdict_rule: dict[str, float] = Field(default_factory=_verdict_rule)   # thresholds behind the verdict labels
 
 
 # ---------------------------------------------------------------------- facts (deterministic)
