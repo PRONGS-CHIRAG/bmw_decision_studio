@@ -1,0 +1,67 @@
+model,item,tier,n_variants,n_standard,n_optional,price_min_eur,price_item,via_package,items,pages,item_id
+F70,hud,optional,6.0,0.0,6.0,3800.0,INNOVATIONSPAKET,True,INNOVATIONSPAKET,16,F70-p16-02
+G60,hud,optional,10.0,0.0,10.0,2400.0,INNOVATIONSPAKET,True,INNOVATIONSPAKET,17,G60-p17-01
+G70,hud,standard_all,4.0,4.0,0.0,,,,BMW 3D Head-Up Display,7,G70-p07-03
+F70,acc,optional,6.0,0.0,6.0,700.0,Driving Assistant Plus,False,Driving Assistant Plus,17,F70-p17-07
+G60,acc,optional,10.0,0.0,10.0,1000.0,Driving Assistant Plus,False,Driving Assistant Plus | Driving Assistant Professional,18,G60-p18-03
+G70,acc,standard_all,4.0,4.0,0.0,,,,Driving Assistant Plus,8,G70-p08-02
+F70,hands_off,not_listed,,,,,,,,,
+G60,hands_off,optional,10.0,0.0,10.0,850.0,Autobahnassistent,False,Autobahnassistent,18,G60-p18-05
+G70,hands_off,optional,4.0,0.0,4.0,1980.0,Autobahn- & City-Assistent (laufzeitbegrenzt),False,Autobahn- & City-Assistent (laufzeitbegrenzt),22,G70-p22-01
+F70,pano_roof,optional,6.0,0.0,6.0,1180.0,Panorama Glasdach,False,Panorama Glasdach,17,F70-p17-02
+G60,pano_roof,optional,10.0,0.0,10.0,1630.0,Panorama Glasdach inkl. Dachlackierung in Schwarz Hochglanz,False,Panorama Glasdach inkl. Dachlackierung in Schwarz Hochglanz,19,G60-p19-01
+G70,pano_roof,standard_all,4.0,4.0,0.0,,,,DESIGN PURE EXCELLENCE | Panorama-Glasdach | Panorama-Glasdach Sky Lounge,6 | 8 | 20 | 22,G70-p06-24
+F70,massage,not_listed,,,,,,,,,
+G60,massage,not_listed,,,,,,,,,
+G70,massage,optional,4.0,0.0,4.0,3200.0,CONNOISSEUR PAKET,True,CONNOISSEUR PAKET,20,G70-p20-03
+F70,ventilated_seats,not_listed,,,,,,,,,
+G60,ventilated_seats,optional,10.0,0.0,10.0,1150.0,COMFORT PAKET,True,COMFORT PAKET,17,G60-p17-02
+G70,ventilated_seats,optional,4.0,0.0,4.0,3200.0,CONNOISSEUR PAKET,True,CONNOISSEUR PAKET,20,G70-p20-03
+F70,heated_wheel,optional,6.0,0.0,6.0,250.0,Lenkradheizung,False,Lenkradheizung,17,F70-p17-04
+G60,heated_wheel,optional,10.0,0.0,10.0,350.0,Lenkradheizung,False,Lenkradheizung,17,G60-p17-09
+G70,heated_wheel,standard_all,4.0,4.0,0.0,,,,Lenkradheizung,8,G70-p08-21
+F70,surround_view,not_listed,,,,,,,,,
+G60,surround_view,optional,10.0,0.0,10.0,2400.0,INNOVATIONSPAKET,True,INNOVATIONSPAKET,17,G60-p17-01
+G70,surround_view,standard_all,4.0,4.0,0.0,,,,Parking Assistant Plus,8,G70-p08-04
+F70,auto_parking,standard_all,6.0,6.0,0.0,,,,INNOVATIONSPAKET | Parking Assistant | Parking Assistant Professional,7 | 16 | 17,F70-p07-03
+G60,auto_parking,standard_all,10.0,10.0,0.0,,,,INNOVATIONSPAKET | Parking Assistant | Parking Assistant Professional,7 | 17 | 18,G60-p07-11
+G70,auto_parking,standard_all,4.0,4.0,0.0,,,,Parking Assistant | Parking Assistant Plus,8,G70-p08-03
+F70,wireless_charging,optional,6.0,0.0,6.0,1900.0,PREMIUM PAKET,True,INNOVATIONSPAKET | PREMIUM PAKET,16,F70-p16-01
+G60,wireless_charging,standard_all,10.0,10.0,0.0,,,,Wireless Charging Ablage,7,G60-p07-03
+G70,wireless_charging,standard_all,4.0,4.0,0.0,,,,Wireless Charging Ablage,9,G70-p09-04
+F70,premium_audio,standard_some,6.0,1.0,5.0,600.0,HiFi Lautsprechersystem harman/kardon,False,HiFi Lautsprechersystem harman/kardon,6 | 17,F70-p06-03
+G60,premium_audio,standard_all,10.0,10.0,0.0,,,,Bowers & Wilkins Surround Sound System | HiFi Lautsprechersystem harman/kardon,7 | 17,G60-p07-04
+G70,premium_audio,standard_all,4.0,4.0,0.0,,,,Bowers & Wilkins Diamond Surround Sound System | Bowers & Wilkins Surround Sound System,7 | 21,G70-p07-06
+F70,ambient_light,not_listed,,,,,,,,,
+G60,ambient_light,standard_all,10.0,10.0,0.0,,,,Ambientes Licht,6,G60-p06-11
+G70,ambient_light,standard_all,4.0,4.0,0.0,,,,Ambientes Licht,6 | 8,G70-p06-23
+F70,keyless,optional,6.0,0.0,6.0,1900.0,PREMIUM PAKET,True,INNOVATIONSPAKET | PREMIUM PAKET,16,F70-p16-01
+G60,keyless,optional,10.0,0.0,10.0,1900.0,TRAVEL PAKET,True,TRAVEL PAKET,17,G60-p17-03
+G70,keyless,standard_all,4.0,4.0,0.0,,,,Komfortzugang,9,G70-p09-05
+F70,power_tailgate,optional,6.0,0.0,6.0,450.0,Automatische Heckklappenbetätigung,False,Automatische Heckklappenbetätigung,18,F70-p18-07
+G60,power_tailgate,optional,10.0,0.0,10.0,1900.0,TRAVEL PAKET,True,TRAVEL PAKET,17,G60-p17-03
+G70,power_tailgate,standard_all,4.0,4.0,0.0,,,,Automatische Heckklappenbetätigung,9,G70-p09-03
+F70,soft_close,not_listed,,,,,,,,,
+G60,soft_close,not_listed,,,,,,,,,
+G70,soft_close,standard_all,4.0,4.0,0.0,,,,Soft-Close-Automatik für Türen,9,G70-p09-02
+F70,auto_doors,not_listed,,,,,,,,,
+G60,auto_doors,not_listed,,,,,,,,,
+G70,auto_doors,optional,4.0,0.0,4.0,1600.0,Automatiktüren,False,Automatiktüren,22,G70-p22-07
+F70,rear_entertainment,not_listed,,,,,,,,,
+G60,rear_entertainment,not_listed,,,,,,,,,
+G70,rear_entertainment,not_listed,,,,,,,,,
+F70,air_suspension,not_listed,,,,,,,,,
+G60,air_suspension,not_listed,,,,,,,,,
+G70,air_suspension,not_listed,,,,,,,,,
+F70,rear_steering,not_listed,,,,,,,,,
+G60,rear_steering,standard_some,10.0,3.0,7.0,1990.0,Adaptives Fahrwerk Professional,False,Adaptives Fahrwerk Professional | Adaptives M Fahrwerk Professional,18,G60-p18-01
+G70,rear_steering,standard_all,4.0,4.0,0.0,,,,Integral-Aktivlenkung,7,G70-p07-09
+F70,matrix_lights,optional,6.0,0.0,6.0,1900.0,PREMIUM PAKET,True,INNOVATIONSPAKET | PREMIUM PAKET,16,F70-p16-01
+G60,matrix_lights,standard_all,10.0,10.0,0.0,,,,Adaptiver LED-Scheinwerfer,8,G60-p08-01
+G70,matrix_lights,standard_all,4.0,4.0,0.0,,,,Adaptiver LED-Scheinwerfer | BMW Individual Kristallscheinwerfer Iconic Glow | DESIGN PURE EXCELLENCE,6 | 8 | 20 | 22,G70-p06-08
+F70,dashcam,not_listed,,,,,,,,,
+G60,dashcam,optional,10.0,0.0,10.0,2400.0,INNOVATIONSPAKET,True,INNOVATIONSPAKET,17,G60-p17-01
+G70,dashcam,not_listed,,,,,,,,,
+F70,digital_key,not_listed,,,,,,,,,
+G60,digital_key,standard_all,10.0,10.0,0.0,,,,BMW Digital Key,8,G60-p08-03
+G70,digital_key,not_listed,,,,,,,,,

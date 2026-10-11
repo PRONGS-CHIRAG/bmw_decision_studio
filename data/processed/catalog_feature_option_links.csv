@@ -1,0 +1,362 @@
+feature,model,item_id,option_name,sa_code,page,page_type,matched_keyword,matched_in,matched_text
+Head-Up Display,F70,F70-p16-02,INNOVATIONSPAKET,7EW,16,optional_equipment,Head-Up,contents,BMW Head-Up-Display
+Head-Up Display,G60,G60-p17-01,INNOVATIONSPAKET,7EW,17,optional_equipment,Head-Up,contents,BMW Live Cockpit Professional inkl. BMW Head-Up Display
+Head-Up Display,G70,G70-p07-03,BMW 3D Head-Up Display,,7,standard_equipment,Head-Up,name,BMW 3D Head-Up Display
+"Touch screen, operation",F70,F70-p06-01,BMW Live Cockpit Plus,,6,standard_equipment,Curved Display,contents,BMW Curved Display
+"Touch screen, operation",F70,F70-p16-02,INNOVATIONSPAKET,7EW,16,optional_equipment,Curved Display,contents,BMW Curved Display
+"Touch screen, operation",G60,G60-p06-13,BMW Live Cockpit Plus,,6,standard_equipment,Curved Display,contents,BMW Curved Display
+"Touch screen, operation",G70,G70-p07-02,BMW Panoramic iDrive,,7,standard_equipment,Panoramic iDrive,name,BMW Panoramic iDrive
+"Operating concept, operating system",F70,F70-p06-01,BMW Live Cockpit Plus,,6,standard_equipment,BMW Operating System,contents,BMW Operating System 9
+"Operating concept, operating system",F70,F70-p16-02,INNOVATIONSPAKET,7EW,16,optional_equipment,BMW Operating System,contents,BMW Operating System 9
+"Operating concept, operating system",G60,G60-p06-13,BMW Live Cockpit Plus,,6,standard_equipment,BMW Operating System,contents,BMW Operating System 8.5
+"Operating concept, operating system",G70,G70-p07-02,BMW Panoramic iDrive,,7,standard_equipment,Panoramic iDrive,name,BMW Panoramic iDrive
+Instrument cluster,F70,F70-p06-01,BMW Live Cockpit Plus,,6,standard_equipment,Instrumentendisplay,contents,"Displaykombination mit 10,25"" Instrumentendisplay und 10,7"" Control Display"
+Instrument cluster,F70,F70-p16-02,INNOVATIONSPAKET,7EW,16,optional_equipment,Instrumentendisplay,contents,"Displaykombination mit 10,25"" Instrumentendisplay und 10,7"" Control Display"
+Instrument cluster,G60,G60-p06-13,BMW Live Cockpit Plus,,6,standard_equipment,Instrumentendisplay,contents,"Displaykombination mit 12,3"" volldigitalem Instrumentendisplay und 14,9"" Control Display"
+Instrument cluster,G70,G70-p07-01,BMW Panoramic Vision,,7,standard_equipment,Panoramic Vision,name,BMW Panoramic Vision
+Controller operation,G60,G60-p06-13,BMW Live Cockpit Plus,,6,standard_equipment,BMW Controller,contents,BMW Controller
+Navigation,F70,F70-p06-01,BMW Live Cockpit Plus,,6,standard_equipment,Navigationsfunktion,contents,Navigationsfunktion
+Navigation,F70,F70-p16-02,INNOVATIONSPAKET,7EW,16,optional_equipment,Navigationsfunktion,contents,Navigationsfunktion
+Navigation,F70,F70-p18-10,BMW Digital Premium (laufzeitbegrenzt),6D5,18,optional_equipment,re:\bNavigation\b,description,"Digitales Rundum-sorglos-Paket mit Personalisierungsmöglichkeiten, bester Navigation und"
+Navigation,G60,G60-p06-13,BMW Live Cockpit Plus,,6,standard_equipment,re:\bNavigation\b,contents,Navigation
+Navigation,G60,G60-p06-16,Connected Package Professional,,6,standard_equipment,re:\bNavigation\b,contents,Connected Navigation
+Navigation,G70,G70-p07-05,BMW Digital Premium (laufzeitbegrenzt),,7,standard_equipment,BMW Maps,description,"enthält Security Assistant, zusätzliche BMW Maps Funktionen und Datenvolumen für vielfältiges Entertainment"
+Map update,G60,G60-p06-13,BMW Live Cockpit Plus,,6,standard_equipment,Navigationskarten-Update,contents,Navigationskarten-Update Over-the-Air
+Intelligent Personal Assistant,F70,F70-p06-01,BMW Live Cockpit Plus,,6,standard_equipment,Intelligent Personal Assistant,contents,Intelligent Personal Assistant
+Intelligent Personal Assistant,F70,F70-p16-02,INNOVATIONSPAKET,7EW,16,optional_equipment,Intelligent Personal Assistant,contents,Intelligent Personal Assistant
+Intelligent Personal Assistant,G60,G60-p06-13,BMW Live Cockpit Plus,,6,standard_equipment,Intelligent Personal Assistant,contents,Intelligent Personal Assistant
+Apple CarPlay,F70,F70-p06-01,BMW Live Cockpit Plus,,6,standard_equipment,Apple Car Play,contents,Smartphone Integration (kompatibles Smartphone erforderlich) zur Nutzung von Apple Car Play oder Android Auto
+Apple CarPlay,G60,G60-p06-16,Connected Package Professional,,6,standard_equipment,Smartphone Integration,contents,Smartphone Integration (Kompatibles Smartphone erforderlich)
+Android Auto,F70,F70-p06-01,BMW Live Cockpit Plus,,6,standard_equipment,Android Auto,contents,Smartphone Integration (kompatibles Smartphone erforderlich) zur Nutzung von Apple Car Play oder Android Auto
+Android Auto,G60,G60-p06-16,Connected Package Professional,,6,standard_equipment,Smartphone Integration,contents,Smartphone Integration (Kompatibles Smartphone erforderlich)
+Manage / pair mobile device (Bluetooth),F70,F70-p06-01,BMW Live Cockpit Plus,,6,standard_equipment,Bluetooth,contents,Bluetooth / WiFi Schnittstelle mit Freisprecheinrichtung
+Manage / pair mobile device (Bluetooth),F70,F70-p16-02,INNOVATIONSPAKET,7EW,16,optional_equipment,Bluetooth,contents,Bluetooth / WiFi Schnittstelle mit Freisprecheinrichtung
+Manage / pair mobile device (Bluetooth),G60,G60-p06-13,BMW Live Cockpit Plus,,6,standard_equipment,Bluetooth,contents,Bluetooth / WiFi Schnittstelle mit Freisprecheinrichtung
+"Mobile device, wireless charging",F70,F70-p16-01,PREMIUM PAKET,7EV,16,optional_equipment,Wireless Charging,contents,Wireless Charging Ablage
+"Mobile device, wireless charging",F70,F70-p16-02,INNOVATIONSPAKET,7EW,16,optional_equipment,Wireless Charging,contents,Wireless Charging Ablage
+"Mobile device, wireless charging",G60,G60-p07-03,Wireless Charging Ablage,,7,standard_equipment,Wireless Charging,name,Wireless Charging Ablage
+"Mobile device, wireless charging",G70,G70-p09-04,Wireless Charging Ablage,,9,standard_equipment,Wireless Charging,name,Wireless Charging Ablage
+USB port,F70,F70-p05-17,2 USB-C Anschlüsse in Mittelkonsole vorne (Ladefunktion),,5,standard_equipment,USB,name,2 USB-C Anschlüsse in Mittelkonsole vorne (Ladefunktion)
+USB port,F70,F70-p06-01,BMW Live Cockpit Plus,,6,standard_equipment,USB,contents,USB Anschlüsse
+USB port,G70,G70-p09-10,Travel & Comfort System,,9,standard_equipment,USB,description,Schnittstelle im Sitz zur Halterung von Tablets etc. inkl. USB-C Buchse
+Touch Command,G70,G70-p08-16,BMW Touch Command,,8,standard_equipment,Touch Command,name,BMW Touch Command
+"Audio mode, sound",F70,F70-p06-03,HiFi Lautsprechersystem harman/kardon,,6,standard_equipment,harman/kardon,name,HiFi Lautsprechersystem harman/kardon
+"Audio mode, sound",F70,F70-p17-06,HiFi Lautsprechersystem harman/kardon,674,17,optional_equipment,harman/kardon,name,HiFi Lautsprechersystem harman/kardon
+"Audio mode, sound",G60,G60-p07-04,HiFi Lautsprechersystem harman/kardon,,7,standard_equipment,harman/kardon,name,HiFi Lautsprechersystem harman/kardon
+"Audio mode, sound",G60,G60-p17-11,Bowers & Wilkins Surround Sound System,6F4,17,optional_equipment,Bowers & Wilkins,name,Bowers & Wilkins Surround Sound System
+"Audio mode, sound",G70,G70-p07-06,Bowers & Wilkins Surround Sound System,,7,standard_equipment,Bowers & Wilkins,name,Bowers & Wilkins Surround Sound System
+"Audio mode, sound",G70,G70-p21-06,Bowers & Wilkins Diamond Surround Sound System,6F1,21,optional_equipment,Bowers & Wilkins,name,Bowers & Wilkins Diamond Surround Sound System
+Radio function,F70,F70-p06-01,BMW Live Cockpit Plus,,6,standard_equipment,Audio Tuner,contents,Audio Tuner mit Diversity-Empfang und RDS
+Radio function,F70,F70-p06-02,DAB-Tuner,,6,standard_equipment,DAB,name,DAB-Tuner
+Radio function,F70,F70-p16-02,INNOVATIONSPAKET,7EW,16,optional_equipment,Audio Tuner,contents,Audio Tuner mit Diversity-Empfang und RDS
+Radio function,G60,G60-p06-13,BMW Live Cockpit Plus,,6,standard_equipment,Audio Tuner,contents,Audio Tuner
+Radio function,G60,G60-p07-01,DAB-Tuner,,7,standard_equipment,DAB,name,DAB-Tuner
+Radio function,G70,G70-p07-07,DAB-Tuner,,7,standard_equipment,DAB,name,DAB-Tuner
+Rear seat entertainment,G70,G70-p20-02,EXECUTIVE LOUNGE PAKET,9DB,20,optional_equipment,Fond-Entertainment,contents,Fond-Entertainment Experience
+Video: playback / streaming,G60,G60-p06-16,Connected Package Professional,,6,standard_equipment,Videostreaming,contents,AirConsole Games / Videostreaming
+Apps (in-car),G60,G60-p06-13,BMW Live Cockpit Plus,,6,standard_equipment,Vehicle Apps,contents,Vehicle Apps
+Apps (in-car),G60,G60-p06-16,Connected Package Professional,,6,standard_equipment,AirConsole,contents,AirConsole Games / Videostreaming
+Remote Software Upgrade/RSU,F70,F70-p06-01,BMW Live Cockpit Plus,,6,standard_equipment,Remote Software Upgrade,contents,Remote Software Upgrade
+Remote Software Upgrade/RSU,F70,F70-p16-02,INNOVATIONSPAKET,7EW,16,optional_equipment,Remote Software Upgrade,contents,Remote Software Upgrade
+Remote Software Upgrade/RSU,G60,G60-p06-13,BMW Live Cockpit Plus,,6,standard_equipment,Remote Software Upgrade,contents,Remote Software Upgrade
+Remote Services & Remote Keyless Entry (My BMW App/MINI App),G60,G60-p06-16,Connected Package Professional,,6,standard_equipment,Remote Services,contents,Remote Services
+Remote 3D View (My BMW App / MINI App),F70,F70-p16-02,INNOVATIONSPAKET,7EW,16,optional_equipment,Remote 3D View,contents,Remote 3D View
+Remote 3D View (My BMW App / MINI App),G60,G60-p17-01,INNOVATIONSPAKET,7EW,17,optional_equipment,Remote 3D View,contents,Remote 3D View
+Remote 3D View (My BMW App / MINI App),G70,G70-p08-04,Parking Assistant Plus,,8,standard_equipment,Remote 3D View,contents,Remote 3D View
+Personal eSIM,G60,G60-p07-02,Personal eSIM,,7,standard_equipment,eSIM,name,Personal eSIM
+Teleservices,F70,F70-p06-01,BMW Live Cockpit Plus,,6,standard_equipment,Teleservices,contents,Intelligenter Notruf inkl. TeleServices und BMW Unfallhilfe
+Teleservices,F70,F70-p16-02,INNOVATIONSPAKET,7EW,16,optional_equipment,Teleservices,contents,Intelligenter Notruf inkl. Teleservices und BMW Unfallhilfe
+Teleservices,G60,G60-p06-14,Teleservices,,6,standard_equipment,Teleservices,name,Teleservices
+Teleservices,G70,G70-p08-01,Gesetzlicher Notruf inkl. Teleservices und BMW Unfallhilfe,,8,standard_equipment,Teleservices,name,Gesetzlicher Notruf inkl. Teleservices und BMW Unfallhilfe
+BMW ConnectedDrive upgrades/ MINI CONNECTED upgrades,F70,F70-p06-01,BMW Live Cockpit Plus,,6,standard_equipment,Digital Premium,contents,BMW Digital Premiumdienste über ConnectedDrive Store kostenpflichtig buchbar
+BMW ConnectedDrive upgrades/ MINI CONNECTED upgrades,F70,F70-p16-02,INNOVATIONSPAKET,7EW,16,optional_equipment,Digital Premium,contents,BMW Digital Premiumdienste über Connected Drive Store kostenpflichtig buchbar
+BMW ConnectedDrive upgrades/ MINI CONNECTED upgrades,F70,F70-p18-10,BMW Digital Premium (laufzeitbegrenzt),6D5,18,optional_equipment,Digital Premium,name,BMW Digital Premium (laufzeitbegrenzt)
+BMW ConnectedDrive upgrades/ MINI CONNECTED upgrades,G70,G70-p07-05,BMW Digital Premium (laufzeitbegrenzt),,7,standard_equipment,Digital Premium,name,BMW Digital Premium (laufzeitbegrenzt)
+ConnectedDrive services (smartphone) technology overall,G60,G60-p06-15,ConnectedDrive Services,,6,standard_equipment,ConnectedDrive Services,name,ConnectedDrive Services
+ConnectedDrive services (smartphone) technology overall,G60,G60-p06-16,Connected Package Professional,,6,standard_equipment,Connected Package,name,Connected Package Professional
+Highway assistant,G60,G60-p18-05,Autobahnassistent,5AX,18,optional_equipment,Autobahnassistent,name,Autobahnassistent
+Highway assistant,G70,G70-p22-01,Autobahn- & City-Assistent (laufzeitbegrenzt),5BB,22,optional_equipment,Autobahn- & City-Assistent,name,Autobahn- & City-Assistent (laufzeitbegrenzt)
+(Active) cruise control,F70,F70-p17-08,Driving Assistant Professional,5AU,17,optional_equipment,Abstandsregelung,contents,Abstandsregelung mit aktiver Navigationsführung
+(Active) cruise control,G60,G60-p18-03,Driving Assistant Plus,5AT,18,optional_equipment,Aktive Geschwindigkeitsregelung,contents,Aktive Geschwindigkeitsregelung 30 – 180 km/h
+(Active) cruise control,G60,G60-p18-04,Driving Assistant Professional,5AU,18,optional_equipment,Aktive Geschwindigkeitsregelung,contents,Aktive Geschwindigkeitsregelung 30 – 210 km/h
+(Active) cruise control,G70,G70-p07-10,Geschwindigkeitsregelung mit Bremsfunktion,,7,standard_equipment,Geschwindigkeitsregelung mit Bremsfunktion,name,Geschwindigkeitsregelung mit Bremsfunktion
+Steering and lane guide assist,F70,F70-p17-07,Driving Assistant Plus,5AT,17,optional_equipment,Lenk und Spurführungsassistent,contents,Lenk und Spurführungsassistent
+Steering and lane guide assist,F70,F70-p17-08,Driving Assistant Professional,5AU,17,optional_equipment,Lenk- und Spurführungsassistent,contents,Lenk- und Spurführungsassistent inklusive Stauassistent
+Steering and lane guide assist,G60,G60-p18-03,Driving Assistant Plus,5AT,18,optional_equipment,Lenk- und Spurführungsassistent,contents,Lenk- und Spurführungsassistent bis 180 km/h
+Steering and lane guide assist,G60,G60-p18-04,Driving Assistant Professional,5AU,18,optional_equipment,Lenk- und Spurführungsassistent,contents,Lenk- und Spurführungsassistent bis 210 km/h
+Steering and lane guide assist,G70,G70-p08-02,Driving Assistant Plus,,8,standard_equipment,Lenk- und Spurführungsassistent,contents,Lenk- und Spurführungsassistent
+Steering and lane guide assist,G70,G70-p22-01,Autobahn- & City-Assistent (laufzeitbegrenzt),5BB,22,optional_equipment,Lenk- und Spurführungsassistent,contents,Lenk- und Spurführungsassistent
+Lane departure warning,F70,F70-p06-09,Active Guard,,6,standard_equipment,Spurverlassenswarnung,contents,Spurverlassenswarnung mit aktiver Rückführung
+Lane departure warning,F70,F70-p07-02,Driving Assistant,,7,standard_equipment,Spurverlassenswarnung,contents,Spurverlassenswarnung
+Lane departure warning,G60,G60-p07-12,Spurverlassenswarnung mit aktiver Rückführung,,7,standard_equipment,Spurverlassenswarnung,name,Spurverlassenswarnung mit aktiver Rückführung
+Lane departure warning,G70,G70-p08-02,Driving Assistant Plus,,8,standard_equipment,Spurverlassenswarnung,contents,Spurverlassenswarnung
+Lane Change Assistant,F70,F70-p17-08,Driving Assistant Professional,5AU,17,optional_equipment,Spurwechselassistent,contents,Spurwechselassistent
+Lane Change Assistant,G60,G60-p18-04,Driving Assistant Professional,5AU,18,optional_equipment,Spurwechselassistent,contents,Aktiver Spurwechselassistent
+Lane Change Assistant,G60,G60-p18-05,Autobahnassistent,5AX,18,optional_equipment,Spurwechselassistent,contents,Spurwechselassistent mit Blickbestätigung
+Lane Change Assistant,G70,G70-p22-01,Autobahn- & City-Assistent (laufzeitbegrenzt),5BB,22,optional_equipment,Spurwechselassistent,contents,Spurwechselassistent
+Blind spot monitoring,F70,F70-p07-02,Driving Assistant,,7,standard_equipment,Spurwechselwarnung,contents,Spurwechselwarnung
+Blind spot monitoring,G60,G60-p07-10,Driving Assistant,,7,standard_equipment,Spurwechselwarnung,contents,Spurwechselwarnung
+Blind spot monitoring,G70,G70-p08-02,Driving Assistant Plus,,8,standard_equipment,Spurwechselwarnung,contents,Spurwechselwarnung
+Front collision warning,F70,F70-p06-09,Active Guard,,6,standard_equipment,Frontkollisionswarnung,contents,Frontkollisionswarnung mit Bremsfunktion
+Front collision warning,F70,F70-p17-08,Driving Assistant Professional,5AU,17,optional_equipment,Frontkollisionswarnung,contents,Frontkollisionswarnung mit Bremseingriff
+Front collision warning,G60,G60-p07-13,"Frontkollisionswarnung mit Bremsfunktion, Ausweichhilfe und Bremseingriff",,7,standard_equipment,Frontkollisionswarnung,name,"Frontkollisionswarnung mit Bremsfunktion, Ausweichhilfe und Bremseingriff"
+Front collision warning,G70,G70-p08-02,Driving Assistant Plus,,8,standard_equipment,Frontkollisionwarnung,contents,Frontkollisionwarnung mit Bremseingriff
+Rear-end collision warning,F70,F70-p07-02,Driving Assistant,,7,standard_equipment,Prävention Heckkollision,contents,Prävention Heckkollision
+Rear-end collision warning,G60,G60-p07-10,Driving Assistant,,7,standard_equipment,Heckkollisionswarnung,contents,Heckkollisionswarnung
+Cross Traffic Warning Rear with Brake Intervention,F70,F70-p07-02,Driving Assistant,,7,standard_equipment,Querverkehrswarnung,contents,Querverkehrswarnung hinten mit Bremseingriff
+Cross Traffic Warning Rear with Brake Intervention,F70,F70-p17-08,Driving Assistant Professional,5AU,17,optional_equipment,Querverkehrswarnung,contents,Querverkehrswarnung vorne/hinten
+Cross Traffic Warning Rear with Brake Intervention,G60,G60-p07-10,Driving Assistant,,7,standard_equipment,Querverkehrswarnung,contents,Querverkehrswarnung hinten mit Bremseingriff
+Cross Traffic Warning Rear with Brake Intervention,G60,G60-p18-04,Driving Assistant Professional,5AU,18,optional_equipment,Querverkehrswarnung,contents,Querverkehrswarnung vorne/hinten
+Cross Traffic Warning Rear with Brake Intervention,G70,G70-p08-02,Driving Assistant Plus,,8,standard_equipment,Querverkehrswarnung,contents,Querverkehrswarnung hinten
+Intersection Warning with Brake Intervention,F70,F70-p06-09,Active Guard,,6,standard_equipment,Linksabbiegewarnung,contents,Linksabbiegewarnung mit Bremsfunktion
+Intersection Warning with Brake Intervention,F70,F70-p17-08,Driving Assistant Professional,5AU,17,optional_equipment,Kreuzungswarnung,contents,Kreuzungswarnung / Vorfahrtswarnung
+Intersection Warning with Brake Intervention,G60,G60-p07-14,Linksabbiegewarnung (Fahrzeug) mit Bremsfunktion,,7,standard_equipment,Linksabbiegewarnung,name,Linksabbiegewarnung (Fahrzeug) mit Bremsfunktion
+Intersection Warning with Brake Intervention,G70,G70-p22-01,Autobahn- & City-Assistent (laufzeitbegrenzt),5BB,22,optional_equipment,Kreuzungsassistent,contents,Kreuzungsassistent
+Traffic Light And Sign Warning,F70,F70-p17-08,Driving Assistant Professional,5AU,17,optional_equipment,Ampelerkennung,contents,Ampelerkennung
+Traffic Light And Sign Warning,G60,G60-p18-04,Driving Assistant Professional,5AU,18,optional_equipment,Ampelerkennung,contents,Ampelerkennung
+Traffic Light And Sign Warning,G70,G70-p22-01,Autobahn- & City-Assistent (laufzeitbegrenzt),5BB,22,optional_equipment,Ampelassistent,contents,Ampelassistent
+Speed Limit Assistant,F70,F70-p06-09,Active Guard,,6,standard_equipment,Speed Limit Info,contents,Speed Limit Info
+Speed Limit Assistant,F70,F70-p17-07,Driving Assistant Plus,5AT,17,optional_equipment,Speed Limit Assist,contents,Automatischer Speed Limit Assist
+Speed Limit Assistant,F70,F70-p17-08,Driving Assistant Professional,5AU,17,optional_equipment,Speed Limit Assist,contents,Automatischer Speed Limit Assist
+Speed Limit Assistant,G60,G60-p07-15,Speed Limit Info,,7,standard_equipment,Speed Limit Info,name,Speed Limit Info
+Speed Limit Assistant,G60,G60-p18-03,Driving Assistant Plus,5AT,18,optional_equipment,Speed Limit Assist,contents,Automatischer Speed Limit Assist inkl. Streckenverlaufsregelung
+Speed Limit Assistant,G70,G70-p08-02,Driving Assistant Plus,,8,standard_equipment,Speed Limit Info,contents,Speed Limit Info
+Emergency Stop Assistant,F70,F70-p17-08,Driving Assistant Professional,5AU,17,optional_equipment,Nothalteassistent,contents,Nothalteassistent
+Emergency Stop Assistant,G60,G60-p18-04,Driving Assistant Professional,5AU,18,optional_equipment,Nothalteassistent,contents,Nothalteassistent
+Traffic Jam Assistant,F70,F70-p17-08,Driving Assistant Professional,5AU,17,optional_equipment,Stauassistent,contents,Lenk- und Spurführungsassistent inklusive Stauassistent
+Fatigue Alert,F70,F70-p07-04,Aufmerksamkeitsassistent,,7,standard_equipment,Aufmerksamkeitsassistent,name,Aufmerksamkeitsassistent
+High-beam assistant,F70,F70-p16-01,PREMIUM PAKET,7EV,16,optional_equipment,Fernlichtassistent,contents,Fernlichtassistent
+High-beam assistant,F70,F70-p16-02,INNOVATIONSPAKET,7EW,16,optional_equipment,Fernlichtassistent,contents,Fernlichtassistent
+High-beam assistant,G60,G60-p08-02,"Fernlichtassistent ""BMW Selective Beam""",,8,standard_equipment,Fernlichtassistent,name,"Fernlichtassistent ""BMW Selective Beam"""
+Parking Assistant,F70,F70-p07-03,Parking Assistant,,7,standard_equipment,Parking Assistant,name,Parking Assistant
+Parking Assistant,F70,F70-p16-02,INNOVATIONSPAKET,7EW,16,optional_equipment,Parking Assistant,description,Parking Assistant sowie:
+Parking Assistant,F70,F70-p17-09,Parking Assistant Professional,5DW,17,optional_equipment,Parking Assistant,name,Parking Assistant Professional
+Parking Assistant,G60,G60-p07-11,Parking Assistant,,7,standard_equipment,Parking Assistant,name,Parking Assistant
+Parking Assistant,G60,G60-p17-01,INNOVATIONSPAKET,7EW,17,optional_equipment,Parking Assistant,contents,Parking Assistant Plus
+Parking Assistant,G60,G60-p18-06,Parking Assistant Professional,5DW,18,optional_equipment,Parking Assistant,name,Parking Assistant Professional
+Parking Assistant,G70,G70-p08-03,Parking Assistant,,8,standard_equipment,Parking Assistant,name,Parking Assistant
+Parking Assistant,G70,G70-p08-04,Parking Assistant Plus,,8,standard_equipment,Parking Assistant,name,Parking Assistant Plus
+Remote controlled parking,F70,F70-p17-09,Parking Assistant Professional,5DW,17,optional_equipment,Ferngesteuertes Parken,contents,Ferngesteuertes Parken
+Back-up Assistant,F70,F70-p07-03,Parking Assistant,,7,standard_equipment,Rückfahrassistent,contents,Rückfahrassistent
+Back-up Assistant,F70,F70-p17-09,Parking Assistant Professional,5DW,17,optional_equipment,Rückfahrassistent,contents,Rückfahrassistent (Professional)
+Back-up Assistant,G60,G60-p18-06,Parking Assistant Professional,5DW,18,optional_equipment,Rückfahrassistent,contents,Rückfahrassistent bis zu 200 m
+Back-up Assistant,G70,G70-p08-03,Parking Assistant,,8,standard_equipment,Rückfahrassistent,contents,Rückfahrassistent
+Rear view camera,F70,F70-p07-03,Parking Assistant,,7,standard_equipment,Rückfahrkamera,contents,Rückfahrkamera inklusive Panorama View
+Rear view camera,G60,G60-p07-11,Parking Assistant,,7,standard_equipment,Rückfahrkamera,contents,Rückfahrkamera bis zu 50 m
+Rear view camera,G70,G70-p08-03,Parking Assistant,,8,standard_equipment,Rückfahrkamera,contents,Rückfahrkamera
+Park Distance Control (PDC),F70,F70-p07-03,Parking Assistant,,7,standard_equipment,Active PDC,contents,Active PDC
+Park Distance Control (PDC),G60,G60-p07-11,Parking Assistant,,7,standard_equipment,Park Distance Control,contents,Active Park Distance Control
+Park Distance Control (PDC),G70,G70-p08-03,Parking Assistant,,8,standard_equipment,Park Distance Control,contents,Active Park Distance Control
+Surround View,G60,G60-p17-01,INNOVATIONSPAKET,7EW,17,optional_equipment,Surround View,contents,Surround View System
+Surround View,G70,G70-p08-04,Parking Assistant Plus,,8,standard_equipment,Surround View,contents,Surround View System
+Drive Recorder,G60,G60-p17-01,INNOVATIONSPAKET,7EW,17,optional_equipment,Drive Recorder,contents,Drive Recorder
+Interior camera,G60,G60-p17-01,INNOVATIONSPAKET,7EW,17,optional_equipment,Innenraumkamera,contents,Innenraumkamera
+Anti-theft alarm system,F70,F70-p06-12,Alarmanlage,,6,standard_equipment,Alarmanlage,name,Alarmanlage
+Anti-theft alarm system,G60,G60-p07-16,Alarmanlage,,7,standard_equipment,Alarmanlage,name,Alarmanlage
+Anti-theft alarm system,G70,G70-p08-05,Alarmanlage,,8,standard_equipment,Alarmanlage,name,Alarmanlage
+Emergency request,F70,F70-p06-01,BMW Live Cockpit Plus,,6,standard_equipment,Notruf,contents,Intelligenter Notruf inkl. TeleServices und BMW Unfallhilfe
+Emergency request,F70,F70-p06-08,Intelligenter Notruf,,6,standard_equipment,Notruf,name,Intelligenter Notruf
+Emergency request,F70,F70-p16-02,INNOVATIONSPAKET,7EW,16,optional_equipment,Notruf,contents,Intelligenter Notruf inkl. Teleservices und BMW Unfallhilfe
+Emergency request,G70,G70-p08-01,Gesetzlicher Notruf inkl. Teleservices und BMW Unfallhilfe,,8,standard_equipment,Notruf,name,Gesetzlicher Notruf inkl. Teleservices und BMW Unfallhilfe
+Airbags,F70,F70-p06-11,Deaktivierung Beifahrer Airbag,,6,standard_equipment,Airbag,name,Deaktivierung Beifahrer Airbag
+Seat belts,F70,F70-p16-03,M TECHNIK PAKET II,33F,16,optional_equipment,Sicherheitsgurte,contents,M Sicherheitsgurte
+Seat belts,G60,G60-p06-01,M SPORTPAKET PRO,,6,standard_equipment,Sicherheitsgurte,contents,M Sicherheitsgurte
+Seat belts,G70,G70-p22-02,M Sicherheitsgurte,4GQ,22,optional_equipment,Sicherheitsgurte,name,M Sicherheitsgurte
+Child restraint seat,F70,F70-p06-10,Kindersitzbefestigung i-Sitze für Beifahrer,,6,standard_equipment,Kindersitzbefestigung,name,Kindersitzbefestigung i-Sitze für Beifahrer
+Ambient light,G60,G60-p06-11,Ambientes Licht,,6,standard_equipment,Ambientes Licht,name,Ambientes Licht
+Ambient light,G70,G70-p06-23,Ambientes Licht,,6,standard_equipment,Ambientes Licht,name,Ambientes Licht
+Ambient light,G70,G70-p08-15,Ambientes Licht,,8,standard_equipment,Ambientes Licht,name,Ambientes Licht
+"Vehicle interior, lighting",F70,F70-p05-15,Interieur Lichtpaket,,5,standard_equipment,Interieur Lichtpaket,name,Interieur Lichtpaket
+Welcome Light Carpet,G70,G70-p06-13,Ceremonial Light Carpet,,6,standard_equipment,Light Carpet,name,Ceremonial Light Carpet
+Exterior lighting,F70,F70-p06-14,LED-Scheinwerfer,,6,standard_equipment,Scheinwerfer,name,LED-Scheinwerfer
+Exterior lighting,F70,F70-p16-01,PREMIUM PAKET,7EV,16,optional_equipment,Scheinwerfer,contents,Adaptiver LED-Scheinwerfer
+Exterior lighting,F70,F70-p16-02,INNOVATIONSPAKET,7EW,16,optional_equipment,Scheinwerfer,contents,Adaptiver LED-Scheinwerfer
+Exterior lighting,G60,G60-p06-06,BMW Iconic Glow Exterieurpaket,,6,standard_equipment,Iconic Glow,name,BMW Iconic Glow Exterieurpaket
+Exterior lighting,G60,G60-p08-01,Adaptiver LED-Scheinwerfer,,8,standard_equipment,Scheinwerfer,name,Adaptiver LED-Scheinwerfer
+Exterior lighting,G60,G60-p17-05,BMW Iconic Glow Exterieurpaket,3DP,17,optional_equipment,Iconic Glow,name,BMW Iconic Glow Exterieurpaket
+Exterior lighting,G70,G70-p06-08,Adaptiver LED-Scheinwerfer,,6,standard_equipment,Scheinwerfer,name,Adaptiver LED-Scheinwerfer
+Exterior lighting,G70,G70-p08-11,Adaptiver LED-Scheinwerfer,,8,standard_equipment,Scheinwerfer,name,Adaptiver LED-Scheinwerfer
+Exterior lighting,G70,G70-p20-04,DESIGN PURE EXCELLENCE,7E1,20,optional_equipment,Kristallscheinwerfer,contents,BMW Individual Kristallscheinwerfer Iconic Glow
+Exterior lighting,G70,G70-p22-03,BMW Individual Kristallscheinwerfer Iconic Glow,3DM,22,optional_equipment,Kristallscheinwerfer,name,BMW Individual Kristallscheinwerfer Iconic Glow
+Radiator grille,F70,F70-p05-05,M Hochglanz Shadow Line,,5,standard_equipment,Niere,contents,Nierenstäbe
+Radiator grille,F70,F70-p16-02,INNOVATIONSPAKET,7EW,16,optional_equipment,Niere,contents,BMW Niere Iconic Glow
+Radiator grille,G70,G70-p06-05,BMW Niere Iconic,,6,standard_equipment,Niere,name,BMW Niere Iconic
+Exterior rearview mirror,F70,F70-p05-05,M Hochglanz Shadow Line,,5,standard_equipment,Außenspiegel,contents,"Außenspiegelrahmen, Spiegelschwert und -fuß, Spiegeldreieck"
+Exterior rearview mirror,F70,F70-p05-06,Außenspiegel anklappbar,,5,standard_equipment,Außenspiegel,name,Außenspiegel anklappbar
+Exterior rearview mirror,F70,F70-p16-01,PREMIUM PAKET,7EV,16,optional_equipment,Außenspiegel,contents,Innen- und Außenspiegelpaket
+Exterior rearview mirror,F70,F70-p16-02,INNOVATIONSPAKET,7EW,16,optional_equipment,Außenspiegel,contents,Innen- und Außenspiegelpaket
+Exterior rearview mirror,G60,G60-p08-04,Erweitertes Außenspiegelpaket,,8,standard_equipment,Außenspiegel,name,Erweitertes Außenspiegelpaket
+Exterior rearview mirror,G70,G70-p06-07,Erweitertes Außenspiegelpaket,,6,standard_equipment,Außenspiegel,name,Erweitertes Außenspiegelpaket
+Exterior rearview mirror,G70,G70-p08-14,Erweitertes Außenspiegelpaket,,8,standard_equipment,Außenspiegel,name,Erweitertes Außenspiegelpaket
+Interior rearview mirror,F70,F70-p16-01,PREMIUM PAKET,7EV,16,optional_equipment,Innenspiegel,contents,Innenspiegel automatisch abblendend
+Interior rearview mirror,F70,F70-p16-02,INNOVATIONSPAKET,7EW,16,optional_equipment,Innenspiegel,contents,Innenspiegel automatisch abblendend
+Garage door opener,G70,G70-p09-11,"Garagentoröffner, integriert",,9,standard_equipment,Garagentoröffner,name,"Garagentoröffner, integriert"
+"Interior mirror, garage door opener",G70,G70-p09-11,"Garagentoröffner, integriert",,9,standard_equipment,Garagentoröffner,name,"Garagentoröffner, integriert"
+Panorama glass roof,F70,F70-p17-02,Panorama Glasdach,402,17,optional_equipment,Panorama Glasdach,name,Panorama Glasdach
+Panorama glass roof,G60,G60-p19-01,Panorama Glasdach inkl. Dachlackierung in Schwarz Hochglanz,402,19,optional_equipment,Panorama Glasdach,name,Panorama Glasdach inkl. Dachlackierung in Schwarz Hochglanz
+Panorama glass roof,G70,G70-p06-24,Panorama-Glasdach,,6,standard_equipment,Panorama-Glasdach,name,Panorama-Glasdach
+Panorama glass roof,G70,G70-p08-18,Panorama-Glasdach,,8,standard_equipment,Panorama-Glasdach,name,Panorama-Glasdach
+Panorama glass roof,G70,G70-p20-04,DESIGN PURE EXCELLENCE,7E1,20,optional_equipment,Panorama-Glasdach,contents,Panorama-Glasdach Sky Lounge
+Panorama glass roof,G70,G70-p22-04,Panorama-Glasdach Sky Lounge,407,22,optional_equipment,Panorama-Glasdach,name,Panorama-Glasdach Sky Lounge
+Sun protection,F70,F70-p06-13,Sonnenschutzverglasung,,6,standard_equipment,Sonnenschutz,name,Sonnenschutzverglasung
+Sun protection,F70,F70-p18-05,Sonnenschutzverglasung,420,18,optional_equipment,Sonnenschutz,name,Sonnenschutzverglasung
+Sun protection,G60,G60-p19-02,Sonnenschutzrollos,416,19,optional_equipment,Sonnenschutz,name,Sonnenschutzrollos
+Sun protection,G60,G60-p19-03,Sonnenschutzverglasung,420,19,optional_equipment,Sonnenschutz,name,Sonnenschutzverglasung
+Sun protection,G70,G70-p06-12,Sonnenschutzverglasung,,6,standard_equipment,Sonnenschutz,name,Sonnenschutzverglasung
+Sun protection,G70,G70-p09-01,Sonnenschutzrollos,,9,standard_equipment,Sonnenschutz,name,Sonnenschutzrollos
+Sun protection,G70,G70-p22-05,Sonnenschutzverglasung,420,22,optional_equipment,Sonnenschutz,name,Sonnenschutzverglasung
+Cushioning / damping vehicle,F70,F70-p06-05,Adaptives M Fahrwerk,,6,standard_equipment,Adaptives M Fahrwerk,name,Adaptives M Fahrwerk
+Cushioning / damping vehicle,G60,G60-p07-06,Adaptives Fahrwerk Professional,,7,standard_equipment,Adaptives Fahrwerk,name,Adaptives Fahrwerk Professional
+Cushioning / damping vehicle,G60,G60-p18-01,Adaptives Fahrwerk Professional,2VV,18,optional_equipment,Adaptives Fahrwerk,name,Adaptives Fahrwerk Professional
+Cushioning / damping vehicle,G60,G60-p18-02,Adaptives M Fahrwerk Professional,2VW,18,optional_equipment,Adaptives M Fahrwerk,name,Adaptives M Fahrwerk Professional
+Cushioning / damping vehicle,G70,G70-p07-14,Adaptive M Chassis Control Professional,,7,standard_equipment,Adaptive M Chassis Control,name,Adaptive M Chassis Control Professional
+Cushioning / damping vehicle,G70,G70-p21-07,Adaptive Chassis Control Professional,2Z2,21,optional_equipment,Adaptive Chassis Control,name,Adaptive Chassis Control Professional
+Steering,G60,G60-p18-01,Adaptives Fahrwerk Professional,2VV,18,optional_equipment,Integral-Aktivlenkung,contents,Integral-Aktivlenkung
+Steering,G60,G60-p18-02,Adaptives M Fahrwerk Professional,2VW,18,optional_equipment,Integral-Aktivlenkung,contents,Integral-Aktivlenkung
+Steering,G70,G70-p07-09,Integral-Aktivlenkung,,7,standard_equipment,Integral-Aktivlenkung,name,Integral-Aktivlenkung
+Steering wheel,F70,F70-p05-14,Sportlenkrad,,5,standard_equipment,Sportlenkrad,name,Sportlenkrad
+Steering wheel,G60,G60-p08-12,M Lederlenkrad,,8,standard_equipment,Lederlenkrad,name,M Lederlenkrad
+Steering wheel,G70,G70-p06-19,Lenksäulenverstellung,,6,standard_equipment,Lenksäulenverstellung,name,Lenksäulenverstellung
+Braking,F70,F70-p16-03,M TECHNIK PAKET II,33F,16,optional_equipment,Compound-Bremse,contents,"19"" M Compound-Bremse, Grau hochglänzend"
+Braking,G60,G60-p06-01,M SPORTPAKET PRO,,6,standard_equipment,Sportbremse,contents,"M Sportbremse, rot hochglänzend"
+Braking,G70,G70-p21-08,"M Sportbremse, dunkelblau metallic",3M1,21,optional_equipment,Sportbremse,name,"M Sportbremse, dunkelblau metallic"
+Braking,G70,G70-p21-09,"M Sportbremse, schwarz metallic",3M3,21,optional_equipment,Sportbremse,name,"M Sportbremse, schwarz metallic"
+Wheels / tires,F70,F70-p05-03,"17"" Leichtmetallräder Y-Speiche 971",,5,standard_equipment,Leichtmetallräder,name,"17"" Leichtmetallräder Y-Speiche 971"
+Wheels / tires,F70,F70-p05-04,"18"" Leichtmetallräder Y-Speiche 975 M Bicolor",,5,standard_equipment,Leichtmetallräder,name,"18"" Leichtmetallräder Y-Speiche 975 M Bicolor"
+Wheels / tires,F70,F70-p13-01,"17"" Leichtmetallräder Y-Speiche 971",1H0,13,wheels,Leichtmetallräder,name,"17"" Leichtmetallräder Y-Speiche 971"
+Wheels / tires,F70,F70-p13-02,"17"" Leichtmetallräder Y-Speiche 972",1H1,13,wheels,Leichtmetallräder,name,"17"" Leichtmetallräder Y-Speiche 972"
+Wheels / tires,F70,F70-p13-03,"18"" Leichtmetallräder Y-Speiche 974 Bicolor",1H2,13,wheels,Leichtmetallräder,name,"18"" Leichtmetallräder Y-Speiche 974 Bicolor"
+Wheels / tires,F70,F70-p13-04,"18"" Leichtmetallräder Y-Speiche 975 M Bicolor",1H5,13,wheels,Leichtmetallräder,name,"18"" Leichtmetallräder Y-Speiche 975 M Bicolor"
+Wheels / tires,F70,F70-p13-05,"19"" Leichtmetallräder Y-Speiche 976 M Bicolor",1H8,13,wheels,Leichtmetallräder,name,"19"" Leichtmetallräder Y-Speiche 976 M Bicolor"
+Wheels / tires,F70,F70-p13-06,"19"" M Leichtmetallräder Vielspeiche 977 M Bicolor",1HA,13,wheels,Leichtmetallräder,name,"19"" M Leichtmetallräder Vielspeiche 977 M Bicolor"
+Wheels / tires,F70,F70-p13-07,"19"" M Schmiederäder Y-Speiche 1085 M",3NA,13,wheels,Schmiederäder,name,"19"" M Schmiederäder Y-Speiche 1085 M"
+Wheels / tires,F70,F70-p13-08,"19"" M Schmiederäder Y-Speiche 1085 M mit Sportreifen",3NB,13,wheels,Schmiederäder,name,"19"" M Schmiederäder Y-Speiche 1085 M mit Sportreifen"
+Wheels / tires,F70,F70-p16-03,M TECHNIK PAKET II,33F,16,optional_equipment,Schmiederäder,contents,"19"" M Schmiederäder Y-Speiche 1085 M mit Sportreifen"
+Wheels / tires,G60,G60-p06-03,"18"" Leichtmetallräder Y-Speiche 932",,6,standard_equipment,Leichtmetallräder,name,"18"" Leichtmetallräder Y-Speiche 932"
+Wheels / tires,G60,G60-p06-04,"19"" Leichtmetallräder Triplex-Speiche 933",,6,standard_equipment,Leichtmetallräder,name,"19"" Leichtmetallräder Triplex-Speiche 933"
+Wheels / tires,G60,G60-p06-05,"19"" M Leichtmetallräder Doppelspeiche 935 M Bicolor mit Mischbereifung",,6,standard_equipment,Leichtmetallräder,name,"19"" M Leichtmetallräder Doppelspeiche 935 M Bicolor mit Mischbereifung"
+Wheels / tires,G60,G60-p13-01,"18"" Leichtmetallräder Y-Speiche 932",3FY,13,wheels,Leichtmetallräder,name,"18"" Leichtmetallräder Y-Speiche 932"
+Wheels / tires,G60,G60-p13-02,"19"" Leichtmetallräder Triplex-Speiche 933",3G0,13,wheels,Leichtmetallräder,name,"19"" Leichtmetallräder Triplex-Speiche 933"
+Wheels / tires,G60,G60-p13-03,"19"" Aerodynamikräder 934 Bicolor",3G3,13,wheels,Aerodynamikräder,name,"19"" Aerodynamikräder 934 Bicolor"
+Wheels / tires,G60,G60-p13-04,"19"" M Leichtmetallräder Doppelspeiche 935 M Bicolor",3G8,13,wheels,Leichtmetallräder,name,"19"" M Leichtmetallräder Doppelspeiche 935 M Bicolor"
+Wheels / tires,G60,G60-p13-05,"19"" M Leichtmetallräder Doppelspeiche 935 M Bicolor mit Mischbereifung",3G9,13,wheels,Leichtmetallräder,name,"19"" M Leichtmetallräder Doppelspeiche 935 M Bicolor mit Mischbereifung"
+Wheels / tires,G60,G60-p13-06,"19"" M Aerodynamikräder 936 M Bicolor",3GC,13,wheels,Aerodynamikräder,name,"19"" M Aerodynamikräder 936 M Bicolor"
+Wheels / tires,G60,G60-p13-07,"19"" M Aerodynamikräder 936 M Bicolor mit Mischbereifung",3GD,13,wheels,Aerodynamikräder,name,"19"" M Aerodynamikräder 936 M Bicolor mit Mischbereifung"
+Wheels / tires,G60,G60-p13-08,"20"" M Leichtmetallräder Sternspeiche 938 M Bicolor mit Mischbereifung",3GN,13,wheels,Leichtmetallräder,name,"20"" M Leichtmetallräder Sternspeiche 938 M Bicolor mit Mischbereifung"
+Wheels / tires,G60,G60-p13-09,"20"" M Aerodynamikräder 939 M Bicolor mit Mischbereifung",3GQ,13,wheels,Aerodynamikräder,name,"20"" M Aerodynamikräder 939 M Bicolor mit Mischbereifung"
+Wheels / tires,G60,G60-p14-01,"20"" M Aerodynamikräder 940 M Bicolor mit Mischbereifung",3GT,14,wheels,Aerodynamikräder,name,"20"" M Aerodynamikräder 940 M Bicolor mit Mischbereifung"
+Wheels / tires,G60,G60-p14-02,"21"" BMW Individual Aerodynamikräder 954 I Bicolor mit Mischbereifung",3GV,14,wheels,Aerodynamikräder,name,"21"" BMW Individual Aerodynamikräder 954 I Bicolor mit Mischbereifung"
+Wheels / tires,G70,G70-p06-02,"20"" Leichtmetallräder Sternspeiche 905 Bicolor",,6,standard_equipment,Leichtmetallräder,name,"20"" Leichtmetallräder Sternspeiche 905 Bicolor"
+Wheels / tires,G70,G70-p06-03,"20"" Aerodynamikräder 1097 Bicolor",,6,standard_equipment,Aerodynamikräder,name,"20"" Aerodynamikräder 1097 Bicolor"
+Wheels / tires,G70,G70-p06-04,"21"" M Aerodynamikräder 909 M Multicolor 3D-Glanzschliff mit Mischbereifung",,6,standard_equipment,Aerodynamikräder,name,"21"" M Aerodynamikräder 909 M Multicolor 3D-Glanzschliff mit Mischbereifung"
+Wheels / tires,G70,G70-p14-01,"20"" Leichtmetallräder Sternspeiche 905 Bicolor",1F4,14,wheels,Leichtmetallräder,name,"20"" Leichtmetallräder Sternspeiche 905 Bicolor"
+Wheels / tires,G70,G70-p14-02,"20"" Aerodynamikräder 1097 Bicolor",3R8,14,wheels,Aerodynamikräder,name,"20"" Aerodynamikräder 1097 Bicolor"
+Wheels / tires,G70,G70-p14-03,"21"" M Aerodynamikräder 909 M Multicolor 3D-Glanzschliff mit Mischbereifung",1FE,14,wheels,Aerodynamikräder,name,"21"" M Aerodynamikräder 909 M Multicolor 3D-Glanzschliff mit Mischbereifung"
+Wheels / tires,G70,G70-p14-04,"20"" M Aerodynamikräder 907 M Bicolor mit Mischbereifung",1F9,14,wheels,Aerodynamikräder,name,"20"" M Aerodynamikräder 907 M Bicolor mit Mischbereifung"
+Wheels / tires,G70,G70-p14-05,"20"" M Aerodynamikräder 907 M Bicolor mit Mischbereifung und Sportreifen",1FA,14,wheels,Aerodynamikräder,name,"20"" M Aerodynamikräder 907 M Bicolor mit Mischbereifung und Sportreifen"
+Wheels / tires,G70,G70-p14-06,"21"" M Aerodynamikräder Kreuzspeiche 1098 Jetblack",3R3,14,wheels,Aerodynamikräder,name,"21"" M Aerodynamikräder Kreuzspeiche 1098 Jetblack"
+Wheels / tires,G70,G70-p14-07,"21"" M Leichtmetallräder Sternspeiche 908M Jetblack",3R5,14,wheels,Leichtmetallräder,name,"21"" M Leichtmetallräder Sternspeiche 908M Jetblack"
+Wheels / tires,G70,G70-p15-01,"21"" BMW Individual Leichtmetallräder Vielspeiche 1055 I Bicolor mit Mischbereifung",1WK,15,wheels,Leichtmetallräder,name,"21"" BMW Individual Leichtmetallräder Vielspeiche 1055 I Bicolor mit Mischbereifung"
+Wheels / tires,G70,G70-p15-02,"22"" BMW Individual Aerodynamikräder V-Speiche 1099",3R0,15,wheels,Aerodynamikräder,name,"22"" BMW Individual Aerodynamikräder V-Speiche 1099"
+Wheels / tires,G70,G70-p15-03,"22"" BMW Individual Aerodynamikräder V-Speiche 1099 mit Sportreifen",3R1,15,wheels,Aerodynamikräder,name,"22"" BMW Individual Aerodynamikräder V-Speiche 1099 mit Sportreifen"
+Wheels / tires,G70,G70-p20-04,DESIGN PURE EXCELLENCE,7E1,20,optional_equipment,Leichtmetallräder,contents,"20"", 21"" oder 22"" BMW Individual Leichtmetallräder"
+Tire pressure control,F70,F70-p06-15,Reifendruck-Kontrolle,,6,standard_equipment,Reifendruck,name,Reifendruck-Kontrolle
+Tire pressure control,G60,G60-p07-17,Reifendruck-Kontrolle,,7,standard_equipment,Reifendruck,name,Reifendruck-Kontrolle
+Tire pressure control,G70,G70-p08-07,Reifendruck-Kontrolle,,8,standard_equipment,Reifendruck,name,Reifendruck-Kontrolle
+Tirefit,F70,F70-p06-16,Reifenpannenset Plus,,6,standard_equipment,Reifenpannenset,name,Reifenpannenset Plus
+Tirefit,G60,G60-p07-18,Reifenreparatur Set oder Reifenpannenset Plus,,7,standard_equipment,Reifenpannenset,name,Reifenreparatur Set oder Reifenpannenset Plus
+Tirefit,G70,G70-p08-08,Reifenpannenset Plus,,8,standard_equipment,Reifenpannenset,name,Reifenpannenset Plus
+Transmission,F70,F70-p06-06,Steptronic Getriebe mit Doppelkupplung,,6,standard_equipment,Steptronic,name,Steptronic Getriebe mit Doppelkupplung
+Transmission,F70,F70-p06-07,Steptronic Getriebe mit Doppelkupplung und Schaltwippen,,6,standard_equipment,Steptronic,name,Steptronic Getriebe mit Doppelkupplung und Schaltwippen
+Transmission,F70,F70-p17-05,Steptronic Getriebe mit Doppelkupplung und Schaltwippen,2TE,17,optional_equipment,Steptronic,name,Steptronic Getriebe mit Doppelkupplung und Schaltwippen
+Transmission,G60,G60-p07-05,Steptronic Getriebe mit Schaltwippen,,7,standard_equipment,Steptronic,name,Steptronic Getriebe mit Schaltwippen
+Transmission,G70,G70-p07-08,Steptronic Sport Getriebe Steptronic Sport Getriebe,,7,standard_equipment,Steptronic,name,Steptronic Sport Getriebe Steptronic Sport Getriebe
+Shift paddle,F70,F70-p06-07,Steptronic Getriebe mit Doppelkupplung und Schaltwippen,,6,standard_equipment,Schaltwippen,name,Steptronic Getriebe mit Doppelkupplung und Schaltwippen
+Shift paddle,F70,F70-p17-05,Steptronic Getriebe mit Doppelkupplung und Schaltwippen,2TE,17,optional_equipment,Schaltwippen,name,Steptronic Getriebe mit Doppelkupplung und Schaltwippen
+Shift paddle,G60,G60-p07-05,Steptronic Getriebe mit Schaltwippen,,7,standard_equipment,Schaltwippen,name,Steptronic Getriebe mit Schaltwippen
+Launch Control,G60,G60-p06-01,M SPORTPAKET PRO,,6,standard_equipment,Launch Control,contents,Launch Control
+My Modes / driving experience,F70,F70-p06-01,BMW Live Cockpit Plus,,6,standard_equipment,My Modes,contents,BMW My Modes
+My Modes / driving experience,F70,F70-p16-02,INNOVATIONSPAKET,7EW,16,optional_equipment,My Modes,contents,BMW My Modes
+My Modes / driving experience,G70,G70-p07-12,Fahrerlebnisschalter,,7,standard_equipment,Fahrerlebnisschalter,name,Fahrerlebnisschalter
+My Modes / driving experience,G70,G70-p08-17,My Modes,,8,standard_equipment,My Modes,name,My Modes
+Engine acoustics / engine sound,G60,G60-p07-07,BMW IconicSounds Electric,,7,standard_equipment,IconicSounds,name,BMW IconicSounds Electric
+Engine acoustics / engine sound,G70,G70-p09-09,BMW IconicSounds Electric,,9,standard_equipment,IconicSounds,name,BMW IconicSounds Electric
+Seats,F70,F70-p05-11,Seriensitz für Fahrer und Beifahrer,,5,standard_equipment,Seriensitz,name,Seriensitz für Fahrer und Beifahrer
+Seats,F70,F70-p05-12,Sportsitze für Fahrer und Beifahrer,,5,standard_equipment,Sportsitze,name,Sportsitze für Fahrer und Beifahrer
+Seats,F70,F70-p16-03,M TECHNIK PAKET II,33F,16,optional_equipment,Sportsitze,contents,M Sportsitze für Fahrer und Beifahrer
+Seats,F70,F70-p18-02,Aktivsitz für Fahrer und Beifahrer,455,18,optional_equipment,Aktivsitz,name,Aktivsitz für Fahrer und Beifahrer
+Seats,F70,F70-p18-03,Sportsitze für Fahrer und Beifahrer,481,18,optional_equipment,Sportsitze,name,Sportsitze für Fahrer und Beifahrer
+Seats,F70,F70-p18-04,M Sportsitze für Fahrer und Beifahrer,711,18,optional_equipment,Sportsitze,name,M Sportsitze für Fahrer und Beifahrer
+Seats,G60,G60-p08-05,Sportsitze für Fahrer und Beifahrer,,8,standard_equipment,Sportsitze,name,Sportsitze für Fahrer und Beifahrer
+Seats,G60,G60-p17-02,COMFORT PAKET,7VB,17,optional_equipment,Komfortsitze,description,Komfortsitze für Fahrer und Beifahrer erhältlich (siehe Seite 17)
+Seats,G60,G60-p18-07,"Komfortsitze vorn, elektrisch verstellbar",456,18,optional_equipment,Komfortsitze,name,"Komfortsitze vorn, elektrisch verstellbar"
+Seats,G70,G70-p06-27,Multifunktionssitze für Fahrer und Beifahrer,,6,standard_equipment,Multifunktionssitze,name,Multifunktionssitze für Fahrer und Beifahrer
+Seats,G70,G70-p09-08,Multifunktionssitze für Fahrer und Beifahrer,,9,standard_equipment,Multifunktionssitze,name,Multifunktionssitze für Fahrer und Beifahrer
+Seats,G70,G70-p20-01,EXECUTIVE PAKET,9DA,20,optional_equipment,Multifunktionssitze,contents,Multifunktionssitze im Fond
+Seats,G70,G70-p20-02,EXECUTIVE LOUNGE PAKET,9DB,20,optional_equipment,Executive Lounge Seating,contents,Executive Lounge Seating
+Seats,G70,G70-p21-02,Executive Lounge Seating,4F4,21,optional_equipment,Executive Lounge Seating,name,Executive Lounge Seating
+Seat memory,F70,F70-p18-01,"Sitzverstellung, elektrisch, mit Memory",459,18,optional_equipment,mit Memory,name,"Sitzverstellung, elektrisch, mit Memory"
+Seat memory,G60,G60-p08-11,"Sitzverstellung, elektrisch, mit Memory für Fahrersitz",,8,standard_equipment,mit Memory,name,"Sitzverstellung, elektrisch, mit Memory für Fahrersitz"
+Seat memory,G60,G60-p17-02,COMFORT PAKET,7VB,17,optional_equipment,mit Memory,contents,"Sitzverstellung, elektrisch, mit Memory für Fahrer"
+Seat memory,G70,G70-p08-12,"Sitzverstellung, elektrisch, mit Memory",,8,standard_equipment,mit Memory,name,"Sitzverstellung, elektrisch, mit Memory"
+Seat massage,G70,G70-p20-01,EXECUTIVE PAKET,9DA,20,optional_equipment,Massage,contents,Massagefunktion im Fond
+Seat massage,G70,G70-p20-03,CONNOISSEUR PAKET,9DC,20,optional_equipment,Massage,contents,Massagefunktion vorn
+"Seating, ventilate / heat",F70,F70-p05-13,Sitzheizung für Fahrer und Beifahrer,,5,standard_equipment,Sitzheizung,name,Sitzheizung für Fahrer und Beifahrer
+"Seating, ventilate / heat",G60,G60-p08-07,Sitzheizung für Fahrer und Beifahrer,,8,standard_equipment,Sitzheizung,name,Sitzheizung für Fahrer und Beifahrer
+"Seating, ventilate / heat",G60,G60-p17-02,COMFORT PAKET,7VB,17,optional_equipment,Sitzheizung,contents,Sitzheizung vorn und hinten
+"Seating, ventilate / heat",G70,G70-p08-13,Sitzheizung vorn und hinten,,8,standard_equipment,Sitzheizung,name,Sitzheizung vorn und hinten
+"Seating, ventilate / heat",G70,G70-p20-01,EXECUTIVE PAKET,9DA,20,optional_equipment,Sitzbelüftung,contents,Aktive Sitzbelüftung im Fond
+"Seating, ventilate / heat",G70,G70-p20-03,CONNOISSEUR PAKET,9DC,20,optional_equipment,Sitzbelüftung,contents,Aktive Sitzbelüftung vorn
+Adjustment of lower lumbar support,G60,G60-p08-06,Lordosenstütze für Fahrer und Beifahrer,,8,standard_equipment,Lordosenstütze,name,Lordosenstütze für Fahrer und Beifahrer
+Heated steering wheel,F70,F70-p17-04,Lenkradheizung,248,17,optional_equipment,Lenkradheizung,name,Lenkradheizung
+Heated steering wheel,G60,G60-p17-09,Lenkradheizung,248,17,optional_equipment,Lenkradheizung,name,Lenkradheizung
+Heated steering wheel,G70,G70-p08-21,Lenkradheizung,,8,standard_equipment,Lenkradheizung,name,Lenkradheizung
+Panel heating,G70,G70-p08-20,Wärmekomfortpaket,,8,standard_equipment,Wärmekomfortpaket,name,Wärmekomfortpaket
+"Vehicle, climatization",F70,F70-p07-01,2-Zonen-Klimaautomatik mit erweiterten Umfängen,,7,standard_equipment,Klimaautomatik,name,2-Zonen-Klimaautomatik mit erweiterten Umfängen
+"Vehicle, climatization",G60,G60-p08-08,Klimaautomatik,,8,standard_equipment,Klimaautomatik,name,Klimaautomatik
+"Vehicle, climatization",G60,G60-p08-09,Klimaautomatik mit 4-Zonenregelung,,8,standard_equipment,Klimaautomatik,name,Klimaautomatik mit 4-Zonenregelung
+"Vehicle, climatization",G60,G60-p17-02,COMFORT PAKET,7VB,17,optional_equipment,Klimaautomatik,contents,Klimaautomatik mit 4-Zonenregelung
+"Vehicle, climatization",G70,G70-p08-19,Klimaautomatik mit 4-Zonen-Regelung,,8,standard_equipment,Klimaautomatik,name,Klimaautomatik mit 4-Zonen-Regelung
+"Vehicle, climatization",G70,G70-p09-07,Standklimatisierung,,9,standard_equipment,Standklimatisierung,name,Standklimatisierung
+"Air conditioning, setting",F70,F70-p07-01,2-Zonen-Klimaautomatik mit erweiterten Umfängen,,7,standard_equipment,Klimaautomatik,name,2-Zonen-Klimaautomatik mit erweiterten Umfängen
+"Air conditioning, setting",G60,G60-p08-08,Klimaautomatik,,8,standard_equipment,Klimaautomatik,name,Klimaautomatik
+"Air conditioning, setting",G60,G60-p08-09,Klimaautomatik mit 4-Zonenregelung,,8,standard_equipment,Klimaautomatik,name,Klimaautomatik mit 4-Zonenregelung
+"Air conditioning, setting",G60,G60-p17-02,COMFORT PAKET,7VB,17,optional_equipment,Klimaautomatik,contents,Klimaautomatik mit 4-Zonenregelung
+"Air conditioning, setting",G70,G70-p08-19,Klimaautomatik mit 4-Zonen-Regelung,,8,standard_equipment,Klimaautomatik,name,Klimaautomatik mit 4-Zonen-Regelung
+Auxiliary heater function,G60,G60-p19-04,Standheizung,536,19,optional_equipment,Standheizung,name,Standheizung
+Interior acoustics,G70,G70-p20-03,CONNOISSEUR PAKET,9DC,20,optional_equipment,Komfortverglasung,contents,Komfortverglasung
+Storage compartments,F70,F70-p05-18,Armauflage vorne mit Ablagefach,,5,standard_equipment,Ablagefach,name,Armauflage vorne mit Ablagefach
+Storage compartments,G70,G70-p06-22,Ablagemöglichkeiten,,6,standard_equipment,Ablagemöglichkeiten,name,Ablagemöglichkeiten
+"Center armrest, front",F70,F70-p05-18,Armauflage vorne mit Ablagefach,,5,standard_equipment,Armauflage vorne,name,Armauflage vorne mit Ablagefach
+Cupholder,F70,F70-p05-16,Cupholder in Mittelkonsole,,5,standard_equipment,Cupholder,name,Cupholder in Mittelkonsole
+Floor mat,F70,F70-p05-19,Fußmatten vorne und hinten in Anthrazit,,5,standard_equipment,Fußmatten,name,Fußmatten vorne und hinten in Anthrazit
+Floor mat,G70,G70-p06-21,Fußmatten in Velours,,6,standard_equipment,Fußmatten,name,Fußmatten in Velours
+Luggage compartment,F70,F70-p18-08,Gepäckraumtrennnetz,413,18,optional_equipment,Gepäckraumtrennnetz,name,Gepäckraumtrennnetz
+Through-loading facility,F70,F70-p18-09,"Fondsitzlehne, Teilung 40 : 20 : 40",465,18,optional_equipment,"Fondsitzlehne, Teilung",name,"Fondsitzlehne, Teilung 40 : 20 : 40"
+Through-loading facility,G60,G60-p08-10,Durchladesystem 40:20:40,,8,standard_equipment,Durchladesystem,name,Durchladesystem 40:20:40
+Through-loading facility,G70,G70-p09-06,Durchladesystem,,9,standard_equipment,Durchladesystem,name,Durchladesystem
+"Trailer, use",F70,F70-p07-03,Parking Assistant,,7,standard_equipment,Anhängerassistent,contents,Anhängerassistent
+"Trailer, use",F70,F70-p18-06,Anhängerkupplung mit abnehmbarem Kugelkopf,235,18,optional_equipment,Anhängerkupplung,name,Anhängerkupplung mit abnehmbarem Kugelkopf
+"Trailer, use",G60,G60-p07-11,Parking Assistant,,7,standard_equipment,Anhängerassistent,contents,Anhängerassistent
+"Trailer, use",G60,G60-p19-05,Anhängerkupplung,3AC,19,optional_equipment,Anhängerkupplung,name,Anhängerkupplung
+"Trailer, use",G70,G70-p22-06,Anhängerkupplung,3AC,22,optional_equipment,Anhängerkupplung,name,Anhängerkupplung
+Comfort Access,F70,F70-p16-01,PREMIUM PAKET,7EV,16,optional_equipment,Komfortzugang,contents,Komfortzugang
+Comfort Access,F70,F70-p16-02,INNOVATIONSPAKET,7EW,16,optional_equipment,Komfortzugang,contents,Komfortzugang
+Comfort Access,G60,G60-p17-03,TRAVEL PAKET,7LK,17,optional_equipment,Komfortzugang,contents,Komfortzugang
+Comfort Access,G70,G70-p09-05,Komfortzugang,,9,standard_equipment,Komfortzugang,name,Komfortzugang
+Digital Key,G60,G60-p08-03,BMW Digital Key,,8,standard_equipment,Digital Key,name,BMW Digital Key
+Automatic doors,G70,G70-p22-07,Automatiktüren,3CD,22,optional_equipment,Automatiktüren,name,Automatiktüren
+"Door, open / close",G70,G70-p09-02,Soft-Close-Automatik für Türen,,9,standard_equipment,Soft-Close,name,Soft-Close-Automatik für Türen
+"Door, open / close",G70,G70-p22-07,Automatiktüren,3CD,22,optional_equipment,Automatiktüren,name,Automatiktüren
+"Trunk lid, open / close",F70,F70-p18-07,Automatische Heckklappenbetätigung,316,18,optional_equipment,Automatische Heckklappenbetätigung,name,Automatische Heckklappenbetätigung
+"Trunk lid, open / close",G60,G60-p17-03,TRAVEL PAKET,7LK,17,optional_equipment,Automatische Heckklappenbetätigung,contents,Automatische Heckklappenbetätigung
+"Trunk lid, open / close",G70,G70-p09-03,Automatische Heckklappenbetätigung,,9,standard_equipment,Automatische Heckklappenbetätigung,name,Automatische Heckklappenbetätigung
+"Outer door handle, front",G70,G70-p06-06,Flächenintegrierte Türgriffe,,6,standard_equipment,Flächenintegrierte Türgriffe,name,Flächenintegrierte Türgriffe
+"Outer door handle, rear",G70,G70-p06-06,Flächenintegrierte Türgriffe,,6,standard_equipment,Flächenintegrierte Türgriffe,name,Flächenintegrierte Türgriffe
+Charge high-voltage battery,G60,G60-p07-09,AC-Laden Professional (22 kW),,7,standard_equipment,AC-Laden,name,AC-Laden Professional (22 kW)
+Charge high-voltage battery,G60,G60-p19-06,AC-Laden Professional (22 kW),4U6,19,optional_equipment,AC-Laden,name,AC-Laden Professional (22 kW)
+Charge high-voltage battery,G70,G70-p07-13,"AC-Laden Professional: AC Laden für zuhause und unterwegs (22 kW, 3-phasig)",,7,standard_equipment,AC-Laden,name,"AC-Laden Professional: AC Laden für zuhause und unterwegs (22 kW, 3-phasig)"
+Charge high-voltage battery,G70,G70-p22-08,Ladekabel Professional (Mode 3) für öffentliches Laden,4T2,22,optional_equipment,Ladeleistung,contents,"Ladeleistung 22kW, 3-phasig; max. Stromstärke 32A"
+"Wallbox, charging / home charging",G70,G70-p07-13,"AC-Laden Professional: AC Laden für zuhause und unterwegs (22 kW, 3-phasig)",,7,standard_equipment,AC Laden für zuhause,name,"AC-Laden Professional: AC Laden für zuhause und unterwegs (22 kW, 3-phasig)"
+Charging cable,G60,G60-p07-08,Ladekabel Professional (Mode 3) für öffentliches Laden,,7,standard_equipment,Ladekabel,name,Ladekabel Professional (Mode 3) für öffentliches Laden
+Charging cable,G70,G70-p22-08,Ladekabel Professional (Mode 3) für öffentliches Laden,4T2,22,optional_equipment,Ladekabel,name,Ladekabel Professional (Mode 3) für öffentliches Laden

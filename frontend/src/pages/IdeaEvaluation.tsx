@@ -1,7 +1,8 @@
 import { Suspense, lazy, useCallback, useEffect, useRef, useState } from "react";
 import { ApiError, MARKET_NAMES, MODEL_NAMES, MOVE_LABELS, fmtInt, fmtNum, postJSON, useApi } from "../api";
-import type { AgentEvaluation, AgentStatus, Explained, FeatureResult, IdeaSpec, InterpretResult, Policy } from "../types";
+import type { AgentEvaluation, AgentStatus, CompareResult, CompetitorAnalysis, Explained, FeatureResult, IdeaSpec, InterpretResult, Policy } from "../types";
 import ProcessFlow, { ACTOR_LABEL, ActorIcon, type Actor, type ExplainState, type Phase, type RunKey, type Runs, type StepId, type TraceEvent } from "../components/ProcessFlow";
+import CompetitorPanel, { type CompState } from "../components/CompetitorPanel";
 import DecisionForm from "../components/DecisionForm";
 import DecisionMatrix from "../components/DecisionMatrix";
 import EvidencePanel from "../components/EvidencePanel";
@@ -13,8 +14,9 @@ import SpecReview from "../components/SpecReview";
 import VerificationReport from "../components/VerificationReport";
 import { REC_INFO, REC_ORDER, bottomLine, groupCells } from "../plain";
 
-// cytoscape is large: load the graph view only when its tab is opened
+// cytoscape is large: load the graph view only when its tab or the full-screen page is opened
 const EvidenceGraph = lazy(() => import("../components/EvidenceGraph"));
+const GraphPage = lazy(() => import("../components/GraphPage"));
 
 type Tab = "summary" | "markets" | "equipment" | "graph" | "verification";
 const TABS: { id: Tab; label: string }[] = [
@@ -56,7 +58,15 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
   const [panel, setPanel] = useState<StepId>("retriever");   // side panel; follows each real step transition
   const [tab, setTab] = useState<Tab>("summary");
   const shown = useRef<string | null>(null);          // evaluation id on screen; late agent answers for others are dropped
+  const [graphOpen, setGraphOpen] = useState(false);  // the knowledge graph on a page of its own
+  const [pdfBusy, setPdfBusy] = useState(false);
+  const [pdfError, setPdfError] = useState<string | null>(null);
   const policyEdited = useRef(false);
+  const [comp, setComp] = useState<CompareResult | null>(null);              // competitor comparison (no LLM)
+  const [compAnalysis, setCompAnalysis] = useState<CompetitorAnalysis | null>(null);   // Agents 4 + 5
+  const [compState, setCompState] = useState<CompState>("idle");
+  const [compError, setCompError] = useState<string | null>(null);
+  const compShown = useRef<string | null>(null);      // scope on screen; late competitor answers for others are dropped
 
   useEffect(() => {
     if (policyData && !policy) setPolicy(policyData.default);
@@ -90,6 +100,11 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
     setExplainState("idle");
     setFocus(null);
     shown.current = null;
+    compShown.current = null;
+    setComp(null);
+    setCompAnalysis(null);
+    setCompState("idle");
+    setCompError(null);
     setPanel("retriever");
     setTab("summary");
     const t = performance.now();
@@ -147,6 +162,64 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
     }
   }
 
+  // Competitors: the comparison depends on the scope only (series, markets, features), not on the policy.
+  async function analyseCompetitors(cid: string) {
+    setCompState("running");
+    setCompError(null);
+    setCompAnalysis(null);
+    log("analyst", "Request sent: compare with the competitors", `POST /api/agent/competitors, comparison ${cid}`);
+    const t = performance.now();
+    try {
+      const x = await postJSON<CompetitorAnalysis>("/api/agent/competitors", { competition_id: cid });
+      if (compShown.current !== cid) return;
+      const a = x.analysis;
+      log("analyst", `${a.findings.length} findings verified, ${a.removed.length} removed`, `${a.model}; ${a.rewritten.length} sent back once`);
+      if (x.verification) log("presenter", `Competitor brief: ${x.verification.n_presented_verified} sentences verified`,
+        `${x.brief?.model}; ${x.verification.n_presented_replaced} replaced by the analyst's finding; ${((performance.now() - t) / 1000).toFixed(1)} s`);
+      setCompAnalysis(x);
+      setCompState("done");
+    } catch (e) {
+      if (compShown.current !== cid) return;
+      const err = e as ApiError;
+      const off = err.code === "llm_unavailable" || err.code === "model_unavailable";
+      log("analyst", off ? "Competitor agents not available" : "Competitor analysis failed", err.message, "error");
+      setCompError(err.message);
+      setCompState(off ? "unavailable" : "error");
+    }
+  }
+
+  async function loadCompetitors(spec: IdeaSpec) {
+    const scope = JSON.stringify([spec.series, spec.markets, spec.features.map((f) => f.feature)]);
+    compShown.current = scope;
+    setComp(null);
+    setCompAnalysis(null);
+    setCompError(null);
+    setCompState("loading");
+    log("system", "Request sent: competitor comparison", "POST /api/competitors/compare");
+    try {
+      const r = await postJSON<CompareResult>("/api/competitors/compare", {
+        series: spec.series, markets: spec.markets, features: spec.features.map((f) => f.feature), idea: spec.idea, move: spec.move,
+      });
+      if (compShown.current !== scope) return;
+      setComp(r);
+      if (!r.available || !r.competition_id) {
+        log("system", "No competitor data", r.comparison.message ?? "", "error");
+        setCompState("nodata");
+        return;
+      }
+      const n = r.comparison.tuples.filter((x) => x.status === "ok").length;
+      log("system", `Competitor comparison: ${n} series-market sets, ${r.facts.length} facts`, `Comparison ${r.competition_id}; data ${r.comparison.data_hash}`);
+      compShown.current = r.competition_id;
+      analyseCompetitors(r.competition_id);
+    } catch (e) {
+      if (compShown.current !== scope) return;
+      const msg = (e as Error).message;
+      log("system", "Competitor comparison failed", msg, "error");
+      setCompError(msg);
+      setCompState("error");
+    }
+  }
+
   async function evaluate(spec: IdeaSpec, pol: Policy | null, withAgents: boolean) {
     setError(null);
     setEvaluateError(null);
@@ -176,6 +249,7 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
       if (withAgents) {
         setCellKey(null);
         explain(r.evaluation_id);
+        loadCompetitors(r.spec);
       } else if (changed) {
         setExplained(null);
         setExplainState((s) => (s === "unavailable" ? s : "stale"));
@@ -208,6 +282,37 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
     setTab("graph");
     requestAnimationFrame(() => document.getElementById("report")?.scrollIntoView({ behavior: "smooth", block: "start" }));
   };
+
+  // The graph page gets a history entry, so the browser's Back closes it instead of leaving the app.
+  const openGraph = useCallback(() => {
+    window.history.pushState({ graphPage: true }, "", "#knowledge-graph");
+    setGraphOpen(true);
+  }, []);
+  const closeGraph = useCallback(() => {
+    if (window.history.state?.graphPage) window.history.back();
+    else setGraphOpen(false);
+  }, []);
+  useEffect(() => {
+    if (!graphOpen) return;
+    const pop = () => setGraphOpen(false);
+    window.addEventListener("popstate", pop);
+    return () => window.removeEventListener("popstate", pop);
+  }, [graphOpen]);
+
+  async function exportPdf() {
+    if (!evaluation) return;
+    setPdfBusy(true);
+    setPdfError(null);
+    try {
+      const { downloadReport } = await import("../pdf/exportReport");
+      await downloadReport({ evaluation, explained, explainState, explainError, status, competitors: { compare: comp, analysis: compAnalysis, state: compState, error: compError } });
+      log("system", "Report exported as PDF", `Evaluation ${evaluation.evaluation_id}${explainState === "done" ? ", with the verified brief" : ", without the written brief"}`);
+    } catch (e) {
+      setPdfError((e as Error).message);
+    } finally {
+      setPdfBusy(false);
+    }
+  }
 
   const features = evaluation?.result.features ?? [];
   const fr = features[featIdx] ?? null;
@@ -255,6 +360,17 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
         <section id="report" className="ws__report anchor" aria-labelledby="report-title">
           <div className="report__top">
             <h2 id="report-title" className="report__title">Report</h2>
+            {evaluation && (
+              <div className="report__actions">
+                <button type="button" className="btn btn--outline btn--small" onClick={openGraph}>
+                  <GraphIcon /> Open knowledge graph
+                </button>
+                <button type="button" className="btn btn--small" onClick={exportPdf} disabled={pdfBusy}
+                  title={explainState === "running" ? "The written brief is still being prepared; export now leaves it out" : undefined}>
+                  <DownloadIcon /> {pdfBusy ? "Preparing PDF…" : "Export PDF"}
+                </button>
+              </div>
+            )}
             {features.length > 1 && (
               <div className="chips" role="group" aria-label="Feature">
                 {features.map((f, i) => (
@@ -265,6 +381,7 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
               </div>
             )}
           </div>
+          {pdfError && <p className="note note--error small">The PDF could not be created: {pdfError}</p>}
           {!evaluation ? (
             <div className="report__empty">
               <p><strong>The report appears here once the evidence is computed.</strong></p>
@@ -293,7 +410,7 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
                     </div>
                   </div>
                 ) : <p className="small muted">No feature was evaluated, so there is no series × market evidence.</p>)}
-                {tab === "equipment" && (fr ? (
+                {tab === "equipment" && (<>{fr ? (
                   <div className="stack">
                     <p className="small muted">German price lists, July 2026. EUR incl. 19% VAT. Prices for other markets are not in the data.</p>
                     <PriceLadder ladder={fr.price_ladder} />
@@ -313,10 +430,13 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
                       </details>
                     )}
                   </div>
-                ) : <p className="small muted">No feature was evaluated.</p>)}
+                ) : <p className="small muted">No feature was evaluated, so there is no BMW price-list position for it.</p>}
+                  <CompetitorPanel compare={comp} analysis={compAnalysis} state={compState} error={compError} onShowNode={showNode}
+                    onRetry={() => (comp?.competition_id ? analyseCompetitors(comp.competition_id) : evaluation && loadCompetitors(evaluation.spec))} />
+                </>)}
                 {tab === "graph" && (
                   <Suspense fallback={<div className="skeleton" style={{ height: 320 }} />}>
-                    <EvidenceGraph evaluation={evaluation} focus={focus} onFocus={setFocus} />
+                    <EvidenceGraph evaluation={evaluation} focus={focus} onFocus={setFocus} onOpenFull={openGraph} />
                   </Suspense>
                 )}
                 {tab === "verification" && <VerificationReport explained={explained} facts={evaluation.facts} />}
@@ -325,6 +445,12 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
           )}
         </section>
       </div>
+
+      {graphOpen && evaluation && (
+        <Suspense fallback={<div className="gpage gpage--loading" role="status"><span className="spinner" aria-hidden /></div>}>
+          <GraphPage evaluation={evaluation} focus={focus} onFocus={setFocus} onClose={closeGraph} onExport={exportPdf} exporting={pdfBusy} exportError={pdfError} />
+        </Suspense>
+      )}
 
       <aside className="ws__side side" aria-label="Side panel">
         <div className="side__head">
@@ -453,6 +579,23 @@ function IdeaBar({ idea, setIdea, onSubmit, busy }: { idea: string; setIdea: (v:
       <input id="idea" className="input ideabar__input" value={idea} onChange={(e) => setIdea(e.target.value)} placeholder={`Try another idea, for example: ${EXAMPLES[0]}`} autoComplete="off" maxLength={2000} />
       <button className="btn btn--small ideabar__btn" type="submit" disabled={busy || !idea.trim()}>{busy ? "Working…" : "Evaluate"}</button>
     </form>
+  );
+}
+
+function GraphIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
+      <circle cx="3.5" cy="8" r="2" /><circle cx="12.5" cy="3.5" r="2" /><circle cx="12.5" cy="12.5" r="2" />
+      <path d="M5.3 7.1 10.7 4.4M5.3 8.9l5.4 2.7" />
+    </svg>
+  );
+}
+
+function DownloadIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden>
+      <path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M2.5 13.5h11" />
+    </svg>
   );
 }
 

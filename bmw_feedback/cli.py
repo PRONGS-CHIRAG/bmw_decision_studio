@@ -6,6 +6,7 @@
     export    JSON row files for the interactive dashboard -> data/processed/dashboard/
     graph     knowledge graph of the processed data and model outputs -> data/processed/knowledge_graph.json
     agent     run the three-agent idea evaluation in the terminal (needs OPENAI_API_KEY for agents 2 and 3)
+    competitors  fetch | grep | sources | check | build: public web data on the competitors per series x market
     verdict   PM verdict for a feature (--feature) or a new comment (--text)
     serve     API + web app (Product Decision Studio) on http://127.0.0.1:8000
     all       build + train + graph + figures
@@ -229,9 +230,98 @@ def cmd_serve(args) -> None:
     uvicorn.run("bmw_feedback.api:app", host=args.host, port=args.port, reload=False)
 
 
+def cmd_competitors(args) -> None:
+    from .competitors import records, snapshot
+    action = args.action
+    if action == "fetch":
+        for url in args.urls:
+            try:
+                m = snapshot.fetch(url, render=args.render, force=args.force)
+            except Exception as e:                       # report and continue with the next URL
+                print(f"FAILED {url}: {e}")
+                continue
+            state = "ok" if m["ok"] else f"PROBLEM: {m['problem']}"
+            print(f"{m['source_id']}  {state}  {m['kind']}  {m['text_chars']:,} chars  {m['publisher']}  "
+                  f"{m['title'][:80]}{'  (cached)' if m.get('cached') else ''}")
+    elif action == "grep":
+        for hit in snapshot.grep(args.source_id, args.pattern, context=args.context, limit=args.limit):
+            print(f"... {hit} ...\n")
+    elif action == "sources":
+        for m in snapshot.all_sources():
+            print(f"{m['source_id']}  {'ok ' if m['ok'] else 'BAD'}  {m['kind']:4}  {m['publisher']:28}  {m['url']}")
+    elif action == "check":
+        from pathlib import Path
+        named = [Path(p) if "/" in p else records.R.EXTRACTED_DIR / p for p in args.files]
+        rows, load_errors = records.load(named or None)
+        if named:                                         # model rows defined in the other files count too
+            others, _ = records.load([p for p in records.record_files() if p.resolve() not in
+                                      {n.resolve() for n in named}])
+            rows += [r for r in others if r.get("table") == "model"]
+        _, errors, stats = records.validate_all(rows)
+        for e in load_errors + errors:
+            print(f"ERROR {e}")
+        print(json.dumps(stats))
+        if load_errors or errors:
+            sys.exit(1)
+    elif action == "analyse":
+        from .agents.competition import CompetitionService
+        from .agents.llm import LLMError, from_env
+        from .graph.store import get_graph
+        from .verdict import load_context
+        svc = CompetitionService(graph=get_graph()[0], llm_getter=from_env, ctx=load_context())
+        res = svc.compare(args.series, args.markets, args.feature, args.idea or "")
+        if not res["available"]:
+            print(res["comparison"].get("message"))
+            sys.exit(1)
+        print(f"Comparison {res['competition_id']}: {len(res['facts'])} facts, "
+              f"{res['graph_missing_nodes']} fact(s) without a graph node")
+        for t in res["comparison"]["tuples"]:
+            names = ", ".join(c["name"] for c in t["competitors"]) or t.get("note")
+            print(f"  {t['series']} {t['market']} [{t['status']}]: {names}")
+        if args.no_agents:
+            return
+        try:
+            out = svc.analyse(res["competition_id"])
+        except LLMError as e:
+            print(f"Agents 4 + 5 not run: {e}")
+            sys.exit(1)
+        a = out["analysis"]
+        print(f"Agent 4 ({a['model']}): {len(a['findings'])} findings verified, {len(a['removed'])} removed, "
+              f"{len(a['rewritten'])} sent back once ({out['seconds']} s)")
+        for f in a["findings"]:
+            print(f"  [{f['series']} {f['market']} {f['section']}] {f['text']}  ({', '.join(f['fact_ids'])})")
+        for f in a["removed"]:
+            print(f"  REMOVED [{f['series']} {f['market']}] {f['text']}: "
+                  + "; ".join(ch["detail"] for ch in f["checks"] if not ch["passed"]))
+        if out["brief"]:
+            v = out["verification"]
+            print(f"Agent 5 ({out['brief']['model']}): {v['n_presented_verified']} sentences verified, "
+                  f"{v['n_presented_replaced']} replaced by the analyst's finding")
+            for sec, claims in out["brief"]["sections"].items():
+                for c in claims:
+                    print(f"  [{sec}{' fallback' if c['origin'] == 'analyst_fallback' else ''}] {c['text']}")
+            for c in v["presented"]:
+                if c["status"] == "removed":
+                    print(f"  REPLACED [{c['section']}] {c['text']}: "
+                          + "; ".join(ch["detail"] for ch in c["checks"] if not ch["passed"]))
+    elif action == "build":
+        from .competitors.build import build_and_save
+        q = build_and_save(drop_invalid=args.drop_invalid)
+        print(json.dumps({k: q[k] for k in ("records", "tables", "sets")}, indent=1, default=str))
+
+
 def cmd_all(args) -> None:
     cmd_build(args)
     cmd_train(args)
+    from .competitors import records, snapshot
+    if records.record_files():                           # competitor tables feed the graph, so they come first
+        if snapshot.all_sources():
+            from .competitors.build import build_and_save
+            build_and_save()
+        else:                                            # a fresh clone: the web snapshots are git-ignored
+            print("Competitor web snapshots (competitor-data/raw, text) are not on this machine, so the tracked "
+                  "data/processed/competitor_*.csv are used as they are. Re-fetch the sources listed in "
+                  "competitor_sources.csv to rebuild them.")
     cmd_graph(args)
     cmd_figures(args)
 
@@ -250,6 +340,29 @@ def main(argv=None) -> None:
     ag.add_argument("idea", nargs="?", help="the feature idea, in quotes")
     ag.add_argument("--check", action="store_true", help="check the API key and model availability")
     ag.set_defaults(func=cmd_agent)
+    cp = sub.add_parser("competitors", help="competitor web data: fetch sources, check extracted rows, build tables")
+    csub = cp.add_subparsers(dest="action", required=True)
+    cf = csub.add_parser("fetch", help="download URLs into competitor-data/raw (prints the source ids)")
+    cf.add_argument("urls", nargs="+")
+    cf.add_argument("--render", action="store_true", help="render with a headless browser (for script-built pages)")
+    cf.add_argument("--force", action="store_true", help="download again even if already saved")
+    cg = csub.add_parser("grep", help="search a saved source's normalised text, to copy evidence quotes")
+    cg.add_argument("source_id")
+    cg.add_argument("pattern")
+    cg.add_argument("-C", "--context", type=int, default=160)
+    cg.add_argument("--limit", type=int, default=25)
+    csub.add_parser("sources", help="list downloaded sources")
+    cc = csub.add_parser("check", help="validate extracted rows (all files, or the ones named)")
+    cc.add_argument("files", nargs="*")
+    ca = csub.add_parser("analyse", help="compare and run the competitor agents in the terminal")
+    ca.add_argument("--series", nargs="*", default=[], help="F70 G60 G70 (default: all)")
+    ca.add_argument("--markets", nargs="*", default=[], help="EU US CN RoW (default: all)")
+    ca.add_argument("--feature", nargs="*", default=[], help="taxonomy feature names, e.g. 'Head-Up Display'")
+    ca.add_argument("--idea", default="")
+    ca.add_argument("--no-agents", action="store_true", help="only the deterministic comparison")
+    cb = csub.add_parser("build", help="validated rows -> data/processed/competitor_*.csv")
+    cb.add_argument("--drop-invalid", action="store_true", help="drop invalid rows (listed in the quality report)")
+    cp.set_defaults(func=cmd_competitors)
     sv = sub.add_parser("serve", help="run the API + web app (frontend/dist) on http://HOST:PORT")
     sv.add_argument("--host", default="127.0.0.1")
     sv.add_argument("--port", type=int, default=8000)

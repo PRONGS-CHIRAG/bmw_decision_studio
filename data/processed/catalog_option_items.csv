@@ -1,0 +1,365 @@
+item_id,model,page,page_type,section,name,sa_code,description,contents,conditions
+F70-p05-01,F70,5,standard_equipment,Exterieur,Lackierung Schwarz Uni,,,,
+F70-p05-02,F70,5,standard_equipment,Exterieur,Lackierung Alpinweiß Uni,,,,Im Umfang M Sportpaket enthalten
+F70-p05-03,F70,5,standard_equipment,Exterieur,"17"" Leichtmetallräder Y-Speiche 971",,"7,5 J x 17 mit Bereifung 205/55 R17 | Lightning Grey Alugussrad",,Hinweis: ohne Radschraubensicherung
+F70-p05-04,F70,5,standard_equipment,Exterieur,"18"" Leichtmetallräder Y-Speiche 975 M Bicolor",,"8 J x 18 mit Bereifung 225/45 R18 | Midnight Grey, glanzgedreht",,Nur in Verbindung mit M Sportpaket | Hinweis: mit Radschraubensicherung
+F70-p05-05,F70,5,standard_equipment,Exterieur,M Hochglanz Shadow Line,,Ausstattungsumfänge in Schwarz hochglänzend:,"Fensterrahmeneinfassung | Fensterschachtabdeckung | Blende C-Säule | Außenspiegelrahmen, Spiegelschwert und -fuß, Spiegeldreieck | Blende B-Säule | Nierenstäbe",
+F70-p05-06,F70,5,standard_equipment,Exterieur,Außenspiegel anklappbar,,,,
+F70-p05-07,F70,5,standard_equipment,Interieur,Stoff/Arktur Anthrazit,,,,
+F70-p05-08,F70,5,standard_equipment,Interieur,M Alcantara/Veganza-Kombination Schwarz/Kontraststeppung Blau,,,,
+F70-p05-09,F70,5,standard_equipment,Interieur,Interieurdekore dunkelsilber,,,,
+F70-p05-10,F70,5,standard_equipment,Interieur,"M Interieurdekore Illuminated Aluminium Hexacube, matt",,,,
+F70-p05-11,F70,5,standard_equipment,Interieur,Seriensitz für Fahrer und Beifahrer,,,,
+F70-p05-12,F70,5,standard_equipment,Interieur,Sportsitze für Fahrer und Beifahrer,,,,
+F70-p05-13,F70,5,standard_equipment,Interieur,Sitzheizung für Fahrer und Beifahrer,,,,
+F70-p05-14,F70,5,standard_equipment,Interieur,Sportlenkrad,,,,
+F70-p05-15,F70,5,standard_equipment,Interieur,Interieur Lichtpaket,,,,
+F70-p05-16,F70,5,standard_equipment,Interieur,Cupholder in Mittelkonsole,,,,
+F70-p05-17,F70,5,standard_equipment,Interieur,2 USB-C Anschlüsse in Mittelkonsole vorne (Ladefunktion),,,,
+F70-p05-18,F70,5,standard_equipment,Interieur,Armauflage vorne mit Ablagefach,,,,
+F70-p05-19,F70,5,standard_equipment,Interieur,Fußmatten vorne und hinten in Anthrazit,,,,
+F70-p06-01,F70,6,standard_equipment,Konnektivität Und Infotainment,BMW Live Cockpit Plus,,,"BMW Curved Display | Displaykombination mit 10,25"" Instrumentendisplay und 10,7"" Control Display | BMW Operating System 9 | Navigationsfunktion | Intuitive Bedienmöglichkeiten | Bluetooth / WiFi Schnittstelle mit Freisprecheinrichtung | Audio Tuner mit Diversity-Empfang und RDS | 4G LTE Connectivity | Remote Software Upgrade | BMW My Modes | Intelligent Personal Assistant | USB Anschlüsse | Intelligenter Notruf inkl. TeleServices und BMW Unfallhilfe | BMW Maps | Touchbedienung am Controlsystem | Smartphone Integration (kompatibles Smartphone erforderlich) zur Nutzung von Apple Car Play oder Android Auto | BMW Digital Premiumdienste über ConnectedDrive Store kostenpflichtig buchbar",
+F70-p06-02,F70,6,standard_equipment,Konnektivität Und Infotainment,DAB-Tuner,,,,
+F70-p06-03,F70,6,standard_equipment,Konnektivität Und Infotainment,HiFi Lautsprechersystem harman/kardon,,,,
+F70-p06-04,F70,6,standard_equipment,Antrieb / Fahrdynamik / Fahrwerk,Performance Control,,,,
+F70-p06-05,F70,6,standard_equipment,Antrieb / Fahrdynamik / Fahrwerk,Adaptives M Fahrwerk,,,,
+F70-p06-06,F70,6,standard_equipment,Antrieb / Fahrdynamik / Fahrwerk,Steptronic Getriebe mit Doppelkupplung,,,,
+F70-p06-07,F70,6,standard_equipment,Antrieb / Fahrdynamik / Fahrwerk,Steptronic Getriebe mit Doppelkupplung und Schaltwippen,,,,
+F70-p06-08,F70,6,standard_equipment,Fahrerassistenz Und Sicherheit,Intelligenter Notruf,,,,
+F70-p06-09,F70,6,standard_equipment,Fahrerassistenz Und Sicherheit,Active Guard,,,Spurverlassenswarnung mit aktiver Rückführung | Frontkollisionswarnung mit Bremsfunktion | Linksabbiegewarnung mit Bremsfunktion | Speed Limit Info | Manueller Speed Limit Assist | Ausweichassistent,
+F70-p06-10,F70,6,standard_equipment,Fahrerassistenz Und Sicherheit,Kindersitzbefestigung i-Sitze für Beifahrer,,,,
+F70-p06-11,F70,6,standard_equipment,Fahrerassistenz Und Sicherheit,Deaktivierung Beifahrer Airbag,,,,
+F70-p06-12,F70,6,standard_equipment,Fahrerassistenz Und Sicherheit,Alarmanlage,,,,
+F70-p06-13,F70,6,standard_equipment,Fahrerassistenz Und Sicherheit,Sonnenschutzverglasung,,,,
+F70-p06-14,F70,6,standard_equipment,Fahrerassistenz Und Sicherheit,LED-Scheinwerfer,,,,
+F70-p06-15,F70,6,standard_equipment,Fahrerassistenz Und Sicherheit,Reifendruck-Kontrolle,,,,
+F70-p06-16,F70,6,standard_equipment,Fahrerassistenz Und Sicherheit,Reifenpannenset Plus,,,,
+F70-p07-01,F70,7,standard_equipment,Komfort Und Funktionalität,2-Zonen-Klimaautomatik mit erweiterten Umfängen,,,,
+F70-p07-02,F70,7,standard_equipment,Komfort Und Funktionalität,Driving Assistant,,Kamera- und radarbasiertes Fahrerassistenzsystem bestehend aus:,Spurverlassenswarnung | Spurwechselwarnung | Querverkehrswarnung hinten mit Bremseingriff | Prävention Heckkollision | Ausstiegswarnung,
+F70-p07-03,F70,7,standard_equipment,Komfort Und Funktionalität,Parking Assistant,,Kamera- und ultraschallbasiertes Assistenzsystem bestehend aus,Parkassistent | Rückfahrassistent | Park- und Anfahrüberwachung | Active PDC | Anhängerassistent | Rückfahrkamera inklusive Panorama View | Park Distance Control,
+F70-p07-04,F70,7,standard_equipment,Komfort Und Funktionalität,Aufmerksamkeitsassistent,,,,
+F70-p13-01,F70,13,wheels,Räder Und Reifen,"17"" Leichtmetallräder Y-Speiche 971",1H0,"7,5 J x 17 mit Bereifung 205/55 R17 | Lightning Grey Alugussrad",,Hinweis: nicht mit Radschraubensicherung
+F70-p13-02,F70,13,wheels,Räder Und Reifen,"17"" Leichtmetallräder Y-Speiche 972",1H1,"7,5 J x 17 mit Bereifung 205/55 R17 | Refinded Silver Alugussrad",,Hinweis: mit Radschraubensicherung
+F70-p13-03,F70,13,wheels,Räder Und Reifen,"18"" Leichtmetallräder Y-Speiche 974 Bicolor",1H2,"8 J x 18 mit Bereifung 225/45 R18 | Gunmetal Grey, glanzgedreht",,Hinweis: mit Radschraubensicherung
+F70-p13-04,F70,13,wheels,Räder Und Reifen,"18"" Leichtmetallräder Y-Speiche 975 M Bicolor",1H5,"8 J x 18 mit Bereifung 225/45 R18 | Midnight Grey, glanzgedreht",,Nur in Verbindung mit M Sport Design oder M Sportpaket | Hinweis: mit Radschraubensicherung
+F70-p13-05,F70,13,wheels,Räder Und Reifen,"19"" Leichtmetallräder Y-Speiche 976 M Bicolor",1H8,"8 J x 19 mit Bereifung 225/40 R19 | Jet Black Uni, glanzgedreht | 8 J x 19 mit Bereifung 235/40 R19 | Jet Black Uni, glanzgedreht",,Nur in Verbindung mit M Sportpaket | Nicht in Verbindung mit M Sport Design | Hinweis: mit Radschraubensicherung
+F70-p13-06,F70,13,wheels,Räder Und Reifen,"19"" M Leichtmetallräder Vielspeiche 977 M Bicolor",1HA,"8 J x 19 mit Bereifung 235/40 R19 | Jetblack Uni, glanzgedreht",,Hinweis: mit Radschraubensicherung
+F70-p13-07,F70,13,wheels,Räder Und Reifen,"19"" M Schmiederäder Y-Speiche 1085 M",3NA,"8 J x 19 mit Bereifung 225 /40 R19 | Orbit Grey matt metallic, Aluschmiederad | 8 J x 19 mit Bereifung 235/40 R19 | Orbit Grey, Aluschmiederad",,Hinweis: keine Schneekettenmontage möglich | Nur in Verbindung mit M Sportpaket
+F70-p13-08,F70,13,wheels,Räder Und Reifen,"19"" M Schmiederäder Y-Speiche 1085 M mit Sportreifen",3NB,"8 J x 19 mit Bereifung 235/40 R19 | Orbit Grey matt, Aluschmiederad",,Hinweis: keine Schneekettenmontage möglich | In Verbindung mit M Technik Paket II
+F70-p14-01,F70,14,paint,Uni,Schwarz uni,668,,,Nicht in Verbindung mit M Sportpaket
+F70-p14-02,F70,14,paint,Uni,Alpinweiß uni,300,,,
+F70-p14-03,F70,14,paint,Metallic,Black Sapphire,475,,,
+F70-p14-04,F70,14,paint,Metallic,Skyscraper Grau,C4W,,,
+F70-p14-05,F70,14,paint,Metallic,Thundernight,C56,,,
+F70-p14-06,F70,14,paint,Metallic,Fire Red,C68,,,
+F70-p14-07,F70,14,paint,Metallic,M Portimao Blau,C31,,,
+F70-p14-08,F70,14,paint,Metallic,M Portimao Blau,C31,,,
+F70-p14-09,F70,14,paint,Metallic,M Brooklyn Grau,C4P,,,
+F70-p14-10,F70,14,paint,Metallic,Cape York Grün,C5Y,,,
+F70-p14-11,F70,14,paint,Bmw Individual Lackierung,BMW Individual Storm Bay,C3N,,,
+F70-p14-12,F70,14,paint,Bmw Individual Lackierung,BMW Individual Tansanitblau metallic,C3Z,,,
+F70-p14-13,F70,14,paint,Bmw Individual Lackierung,BMW Individual Frozen Pure Grey,C5A,,,
+F70-p14-14,F70,14,paint,Bmw Individual Lackierung,BMW Individual Frozen Portimao Blue,C6R,,,
+F70-p14-15,F70,14,paint,Bmw Individual Lackierung,BMW Individual Sonderlackierung,U490,,,
+F70-p15-01,F70,15,interior_colour,Polster,STOFF/ARKTUR,BLAT,,Anthrazit,Nicht in Verbindung mit Sportsitze für Fahrer und Beifahrer oder M Sportsitze für Fahrer und Beifahrer
+F70-p15-02,F70,15,interior_colour,Polster,ECONEER,ECI2,,Bicolor Blau | Nur mit Sportsitze für Fahrer und Beifahrer,Nicht in Verbindung mit M Sportpaket
+F70-p15-03,F70,15,interior_colour,Polster,M ALCANTARA/VEGANZA-KOMBINATION,KTNL,,Schwarz/Kontraststeppung Blau,Nur in Verbindung mit Sportsitze für Fahrer und Beifahrer oder M Sportsitze für Fahrer und Beifahrer | Nur in Verbindung mit M Sportpaket | Nicht in Verbindung mit M Sport Design
+F70-p15-04,F70,15,interior_colour,Ledernachbildung,VEGANZA PERFORIERT,KUCX,,Dachhimmel anthrazit | Oyster | Mokka | Schwarz,Nicht in Verbindung mit M Sportsitze für Fahrer und Beifahrer | In Verbindung mit M Sportpaket
+F70-p15-05,F70,15,interior_colour,Ledernachbildung,Mokka,KUMY,,,Nicht in Verbindung mit M Sportsitze für Fahrer und Beifahrer | In Verbindung mit M Sportpaket
+F70-p15-06,F70,15,interior_colour,Ledernachbildung,Schwarz,KUSW,,,Nicht in Verbindung mit M Sportsitze für Fahrer und Beifahrer | In Verbindung mit M Sportpaket
+F70-p15-07,F70,15,interior_colour,Ledernachbildung,Korallrot/Schwarz,KUKP,,,Nur in Verbindung mit Sportsitze für Fahrer und Beifahrer oder M Sportsitze für Fahrer und Beifahrer | In Verbindung mit M Sportpaket
+F70-p15-08,F70,15,interior_colour,Interieurleisten,Interieurdekore dunkelsilber,43T,,,
+F70-p15-09,F70,15,interior_colour,Interieurleisten,Interieurdekore Illuminated Aluminium graphit,43U,,,In Verbindung mit M Sportpaket
+F70-p15-10,F70,15,interior_colour,Interieurleisten,"M Interieurdekore Illuminated Aluminium Hexacube, matt",43Z,,,Nur in Verbindung mit M Sportpaket
+F70-p16-01,F70,16,optional_equipment,Ausstattungspakete,PREMIUM PAKET,7EV,,Komfortzugang | Innen- und Außenspiegelpaket | Innenspiegel automatisch abblendend | Adaptiver LED-Scheinwerfer | Fernlichtassistent | Wireless Charging Ablage,Nicht in Verbindung mit Innovationspaket
+F70-p16-02,F70,16,optional_equipment,Ausstattungspakete,INNOVATIONSPAKET,7EW,Bestehend aus: | Kamera und ultraschallbasiertes Parkssistenzsystem bestehend aus den Funktionen vom | Parking Assistant sowie:,"Komfortzugang | Innen- und Außenspiegelpaket | Innenspiegel automatisch abblendend | Adaptiver LED-Scheinwerfer | Fernlichtassistent | Wireless Charging Ablage | BMW Niere Iconic Glow | Inszenierung der BMW Niere durch Konturbeleuchtung | Aktiv in Fahrzeugruhe und während der Fahrt | BMW Live Cockpit Professional | BMW Head-Up-Display | BMW Curved Display | Displaykombination mit 10,25"" Instrumentendisplay und 10,7"" Control Display | BMW Operating System 9 | Navigationsfunktion | Intuitive Bedienmöglichkeiten | Bluetooth / WiFi Schnittstelle mit Freisprecheinrichtung | Audio Tuner mit Diversity-Empfang und RDS | 4G LTE Connectivity | Remote Software Upgrade | BMW My Modes | BMW Maps | Intelligent Personal Assistant | Intelligenter Notruf inkl. Teleservices und BMW Unfallhilfe | BMW Digital Premiumdienste über Connected Drive Store kostenpflichtig buchbar | Parking Assistant Plus | Remote 3D View | Anti-Diebstahl-Rekorder",(Ausstattungsalternative zu reduziertem Preis: Parking Assistant Professional)
+F70-p16-03,F70,16,optional_equipment,Ausstattungspakete,M TECHNIK PAKET II,33F,,"19"" M Compound-Bremse, Grau hochglänzend | 19"" M Schmiederäder Y-Speiche 1085 M mit Sportreifen | M Leichtbaumaßnahmen | M Sportsitze für Fahrer und Beifahrer | M Leuchten Shadow Line | M Hochglanz Shadow Line mit erweiterten Umfängen | M Sicherheitsgurte",Nicht in Verbindung mit M Sportpaket Pro
+F70-p17-01,F70,17,optional_equipment,Exterieur,Dach in Schwarz,3B5,Ausführung der Spiegelkappen in Schwarz,,Nicht in Verbindung mit ausgewählten Aussenfarben
+F70-p17-02,F70,17,optional_equipment,Exterieur,Panorama Glasdach,402,,,
+F70-p17-03,F70,17,optional_equipment,Exterieur,"Modellschriftzug, Entfall",320,,,
+F70-p17-04,F70,17,optional_equipment,Interieur,Lenkradheizung,248,,,
+F70-p17-05,F70,17,optional_equipment,Antrieb / Fahrdynamik / Fahrwerk,Steptronic Getriebe mit Doppelkupplung und Schaltwippen,2TE,,,Nur in Verbindung mit M Lederlenkrad
+F70-p17-06,F70,17,optional_equipment,Konnektivität Und Infotainment,HiFi Lautsprechersystem harman/kardon,674,,,
+F70-p17-07,F70,17,optional_equipment,Fahrassistenz Und Sicherheit,Driving Assistant Plus,5AT,Kamera- und radarbasiertes Fahrerassistenzsystem bestehend aus:,Automatischer Speed Limit Assist | Lenk und Spurführungsassistent | Manueller Speed Limit Assist | Streckenverlaufsregelung,
+F70-p17-08,F70,17,optional_equipment,Fahrassistenz Und Sicherheit,Driving Assistant Professional,5AU,Kamera- und radarbasiertes Fahrerassistenzsystem bestehend aus:,Lenk- und Spurführungsassistent inklusive Stauassistent | Nothalteassistent | Automatischer Speed Limit Assist | Spurwechselassistent | Abstandsregelung mit aktiver Navigationsführung | Spurhalteassistent mit aktiven Seitenkollisionsschutz | Querverkehrswarnung vorne/hinten | Frontkollisionswarnung mit Bremseingriff | Ausweichhilfe | Ausstiegswarnung (Safe Exit) | Rettungsgassenassistent | Ampelerkennung | Kreuzungswarnung / Vorfahrtswarnung | Falschfahrwarnung,Nur in Verbindung mit Innovationspaket
+F70-p17-09,F70,17,optional_equipment,Fahrassistenz Und Sicherheit,Parking Assistant Professional,5DW,Kamera- und ultraschallbasiertes Assistenzsystem bestehend aus den Funktionen vom Parking | Assistant und dem Parking Assistant Plus sowie:,Remotebedinung (Kompatibles Smartphone erforderlich) | Ferngesteuertes Parken | Manöverirassistent | Rückfahrassistent (Professional),Nur in Verbindung mit Innovationspaket
+F70-p18-01,F70,18,optional_equipment,Komfort Und Funktionalität,"Sitzverstellung, elektrisch, mit Memory",459,,,
+F70-p18-02,F70,18,optional_equipment,Komfort Und Funktionalität,Aktivsitz für Fahrer und Beifahrer,455,,,
+F70-p18-03,F70,18,optional_equipment,Komfort Und Funktionalität,Sportsitze für Fahrer und Beifahrer,481,,,In Verbindung mit M Sportpaket
+F70-p18-04,F70,18,optional_equipment,Komfort Und Funktionalität,M Sportsitze für Fahrer und Beifahrer,711,,,Nur in Verbindung mit M Sportpaket | Nur in Verbindung mit Veganza perforiert Korallrot / Schwarz oder M Alcantara / Veganza-Kombination | Nicht in Verbindung mit Aktivsitz für Fahrer und Beifahrer | In Verbindung mit M Sportpaket Pro oder M Technik Paket II
+F70-p18-05,F70,18,optional_equipment,Komfort Und Funktionalität,Sonnenschutzverglasung,420,,,
+F70-p18-06,F70,18,optional_equipment,Komfort Und Funktionalität,Anhängerkupplung mit abnehmbarem Kugelkopf,235,,,
+F70-p18-07,F70,18,optional_equipment,Komfort Und Funktionalität,Automatische Heckklappenbetätigung,316,,,
+F70-p18-08,F70,18,optional_equipment,Komfort Und Funktionalität,Gepäckraumtrennnetz,413,,,
+F70-p18-09,F70,18,optional_equipment,Komfort Und Funktionalität,"Fondsitzlehne, Teilung 40 : 20 : 40",465,,,
+F70-p18-10,F70,18,optional_equipment,Konnektivität Und Infotainment,BMW Digital Premium (laufzeitbegrenzt),6D5,"Digitales Rundum-sorglos-Paket mit Personalisierungsmöglichkeiten, bester Navigation und | vielfältigem Entertainment inklusive Datenvolumen. | Weitere Informationen zu den Inhalten finden Sie unter www.bmw.de/de/neufahrzeuge",,Hinweis: Nachträglich auch im BMW ConnectedDrive Store buchbar
+G60-p06-01,G60,6,standard_equipment,,M SPORTPAKET PRO,,,"M Leuchten Shadow Line | M Hochglanz Shadow Line mit erweiterten Umfängen | M Sportbremse, rot hochglänzend | M Heckspoiler in Black Sapphire | M Sicherheitsgurte | Launch Control",
+G60-p06-02,G60,6,standard_equipment,Exterieur,"Uni-Lackierung, Alpinweiß",,,,
+G60-p06-03,G60,6,standard_equipment,Exterieur,"18"" Leichtmetallräder Y-Speiche 932",,"7,5J x 18 mit Bereifung 225/55 | Grau",,
+G60-p06-04,G60,6,standard_equipment,Exterieur,"19"" Leichtmetallräder Triplex-Speiche 933",,"8,5J x 19 mit Bereifung 245/45 R19 | Silber",,
+G60-p06-05,G60,6,standard_equipment,Exterieur,"19"" M Leichtmetallräder Doppelspeiche 935 M Bicolor mit Mischbereifung",,"8,5J x 19 mit Bereifung 245/45 R19 vorn | 10J x 19 mit Bereifung 275/40 R19 hinten | Schwarzgrau",,
+G60-p06-06,G60,6,standard_equipment,Exterieur,BMW Iconic Glow Exterieurpaket,,,,
+G60-p06-07,G60,6,standard_equipment,Interieur,Polster Veganza perforiert | Schwarz,,,,
+G60-p06-08,G60,6,standard_equipment,Interieur,M Veganza/Alcantara Schwarz,,,,
+G60-p06-09,G60,6,standard_equipment,Interieur,Interieurleisten Akzent Dunkelsilber kombiniert mit Effektlackierung Dark Graphite matt,,,,
+G60-p06-10,G60,6,standard_equipment,Interieur,Interieurleisten M Akzent Dunkelsilber kombiniert mit Aluminium Rhombicle Dunkelsilber,,,,
+G60-p06-11,G60,6,standard_equipment,Interieur,Ambientes Licht,,inkl. BMW Interaction Bar mit kristalliner Glasoptik,,
+G60-p06-12,G60,6,standard_equipment,Interieur,M Dachhimmel Anthrazit,,,,
+G60-p06-13,G60,6,standard_equipment,Konnektivität Und Infotainment,BMW Live Cockpit Plus,,,"BMW Curved Display | Displaykombination mit 12,3"" volldigitalem Instrumentendisplay und 14,9"" Control Display | BMW Operating System 8.5 | Navigation | BMW Maps | BMW Controller | Bluetooth / WiFi Schnittstelle mit Freisprecheinrichtung | Audio Tuner | 4G LTE Connectivity: festverbaute SIM-Karte mit 4G Netz | Remote Software Upgrade | Vehicle Apps | Navigationskarten-Update Over-the-Air | Intelligent Personal Assistant",
+G60-p06-14,G60,6,standard_equipment,Konnektivität Und Infotainment,Teleservices,,,,
+G60-p06-15,G60,6,standard_equipment,Konnektivität Und Infotainment,ConnectedDrive Services,,,,
+G60-p06-16,G60,6,standard_equipment,Konnektivität Und Infotainment,Connected Package Professional,,,Remote Services | Connected Navigation | Connected Parking | 3rd party Assistants | Smartphone Integration (Kompatibles Smartphone erforderlich) | Connected Music | AirConsole Games / Videostreaming,
+G60-p07-01,G60,7,standard_equipment,Konnektivität Und Infotainment,DAB-Tuner,,,,
+G60-p07-02,G60,7,standard_equipment,Konnektivität Und Infotainment,Personal eSIM,,,,
+G60-p07-03,G60,7,standard_equipment,Konnektivität Und Infotainment,Wireless Charging Ablage,,,,
+G60-p07-04,G60,7,standard_equipment,Konnektivität Und Infotainment,HiFi Lautsprechersystem harman/kardon,,,,
+G60-p07-05,G60,7,standard_equipment,Antrieb / Fahrdynamik / Fahrwerk,Steptronic Getriebe mit Schaltwippen,,,,
+G60-p07-06,G60,7,standard_equipment,Antrieb / Fahrdynamik / Fahrwerk,Adaptives Fahrwerk Professional,,,,
+G60-p07-07,G60,7,standard_equipment,Antrieb / Fahrdynamik / Fahrwerk,BMW IconicSounds Electric,,,,
+G60-p07-08,G60,7,standard_equipment,Antrieb / Fahrdynamik / Fahrwerk,Ladekabel Professional (Mode 3) für öffentliches Laden,,,,
+G60-p07-09,G60,7,standard_equipment,Antrieb / Fahrdynamik / Fahrwerk,AC-Laden Professional (22 kW),,,,
+G60-p07-10,G60,7,standard_equipment,Fahrerassistenz Und Sicherheit,Driving Assistant,,radarbasiertes Fahrerassistenzsystem bestehend aus:,Spurwechselwarnung | Querverkehrswarnung hinten mit Bremseingriff | Ausstiegswarnung (Safe Exit) | Heckkollisionswarnung,
+G60-p07-11,G60,7,standard_equipment,Fahrerassistenz Und Sicherheit,Parking Assistant,,kamera- und ultraschallbasiertes Assistenzsystem bestehend aus:,Active Park Distance Control | Parkassistent | Rückfahrkamera bis zu 50 m | Active Park Distance Control | Einparkhilfe Seite | Parken-Anfahrüberwachung | Rückfahrkamera mit Panoramaansicht hinten | Anhängerassistent,
+G60-p07-12,G60,7,standard_equipment,Fahrerassistenz Und Sicherheit,Spurverlassenswarnung mit aktiver Rückführung,,,,
+G60-p07-13,G60,7,standard_equipment,Fahrerassistenz Und Sicherheit,"Frontkollisionswarnung mit Bremsfunktion, Ausweichhilfe und Bremseingriff",,,,
+G60-p07-14,G60,7,standard_equipment,Fahrerassistenz Und Sicherheit,Linksabbiegewarnung (Fahrzeug) mit Bremsfunktion,,,,
+G60-p07-15,G60,7,standard_equipment,Fahrerassistenz Und Sicherheit,Speed Limit Info,,"inkl. Vorausschau und Überholverbotsanzeige, manueller Speed Limit Assist",,
+G60-p07-16,G60,7,standard_equipment,Fahrerassistenz Und Sicherheit,Alarmanlage,,,,
+G60-p07-17,G60,7,standard_equipment,Fahrerassistenz Und Sicherheit,Reifendruck-Kontrolle,,,,
+G60-p07-18,G60,7,standard_equipment,Fahrerassistenz Und Sicherheit,Reifenreparatur Set oder Reifenpannenset Plus,,Ausstattung abhängig vom gewählten Leichtmetallrad,,
+G60-p07-19,G60,7,standard_equipment,Fahrerassistenz Und Sicherheit,Warndreieck und Verbandskasten,,,,
+G60-p07-20,G60,7,standard_equipment,Fahrerassistenz Und Sicherheit,Akustischer Fußgängerschutz,,,,
+G60-p08-01,G60,8,standard_equipment,Komfort Und Funktionalität,Adaptiver LED-Scheinwerfer,,,,
+G60-p08-02,G60,8,standard_equipment,Komfort Und Funktionalität,"Fernlichtassistent ""BMW Selective Beam""",,,,
+G60-p08-03,G60,8,standard_equipment,Komfort Und Funktionalität,BMW Digital Key,,,,
+G60-p08-04,G60,8,standard_equipment,Komfort Und Funktionalität,Erweitertes Außenspiegelpaket,,,,
+G60-p08-05,G60,8,standard_equipment,Komfort Und Funktionalität,Sportsitze für Fahrer und Beifahrer,,,,
+G60-p08-06,G60,8,standard_equipment,Komfort Und Funktionalität,Lordosenstütze für Fahrer und Beifahrer,,,,
+G60-p08-07,G60,8,standard_equipment,Komfort Und Funktionalität,Sitzheizung für Fahrer und Beifahrer,,,,
+G60-p08-08,G60,8,standard_equipment,Komfort Und Funktionalität,Klimaautomatik,,,,
+G60-p08-09,G60,8,standard_equipment,Komfort Und Funktionalität,Klimaautomatik mit 4-Zonenregelung,,,,
+G60-p08-10,G60,8,standard_equipment,Komfort Und Funktionalität,Durchladesystem 40:20:40,,,,
+G60-p08-11,G60,8,standard_equipment,Komfort Und Funktionalität,"Sitzverstellung, elektrisch, mit Memory für Fahrersitz",,,,
+G60-p08-12,G60,8,standard_equipment,Komfort Und Funktionalität,M Lederlenkrad,,,,
+G60-p13-01,G60,13,wheels,Räder Und Reifen,"18"" Leichtmetallräder Y-Speiche 932",3FY,"7,5J x 18 mit Bereifung 225/55 | Grau",,Hinweis: ohne Radschraubensicherung
+G60-p13-02,G60,13,wheels,Räder Und Reifen,"19"" Leichtmetallräder Triplex-Speiche 933",3G0,"8,5 J x 19 mit Bereifung 245/45 | Silber | ohne Radschraubensicherung für | BMW i5 eDrive40, xDrive40, 530e, 530e xDrive, 550e xDrive | mit Radschraubensicherung für | BMW 520i, 520d, 520d xDrive, 540d xDrive",,Hinweis:
+G60-p13-03,G60,13,wheels,Räder Und Reifen,"19"" Aerodynamikräder 934 Bicolor",3G3,"8,5 J x 19 mit Bereifung 245/45 | Grau",,Hinweis: mit Radschraubensicherung
+G60-p13-04,G60,13,wheels,Räder Und Reifen,"19"" M Leichtmetallräder Doppelspeiche 935 M Bicolor",3G8,"8,5J x 19 mit Bereifung 245/45 | Schwarzgrau",,Nur in Verbindung mit M Sportpaket | Hinweis: mit Radschraubensicherung
+G60-p13-05,G60,13,wheels,Räder Und Reifen,"19"" M Leichtmetallräder Doppelspeiche 935 M Bicolor mit Mischbereifung",3G9,"8,5J x 19 mit Bereifung 245/45 vorn | 10J x 19 mit Bereifung 275/40 hinten | Schwarzgrau",,Hinweis: mit Radschraubensicherung
+G60-p13-06,G60,13,wheels,Räder Und Reifen,"19"" M Aerodynamikräder 936 M Bicolor",3GC,"8,5J x 19 mit Bereifung 245/45 | Schwarzgrau",,Nur in Verbindung mit M Sportpaket | Hinweis: mit Radschraubensicherung
+G60-p13-07,G60,13,wheels,Räder Und Reifen,"19"" M Aerodynamikräder 936 M Bicolor mit Mischbereifung",3GD,"8,5J x 19 mit Bereifung 245/45 vorn | 10J x 19 mit Bereifung 275/40 hinten | Schwarzgrau",,Hinweis: mit Radschraubensicherung
+G60-p13-08,G60,13,wheels,Räder Und Reifen,"20"" M Leichtmetallräder Sternspeiche 938 M Bicolor mit Mischbereifung",3GN,"8,5J x 20 mit Bereifung 245/40 vorn | 10J x 20 mit Bereifung 275/35 hinten | Jetblack",,Nur in Verbindung mit M Sportpaket
+G60-p13-09,G60,13,wheels,Räder Und Reifen,"20"" M Aerodynamikräder 939 M Bicolor mit Mischbereifung",3GQ,"8,5J x 20 mit Bereifung 245/40 vorn | 10J x 20 mit Bereifung 275/35 hinten | Schwarzgrau",,Nur in Verbindung mit M Sportpaket | Hinweis: mit Radschraubensicherung
+G60-p13-10,G60,13,wheels,Räder Und Reifen,BLEIBEN SIE IN DER SPUR.,1  Gegen Aufpreis auch mit Sportbereifung erhältlich. Die Sportbereifung trägt signifikant zur Erhöhung des Verbrauchs und Reduzierung der Reichweite bei.,(Die BMW Reifenversicherung ist ein Produkt der Allianz Versicherungs-AG).,,
+G60-p14-01,G60,14,wheels,Räder Und Reifen,"20"" M Aerodynamikräder 940 M Bicolor mit Mischbereifung",3GT,"8,5J x 20 mit Bereifung 245/40 vorn | 10J x 20 mit Bereifung 275/35 hinten | Jetblack",,Hinweis: mit Radschraubensicherung
+G60-p14-02,G60,14,wheels,Räder Und Reifen,"21"" BMW Individual Aerodynamikräder 954 I Bicolor mit Mischbereifung",3GV,"8,5J x 21 mit Bereifung 245/35 vorn | 10J x 21 mit Bereifung 275/30 hinten | Jetblack / Alueinleger gebürstet | 8,5J x 21 mit Bereifung 255/35 vorn | 9,5J x 21 mit Bereifung 285/30 hinten | Jetblack / Alueinleger gebürstet",,"In Verbindung mit M Sportpaket | Für 520i, 520d, 520d xDrive, 540d xDrive: | Nur in Verbindung mit M Sportfahrwerk oder Adaptives Fahrwerk Professional | Für i5 eDrive40, i5 xDrive40, i5 M60 xDrive, 530e, 530e xDrive, 550e xDrive: | Hinweis: mit Radschraubensicherung"
+G60-p14-03,G60,14,wheels,Räder Und Reifen,BLEIBEN SIE IN DER SPUR.,1  Gegen Aufpreis auch mit Sportbereifung erhältlich. Die Sportbereifung trägt signifikant zur Erhöhung des Verbrauchs und Reduzierung der Reichweite bei.,(Die BMW Reifenversicherung ist ein Produkt der Allianz Versicherungs-AG).,,
+G60-p15-01,G60,15,paint,Uni,Alpinweiß,300,,,
+G60-p15-02,G60,15,paint,Metallic,Saphirschwarz,475,,,
+G60-p15-03,G60,15,paint,Metallic,Sophistograu,A90,,,
+G60-p15-04,G60,15,paint,Metallic,Mineralweiß,A96,,,
+G60-p15-05,G60,15,paint,Metallic,Phytonicblau,C1M,,,
+G60-p15-06,G60,15,paint,Metallic,Cape York Grün,C5Y,,,
+G60-p15-07,G60,15,paint,Metallic,Oxidgrau,C4A,,,
+G60-p15-08,G60,15,paint,Metallic,M Carbonschwarz,416,,,Nur in Verbindung mit M Sportpaket
+G60-p15-09,G60,15,paint,Metallic,M Brooklyn Grau metallic,C4P,,,Nur in Verbindung mit M Sportpaket
+G60-p15-10,G60,15,paint,Metallic,Fire Red metallic,C68,,,Nur in Verbindung mit M Sportpaket
+G60-p15-11,G60,15,paint,Bmw Individual Lackierung,BMW Individual Tansanitblau metallic,C3Z,,,
+G60-p15-12,G60,15,paint,Bmw Individual Lackierung,BMW Individual Frozen Pure Grey metallic,C5A,,,Nur in Verbindung mit M Sportpaket
+G60-p15-13,G60,15,paint,Bmw Individual Lackierung,BMW Individual Frozen Deep Grey metallic,C64,,,Nur in Verbindung mit M Sportpaket
+G60-p15-14,G60,15,paint,Bmw Individual Lackierung,BMW Individual Frozen Portimao Blau metallic,X1E,,,Nur in Verbindung mit M Sportpaket
+G60-p15-15,G60,15,paint,Bmw Individual Lackierung,BMW Individual Sonderlackierung,490,,,
+G60-p16-01,G60,16,interior_colour,Kunstleder,Veganza perforiert | Schwarz,KUSW,,,
+G60-p16-02,G60,16,interior_colour,Kunstleder,M Alcantara | Veganza-Kombination | Schwarz,KTSW,,,Nur in Verbindung mit M Sportpaket
+G60-p16-03,G60,16,interior_colour,Kunstleder,Veganza perforiert und gesteppt,KS,,,
+G60-p16-04,G60,16,interior_colour,Kunstleder,Rauchweiß,KSFU,,,"In Verbindung mit M Sportpaket, i5 M60 xDrive"
+G60-p16-05,G60,16,interior_colour,Kunstleder,Espressobraun,KSJX,,,"In Verbindung mit M Sportpaket, i5 M60 xDrive"
+G60-p16-06,G60,16,interior_colour,Kunstleder,Schwarz,KSSW,,,"In Verbindung mit M Sportpaket, i5 M60 xDrive"
+G60-p16-07,G60,16,interior_colour,Bmw Individual Leder,BMW Individual Leder Merino,VC,,,
+G60-p16-08,G60,16,interior_colour,Bmw Individual Leder,Schwarz | Atlasgrau,VCJL,"Silverstone II I Atlasgrau nur in Verbindung mit Komfortsitze vorn,",,"In Verbindung mit M Sportpaket, i5 M60 xDrive elektrisch verstellbar"
+G60-p16-09,G60,16,interior_colour,Bmw Individual Leder,Kupferbraun | Atlasgrau,VCJM,,,"In Verbindung mit M Sportpaket, i5 M60 xDrive elektrisch verstellbar"
+G60-p16-10,G60,16,interior_colour,Bmw Individual Leder,Silverstone II | Atlasgrau,VCJN,,,"In Verbindung mit M Sportpaket, i5 M60 xDrive elektrisch verstellbar"
+G60-p16-11,G60,16,interior_colour,Interieurleisten,Akzent Dunkelsilber kombiniert mit Effektlackierung Dark Graphite matt,43G,,,Nicht in Verbindung mit i5 M60 xDrive
+G60-p16-12,G60,16,interior_colour,Interieurleisten,Akzent Dunkelsilber kombiniert mit Edelholz Eiche dunkel hochglänzend,43L,,,"In Verbindung mit M Sportpaket, i5 M60 xDrive"
+G60-p16-13,G60,16,interior_colour,Interieurleisten,M Akzent Dunkelsilber kombiniert mit Aluminium Rhombicle Dunkelsilber,43R,,,In Verbindung mit M Sportpaket
+G60-p16-14,G60,16,interior_colour,Interieurleisten,M Akzent Dunkelsilber kombiniert mit 'Carbon Fibre' und Silberfäden hochglänzend,43P,,,"In Verbindung mit M Sportpaket, i5 M60 xDrive"
+G60-p17-01,G60,17,optional_equipment,Ausstattungspakete,INNOVATIONSPAKET,7EW,"kamera- und ultraschallbasiertes Assistenzsystem bestehend aus: | Professional, weitere Informationen siehe Seite 17)",BMW Live Cockpit Professional inkl. BMW Head-Up Display | Innenraumkamera | Parking Assistant Plus | Surround View System | Remote 3D View | Panoramaansicht vorne | Drive Recorder | Anti-Diebstahl-Rekorder,(Ausstattungsalternative mit reduziertem Preis: Parking Assistant
+G60-p17-02,G60,17,optional_equipment,Ausstattungspakete,COMFORT PAKET,7VB,Komfortsitze für Fahrer und Beifahrer erhältlich (siehe Seite 17),"Sitzverstellung, elektrisch, mit Memory für Fahrer | Sitzheizung vorn und hinten | Aktive Sitzbelüftung vorn | Klimaautomatik mit 4-Zonenregelung",Ausstattungsalternative: optional gegen Aufpreis sind
+G60-p17-03,G60,17,optional_equipment,Ausstattungspakete,TRAVEL PAKET,7LK,,Automatische Heckklappenbetätigung | Komfortzugang | Travel & Comfort System,
+G60-p17-04,G60,17,optional_equipment,Exterieur,"Entfall, Modellschriftzug",320,,,
+G60-p17-05,G60,17,optional_equipment,Exterieur,BMW Iconic Glow Exterieurpaket,3DP,,,Im Umfang M Sportpaket Pro enthalten
+G60-p17-06,G60,17,optional_equipment,Exterieur,M Carbon Exterieurpaket,71C,,,Nur in Verbindung mit M Sportpaket | In Verbindung mit M Sportpaket Pro
+G60-p17-07,G60,17,optional_equipment,Exterieur,M Heckspoiler in Wagenfarbe,754,,,Nicht in Verbindung mit M Carbon Exterieurpaket | Nur in Verbindung mit M Sportpaket | In Verbindung mit M Sportpaket Pro in Black Sapphire
+G60-p17-08,G60,17,optional_equipment,Interieur,Glasapplikation 'CraftedClarity' für Interieurelemente,4A2,,,
+G60-p17-09,G60,17,optional_equipment,Interieur,Lenkradheizung,248,,,
+G60-p17-10,G60,17,optional_equipment,Interieur,M Dachhimmel Alcantara anthrazit,776,,,Nur in Verbindung mit Panorama Glasdach | In Verbindung mit M Sportpaket
+G60-p17-11,G60,17,optional_equipment,Konnektivität Und Infotainment,Bowers & Wilkins Surround Sound System,6F4,,,
+G60-p18-01,G60,18,optional_equipment,Antrieb / Fahrdynamik / Fahrwerk,Adaptives Fahrwerk Professional,2VV,,Elektronisch geregelte Stoßdämpfer | Integral-Aktivlenkung,In Verbindung mit M Sportpaket
+G60-p18-02,G60,18,optional_equipment,Antrieb / Fahrdynamik / Fahrwerk,Adaptives M Fahrwerk Professional,2VW,,Elektronisch geregelte Stoßdämpfer | Integral-Aktivlenkung | Aktive Wankstabilisierung,
+G60-p18-03,G60,18,optional_equipment,Fahrassistenz Und Sicherheit,Driving Assistant Plus,5AT,kamera- und radarbasiertes Fahrerassistenzsystem bestehend aus | folgenden Funktionen inkl. den Funktionen des Driving Assistant:,Aktive Geschwindigkeitsregelung 30 – 180 km/h | Lenk- und Spurführungsassistent bis 180 km/h | Automatischer Speed Limit Assist inkl. Streckenverlaufsregelung,Nicht in Verbindung mit Driving Assistant Professional
+G60-p18-04,G60,18,optional_equipment,Fahrassistenz Und Sicherheit,Driving Assistant Professional,5AU,kamera- und radarbasiertes Fahrerassistenzsystem bestehend aus | folgenden Funktionen inkl. den Funktionen des Driving Assistant und | Driving Assistant Plus: | Abbiegen,"Aktive Geschwindigkeitsregelung 30 – 210 km/h | Lenk- und Spurführungsassistent bis 210 km/h | Nothalteassistent | Aktiver Spurwechselassistent | Querverkehrswarnung vorne/hinten | Ausweichhilfe | Falschfahrwarnung, Vorfahrtswarnung | Seitenkollisionswarnung mit aktiver Rückführung | Ampelerkennung | Rettungsgassenassistent | Abstandsinformation | Personen-/Radfahrerwarnung mit City-Bremsfunktion inkl.",Nur in Verbindung mit Innovationspaket
+G60-p18-05,G60,18,optional_equipment,Fahrassistenz Und Sicherheit,Autobahnassistent,5AX,Erweiterung der Sonderausstattung Driving Assistant Professional um | folgende Funktionen: | Deutschland | Der Autobahnassistent ist nur in Verbindung mit den erforderlichen | BMW Connected Drive Diensten verfügbar. Die Laufzeit für diese | Dienste beträgt 2 Jahre. Die Funktion des automatischen Spurwech | sels mit Blickbestätigung ist auch ohne diese Dienste nutzbar.,erweiterte Lenkunterstützung bis 130 km/h auf Autobahnen in | Spurwechselassistent mit Blickbestätigung,Nur in Verbindung mit Driving Assistant Professional
+G60-p18-06,G60,18,optional_equipment,Fahrassistenz Und Sicherheit,Parking Assistant Professional,5DW,"kamera- und ultraschallbasiertes Assistenzsystem bestehend aus | folgenden Funktionen inkl. den Funktionen des Parking Assistant | und Parking Assistant Plus: | selbstständig wieder abgefahren werden können, Fahrweg bis zu | 200 m je Manöver, insgesamt max. 600 m | Fernbedienung über ein Smartphone (Kompatibles Smartphone | erforderlich)","Parkassistent Professional | Rückfahrassistent bis zu 200 m | Mänoverassistent mit bis zu 10 anlernbaren Fahrstrecken, die | Bedienung im Fahrzeug oder außerhalb des Fahrzeugs per",Nur in Verbindung mit Travel Paket | In Verbindung mit Innovationspaket
+G60-p18-07,G60,18,optional_equipment,Sitzkomfort,"Komfortsitze vorn, elektrisch verstellbar",456,,,"Nur in Verbindung mit Veganza perforiert und gesteppt | Rauchweiß; Schwarz; Espressobraun, BMW Individual Leder 'Merino' | Schwarz/ Atlasgrau; Kupferbraun/Atlasgrau | Nur in Verbindung mit Comfort Paket"
+G60-p19-01,G60,19,optional_equipment,Klimakomfort,Panorama Glasdach inkl. Dachlackierung in Schwarz Hochglanz,402,,,
+G60-p19-02,G60,19,optional_equipment,Klimakomfort,Sonnenschutzrollos,416,"Heckscheibe elektrisch, hintere Türseitenscheiben mechanisch",,
+G60-p19-03,G60,19,optional_equipment,Klimakomfort,Sonnenschutzverglasung,420,,,
+G60-p19-04,G60,19,optional_equipment,Klimakomfort,Standheizung,536,,,
+G60-p19-05,G60,19,optional_equipment,Transport Und Stauraum,Anhängerkupplung,3AC,,,
+G60-p19-06,G60,19,optional_equipment,Weitere Funktionen,AC-Laden Professional (22 kW),4U6,,,
+G70-p06-01,G70,6,standard_equipment,Exterieur,"Uni-Lackierung, Alpinweiß",,,,
+G70-p06-02,G70,6,standard_equipment,Exterieur,"20"" Leichtmetallräder Sternspeiche 905 Bicolor",,"9 J x 20 mit Bereifung 255/45 R20 vorn | 10,5 J x 20 mit Bereifung 285/40 R20 hinten | Mitdnight Grey, glanzgedreht",,Hinweis: Schneekettenmontage nicht möglich
+G70-p06-03,G70,6,standard_equipment,Exterieur,"20"" Aerodynamikräder 1097 Bicolor",,"9 J x 20 mit Bereifung 255/45 R20 vorn | 10,5 J x 20 mit Bereifung 285/40 R20 hinten | Schwarz/Jetblack, glanzgedreht",,Hinweis: Schneekettenmontage nicht möglich
+G70-p06-04,G70,6,standard_equipment,Exterieur,"21"" M Aerodynamikräder 909 M Multicolor 3D-Glanzschliff mit Mischbereifung",,"9 J x 21 mit Bereifung 255/40 R21 vorn | 10,5 J x 21 mit Bereifung 285/35 R21 hinten | Schwarz/Jetblack",,Hinweis: Schneekettenmontage nicht möglich
+G70-p06-05,G70,6,standard_equipment,Exterieur,BMW Niere Iconic,,,,
+G70-p06-06,G70,6,standard_equipment,Exterieur,Flächenintegrierte Türgriffe,,,,
+G70-p06-07,G70,6,standard_equipment,Exterieur,Erweitertes Außenspiegelpaket,,,,
+G70-p06-08,G70,6,standard_equipment,Exterieur,Adaptiver LED-Scheinwerfer,,,,
+G70-p06-09,G70,6,standard_equipment,Exterieur,M Hochglanz Shadow Line,,,,
+G70-p06-10,G70,6,standard_equipment,Exterieur,M Heckspoiler in Wagenfarbe,,,,
+G70-p06-11,G70,6,standard_equipment,Exterieur,M Sport Exterieurumfänge,,,,
+G70-p06-12,G70,6,standard_equipment,Exterieur,Sonnenschutzverglasung,,,,
+G70-p06-13,G70,6,standard_equipment,Exterieur,Ceremonial Light Carpet,,,,
+G70-p06-14,G70,6,standard_equipment,Interieur,Kunstleder Veganza | Schwarz,,,,
+G70-p06-15,G70,6,standard_equipment,Interieur,BMW M Leder 'Merino' Schwarz | Atlasgrau,,,,
+G70-p06-16,G70,6,standard_equipment,Interieur,"Interieurleisten Edelholz Lindenholz Fineline braun, offenporig",,,,
+G70-p06-17,G70,6,standard_equipment,Interieur,"Interieurleisten Edelholz Fineline schwarz mit Metalleffekt hochglänzend, M Signatur",,,,
+G70-p06-18,G70,6,standard_equipment,Interieur,Glasapplikationen „CraftedClarity“ für Interieurelemente,,,,
+G70-p06-19,G70,6,standard_equipment,Interieur,Lenksäulenverstellung,,,,
+G70-p06-20,G70,6,standard_equipment,Interieur,5-Sitzigkeit,,,,
+G70-p06-21,G70,6,standard_equipment,Interieur,Fußmatten in Velours,,,,
+G70-p06-22,G70,6,standard_equipment,Interieur,Ablagemöglichkeiten,,,,
+G70-p06-23,G70,6,standard_equipment,Interieur,Ambientes Licht,,,,
+G70-p06-24,G70,6,standard_equipment,Interieur,Panorama-Glasdach,,,,
+G70-p06-25,G70,6,standard_equipment,Interieur,M Dachhimmel Anthrazit,,,,
+G70-p06-26,G70,6,standard_equipment,Interieur,M Sport Interieurumfänge,,,,
+G70-p06-27,G70,6,standard_equipment,Interieur,Multifunktionssitze für Fahrer und Beifahrer,,,,
+G70-p07-01,G70,7,standard_equipment,Konnektivität Und Infotainment,BMW Panoramic Vision,,Das virtuelle Display projiziert Inhalte gut sichtbar für alle Insassen über die gesamte Breite der Frontscheibe.,,
+G70-p07-02,G70,7,standard_equipment,Konnektivität Und Infotainment,BMW Panoramic iDrive,,mit BMW Operating System X,,
+G70-p07-03,G70,7,standard_equipment,Konnektivität Und Infotainment,BMW 3D Head-Up Display,,,,
+G70-p07-04,G70,7,standard_equipment,Konnektivität Und Infotainment,BMW Passenger Screen,,,,
+G70-p07-05,G70,7,standard_equipment,Konnektivität Und Infotainment,BMW Digital Premium (laufzeitbegrenzt),,"enthält Security Assistant, zusätzliche BMW Maps Funktionen und Datenvolumen für vielfältiges Entertainment",,Hinweis: Nachträglich auch im BMW ConnectedDrive Store buchbar
+G70-p07-06,G70,7,standard_equipment,Konnektivität Und Infotainment,Bowers & Wilkins Surround Sound System,,,,
+G70-p07-07,G70,7,standard_equipment,Konnektivität Und Infotainment,DAB-Tuner,,,,
+G70-p07-08,G70,7,standard_equipment,Antrieb / Fahrdynamik / Fahrwerk,Steptronic Sport Getriebe Steptronic Sport Getriebe,,,,
+G70-p07-09,G70,7,standard_equipment,Antrieb / Fahrdynamik / Fahrwerk,Integral-Aktivlenkung,,,,
+G70-p07-10,G70,7,standard_equipment,Antrieb / Fahrdynamik / Fahrwerk,Geschwindigkeitsregelung mit Bremsfunktion,,,,
+G70-p07-11,G70,7,standard_equipment,Antrieb / Fahrdynamik / Fahrwerk,Speed Limiter,,,,
+G70-p07-12,G70,7,standard_equipment,Antrieb / Fahrdynamik / Fahrwerk,Fahrerlebnisschalter,,,,
+G70-p07-13,G70,7,standard_equipment,Antrieb / Fahrdynamik / Fahrwerk,"AC-Laden Professional: AC Laden für zuhause und unterwegs (22 kW, 3-phasig)",,,,
+G70-p07-14,G70,7,standard_equipment,Antrieb / Fahrdynamik / Fahrwerk,Adaptive M Chassis Control Professional,,,,
+G70-p08-01,G70,8,standard_equipment,Fahrerassistenz Und Sicherheit,Gesetzlicher Notruf inkl. Teleservices und BMW Unfallhilfe,,,,
+G70-p08-02,G70,8,standard_equipment,Fahrerassistenz Und Sicherheit,Driving Assistant Plus,,kamera- und radarbasiertes Fahrerassistenzsystem bestehend aus:,Speed Limit Info | Automatischer Speed Limit Assist | Spurverlassenswarnung | Spurwechselwarnung | Frontkollisionwarnung mit Bremseingriff | Lenk- und Spurführungsassistent | Auffahr- und Personenwarnung mit City-Bremsfunktion | Querverkehrswarnung hinten | Prävention Heckkollison,
+G70-p08-03,G70,8,standard_equipment,Fahrerassistenz Und Sicherheit,Parking Assistant,,kamera- und ultraschallbasiertes Assistenzsystem bestehend aus:,Rückfahrassistent | Parkassistent | Active Park Distance Control | Einparkhilfe Seite | Rückfahrkamera,
+G70-p08-04,G70,8,standard_equipment,Fahrerassistenz Und Sicherheit,Parking Assistant Plus,,kamera- und ultraschallbasiertes Assistenzsystem bestehend aus:,Surround View System | Remote 3D View,
+G70-p08-05,G70,8,standard_equipment,Fahrerassistenz Und Sicherheit,Alarmanlage,,,,
+G70-p08-06,G70,8,standard_equipment,Fahrerassistenz Und Sicherheit,Active Protection,,,,
+G70-p08-07,G70,8,standard_equipment,Fahrerassistenz Und Sicherheit,Reifendruck-Kontrolle,,,,
+G70-p08-08,G70,8,standard_equipment,Fahrerassistenz Und Sicherheit,Reifenpannenset Plus,,,,
+G70-p08-09,G70,8,standard_equipment,Fahrerassistenz Und Sicherheit,Radschraubensicherung,,,,
+G70-p08-10,G70,8,standard_equipment,Fahrerassistenz Und Sicherheit,Warndreieck und Verbandskasten,,,,
+G70-p08-11,G70,8,standard_equipment,Komfort Und Funktionalität,Adaptiver LED-Scheinwerfer,,,,
+G70-p08-12,G70,8,standard_equipment,Komfort Und Funktionalität,"Sitzverstellung, elektrisch, mit Memory",,,,
+G70-p08-13,G70,8,standard_equipment,Komfort Und Funktionalität,Sitzheizung vorn und hinten,,,,
+G70-p08-14,G70,8,standard_equipment,Komfort Und Funktionalität,Erweitertes Außenspiegelpaket,,,,
+G70-p08-15,G70,8,standard_equipment,Komfort Und Funktionalität,Ambientes Licht,,,,
+G70-p08-16,G70,8,standard_equipment,Komfort Und Funktionalität,BMW Touch Command,,,,
+G70-p08-17,G70,8,standard_equipment,Komfort Und Funktionalität,My Modes,,,,
+G70-p08-18,G70,8,standard_equipment,Komfort Und Funktionalität,Panorama-Glasdach,,,,
+G70-p08-19,G70,8,standard_equipment,Komfort Und Funktionalität,Klimaautomatik mit 4-Zonen-Regelung,,,,
+G70-p08-20,G70,8,standard_equipment,Komfort Und Funktionalität,Wärmekomfortpaket,,"beheizte Armauflagen an Türen, Mittelkonsole und Fondmittelarmlehne",,
+G70-p08-21,G70,8,standard_equipment,Komfort Und Funktionalität,Lenkradheizung,,,,
+G70-p09-01,G70,9,standard_equipment,Komfort Und Funktionalität,Sonnenschutzrollos,,,,
+G70-p09-02,G70,9,standard_equipment,Komfort Und Funktionalität,Soft-Close-Automatik für Türen,,,,
+G70-p09-03,G70,9,standard_equipment,Komfort Und Funktionalität,Automatische Heckklappenbetätigung,,,,
+G70-p09-04,G70,9,standard_equipment,Komfort Und Funktionalität,Wireless Charging Ablage,,,,
+G70-p09-05,G70,9,standard_equipment,Komfort Und Funktionalität,Komfortzugang,,,,
+G70-p09-06,G70,9,standard_equipment,Komfort Und Funktionalität,Durchladesystem,,,,
+G70-p09-07,G70,9,standard_equipment,Komfort Und Funktionalität,Standklimatisierung,,"Individuelles Temperieren des Fahrgastraums durch Aufheizen oder Abkühlen, inklusive Vorkonditionierung, Aktivierung der | Klimatisierung im Rahmen von BMW ConnectedDrive per Smartphone-App möglich (Kompatibles Smartphone erforderlich). Kühlung der | Batterie bei warmen Außentemperaturen für optimale Betriebsbedingungen",,
+G70-p09-08,G70,9,standard_equipment,Komfort Und Funktionalität,Multifunktionssitze für Fahrer und Beifahrer,,,,
+G70-p09-09,G70,9,standard_equipment,Komfort Und Funktionalität,BMW IconicSounds Electric,,Jeder Fahrmodus hat seinen eigenen Sound,,
+G70-p09-10,G70,9,standard_equipment,Komfort Und Funktionalität,Travel & Comfort System,,Schnittstelle im Sitz zur Halterung von Tablets etc. inkl. USB-C Buchse,,
+G70-p09-11,G70,9,standard_equipment,Komfort Und Funktionalität,"Garagentoröffner, integriert",,,,
+G70-p14-01,G70,14,wheels,Räder Und Reifen,"20"" Leichtmetallräder Sternspeiche 905 Bicolor",1F4,"9 J x 20 mit Bereifung 255/45 R20 vorn | 10,5 J x 20 mit Bereifung 285/40 R20 hinten | Mitdnight Grey, glanzgedreht",,Hinweis: Schneekettenmontage nicht möglich | In Verbindung mit BMW Individual Premiere Collection
+G70-p14-02,G70,14,wheels,Räder Und Reifen,"20"" Aerodynamikräder 1097 Bicolor",3R8,"9 J x 20 mit Bereifung 255/45 R20 vorn | 10,5 J x 20 mit Bereifung 285/40 R20 hinten | Schwarz/Jetblack, glanzgedreht",,Hinweis: Schneekettenmontage nicht möglich
+G70-p14-03,G70,14,wheels,Räder Und Reifen,"21"" M Aerodynamikräder 909 M Multicolor 3D-Glanzschliff mit Mischbereifung",1FE,"9 J x 21 mit Bereifung 255/40 R21 vorn | 10,5 J x 21 mit Bereifung 285/35 R21 hinten | Schwarz/Jetblack",,Hinweis: Schneekettenmontage nicht möglich
+G70-p14-04,G70,14,wheels,Räder Und Reifen,"20"" M Aerodynamikräder 907 M Bicolor mit Mischbereifung",1F9,"9 J x 20 mit Bereifung 255/45 vorn | 10,5 J x 20 mit Bereifung 285/40 hinten | Schwarz/Jetblack, glanzgedreht",,Hinweis: Schneekettenmontage nicht möglich | Im Umfang M Sportpaket enthalten | In Verbindung mit BMW Individual Premiere Collection
+G70-p14-05,G70,14,wheels,Räder Und Reifen,"20"" M Aerodynamikräder 907 M Bicolor mit Mischbereifung und Sportreifen",1FA,"9 J x 20 mit Bereifung 255/45 vorn | 10,5 J x 20 mit Bereifung 285/40 hinten | Jetblack, glanzgedreht",,Hinweis: Schneekettenmontage nicht möglich | In Verbindung mit BMW Individual Premiere Collection
+G70-p14-06,G70,14,wheels,Räder Und Reifen,"21"" M Aerodynamikräder Kreuzspeiche 1098 Jetblack",3R3,"9 J x 21 mit mit Bereifung 255/40 vorn | 10,5 J x 21 mit Bereifung 285/35 hinten | Schwarz/Jetblack, glanzgedreht",,Hinweis: Schneekettenmontage nicht möglich | In Verbindung mit M Sportpaket Pro und BMW Individual Premiere Collection
+G70-p14-07,G70,14,wheels,Räder Und Reifen,"21"" M Leichtmetallräder Sternspeiche 908M Jetblack",3R5,"9 J x 21 mit Bereifung 255/40vorn | 10,5 J x 21 mit Bereifung 285/35 hinten | Schwarz/Jetblack",,Hinweis: Schneekettenmontage nicht möglich | In Verbindung mit M Sportpaket Pro und BMW Individual Premiere Collection
+G70-p15-01,G70,15,wheels,Räder Und Reifen,"21"" BMW Individual Leichtmetallräder Vielspeiche 1055 I Bicolor mit Mischbereifung",1WK,"9 J x 21 Bereifung 255/40 R21 vorn | 10,5 J x 21 Bereifung 285/35 R21 hinten | Schwarz/Jetblack",,Hinweis: Schneekettenmontage nicht möglich | In Verbindung mit BMW Individual Premiere Collection
+G70-p15-02,G70,15,wheels,Räder Und Reifen,"22"" BMW Individual Aerodynamikräder V-Speiche 1099",3R0,"9 J x 22 mit Bereifung 255/35 R22 vorn | 10,5 J x 22 mit Bereifung 295/30 R22 hinten",,Hinweis: Schneekettenmontage nicht möglich | In Verbindung mit BMW Individual Premiere Collection und M Sportpaket und M Sportpaket Pro
+G70-p15-03,G70,15,wheels,Räder Und Reifen,"22"" BMW Individual Aerodynamikräder V-Speiche 1099 mit Sportreifen",3R1,"9 J x 22 mit Bereifung 255/35 R22 vorn | 10,5 J x 22 mit Bereifung 295/30 R22 hinten",,Hinweis: Schneekettenmontage nicht möglich | In Verbindung mit BMW Individual Premiere Collection und M Sportpaket Pro
+G70-p15-04,G70,15,wheels,Räder Und Reifen,Radschraubensicherung,2PA,,,Nur in Verbindung mit optionalen Rädern und Reifen
+G70-p16-01,G70,16,paint,Uni,Alpinweiß,300,,,
+G70-p16-02,G70,16,paint,Metallic,Mineralweiss,A96,,,
+G70-p16-03,G70,16,paint,Metallic,Aveturinrot,C57,,,
+G70-p16-04,G70,16,paint,Metallic,Saphirschwarz,475,,,
+G70-p16-05,G70,16,paint,Metallic,Oxidgrau,C4A,,,
+G70-p16-06,G70,16,paint,Metallic,Vancouver Green,C84,,,
+G70-p16-07,G70,16,paint,Metallic,M Brooklyn Grau,C4P,,,In Verbindung mit M Sportpaket Pro
+G70-p16-08,G70,16,paint,Metallic,M Carbonschwarz,416,,,In Verbindung mit M Sportpaket Pro
+G70-p16-09,G70,16,paint,Bmw Individual Lackierung,BMW Individual Tansanitblau metallic,C3Z,,,
+G70-p16-10,G70,16,paint,Bmw Individual Lackierung,BMW Individual Dravitgrau metallic,C36,,,
+G70-p16-11,G70,16,paint,Bmw Individual Lackierung,BMW Individual Frozen Deep Grey,C64,,,
+G70-p16-12,G70,16,paint,Bmw Individual Lackierung,BMW Individual Frozen Space Silver,C7W,,,
+G70-p16-13,G70,16,paint,Bmw Individual Lackierung,BMW Individual Frozen Tanzanite Blue metallic,X1G,,,
+G70-p16-14,G70,16,paint,Bmw Individual Two-Tone Lackierung,BMW Individual Two-Tone Oxidgrau II metallic mit Saphirschwarz metallic,SXB,,,In Verbindung mit BMW Individual Premiere Collection
+G70-p16-15,G70,16,paint,Bmw Individual Two-Tone Lackierung,BMW Individual Two-Tone Aventurinrot III metallic mit Saphirschwarz metallic,SXC,,,In Verbindung mit BMW Individual Premiere Collection
+G70-p16-16,G70,16,paint,Bmw Individual Two-Tone Lackierung,BMW Individual Two-Tone Vancouvergreen metallic mit Saphirschwarz metallic,SXD,,,In Verbindung mit BMW Individual Premiere Collection
+G70-p16-17,G70,16,paint,Bmw Individual Two-Tone Lackierung,BMW Individual Two-Tone Dravit Grau metallic mit Saphirschwarz metallic,SXE,,,In Verbindung mit BMW Individual Premiere Collection
+G70-p16-18,G70,16,paint,Bmw Individual Two-Tone Lackierung,BMW Individual Two-Tone Tansanitblau II metallic mit Saphirschwarz metallic,SXF,,,In Verbindung mit BMW Individual Premiere Collection
+G70-p16-19,G70,16,paint,Bmw Individual Two-Tone Lackierung,BMW Individual Two-Tone Dravit Grau metallic mit Oxidgrau II metallic,SXG,,,In Verbindung mit BMW Individual Premiere Collection
+G70-p16-20,G70,16,paint,Bmw Individual Two-Tone Lackierung,BMW Individual Two-Tone Saphirschwarz metallic mit Oxidgrau II metallic,SXH,,,In Verbindung mit BMW Individual Premiere Collection
+G70-p16-21,G70,16,paint,Bmw Individual Two-Tone Lackierung,BMW Individual Two-Tone Dual-Frozen Tanzaniteblue III metallic Tansaniteblau II,SXU,,,In Verbindung mit BMW Individual Premiere Collection
+G70-p17-01,G70,17,interior_colour,Kunstleder,Kunstleder Veganza,KVSW,Schwarz,,
+G70-p17-02,G70,17,interior_colour,Kunstleder,Mokka,KVMY,,,
+G70-p17-03,G70,17,interior_colour,Kunstleder,Cognac,KVRI,,,
+G70-p17-04,G70,17,interior_colour,Leder,BMW M Leder 'Merino' Schwarz/Atlasgrau,VCJL,,,Nur in Verbindung mit M Sportpaket oder M Sportpaket Pro
+G70-p17-05,G70,17,interior_colour,Bmw Individual Leder,BMW Individual Leder 'Merino',VCSW,Schwarz,,
+G70-p17-06,G70,17,interior_colour,Bmw Individual Leder,Mokka,VCMY,,,
+G70-p17-07,G70,17,interior_colour,Bmw Individual Leder,Rauchweiss,VCFU,,,
+G70-p17-08,G70,17,interior_colour,Bmw Individual Leder,Tartufo,VCTQ,,,
+G70-p17-09,G70,17,interior_colour,Bmw Individual Leder,BMW Individual mit Leder 'Merino' mit Exklusivumfängen,VDSW,Schwarz,,
+G70-p17-10,G70,17,interior_colour,Bmw Individual Leder,Mokka,VDMY,,,
+G70-p17-11,G70,17,interior_colour,Bmw Individual Leder,Rauchweiss,VDFU,,,
+G70-p17-12,G70,17,interior_colour,Bmw Individual Leder,Adelaide Grau,ZDHV,,,
+G70-p17-13,G70,17,interior_colour,Bmw Individual Leder,Tartufo,VDTQ,,,In Verbindung mit M Sportpaket | In Verbindung mit BMW Individual Premiere Collection
+G70-p17-14,G70,17,interior_colour,Bmw Individual Leder,BMW Individual Leder 'Merino'/ Woll-Kaschmir-Kombination mit Exklusivumfängen,VEII,Rauchweiß/Hellgrau,,
+G70-p17-15,G70,17,interior_colour,Bmw Individual Leder,BMW Individual Leder 'Merino' mit Exklusivumfängen | Caramel/Atlasgrau,ZDIE,,,In Verbindung mit BMW Individual Premiere Collection
+G70-p17-16,G70,17,interior_colour,Bmw Individual Leder,BMW Individual Leder 'Merino'/Woll-Kaschmirkombination mit Exklusivumfängen | Schwarz/Grau,ZETM,,,In Verbindung mit BMW Individual Premiere Collection
+G70-p18-01,G70,18,interior_colour,Interieurleisten,"Interieurleisten Edelholz Lindenholz Fineline braun, offenporig",4D7,,,
+G70-p18-02,G70,18,interior_colour,Interieurleisten,Interieurakzent Silberbronze,4H4,,,
+G70-p18-03,G70,18,interior_colour,Interieurleisten,Interieurleisten Edelholz Spiegeleiche grau-metallic hochglänzend,43D,,,In Verbindung mit M Sportpaket und M Sportpaket Pro
+G70-p18-04,G70,18,interior_colour,Interieurleisten,Interieurleisten Alcantara,4H5,,,
+G70-p18-05,G70,18,interior_colour,Interieurleisten,Interieurleisten Alcantara Adelaide Grau,XEG,,,
+G70-p18-06,G70,18,interior_colour,Interieurleisten,M Interieurleisten Carbon Fibre mit Silberfäden/Pianolack schwarz,43B,Pianolack-Umfänge an der Mittelkonsole,,Nur in Verbindung mit M Sportpaket und M Sportpaket Pro
+G70-p18-07,G70,18,interior_colour,Bmw Individual Interieurleisten,BMW Individual Interieurleisten Edelholz Esche Flowing Grey offenporig,XEE,,,Nur in Verbindung mit BMW Individual Leder 'Merino'/ Woll-Kaschmir-Kombination Rauchweiß/Hellgrau | In Verbindung mit M Sportpaket und M Sportpaket Pro
+G70-p19-01,G70,19,interior_colour,Lenkräder,Sport-Lenkrad,2XH,Sport Lenkrad mit Shy-Tech-Bedienelementen:,Multlifunktionslenkrad | M-Emblem auf Lenkradspeiche | 2 Speichen Design in Dunkelsilber oder Silberbronze (Speichen auf 12 und 6 Uhr) | Freischwebende Bedienelemente mit Aktivhaptik | Freigelegter Griffbereich | Lenkradkranz und Airbag- Abdeckung in Kunstleder,In Verbindung mit M Sportpaket oder M Sportpaket Pro
+G70-p19-02,G70,19,interior_colour,Lenkräder,Sport-Lederlenkrad,255,Sport Lenkrad mit Shy-Tech-Bedienelementen: | Nicht in Kombination mit Interieurakzent Silberbronze und BMW Individual Leder 'Merino' | mit Exklusivumfängen/Tartufo und Caramel Atlasgrau,"Multlifunktionslenkrad | M-Emblem auf Lenkradspeiche | 2 Speichen Design in Dunkelsilber oder Silberbronze (Speichen auf 12 und 6 Uhr) | Freischwebende Bedienelemente mit Aktivhaptik | Freigelegter Griffbereich | Lenkradkranz in Echtleder, Airbag-Abdeckung in Kunstleder",In Verbindung mit M Sportpaket | In Verbindung mit M Sportpaket Pro
+G70-p19-03,G70,19,interior_colour,Lenkräder,BMW Individual Lenkrad,2XP,Weißes Individual Lenkrad mit Shy-Tech-Bedienelementen:,Multlifunktionslenkrad | 2 Speichen Design mit Akzentelementen Dunkelsilber (Speichen auf 12 und 6 Uhr) | Freischwebende Bedienelemente mit Aktivhaptik | Freigelegter Griffbereich | Lenkradkranz in Echtleder 'Merino',Nur in Verbindung mit Leder 'Merino' Rauchweiß | In Verbindung mit M Sportpaket oder M Sportpaket Pro
+G70-p19-04,G70,19,interior_colour,Lenkräder,M Lederlenkrad,710,M Lederlenkrad mit Shy-Tech-Bedienelementen: | Nicht in Kombination mit Interieurakzent Silberbronze,"Multlifunktionslenkrad | 2 Speichen Horizontaldesign mit Akzentelementen in Dunkelsilber | Freischwebende Bedienelemente mit Aktivhaptik | Freigelegter Griffbereich | Lenkradkranz in Echtleder, Airbag Abdeckung in Kunstleder | schwarze 12-Uhr-Markierung",In Verbindung mit M Sportpaket | In Verbindung mit M Sportpaket Pro
+G70-p20-01,G70,20,optional_equipment,Ausstattungspakete,EXECUTIVE PAKET,9DA,bestehend aus:,Aktive Sitzbelüftung im Fond | Multifunktionssitze im Fond | Executive Lounge Fondkonsole | Massagefunktion im Fond,Nicht in Verbindung mit Kunstleder Veganza
+G70-p20-02,G70,20,optional_equipment,Ausstattungspakete,EXECUTIVE LOUNGE PAKET,9DB,bestehend aus:,Executive Lounge Seating | Fond-Entertainment Experience | E-Mirror Vorbereitung,Nicht in Verbindung mit Kunsteleder Veganza | Nur in Verbindung mit Executive Paket und Connoisseur Paket
+G70-p20-03,G70,20,optional_equipment,Ausstattungspakete,CONNOISSEUR PAKET,9DC,bestehend aus:,Aktive Sitzbelüftung vorn | Massagefunktion vorn | Komfortverglasung,Nicht in Verbindung mit Kunstleder Veganza
+G70-p20-04,G70,20,optional_equipment,Ausstattungspakete,DESIGN PURE EXCELLENCE,7E1,inkl. BMW Individual Premiere Collection | bestehend aus:,"BMW Individual Two-Tone Lackierung mit Preisvorteil | BMW Individual Kristallscheinwerfer Iconic Glow | Panorama-Glasdach Sky Lounge | 20"", 21"" oder 22"" BMW Individual Leichtmetallräder | BMW Individual Leder 'Merino' mit Exklusivumfängen",
+G70-p20-05,G70,20,optional_equipment,Ausstattungspakete,M SPORTPAKET,7EV,inkl. BMW Individual Premiere Collection,,
+G70-p20-06,G70,20,optional_equipment,Ausstattungspakete,M SPORTPAKET PRO,7EW,inkl. BMW Individual Premiere Collection,,
+G70-p20-07,G70,20,optional_equipment,Ausstattungspakete,M AUTOMOBILE,C7A,inkl. BMW Individual Premiere Collection,,
+G70-p21-01,G70,21,optional_equipment,Exterieur,"Modellschriftzug, Entfall",320,,,
+G70-p21-02,G70,21,optional_equipment,Interieur,Executive Lounge Seating,4F4,,,Nur in Verbindung mit Executive Paket und Connoisseur Paket
+G70-p21-03,G70,21,optional_equipment,Interieur,M Dachhimmel Anthrazit,775,,,Nur in Verbindung mit M Sportpaket oder M Sportpaket Pro
+G70-p21-04,G70,21,optional_equipment,Interieur,M Dachhimmel Alcantara anthrazit,776,,,In Verbindung mit M Sportpaket und M Sportpaket Pro
+G70-p21-05,G70,21,optional_equipment,Interieur,M Dachhimmel Alcantara,XD5,,,In Verbindung mit M Sportpaket und M Sportpaket Pro
+G70-p21-06,G70,21,optional_equipment,Entertainment,Bowers & Wilkins Diamond Surround Sound System,6F1,,,Nicht in Verbindung mit Kunstleder Veganza
+G70-p21-07,G70,21,optional_equipment,"Fahrwerk, Bremsen Und Lenkung",Adaptive Chassis Control Professional,2Z2,,,
+G70-p21-08,G70,21,optional_equipment,"Fahrwerk, Bremsen Und Lenkung","M Sportbremse, dunkelblau metallic",3M1,,,Nur in Verbindung mit M Sportpaket oder M Sportpaket Pro | In Verbindung mit M Sportpaket oder Premiumpaket | In Verbindung mit M Sportpaket Pro oder Innovationspaket
+G70-p21-09,G70,21,optional_equipment,"Fahrwerk, Bremsen Und Lenkung","M Sportbremse, schwarz metallic",3M3,,,Nur in Verbindung mit M Sportpaket oder M Sportpaket Pro | In Verbindung mit M Sportpaket | In Verbindung mit M Sportpaket Pro
+G70-p22-01,G70,22,optional_equipment,Assistenzsysteme,Autobahn- & City-Assistent (laufzeitbegrenzt),5BB,kamera- und radarbasiertes Fahrerassistenzsystem bestehend aus:,Spurwechselassistent | Autobahnassistent | Lenk- und Spurführungsassistent | Lenk- und Abbiegeassistent | Assisted Driving View | Anfahrerinnerung | Kreuzungsassistent | Ampelassistent,
+G70-p22-02,G70,22,optional_equipment,Sicherheit,M Sicherheitsgurte,4GQ,,,Nur in Verbindung mit M Sportpaket oder M Sportpaket Pro
+G70-p22-03,G70,22,optional_equipment,Sicht,BMW Individual Kristallscheinwerfer Iconic Glow,3DM,,,Im Umfang BMW Individual Premiere Collection enthalten
+G70-p22-04,G70,22,optional_equipment,Klimakomfort,Panorama-Glasdach Sky Lounge,407,,Glasdach inklusive beleuchteter Grafik | Grafik durch Siebdruck in Glas eingebracht | dynamische LED Inszenierung möglich | unterschiedliche Farben auswählbar bzw. Mode abhängig | Lichtgrafiken auch bei Tageslicht deutlich sichtbar,Im Umfang BMW Individual Premiere Collection enthalten
+G70-p22-05,G70,22,optional_equipment,Klimakomfort,Sonnenschutzverglasung,420,,,
+G70-p22-06,G70,22,optional_equipment,Transport Und Stauraum,Anhängerkupplung,3AC,,,
+G70-p22-07,G70,22,optional_equipment,Weitere Funktionen,Automatiktüren,3CD,,,
+G70-p22-08,G70,22,optional_equipment,Weitere Funktionen,Ladekabel Professional (Mode 3) für öffentliches Laden,4T2,AC Laden zu Hause oder unterwegs:,"Ladeleistung 22kW, 3-phasig; max. Stromstärke 32A | AC Stecker: Typ 2",

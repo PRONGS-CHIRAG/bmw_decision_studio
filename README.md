@@ -8,6 +8,8 @@ A product manager types a feature idea ("make seat massage standard on the 5 Ser
 2. **Decision engine** (no LLM) computes every number: per series and market **Prioritise / Consider / Low priority / Insufficient evidence / Not sold** from complaints, breadth, requests, survey weakness and sales volume, plus the price-list position. It emits a bundle of facts, each with a stable ID and a pointer into the graph (table row, PDF page or model file).
 3. **Explainer agent** (`gpt-6-terra`) writes a brief for product management in which every claim cites fact IDs.
 4. **Verifier agent** (rules + `gpt-6-luna`) checks each claim: citations exist, every number matches a cited value, labels and quotes match, the series and markets named are covered, and the cited facts entail the claim. Failing claims go back for one rewrite and are removed if they still fail.
+5. **Competitor analyst agent** compares each series with its **top five competitors per market** (sales, list prices, German-market equipment, technical data, ratings and reviews from public web sources) and writes findings that cite competitor facts; the verifier checks them the same way.
+6. **Presenter agent** turns the verified findings into a plain-language comparison in the report's *Price & equipment* section (and the PDF). A sentence that fails verification is replaced by the analyst's verified finding it was based on.
 
 Weights and market emphasis are an explicit, hashed policy. Two PMs using the same policy and data get the same answer, and a PM override is logged with its rationale.
 
@@ -25,7 +27,7 @@ The full analysis is in **[reports/REPORT.md](reports/REPORT.md)**.
 pip install -r requirements.txt
 # put the hackathon files in BMW-Data/ (git-ignored)
 
-python -m bmw_feedback all            # build + train + knowledge graph + figures (~6 min)
+python -m bmw_feedback all            # build + train + competitor tables + knowledge graph + figures (~6 min)
 cd frontend && npm install && npm run build && cd ..
 python -m bmw_feedback serve          # API + web app on http://127.0.0.1:8000
 
@@ -42,6 +44,8 @@ OPENAI_RETRIEVER_MODEL=gpt-6-luna         # defaults shown; override any of them
 OPENAI_EXPLAINER_MODEL=gpt-6-terra
 OPENAI_VERIFIER_MODEL=gpt-6-luna
 OPENAI_EMBEDDING_MODEL=text-embedding-3-small
+OPENAI_ANALYST_MODEL=...                  # competitor analyst; defaults to the explainer model
+OPENAI_PRESENTER_MODEL=...                # competitor presenter; defaults to the explainer model
 ```
 
 `python -m bmw_feedback agent --check` lists which configured models the key can use. A model the key cannot use is reported with the available ones; it is never swapped silently. `python -m bmw_feedback agent "your idea"` runs the whole pipeline in the terminal.
@@ -71,7 +75,7 @@ One page, built for evaluating an idea:
 | Overview | Key figures: priority score, Prioritise / Consider cells, evidence coverage, customer verdict, claims verified |
 | Explanation | The brief for product management; every claim has numbered citations that open the fact and its source and can jump to the node in the graph |
 | Series × markets | Recommendation matrix with an evidence panel per cell (signals, weights, reasons, quotes, survey rows, price-list items) |
-| Price & equipment | Price ladder across the three series and the linked technical data |
+| Price & equipment | Price ladder across the three series and the linked technical data; **competitors**: the verified written comparison, then per series × market the top five rivals with entry prices and gaps, a price strip, sales, ratings, the idea's equipment items, product data, reviews and the web sources |
 | Knowledge graph | The part of the graph this evaluation touched (cited nodes ringed) and a schema view of how all the data connects; a node inspector shows each node's source, attributes and relations |
 | Verification | Every claim with the result of each rule and the entailment check; what was rewritten and what was removed |
 | Decision | Adjustable decision policy and the decision record (accept / override with rationale, logged with policy and data hashes) |
@@ -97,6 +101,26 @@ bmw_feedback/agents/   contracts.py (Pydantic), retriever.py, facts.py, explaine
 ```
 
 API: `POST /api/agent/interpret`, `POST /api/agent/evaluate`, `POST /api/agent/explain`, `GET /api/agent/status`, `GET /api/graph/schema`, `GET /api/graph/node/{id}`.
+
+## Competitor data
+
+Public web data on the rivals of the 1, 5 and 7 Series, collected so that it can be checked like the BMW data:
+
+```bash
+python -m bmw_feedback competitors fetch URL [--render]   # save a page / PDF / XLSX + its normalised text (competitor-data/raw, text; git-ignored)
+python -m bmw_feedback competitors grep SOURCE_ID REGEX   # find the exact words to quote
+python -m bmw_feedback competitors check [FILE]           # validate extracted rows
+python -m bmw_feedback competitors build                  # rows -> data/processed/competitor_*.csv, reports/competitor_quality.json
+python -m bmw_feedback competitors analyse --series G60 --markets EU US --feature "Head-Up Display"   # competitor analyst + presenter in the terminal
+```
+
+- **Rows** (`competitor-data/extracted/*.jsonl`, tracked): sales, prices, specs, equipment, reviews, ratings, rival mentions. Each row names its saved source and quotes it; the build refuses a row whose quote is not in the saved page or whose number is not in the quote (English, German and Chinese number formats). How the research is done: `competitor-data/RESEARCH.md`.
+- **Official German registrations**: `competitor-data/tools/kba_fz11.py` turns the KBA FZ11 files (new registrations by KBA segment and model series) into rows.
+- **Top five per series × market** (`competitor_sets.csv`): models of the same segment and premium positioning, ranked by full-year sales within the segment table the BMW itself sits in (KBA segment in Germany, GoodCarBadCar segment in the US, VFACTS segment in Australia, the Chinese segment tables), with at least 2% of the BMW's volume; then the same source's other tables, other sources, and finally models that publishers name as rivals. The 1 Series is not sold in the US or China (sales_volumes.xlsx), so it has no set there.
+- **Markets**: Europe uses Germany (BMW's own DE price list on the BMW side), the US uses MSRPs, China manufacturer guide prices, rest of world is represented by Australia. Prices are compared only within one market, currency and price basis; nothing is converted.
+- **Comparison** (`competitors/engine.py`, no LLM): entry-price gaps and rank, cheapest price per powertrain, same-source sales, same-publisher ratings, equipment status and price per item (German market; BMW from its price list), technical data ranges, review statements classified with the BMW feedback models. `competitors/facts.py` states it as facts with knowledge-graph provenance; the graph gains CompetitorModel, CompetitorPrice, CompetitorSales, CompetitorSpec, CompetitorEquipment, CompetitorReview, CompetitorRating and WebSource nodes, validated against the tables.
+
+API: `GET /api/competitors/status`, `POST /api/competitors/compare`, `POST /api/agent/competitors`.
 
 ## Pipeline
 
@@ -143,6 +167,7 @@ One printed anomaly (F70 p.17) is kept as printed. 106 feedback features are lin
 | `reports/classifier_metrics.json`, `data_quality.json` | Classifier CV metrics, cleaning and PDF-validation counts |
 | `data/processed/catalog_*.csv` | Parsed price lists: variants, items, fitment, packages, technical data, feature links |
 | `data/processed/knowledge_graph.json`, `graph_schema.json` | Knowledge graph and its schema with the integrity checks |
+| `data/processed/competitor_*.csv`, `reports/competitor_quality.json` | Competitor tables, top-five sets, web-source manifest, validation and coverage |
 | `data/decisions.jsonl` | Decision log written by the app (git-ignored) |
 
 - There are **no China verbatims**: China rests on the customer study and web research.

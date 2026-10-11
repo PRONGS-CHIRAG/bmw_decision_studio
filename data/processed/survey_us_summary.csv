@@ -1,0 +1,207 @@
+attribute,model,top2_box,bottom3_box,mean_score
+2nd row seat roominess,G60,0.473,0.024,5.378
+2nd row seat roominess,G70,0.779,0.032,6.179
+Acceleration from stop,G60,0.679,0.024,6.026
+Acceleration from stop,G70,0.643,0.024,5.91
+Active noise cancellation,G60,0.47100000000000003,0.06600000000000002,5.3130000000000015
+Active noise cancellation,G70,0.46499999999999997,0.024,5.329
+"Adaptive driving assists (lane keeping, cruise, braking)",G60,0.612,0.018,5.774
+"Adaptive driving assists (lane keeping, cruise, braking)",G70,0.498,0.08,5.316
+Affordable to buy,G60,0.197,0.08,4.704000000000001
+Affordable to buy,G70,0.063,0.232,3.7800000000000002
+Air conditioner performance,G60,0.394,0.067,5.188
+Air conditioner performance,G70,0.347,0.21000000000000002,4.478000000000001
+Appearance of tires/ wheels,G60,0.6859999999999999,0.046,5.927
+Appearance of tires/ wheels,G70,0.42400000000000004,0.032,5.291
+Audio clarity,G60,0.5640000000000001,0.04,5.679
+Audio clarity,G70,0.365,0.08600000000000001,5.057
+Bass performance,G60,0.549,0.037000000000000005,5.591
+Bass performance,G70,0.34299999999999997,0.10099999999999999,4.968999999999999
+Bluetooth/ smartphone pairing,G60,0.566,0.028,5.592
+Bluetooth/ smartphone pairing,G70,0.461,0.168,5.031000000000001
+Braking,G60,0.5500000000000002,0.021,5.668000000000001
+Braking,G70,0.44899999999999995,0.07200000000000001,5.379
+Cargo capacity/usefulness,G60,0.5,0.04,5.477
+Cargo capacity/usefulness,G70,0.562,0.096,5.386
+Comfort of 2nd row seat,G60,0.47100000000000003,0.04900000000000001,5.269000000000001
+Comfort of 2nd row seat,G70,0.736,0.032,6.235
+Comfort of front seat,G60,0.653,0.07,5.667999999999999
+Comfort of front seat,G70,0.5760000000000001,0.022,5.922000000000001
+Cupholders,G60,0.47200000000000003,0.047,5.42
+Cupholders,G70,0.323,0.129,4.799
+Design and integration of speakers,G60,0.563,0.039,5.616
+Design and integration of speakers,G70,0.396,0.096,5.022
+Driver seat adjustability,G60,0.555,0.041999999999999996,5.603000000000001
+Driver seat adjustability,G70,0.604,0.023,5.763
+Ease of 2nd row seat entry,G60,0.45799999999999996,0.014000000000000002,5.406
+Ease of 2nd row seat entry,G70,0.657,0.034,5.986000000000001
+Ease of front seat entry,G60,0.543,0.020999999999999998,5.597
+Ease of front seat entry,G70,0.585,0.023,5.874
+Ease of loading/unloading cargo,G60,0.485,0.034,5.5
+Ease of loading/unloading cargo,G70,0.531,0.108,5.351
+Ease of reading and using screen interface,G60,0.498,0.08,5.2509999999999994
+Ease of reading and using screen interface,G70,0.352,0.193,4.888999999999999
+Economical to own (cost of ownership),G60,0.281,0.068,4.967
+Economical to own (cost of ownership),G70,0.163,0.245,4.029
+Exterior door handles,G60,0.46299999999999997,0.039,5.444999999999999
+Exterior door handles,G70,0.519,0.029,5.545999999999999
+Freedom from electrical problems,G60,0.409,0.032,5.420999999999999
+Freedom from electrical problems,G70,0.494,0.14100000000000001,5.178
+Freedom from squeaks and rattles,G60,0.567,0.08,5.542999999999999
+Freedom from squeaks and rattles,G70,0.63,0.025,5.883
+Freedom from wind and road noise,G60,0.5569999999999999,0.059,5.5440000000000005
+Freedom from wind and road noise,G70,0.6410000000000001,0.05500000000000001,5.828000000000001
+Front seat roominess,G60,0.683,0.016,5.859999999999999
+Front seat roominess,G70,0.766,0.024,6.204000000000001
+Front visibility,G60,0.626,0.027999999999999997,5.823
+Front visibility,G70,0.595,0.07700000000000001,5.686
+Future trade-in or resale value,G60,0.359,0.134,4.923
+Future trade-in or resale value,G70,0.132,0.33699999999999997,3.77
+Gas or electric mileage (fuel economy),G60,0.48,0.07,5.478
+Gas or electric mileage (fuel economy),G70,0.321,0.07300000000000001,4.99
+Ground clearance,G60,0.345,0.057999999999999996,5.138
+Ground clearance,G70,0.421,0.034,5.3069999999999995
+Handling/Maneuverability,G60,0.6990000000000001,0.020999999999999998,6.058
+Handling/Maneuverability,G70,0.551,0.025,5.622
+Head-up Display,G60,0.599,0.022000000000000002,5.742
+Head-up Display,G70,0.515,0.11,5.473
+Headlight function/ brightness,G60,0.703,0.028999999999999998,5.927
+Headlight function/ brightness,G70,0.613,0.096,5.549
+Headlight/ taillight design,G60,0.615,0.020999999999999998,5.805
+Headlight/ taillight design,G70,0.5539999999999999,0.038,5.664999999999999
+Heater performance,G60,0.41300000000000003,0.058,5.295
+Heater performance,G70,0.456,0.051000000000000004,5.191
+If applicable: 4WD/AWD performance,G60,0.553,0.033999999999999996,5.721
+If applicable: 4WD/AWD performance,G70,0.389,0.023,5.494
+"If applicable: Backup system (camera, sensors, etc.)",G60,0.584,0.011,5.8
+"If applicable: Backup system (camera, sensors, etc.)",G70,0.508,0.08100000000000002,5.462
+If applicable: Ease of customization,G60,0.43700000000000006,0.07600000000000003,5.197000000000001
+If applicable: Ease of customization,G70,0.276,0.302,4.338
+"If applicable: Flat tire preparedness (spare, run flat, etc.)",G60,0.353,0.182,4.682
+"If applicable: Flat tire preparedness (spare, run flat, etc.)",G70,0.269,0.321,4.2219999999999995
+"If applicable: Interactive information system (e.g., OnStar, mbrace, iDrive)",G60,0.357,0.066,5.125
+"If applicable: Interactive information system (e.g., OnStar, mbrace, iDrive)",G70,0.278,0.101,4.832
+If applicable: Navigation system,G60,0.53,0.028999999999999998,5.529
+If applicable: Navigation system,G70,0.388,0.132,4.85
+If applicable: Sunroof/ moonroof,G60,0.391,0.03,5.188000000000001
+If applicable: Sunroof/ moonroof,G70,0.32,0.054000000000000006,5.055999999999999
+Instrument panel (IP),G60,0.489,0.08,5.4030000000000005
+Instrument panel (IP),G70,0.373,0.169,4.851000000000001
+Interior colors,G60,0.653,0.026000000000000002,6.008
+Interior colors,G70,0.633,0.02,5.807
+Interior door handles,G60,0.493,0.065,5.342
+Interior door handles,G70,0.613,0.053,5.699
+Interior lighting,G60,0.633,0.03,5.9239999999999995
+Interior lighting,G70,0.551,0.018000000000000002,5.7330000000000005
+Interior roominess,G60,0.522,0.026000000000000002,5.605
+Interior roominess,G70,0.596,0.028,5.911
+Interior storage,G60,0.386,0.105,5.154
+Interior storage,G70,0.44000000000000006,0.056999999999999995,5.328
+Interior trim and finish,G60,0.6430000000000001,0.028,5.853000000000001
+Interior trim and finish,G70,0.603,0.028,5.763
+Intuitiveness of controls,G60,0.42200000000000004,0.08,5.2
+Intuitiveness of controls,G70,0.24900000000000003,0.26400000000000007,4.357
+Level of standard equipment,G60,0.383,0.025,5.363
+Level of standard equipment,G70,0.526,0.093,5.49
+Menu structure of infotainment system,G60,0.357,0.126,4.879
+Menu structure of infotainment system,G70,0.319,0.21,4.574
+Mirroring of smartphone content on vehicle display,G60,0.499,0.052000000000000005,5.484999999999999
+Mirroring of smartphone content on vehicle display,G70,0.333,0.11,4.789
+Off-Road capability,G60,0.169,0.17900000000000002,4.529000000000001
+Off-Road capability,G70,0.26899999999999996,0.036,4.635999999999999
+Operation of heater/ AC controls,G60,0.28900000000000003,0.15000000000000002,4.804000000000001
+Operation of heater/ AC controls,G70,0.321,0.197,4.512
+Overall brand image,G60,0.6970000000000001,0.028,5.848
+Overall brand image,G70,0.622,0.07100000000000001,5.731999999999999
+Overall comfort of the seats,G60,0.666,0.04,5.7410000000000005
+Overall comfort of the seats,G70,0.661,0.031,6.0440000000000005
+Overall driver assist features,G60,0.46,0.017,5.579000000000001
+Overall driver assist features,G70,0.526,0.082,5.309
+Overall driver-vehicle interaction (HMI),G60,0.45099999999999996,0.038000000000000006,5.4879999999999995
+Overall driver-vehicle interaction (HMI),G70,0.367,0.09000000000000001,5.052999999999999
+Overall driving performance,G60,0.648,0.017,6.039
+Overall driving performance,G70,0.642,0.03500000000000001,5.8790000000000004
+Overall environmental friendliness,G60,0.507,0.028999999999999998,5.4830000000000005
+Overall environmental friendliness,G70,0.377,0.07800000000000001,4.992999999999999
+Overall exterior styling,G60,0.638,0.019,5.782
+Overall exterior styling,G70,0.527,0.025,5.561999999999999
+Overall impression of durability/reliability,G60,0.66,0.035,5.916
+Overall impression of durability/reliability,G70,0.556,0.079,5.521
+Overall interior design / layout,G60,0.554,0.034,5.678
+Overall interior design / layout,G70,0.479,0.027,5.555999999999999
+Overall interior styling/ aesthetics,G60,0.532,0.057,5.6
+Overall interior styling/ aesthetics,G70,0.497,0.028999999999999998,5.519
+Overall interior versatility/seat stowaway,G60,0.5500000000000002,0.046000000000000006,5.472000000000001
+Overall interior versatility/seat stowaway,G70,0.59,0.013000000000000001,5.728
+Overall interior workmanship,G60,0.527,0.019000000000000006,5.714
+Overall interior workmanship,G70,0.5820000000000001,0.028999999999999998,5.842
+Overall noise/vibration/harshness,G60,0.5840000000000001,0.032,5.649
+Overall noise/vibration/harshness,G70,0.5960000000000001,0.038,5.768000000000001
+Overall performance of climate control system,G60,0.357,0.056,5.144
+Overall performance of climate control system,G70,0.387,0.18000000000000002,4.74
+Overall performance of sound system,G60,0.501,0.04,5.497999999999999
+Overall performance of sound system,G70,0.359,0.076,5.111000000000001
+Overall power and pickup,G60,0.636,0.020999999999999998,5.942
+Overall power and pickup,G70,0.576,0.024,5.755
+Overall safety of the vehicle,G60,0.581,0.018000000000000002,5.792999999999999
+Overall safety of the vehicle,G70,0.556,0.061,5.683
+Overall value for money,G60,0.37600000000000006,0.04800000000000001,5.236000000000001
+Overall value for money,G70,0.271,0.074,4.799
+Overall vehicle image,G60,0.62,0.017,5.8740000000000006
+Overall vehicle image,G70,0.56,0.07200000000000001,5.7
+Overall vehicle sound,G60,0.5589999999999999,0.057,5.575
+Overall vehicle sound,G70,0.548,0.037,5.691
+Passenger seat adjustability,G60,0.454,0.021000000000000005,5.425
+Passenger seat adjustability,G70,0.574,0.028999999999999998,5.664
+Passenger seating capacity,G60,0.509,0.021,5.508000000000001
+Passenger seating capacity,G70,0.5680000000000001,0.03,5.728
+Passing capability,G60,0.622,0.017,5.905
+Passing capability,G70,0.636,0.02,5.960000000000001
+Performance of voice recognition,G60,0.385,0.16299999999999998,4.991
+Performance of voice recognition,G70,0.362,0.182,4.76
+Phone charging,G60,0.5640000000000001,0.10200000000000001,5.465
+Phone charging,G70,0.385,0.184,4.9879999999999995
+Place for phone,G60,0.53,0.046,5.473
+Place for phone,G70,0.266,0.16899999999999998,4.775
+Placement/ ease of reading and using controls,G60,0.42600000000000005,0.096,5.118
+Placement/ ease of reading and using controls,G70,0.298,0.244,4.507
+Position/ integration of displays in dashboard,G60,0.426,0.087,5.157
+Position/ integration of displays in dashboard,G70,0.362,0.099,4.996
+Price/deal offered,G60,0.363,0.057,5.037000000000001
+Price/deal offered,G70,0.14300000000000004,0.16300000000000003,4.249000000000001
+Provides a sense of wellbeing,G60,0.537,0.012,5.861
+Provides a sense of wellbeing,G70,0.557,0.023,5.7490000000000006
+Quality of interior materials,G60,0.518,0.020999999999999998,5.617000000000001
+Quality of interior materials,G70,0.632,0.032,5.95
+Quality of seat materials,G60,0.504,0.029,5.615
+Quality of seat materials,G70,0.577,0.040999999999999995,5.8100000000000005
+Rear visibility,G60,0.5700000000000001,0.061,5.625
+Rear visibility,G70,0.38,0.027999999999999997,5.231
+Reputation/prestige of manufacturer,G60,0.7050000000000001,0.013000000000000001,6.074
+Reputation/prestige of manufacturer,G70,0.655,0.067,5.842
+Riding comfort,G60,0.6839999999999999,0.024,6.029999999999999
+Riding comfort,G70,0.749,0.013000000000000001,6.203
+"Safety monitoring features (blid spot warning, lane departure warning, etc)",G60,0.571,0.016,5.723
+"Safety monitoring features (blid spot warning, lane departure warning, etc)",G70,0.518,0.081,5.311
+Size/ proportions,G60,0.5620000000000002,0.031000000000000003,5.744000000000001
+Size/ proportions,G70,0.5609999999999999,0.038,5.712
+Smoothness of transmission,G60,0.595,0.03,5.687000000000001
+Smoothness of transmission,G70,0.614,0.021,5.921
+Solid vehicle construction,G60,0.574,0.016,5.816999999999999
+Solid vehicle construction,G70,0.631,0.09100000000000001,5.646
+Sound of doors/ trunk/ hatch shutting,G60,0.5609999999999999,0.019,5.618
+Sound of doors/ trunk/ hatch shutting,G70,0.49,0.08,5.322
+Sound of engine,G60,0.585,0.031,5.587
+Sound of engine,G70,0.638,0.024,5.888999999999999
+Technical innovations,G60,0.477,0.024,5.463
+Technical innovations,G70,0.482,0.15600000000000003,5.231
+Trunk lid/ tailgate and liftgate operations,G60,0.593,0.03,5.782
+Trunk lid/ tailgate and liftgate operations,G70,0.58,0.022000000000000002,5.71
+Turning radius,G60,0.626,0.017,5.7940000000000005
+Turning radius,G70,0.46900000000000003,0.027,5.379
+Vehicle's Mobile App,G60,0.5369999999999999,0.032,5.64
+Vehicle's Mobile App,G70,0.393,0.105,5.001999999999999
+Warranty coverage,G60,0.44599999999999995,0.020999999999999998,5.343
+Warranty coverage,G70,0.261,0.099,4.611
+WiFi hotspot in vehicle,G60,0.383,0.134,4.976
+WiFi hotspot in vehicle,G70,0.279,0.195,4.505

@@ -23,7 +23,7 @@ LABELS = ["Prioritise", "Consider", "Low priority", "Insufficient evidence", "No
 UNQUOTED_LABELS = ["Low priority", "Insufficient evidence", "Not sold", "Leaning bad", "Leaning good",
                    "Not enough data"]
 SERIES_RX = {"F70": r"\bF70\b|\b1 Series\b|\b1er\b", "G60": r"\bG60\b|\b5 Series\b|\b5er\b",
-             "G70": r"\bG70\b|\b7 Series\b|\b7er\b"}
+             "G70": r"(?<!Genesis )\bG70\b|\b7 Series\b|\b7er\b"}       # the Genesis G70 is not a BMW
 MARKET_RX = {"EU": r"\bEurope(?:an)?\b|\bEU\b", "US": r"\bUnited States\b|\bUS\b|\bU\.S\.|\bAmerican?\b",
              "CN": r"\bChina\b|\bChinese\b|\bCN\b", "RoW": r"\bRest of (?:the )?world\b|\bRoW\b"}
 # Phrases whose digits are names, not data
@@ -46,11 +46,14 @@ For each claim, decide whether its cited facts fully support it. Judge only agai
 Return exactly one judgment per claim_id with a one-sentence reason."""
 
 
-def numbers_in(text: str) -> list[tuple[float, float, bool]]:
+def numbers_in(text: str, names: tuple = ()) -> list[tuple[float, float, bool]]:
     """(value, tolerance, is_percent) for every data number in the text.
 
     The tolerance is half a unit of the last digit written, scaled by a k / m / bn suffix, so '0.7' matches
-    0.71 and '115k' matches 115,000 but '3.9k' does not match 3,800."""
+    0.71 and '115k' matches 115,000 but '3.9k' does not match 3,800. `names` are model names whose digits are
+    names, not data (e.g. 'DS 4'); they are removed first, longest first."""
+    for name in sorted(names, key=len, reverse=True):
+        text = re.sub(rf"(?<![\w]){re.escape(name)}(?![\w])", " ", text)
     for pattern in STRIP:
         text = re.sub(pattern, " ", text)
     out = []
@@ -85,7 +88,7 @@ def _norm(s: str) -> str:
     return re.sub(r"\s+", " ", s.lower()).strip(" .,;:!?…'\"“”")
 
 
-def rule_checks(claim: Claim, index: dict) -> list[Check]:
+def rule_checks(claim: Claim, index: dict, names: tuple = ()) -> list[Check]:
     checks = []
     unknown = [i for i in claim.fact_ids if i not in index]
     cited = [index[i] for i in claim.fact_ids if i in index]
@@ -97,7 +100,7 @@ def rule_checks(claim: Claim, index: dict) -> list[Check]:
         checks.append(Check(name="citations", passed=True, detail=f"{len(cited)} fact(s) cited."))
 
     allowed = _allowed(cited)
-    nums = numbers_in(claim.text)
+    nums = numbers_in(claim.text, names)
     bad = [n for n in nums if not _number_ok(n[0], n[1], n[2], allowed)]
     if bad:
         shown = ", ".join(f"{v:,.10g}{'%' if p else ''}" for v, _, p in bad)
@@ -147,11 +150,14 @@ def rule_checks(claim: Claim, index: dict) -> list[Check]:
     return checks
 
 
-def verify(claims: list[Claim], bundle: FactBundle, llm=None) -> list[Claim]:
-    """Run the rules, then the semantic judge on what passed. Returns claims with checks and status set."""
+def verify(claims: list[Claim], bundle: FactBundle, llm=None, extra=None, names: tuple = ()) -> list[Claim]:
+    """Run the rules, then the semantic judge on what passed. Returns claims with checks and status set.
+
+    extra(claim, index) -> list[Check] adds caller-specific rules that run before the semantic judge;
+    names are model names whose digits the numbers rule ignores."""
     index = bundle.index()
     for c in claims:
-        c.checks = rule_checks(c, index)
+        c.checks = rule_checks(c, index, names) + (extra(c, index) if extra else [])
     passing = [c for c in claims if all(ch.passed for ch in c.checks)]
     if llm is not None and passing:
         blocks = []

@@ -219,3 +219,55 @@ class JudgmentLLM(BaseModel):
 
 class JudgmentsLLM(BaseModel):
     judgments: list[JudgmentLLM]
+
+
+# ---------------------------------------------------------------------- Agents 4 + 5: competitor analyst, presenter
+CompetitorDimension = Literal["selection", "price", "equipment", "product", "sales", "customers"]
+COMPETITOR_DIMENSIONS: tuple = ("selection", "price", "equipment", "product", "sales", "customers")
+# fact groups a finding of each dimension must cite at least one of
+DIMENSION_GROUPS = {"selection": {"set"}, "price": {"price", "summary"}, "equipment": {"equipment"},
+                    "product": {"spec"}, "sales": {"sales", "set"}, "customers": {"rating", "reviews", "quote"}}
+BRIEF_SECTIONS = ["headline", "price_position", "equipment", "product_and_sales", "customer_view", "implications",
+                  "caveats"]
+BRIEF_TITLES = {"headline": "In one sentence", "price_position": "Price position", "equipment": "Equipment for this idea",
+                "product_and_sales": "Product and sales", "customer_view": "What customers say about the rivals",
+                "implications": "What it means for the idea", "caveats": "Limits of this comparison"}
+
+
+class FindingLLM(BaseModel):
+    series: Series
+    market: Market
+    dimension: CompetitorDimension
+    text: str
+    fact_ids: list[str]
+
+
+class CompetitorAnalysisLLM(BaseModel):
+    findings: list[FindingLLM]
+
+
+class Finding(Claim):
+    """An analyst finding after verification (section = dimension)."""
+    series: str
+    market: str
+
+
+class PresentedClaimLLM(BaseModel):
+    text: str
+    fact_ids: list[str]
+    finding_ids: list[str]
+
+
+class CompetitorBriefLLM(BaseModel):
+    headline: PresentedClaimLLM
+    price_position: list[PresentedClaimLLM]
+    equipment: list[PresentedClaimLLM]
+    product_and_sales: list[PresentedClaimLLM]
+    customer_view: list[PresentedClaimLLM]
+    implications: list[PresentedClaimLLM]
+    caveats: list[PresentedClaimLLM]
+
+
+class PresentedClaim(Claim):
+    finding_ids: list[str] = Field(default_factory=list)
+    origin: Literal["presenter", "analyst_fallback"] = "presenter"

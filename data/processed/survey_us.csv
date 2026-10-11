@@ -1,0 +1,1443 @@
+attribute,model,scale_point,scale_rank,share
+Overall exterior styling,G60,I Hate It,1,0.005
+Overall exterior styling,G70,I Hate It,1,0.005
+Overall exterior styling,G60,A Failure,2,0.007
+Overall exterior styling,G70,A Failure,2,0.011
+Overall exterior styling,G60,Unsatisfactory,3,0.007
+Overall exterior styling,G70,Unsatisfactory,3,0.009000000000000001
+Overall exterior styling,G60,Satisfactory,4,0.176
+Overall exterior styling,G70,Satisfactory,4,0.14
+Overall exterior styling,G60,Excellent,5,0.167
+Overall exterior styling,G70,Excellent,5,0.308
+Overall exterior styling,G60,Delightful,6,0.263
+Overall exterior styling,G70,Delightful,6,0.281
+Overall exterior styling,G60,I Love It,7,0.375
+Overall exterior styling,G70,I Love It,7,0.246
+Size/ proportions,G60,I Hate It,1,0.007
+Size/ proportions,G70,I Hate It,1,0.01
+Size/ proportions,G60,A Failure,2,0.012
+Size/ proportions,G70,A Failure,2,0.013
+Size/ proportions,G60,Unsatisfactory,3,0.012
+Size/ proportions,G70,Unsatisfactory,3,0.015
+Size/ proportions,G60,Satisfactory,4,0.118
+Size/ proportions,G70,Satisfactory,4,0.107
+Size/ proportions,G60,Excellent,5,0.289
+Size/ proportions,G70,Excellent,5,0.294
+Size/ proportions,G60,Delightful,6,0.174
+Size/ proportions,G70,Delightful,6,0.194
+Size/ proportions,G60,I Love It,7,0.388
+Size/ proportions,G70,I Love It,7,0.367
+Appearance of tires/ wheels,G60,I Hate It,1,0.007
+Appearance of tires/ wheels,G70,I Hate It,1,0.013
+Appearance of tires/ wheels,G60,A Failure,2,0.005
+Appearance of tires/ wheels,G70,A Failure,2,0.009000000000000001
+Appearance of tires/ wheels,G60,Unsatisfactory,3,0.034
+Appearance of tires/ wheels,G70,Unsatisfactory,3,0.01
+Appearance of tires/ wheels,G60,Satisfactory,4,0.088
+Appearance of tires/ wheels,G70,Satisfactory,4,0.196
+Appearance of tires/ wheels,G60,Excellent,5,0.18
+Appearance of tires/ wheels,G70,Excellent,5,0.348
+Appearance of tires/ wheels,G60,Delightful,6,0.246
+Appearance of tires/ wheels,G70,Delightful,6,0.262
+Appearance of tires/ wheels,G60,I Love It,7,0.44
+Appearance of tires/ wheels,G70,I Love It,7,0.162
+Exterior door handles,G60,I Hate It,1,0.005
+Exterior door handles,G70,I Hate It,1,0.004
+Exterior door handles,G60,A Failure,2,0.003
+Exterior door handles,G70,A Failure,2,0.005
+Exterior door handles,G60,Unsatisfactory,3,0.031
+Exterior door handles,G70,Unsatisfactory,3,0.02
+Exterior door handles,G60,Satisfactory,4,0.215
+Exterior door handles,G70,Satisfactory,4,0.141
+Exterior door handles,G60,Excellent,5,0.283
+Exterior door handles,G70,Excellent,5,0.311
+Exterior door handles,G60,Delightful,6,0.175
+Exterior door handles,G70,Delightful,6,0.28
+Exterior door handles,G60,I Love It,7,0.288
+Exterior door handles,G70,I Love It,7,0.239
+Headlight/ taillight design,G60,I Hate It,1,0.012
+Headlight/ taillight design,G70,I Hate It,1,0.006
+Headlight/ taillight design,G60,A Failure,2,0.007
+Headlight/ taillight design,G70,A Failure,2,0.008
+Headlight/ taillight design,G60,Unsatisfactory,3,0.002
+Headlight/ taillight design,G70,Unsatisfactory,3,0.024
+Headlight/ taillight design,G60,Satisfactory,4,0.142
+Headlight/ taillight design,G70,Satisfactory,4,0.143
+Headlight/ taillight design,G60,Excellent,5,0.222
+Headlight/ taillight design,G70,Excellent,5,0.265
+Headlight/ taillight design,G60,Delightful,6,0.21
+Headlight/ taillight design,G70,Delightful,6,0.204
+Headlight/ taillight design,G60,I Love It,7,0.405
+Headlight/ taillight design,G70,I Love It,7,0.35
+Sound of doors/ trunk/ hatch shutting,G60,I Hate It,1,0.003
+Sound of doors/ trunk/ hatch shutting,G70,I Hate It,1,0.057
+Sound of doors/ trunk/ hatch shutting,G60,A Failure,2,0.013
+Sound of doors/ trunk/ hatch shutting,G70,A Failure,2,0.005
+Sound of doors/ trunk/ hatch shutting,G60,Unsatisfactory,3,0.003
+Sound of doors/ trunk/ hatch shutting,G70,Unsatisfactory,3,0.018
+Sound of doors/ trunk/ hatch shutting,G60,Satisfactory,4,0.264
+Sound of doors/ trunk/ hatch shutting,G70,Satisfactory,4,0.226
+Sound of doors/ trunk/ hatch shutting,G60,Excellent,5,0.156
+Sound of doors/ trunk/ hatch shutting,G70,Excellent,5,0.204
+Sound of doors/ trunk/ hatch shutting,G60,Delightful,6,0.183
+Sound of doors/ trunk/ hatch shutting,G70,Delightful,6,0.153
+Sound of doors/ trunk/ hatch shutting,G60,I Love It,7,0.378
+Sound of doors/ trunk/ hatch shutting,G70,I Love It,7,0.337
+Overall driving performance,G60,I Hate It,1,0.004
+Overall driving performance,G70,I Hate It,1,0.012
+Overall driving performance,G60,A Failure,2,0.011
+Overall driving performance,G70,A Failure,2,0.013
+Overall driving performance,G60,Unsatisfactory,3,0.002
+Overall driving performance,G70,Unsatisfactory,3,0.01
+Overall driving performance,G60,Satisfactory,4,0.034
+Overall driving performance,G70,Satisfactory,4,0.01
+Overall driving performance,G60,Excellent,5,0.301
+Overall driving performance,G70,Excellent,5,0.313
+Overall driving performance,G60,Delightful,6,0.17
+Overall driving performance,G70,Delightful,6,0.288
+Overall driving performance,G60,I Love It,7,0.478
+Overall driving performance,G70,I Love It,7,0.354
+Ground clearance,G60,I Hate It,1,0.005
+Ground clearance,G70,I Hate It,1,0.014
+Ground clearance,G60,A Failure,2,0.031
+Ground clearance,G70,A Failure,2,0.012
+Ground clearance,G60,Unsatisfactory,3,0.022
+Ground clearance,G70,Unsatisfactory,3,0.008
+Ground clearance,G60,Satisfactory,4,0.253
+Ground clearance,G70,Satisfactory,4,0.189
+Ground clearance,G60,Excellent,5,0.344
+Ground clearance,G70,Excellent,5,0.356
+Ground clearance,G60,Delightful,6,0.142
+Ground clearance,G70,Delightful,6,0.238
+Ground clearance,G60,I Love It,7,0.203
+Ground clearance,G70,I Love It,7,0.183
+Riding comfort,G60,I Hate It,1,0.009000000000000001
+Riding comfort,G70,I Hate It,1,0.002
+Riding comfort,G60,A Failure,2,0.012
+Riding comfort,G70,A Failure,2,0.005
+Riding comfort,G60,Unsatisfactory,3,0.003
+Riding comfort,G70,Unsatisfactory,3,0.006
+Riding comfort,G60,Satisfactory,4,0.056
+Riding comfort,G70,Satisfactory,4,0.012
+Riding comfort,G60,Excellent,5,0.236
+Riding comfort,G70,Excellent,5,0.226
+Riding comfort,G60,Delightful,6,0.204
+Riding comfort,G70,Delightful,6,0.248
+Riding comfort,G60,I Love It,7,0.48
+Riding comfort,G70,I Love It,7,0.501
+Turning radius,G60,I Hate It,1,0.008
+Turning radius,G70,I Hate It,1,0.014
+Turning radius,G60,A Failure,2,0.006
+Turning radius,G70,A Failure,2,0.006
+Turning radius,G60,Unsatisfactory,3,0.003
+Turning radius,G70,Unsatisfactory,3,0.007
+Turning radius,G60,Satisfactory,4,0.128
+Turning radius,G70,Satisfactory,4,0.275
+Turning radius,G60,Excellent,5,0.229
+Turning radius,G70,Excellent,5,0.229
+Turning radius,G60,Delightful,6,0.274
+Turning radius,G70,Delightful,6,0.196
+Turning radius,G60,I Love It,7,0.352
+Turning radius,G70,I Love It,7,0.273
+Handling/Maneuverability,G60,I Hate It,1,0.008
+Handling/Maneuverability,G70,I Hate It,1,0.011
+Handling/Maneuverability,G60,A Failure,2,0.003
+Handling/Maneuverability,G70,A Failure,2,0.005
+Handling/Maneuverability,G60,Unsatisfactory,3,0.01
+Handling/Maneuverability,G70,Unsatisfactory,3,0.009000000000000001
+Handling/Maneuverability,G60,Satisfactory,4,0.085
+Handling/Maneuverability,G70,Satisfactory,4,0.173
+Handling/Maneuverability,G60,Excellent,5,0.195
+Handling/Maneuverability,G70,Excellent,5,0.251
+Handling/Maneuverability,G60,Delightful,6,0.194
+Handling/Maneuverability,G70,Delightful,6,0.23
+Handling/Maneuverability,G60,I Love It,7,0.505
+Handling/Maneuverability,G70,I Love It,7,0.321
+If applicable: 4WD/AWD performance,G60,I Hate It,1,0.013
+If applicable: 4WD/AWD performance,G70,I Hate It,1,0.008
+If applicable: 4WD/AWD performance,G60,A Failure,2,0.015
+If applicable: 4WD/AWD performance,G70,A Failure,2,0.009000000000000001
+If applicable: 4WD/AWD performance,G60,Unsatisfactory,3,0.006
+If applicable: 4WD/AWD performance,G70,Unsatisfactory,3,0.006
+If applicable: 4WD/AWD performance,G60,Satisfactory,4,0.105
+If applicable: 4WD/AWD performance,G70,Satisfactory,4,0.082
+If applicable: 4WD/AWD performance,G60,Excellent,5,0.308
+If applicable: 4WD/AWD performance,G70,Excellent,5,0.506
+If applicable: 4WD/AWD performance,G60,Delightful,6,0.171
+If applicable: 4WD/AWD performance,G70,Delightful,6,0.131
+If applicable: 4WD/AWD performance,G60,I Love It,7,0.382
+If applicable: 4WD/AWD performance,G70,I Love It,7,0.258
+Off-Road capability,G60,I Hate It,1,0.01
+Off-Road capability,G70,I Hate It,1,0.018
+Off-Road capability,G60,A Failure,2,0.009000000000000001
+Off-Road capability,G70,A Failure,2,0.006
+Off-Road capability,G60,Unsatisfactory,3,0.16
+Off-Road capability,G70,Unsatisfactory,3,0.012
+Off-Road capability,G60,Satisfactory,4,0.355
+Off-Road capability,G70,Satisfactory,4,0.632
+Off-Road capability,G60,Excellent,5,0.297
+Off-Road capability,G70,Excellent,5,0.063
+Off-Road capability,G60,Delightful,6,0.067
+Off-Road capability,G70,Delightful,6,0.156
+Off-Road capability,G60,I Love It,7,0.102
+Off-Road capability,G70,I Love It,7,0.113
+Overall power and pickup,G60,I Hate It,1,0.006
+Overall power and pickup,G70,I Hate It,1,0.011
+Overall power and pickup,G60,A Failure,2,0.004
+Overall power and pickup,G70,A Failure,2,0.005
+Overall power and pickup,G60,Unsatisfactory,3,0.011
+Overall power and pickup,G70,Unsatisfactory,3,0.008
+Overall power and pickup,G60,Satisfactory,4,0.092
+Overall power and pickup,G70,Satisfactory,4,0.115
+Overall power and pickup,G60,Excellent,5,0.251
+Overall power and pickup,G70,Excellent,5,0.285
+Overall power and pickup,G60,Delightful,6,0.18
+Overall power and pickup,G70,Delightful,6,0.207
+Overall power and pickup,G60,I Love It,7,0.456
+Overall power and pickup,G70,I Love It,7,0.369
+Acceleration from stop,G60,I Hate It,1,0.006
+Acceleration from stop,G70,I Hate It,1,0.008
+Acceleration from stop,G60,A Failure,2,0.014
+Acceleration from stop,G70,A Failure,2,0.008
+Acceleration from stop,G60,Unsatisfactory,3,0.004
+Acceleration from stop,G70,Unsatisfactory,3,0.008
+Acceleration from stop,G60,Satisfactory,4,0.061
+Acceleration from stop,G70,Satisfactory,4,0.102
+Acceleration from stop,G60,Excellent,5,0.236
+Acceleration from stop,G70,Excellent,5,0.231
+Acceleration from stop,G60,Delightful,6,0.197
+Acceleration from stop,G70,Delightful,6,0.202
+Acceleration from stop,G60,I Love It,7,0.482
+Acceleration from stop,G70,I Love It,7,0.441
+Passing capability,G60,I Hate It,1,0.006
+Passing capability,G70,I Hate It,1,0.01
+Passing capability,G60,A Failure,2,0.002
+Passing capability,G70,A Failure,2,0.003
+Passing capability,G60,Unsatisfactory,3,0.009000000000000001
+Passing capability,G70,Unsatisfactory,3,0.007
+Passing capability,G60,Satisfactory,4,0.07100000000000001
+Passing capability,G70,Satisfactory,4,0.014
+Passing capability,G60,Excellent,5,0.29
+Passing capability,G70,Excellent,5,0.33
+Passing capability,G60,Delightful,6,0.22
+Passing capability,G70,Delightful,6,0.235
+Passing capability,G60,I Love It,7,0.402
+Passing capability,G70,I Love It,7,0.401
+Overall interior styling/ aesthetics,G60,I Hate It,1,0.007
+Overall interior styling/ aesthetics,G70,I Hate It,1,0.011
+Overall interior styling/ aesthetics,G60,A Failure,2,0.002
+Overall interior styling/ aesthetics,G70,A Failure,2,0.015
+Overall interior styling/ aesthetics,G60,Unsatisfactory,3,0.048
+Overall interior styling/ aesthetics,G70,Unsatisfactory,3,0.003
+Overall interior styling/ aesthetics,G60,Satisfactory,4,0.22
+Overall interior styling/ aesthetics,G70,Satisfactory,4,0.183
+Overall interior styling/ aesthetics,G60,Excellent,5,0.191
+Overall interior styling/ aesthetics,G70,Excellent,5,0.291
+Overall interior styling/ aesthetics,G60,Delightful,6,0.114
+Overall interior styling/ aesthetics,G70,Delightful,6,0.197
+Overall interior styling/ aesthetics,G60,I Love It,7,0.418
+Overall interior styling/ aesthetics,G70,I Love It,7,0.3
+Interior colors,G60,I Hate It,1,0.007
+Interior colors,G70,I Hate It,1,0.01
+Interior colors,G60,A Failure,2,0.007
+Interior colors,G70,A Failure,2,0.003
+Interior colors,G60,Unsatisfactory,3,0.012
+Interior colors,G70,Unsatisfactory,3,0.007
+Interior colors,G60,Satisfactory,4,0.096
+Interior colors,G70,Satisfactory,4,0.122
+Interior colors,G60,Excellent,5,0.225
+Interior colors,G70,Excellent,5,0.225
+Interior colors,G60,Delightful,6,0.129
+Interior colors,G70,Delightful,6,0.274
+Interior colors,G60,I Love It,7,0.524
+Interior colors,G70,I Love It,7,0.359
+Interior trim and finish,G60,I Hate It,1,0.011
+Interior trim and finish,G70,I Hate It,1,0.007
+Interior trim and finish,G60,A Failure,2,0.015
+Interior trim and finish,G70,A Failure,2,0.009000000000000001
+Interior trim and finish,G60,Unsatisfactory,3,0.002
+Interior trim and finish,G70,Unsatisfactory,3,0.012
+Interior trim and finish,G60,Satisfactory,4,0.166
+Interior trim and finish,G70,Satisfactory,4,0.158
+Interior trim and finish,G60,Excellent,5,0.163
+Interior trim and finish,G70,Excellent,5,0.211
+Interior trim and finish,G60,Delightful,6,0.174
+Interior trim and finish,G70,Delightful,6,0.206
+Interior trim and finish,G60,I Love It,7,0.469
+Interior trim and finish,G70,I Love It,7,0.397
+Interior lighting,G60,I Hate It,1,0.012
+Interior lighting,G70,I Hate It,1,0.006
+Interior lighting,G60,A Failure,2,0.012
+Interior lighting,G70,A Failure,2,0.008
+Interior lighting,G60,Unsatisfactory,3,0.006
+Interior lighting,G70,Unsatisfactory,3,0.004
+Interior lighting,G60,Satisfactory,4,0.127
+Interior lighting,G70,Satisfactory,4,0.103
+Interior lighting,G60,Excellent,5,0.21
+Interior lighting,G70,Excellent,5,0.328
+Interior lighting,G60,Delightful,6,0.119
+Interior lighting,G70,Delightful,6,0.21
+Interior lighting,G60,I Love It,7,0.514
+Interior lighting,G70,I Love It,7,0.341
+Overall interior workmanship,G60,I Hate It,1,0.008
+Overall interior workmanship,G70,I Hate It,1,0.013
+Overall interior workmanship,G60,A Failure,2,0.005
+Overall interior workmanship,G70,A Failure,2,0.003
+Overall interior workmanship,G60,Unsatisfactory,3,0.006
+Overall interior workmanship,G70,Unsatisfactory,3,0.013
+Overall interior workmanship,G60,Satisfactory,4,0.108
+Overall interior workmanship,G70,Satisfactory,4,0.104
+Overall interior workmanship,G60,Excellent,5,0.346
+Overall interior workmanship,G70,Excellent,5,0.285
+Overall interior workmanship,G60,Delightful,6,0.173
+Overall interior workmanship,G70,Delightful,6,0.131
+Overall interior workmanship,G60,I Love It,7,0.354
+Overall interior workmanship,G70,I Love It,7,0.451
+Quality of seat materials,G60,I Hate It,1,0.009000000000000001
+Quality of seat materials,G70,I Hate It,1,0.003
+Quality of seat materials,G60,A Failure,2,0.012
+Quality of seat materials,G70,A Failure,2,0.012
+Quality of seat materials,G60,Unsatisfactory,3,0.008
+Quality of seat materials,G70,Unsatisfactory,3,0.026
+Quality of seat materials,G60,Satisfactory,4,0.126
+Quality of seat materials,G70,Satisfactory,4,0.031
+Quality of seat materials,G60,Excellent,5,0.341
+Quality of seat materials,G70,Excellent,5,0.351
+Quality of seat materials,G60,Delightful,6,0.179
+Quality of seat materials,G70,Delightful,6,0.213
+Quality of seat materials,G60,I Love It,7,0.325
+Quality of seat materials,G70,I Love It,7,0.364
+Quality of interior materials,G60,I Hate It,1,0.003
+Quality of interior materials,G70,I Hate It,1,0.009000000000000001
+Quality of interior materials,G60,A Failure,2,0.005
+Quality of interior materials,G70,A Failure,2,0.011
+Quality of interior materials,G60,Unsatisfactory,3,0.013
+Quality of interior materials,G70,Unsatisfactory,3,0.012
+Quality of interior materials,G60,Satisfactory,4,0.191
+Quality of interior materials,G70,Satisfactory,4,0.108
+Quality of interior materials,G60,Excellent,5,0.27
+Quality of interior materials,G70,Excellent,5,0.228
+Quality of interior materials,G60,Delightful,6,0.175
+Quality of interior materials,G70,Delightful,6,0.113
+Quality of interior materials,G60,I Love It,7,0.343
+Quality of interior materials,G70,I Love It,7,0.519
+Interior door handles,G60,I Hate It,1,0.043
+Interior door handles,G70,I Hate It,1,0.008
+Interior door handles,G60,A Failure,2,0.004
+Interior door handles,G70,A Failure,2,0.008
+Interior door handles,G60,Unsatisfactory,3,0.018
+Interior door handles,G70,Unsatisfactory,3,0.037
+Interior door handles,G60,Satisfactory,4,0.244
+Interior door handles,G70,Satisfactory,4,0.112
+Interior door handles,G60,Excellent,5,0.198
+Interior door handles,G70,Excellent,5,0.222
+Interior door handles,G60,Delightful,6,0.18
+Interior door handles,G70,Delightful,6,0.285
+Interior door handles,G60,I Love It,7,0.313
+Interior door handles,G70,I Love It,7,0.328
+Overall comfort of the seats,G60,I Hate It,1,0.017
+Overall comfort of the seats,G70,I Hate It,1,0.006
+Overall comfort of the seats,G60,A Failure,2,0.012
+Overall comfort of the seats,G70,A Failure,2,0.013
+Overall comfort of the seats,G60,Unsatisfactory,3,0.011
+Overall comfort of the seats,G70,Unsatisfactory,3,0.012
+Overall comfort of the seats,G60,Satisfactory,4,0.13
+Overall comfort of the seats,G70,Satisfactory,4,0.055
+Overall comfort of the seats,G60,Excellent,5,0.164
+Overall comfort of the seats,G70,Excellent,5,0.253
+Overall comfort of the seats,G60,Delightful,6,0.335
+Overall comfort of the seats,G70,Delightful,6,0.136
+Overall comfort of the seats,G60,I Love It,7,0.331
+Overall comfort of the seats,G70,I Love It,7,0.525
+Comfort of front seat,G60,I Hate It,1,0.011
+Comfort of front seat,G70,I Hate It,1,0.007
+Comfort of front seat,G60,A Failure,2,0.053
+Comfort of front seat,G70,A Failure,2,0.003
+Comfort of front seat,G60,Unsatisfactory,3,0.006
+Comfort of front seat,G70,Unsatisfactory,3,0.012
+Comfort of front seat,G60,Satisfactory,4,0.121
+Comfort of front seat,G70,Satisfactory,4,0.059
+Comfort of front seat,G60,Excellent,5,0.156
+Comfort of front seat,G70,Excellent,5,0.343
+Comfort of front seat,G60,Delightful,6,0.302
+Comfort of front seat,G70,Delightful,6,0.11
+Comfort of front seat,G60,I Love It,7,0.351
+Comfort of front seat,G70,I Love It,7,0.466
+Comfort of 2nd row seat,G60,I Hate It,1,0.017
+Comfort of 2nd row seat,G70,I Hate It,1,0.007
+Comfort of 2nd row seat,G60,A Failure,2,0.008
+Comfort of 2nd row seat,G70,A Failure,2,0.011
+Comfort of 2nd row seat,G60,Unsatisfactory,3,0.024
+Comfort of 2nd row seat,G70,Unsatisfactory,3,0.014
+Comfort of 2nd row seat,G60,Satisfactory,4,0.286
+Comfort of 2nd row seat,G70,Satisfactory,4,0.01
+Comfort of 2nd row seat,G60,Excellent,5,0.194
+Comfort of 2nd row seat,G70,Excellent,5,0.222
+Comfort of 2nd row seat,G60,Delightful,6,0.247
+Comfort of 2nd row seat,G70,Delightful,6,0.138
+Comfort of 2nd row seat,G60,I Love It,7,0.224
+Comfort of 2nd row seat,G70,I Love It,7,0.598
+Overall interior design / layout,G60,I Hate It,1,0.003
+Overall interior design / layout,G70,I Hate It,1,0.003
+Overall interior design / layout,G60,A Failure,2,0.013
+Overall interior design / layout,G70,A Failure,2,0.012
+Overall interior design / layout,G60,Unsatisfactory,3,0.018
+Overall interior design / layout,G70,Unsatisfactory,3,0.012
+Overall interior design / layout,G60,Satisfactory,4,0.147
+Overall interior design / layout,G70,Satisfactory,4,0.201
+Overall interior design / layout,G60,Excellent,5,0.265
+Overall interior design / layout,G70,Excellent,5,0.293
+Overall interior design / layout,G60,Delightful,6,0.196
+Overall interior design / layout,G70,Delightful,6,0.129
+Overall interior design / layout,G60,I Love It,7,0.358
+Overall interior design / layout,G70,I Love It,7,0.35
+Ease of front seat entry,G60,I Hate It,1,0.005
+Ease of front seat entry,G70,I Hate It,1,0.008
+Ease of front seat entry,G60,A Failure,2,0.013
+Ease of front seat entry,G70,A Failure,2,0.009000000000000001
+Ease of front seat entry,G60,Unsatisfactory,3,0.003
+Ease of front seat entry,G70,Unsatisfactory,3,0.006
+Ease of front seat entry,G60,Satisfactory,4,0.196
+Ease of front seat entry,G70,Satisfactory,4,0.094
+Ease of front seat entry,G60,Excellent,5,0.24
+Ease of front seat entry,G70,Excellent,5,0.298
+Ease of front seat entry,G60,Delightful,6,0.228
+Ease of front seat entry,G70,Delightful,6,0.131
+Ease of front seat entry,G60,I Love It,7,0.315
+Ease of front seat entry,G70,I Love It,7,0.454
+Front seat roominess,G60,I Hate It,1,0.005
+Front seat roominess,G70,I Hate It,1,0.012
+Front seat roominess,G60,A Failure,2,0.007
+Front seat roominess,G70,A Failure,2,0.003
+Front seat roominess,G60,Unsatisfactory,3,0.004
+Front seat roominess,G70,Unsatisfactory,3,0.009000000000000001
+Front seat roominess,G60,Satisfactory,4,0.099
+Front seat roominess,G70,Satisfactory,4,0.008
+Front seat roominess,G60,Excellent,5,0.202
+Front seat roominess,G70,Excellent,5,0.202
+Front seat roominess,G60,Delightful,6,0.358
+Front seat roominess,G70,Delightful,6,0.245
+Front seat roominess,G60,I Love It,7,0.325
+Front seat roominess,G70,I Love It,7,0.521
+Ease of 2nd row seat entry,G60,I Hate It,1,0.005
+Ease of 2nd row seat entry,G70,I Hate It,1,0.01
+Ease of 2nd row seat entry,G60,A Failure,2,0.004
+Ease of 2nd row seat entry,G70,A Failure,2,0.012
+Ease of 2nd row seat entry,G60,Unsatisfactory,3,0.005
+Ease of 2nd row seat entry,G70,Unsatisfactory,3,0.012
+Ease of 2nd row seat entry,G60,Satisfactory,4,0.246
+Ease of 2nd row seat entry,G70,Satisfactory,4,0.035
+Ease of 2nd row seat entry,G60,Excellent,5,0.282
+Ease of 2nd row seat entry,G70,Excellent,5,0.274
+Ease of 2nd row seat entry,G60,Delightful,6,0.222
+Ease of 2nd row seat entry,G70,Delightful,6,0.193
+Ease of 2nd row seat entry,G60,I Love It,7,0.236
+Ease of 2nd row seat entry,G70,I Love It,7,0.464
+2nd row seat roominess,G60,I Hate It,1,0.007
+2nd row seat roominess,G70,I Hate It,1,0.003
+2nd row seat roominess,G60,A Failure,2,0.003
+2nd row seat roominess,G70,A Failure,2,0.015
+2nd row seat roominess,G60,Unsatisfactory,3,0.014
+2nd row seat roominess,G70,Unsatisfactory,3,0.014
+2nd row seat roominess,G60,Satisfactory,4,0.283
+2nd row seat roominess,G70,Satisfactory,4,0.029
+2nd row seat roominess,G60,Excellent,5,0.22
+2nd row seat roominess,G70,Excellent,5,0.16
+2nd row seat roominess,G60,Delightful,6,0.22
+2nd row seat roominess,G70,Delightful,6,0.265
+2nd row seat roominess,G60,I Love It,7,0.253
+2nd row seat roominess,G70,I Love It,7,0.514
+Passenger seating capacity,G60,I Hate It,1,0.005
+Passenger seating capacity,G70,I Hate It,1,0.002
+Passenger seating capacity,G60,A Failure,2,0.009000000000000001
+Passenger seating capacity,G70,A Failure,2,0.015
+Passenger seating capacity,G60,Unsatisfactory,3,0.007
+Passenger seating capacity,G70,Unsatisfactory,3,0.013
+Passenger seating capacity,G60,Satisfactory,4,0.202
+Passenger seating capacity,G70,Satisfactory,4,0.153
+Passenger seating capacity,G60,Excellent,5,0.268
+Passenger seating capacity,G70,Excellent,5,0.249
+Passenger seating capacity,G60,Delightful,6,0.247
+Passenger seating capacity,G70,Delightful,6,0.176
+Passenger seating capacity,G60,I Love It,7,0.262
+Passenger seating capacity,G70,I Love It,7,0.392
+Interior roominess,G60,I Hate It,1,0.008
+Interior roominess,G70,I Hate It,1,0.007
+Interior roominess,G60,A Failure,2,0.01
+Interior roominess,G70,A Failure,2,0.013
+Interior roominess,G60,Unsatisfactory,3,0.008
+Interior roominess,G70,Unsatisfactory,3,0.008
+Interior roominess,G60,Satisfactory,4,0.118
+Interior roominess,G70,Satisfactory,4,0.018
+Interior roominess,G60,Excellent,5,0.334
+Interior roominess,G70,Excellent,5,0.358
+Interior roominess,G60,Delightful,6,0.243
+Interior roominess,G70,Delightful,6,0.18
+Interior roominess,G60,I Love It,7,0.279
+Interior roominess,G70,I Love It,7,0.416
+Interior storage,G60,I Hate It,1,0.007
+Interior storage,G70,I Hate It,1,0.006
+Interior storage,G60,A Failure,2,0.006
+Interior storage,G70,A Failure,2,0.006
+Interior storage,G60,Unsatisfactory,3,0.092
+Interior storage,G70,Unsatisfactory,3,0.045
+Interior storage,G60,Satisfactory,4,0.225
+Interior storage,G70,Satisfactory,4,0.252
+Interior storage,G60,Excellent,5,0.284
+Interior storage,G70,Excellent,5,0.251
+Interior storage,G60,Delightful,6,0.163
+Interior storage,G70,Delightful,6,0.168
+Interior storage,G60,I Love It,7,0.223
+Interior storage,G70,I Love It,7,0.272
+Trunk lid/ tailgate and liftgate operations,G60,I Hate It,1,0.004
+Trunk lid/ tailgate and liftgate operations,G70,I Hate It,1,0.01
+Trunk lid/ tailgate and liftgate operations,G60,A Failure,2,0.006
+Trunk lid/ tailgate and liftgate operations,G70,A Failure,2,0.003
+Trunk lid/ tailgate and liftgate operations,G60,Unsatisfactory,3,0.02
+Trunk lid/ tailgate and liftgate operations,G70,Unsatisfactory,3,0.009000000000000001
+Trunk lid/ tailgate and liftgate operations,G60,Satisfactory,4,0.183
+Trunk lid/ tailgate and liftgate operations,G70,Satisfactory,4,0.168
+Trunk lid/ tailgate and liftgate operations,G60,Excellent,5,0.194
+Trunk lid/ tailgate and liftgate operations,G70,Excellent,5,0.23
+Trunk lid/ tailgate and liftgate operations,G60,Delightful,6,0.147
+Trunk lid/ tailgate and liftgate operations,G70,Delightful,6,0.215
+Trunk lid/ tailgate and liftgate operations,G60,I Love It,7,0.446
+Trunk lid/ tailgate and liftgate operations,G70,I Love It,7,0.365
+Ease of loading/unloading cargo,G60,I Hate It,1,0.011
+Ease of loading/unloading cargo,G70,I Hate It,1,0.01
+Ease of loading/unloading cargo,G60,A Failure,2,0.004
+Ease of loading/unloading cargo,G70,A Failure,2,0.085
+Ease of loading/unloading cargo,G60,Unsatisfactory,3,0.019
+Ease of loading/unloading cargo,G70,Unsatisfactory,3,0.013
+Ease of loading/unloading cargo,G60,Satisfactory,4,0.17
+Ease of loading/unloading cargo,G70,Satisfactory,4,0.114
+Ease of loading/unloading cargo,G60,Excellent,5,0.311
+Ease of loading/unloading cargo,G70,Excellent,5,0.247
+Ease of loading/unloading cargo,G60,Delightful,6,0.206
+Ease of loading/unloading cargo,G70,Delightful,6,0.276
+Ease of loading/unloading cargo,G60,I Love It,7,0.279
+Ease of loading/unloading cargo,G70,I Love It,7,0.255
+Cargo capacity/usefulness,G60,I Hate It,1,0.003
+Cargo capacity/usefulness,G70,I Hate It,1,0.01
+Cargo capacity/usefulness,G60,A Failure,2,0.013
+Cargo capacity/usefulness,G70,A Failure,2,0.064
+Cargo capacity/usefulness,G60,Unsatisfactory,3,0.024
+Cargo capacity/usefulness,G70,Unsatisfactory,3,0.022
+Cargo capacity/usefulness,G60,Satisfactory,4,0.179
+Cargo capacity/usefulness,G70,Satisfactory,4,0.137
+Cargo capacity/usefulness,G60,Excellent,5,0.281
+Cargo capacity/usefulness,G70,Excellent,5,0.205
+Cargo capacity/usefulness,G60,Delightful,6,0.245
+Cargo capacity/usefulness,G70,Delightful,6,0.325
+Cargo capacity/usefulness,G60,I Love It,7,0.255
+Cargo capacity/usefulness,G70,I Love It,7,0.237
+Instrument panel (IP),G60,I Hate It,1,0.018
+Instrument panel (IP),G70,I Hate It,1,0.076
+Instrument panel (IP),G60,A Failure,2,0.045
+Instrument panel (IP),G70,A Failure,2,0.07100000000000001
+Instrument panel (IP),G60,Unsatisfactory,3,0.017
+Instrument panel (IP),G70,Unsatisfactory,3,0.022
+Instrument panel (IP),G60,Satisfactory,4,0.189
+Instrument panel (IP),G70,Satisfactory,4,0.163
+Instrument panel (IP),G60,Excellent,5,0.242
+Instrument panel (IP),G70,Excellent,5,0.295
+Instrument panel (IP),G60,Delightful,6,0.145
+Instrument panel (IP),G70,Delightful,6,0.171
+Instrument panel (IP),G60,I Love It,7,0.344
+Instrument panel (IP),G70,I Love It,7,0.202
+Cupholders,G60,I Hate It,1,0.008
+Cupholders,G70,I Hate It,1,0.056
+Cupholders,G60,A Failure,2,0.003
+Cupholders,G70,A Failure,2,0.007
+Cupholders,G60,Unsatisfactory,3,0.036
+Cupholders,G70,Unsatisfactory,3,0.066
+Cupholders,G60,Satisfactory,4,0.218
+Cupholders,G70,Satisfactory,4,0.318
+Cupholders,G60,Excellent,5,0.263
+Cupholders,G70,Excellent,5,0.23
+Cupholders,G60,Delightful,6,0.193
+Cupholders,G70,Delightful,6,0.152
+Cupholders,G60,I Love It,7,0.279
+Cupholders,G70,I Love It,7,0.171
+Provides a sense of wellbeing,G60,I Hate It,1,0.003
+Provides a sense of wellbeing,G70,I Hate It,1,0.003
+Provides a sense of wellbeing,G60,A Failure,2,0.004
+Provides a sense of wellbeing,G70,A Failure,2,0.01
+Provides a sense of wellbeing,G60,Unsatisfactory,3,0.005
+Provides a sense of wellbeing,G70,Unsatisfactory,3,0.01
+Provides a sense of wellbeing,G60,Satisfactory,4,0.088
+Provides a sense of wellbeing,G70,Satisfactory,4,0.08
+Provides a sense of wellbeing,G60,Excellent,5,0.363
+Provides a sense of wellbeing,G70,Excellent,5,0.34
+Provides a sense of wellbeing,G60,Delightful,6,0.091
+Provides a sense of wellbeing,G70,Delightful,6,0.223
+Provides a sense of wellbeing,G60,I Love It,7,0.446
+Provides a sense of wellbeing,G70,I Love It,7,0.334
+Overall interior versatility/seat stowaway,G60,I Hate It,1,0.015
+Overall interior versatility/seat stowaway,G70,I Hate It,1,0.003
+Overall interior versatility/seat stowaway,G60,A Failure,2,0.011
+Overall interior versatility/seat stowaway,G70,A Failure,2,0.003
+Overall interior versatility/seat stowaway,G60,Unsatisfactory,3,0.02
+Overall interior versatility/seat stowaway,G70,Unsatisfactory,3,0.007
+Overall interior versatility/seat stowaway,G60,Satisfactory,4,0.192
+Overall interior versatility/seat stowaway,G70,Satisfactory,4,0.191
+Overall interior versatility/seat stowaway,G60,Excellent,5,0.212
+Overall interior versatility/seat stowaway,G70,Excellent,5,0.206
+Overall interior versatility/seat stowaway,G60,Delightful,6,0.303
+Overall interior versatility/seat stowaway,G70,Delightful,6,0.226
+Overall interior versatility/seat stowaway,G60,I Love It,7,0.247
+Overall interior versatility/seat stowaway,G70,I Love It,7,0.364
+Driver seat adjustability,G60,I Hate It,1,0.023
+Driver seat adjustability,G70,I Hate It,1,0.006
+Driver seat adjustability,G60,A Failure,2,0.007
+Driver seat adjustability,G70,A Failure,2,0.014
+Driver seat adjustability,G60,Unsatisfactory,3,0.012
+Driver seat adjustability,G70,Unsatisfactory,3,0.003
+Driver seat adjustability,G60,Satisfactory,4,0.138
+Driver seat adjustability,G70,Satisfactory,4,0.232
+Driver seat adjustability,G60,Excellent,5,0.265
+Driver seat adjustability,G70,Excellent,5,0.141
+Driver seat adjustability,G60,Delightful,6,0.232
+Driver seat adjustability,G70,Delightful,6,0.141
+Driver seat adjustability,G60,I Love It,7,0.323
+Driver seat adjustability,G70,I Love It,7,0.463
+Passenger seat adjustability,G60,I Hate It,1,0.006
+Passenger seat adjustability,G70,I Hate It,1,0.007
+Passenger seat adjustability,G60,A Failure,2,0.009000000000000001
+Passenger seat adjustability,G70,A Failure,2,0.012
+Passenger seat adjustability,G60,Unsatisfactory,3,0.006
+Passenger seat adjustability,G70,Unsatisfactory,3,0.01
+Passenger seat adjustability,G60,Satisfactory,4,0.177
+Passenger seat adjustability,G70,Satisfactory,4,0.249
+Passenger seat adjustability,G60,Excellent,5,0.348
+Passenger seat adjustability,G70,Excellent,5,0.148
+Passenger seat adjustability,G60,Delightful,6,0.243
+Passenger seat adjustability,G70,Delightful,6,0.151
+Passenger seat adjustability,G60,I Love It,7,0.211
+Passenger seat adjustability,G70,I Love It,7,0.423
+Overall performance of climate control system,G60,I Hate It,1,0.017
+Overall performance of climate control system,G70,I Hate It,1,0.124
+Overall performance of climate control system,G60,A Failure,2,0.029
+Overall performance of climate control system,G70,A Failure,2,0.016
+Overall performance of climate control system,G60,Unsatisfactory,3,0.01
+Overall performance of climate control system,G70,Unsatisfactory,3,0.04
+Overall performance of climate control system,G60,Satisfactory,4,0.235
+Overall performance of climate control system,G70,Satisfactory,4,0.278
+Overall performance of climate control system,G60,Excellent,5,0.352
+Overall performance of climate control system,G70,Excellent,5,0.155
+Overall performance of climate control system,G60,Delightful,6,0.16
+Overall performance of climate control system,G70,Delightful,6,0.132
+Overall performance of climate control system,G60,I Love It,7,0.197
+Overall performance of climate control system,G70,I Love It,7,0.255
+Heater performance,G60,I Hate It,1,0.009000000000000001
+Heater performance,G70,I Hate It,1,0.042
+Heater performance,G60,A Failure,2,0.009000000000000001
+Heater performance,G70,A Failure,2,0.005
+Heater performance,G60,Unsatisfactory,3,0.04
+Heater performance,G70,Unsatisfactory,3,0.004
+Heater performance,G60,Satisfactory,4,0.247
+Heater performance,G70,Satisfactory,4,0.346
+Heater performance,G60,Excellent,5,0.282
+Heater performance,G70,Excellent,5,0.147
+Heater performance,G60,Delightful,6,0.141
+Heater performance,G70,Delightful,6,0.184
+Heater performance,G60,I Love It,7,0.272
+Heater performance,G70,I Love It,7,0.272
+Air conditioner performance,G60,I Hate It,1,0.026
+Air conditioner performance,G70,I Hate It,1,0.153
+Air conditioner performance,G60,A Failure,2,0.004
+Air conditioner performance,G70,A Failure,2,0.008
+Air conditioner performance,G60,Unsatisfactory,3,0.037
+Air conditioner performance,G70,Unsatisfactory,3,0.049
+Air conditioner performance,G60,Satisfactory,4,0.296
+Air conditioner performance,G70,Satisfactory,4,0.319
+Air conditioner performance,G60,Excellent,5,0.243
+Air conditioner performance,G70,Excellent,5,0.124
+Air conditioner performance,G60,Delightful,6,0.114
+Air conditioner performance,G70,Delightful,6,0.163
+Air conditioner performance,G60,I Love It,7,0.28
+Air conditioner performance,G70,I Love It,7,0.184
+Operation of heater/ AC controls,G60,I Hate It,1,0.042
+Operation of heater/ AC controls,G70,I Hate It,1,0.108
+Operation of heater/ AC controls,G60,A Failure,2,0.018
+Operation of heater/ AC controls,G70,A Failure,2,0.017
+Operation of heater/ AC controls,G60,Unsatisfactory,3,0.09
+Operation of heater/ AC controls,G70,Unsatisfactory,3,0.07200000000000001
+Operation of heater/ AC controls,G60,Satisfactory,4,0.288
+Operation of heater/ AC controls,G70,Satisfactory,4,0.434
+Operation of heater/ AC controls,G60,Excellent,5,0.273
+Operation of heater/ AC controls,G70,Excellent,5,0.048
+Operation of heater/ AC controls,G60,Delightful,6,0.084
+Operation of heater/ AC controls,G70,Delightful,6,0.069
+Operation of heater/ AC controls,G60,I Love It,7,0.205
+Operation of heater/ AC controls,G70,I Love It,7,0.252
+Overall performance of sound system,G60,I Hate It,1,0.015
+Overall performance of sound system,G70,I Hate It,1,0.012
+Overall performance of sound system,G60,A Failure,2,0.011
+Overall performance of sound system,G70,A Failure,2,0.059
+Overall performance of sound system,G60,Unsatisfactory,3,0.014
+Overall performance of sound system,G70,Unsatisfactory,3,0.005
+Overall performance of sound system,G60,Satisfactory,4,0.204
+Overall performance of sound system,G70,Satisfactory,4,0.256
+Overall performance of sound system,G60,Excellent,5,0.255
+Overall performance of sound system,G70,Excellent,5,0.309
+Overall performance of sound system,G60,Delightful,6,0.179
+Overall performance of sound system,G70,Delightful,6,0.116
+Overall performance of sound system,G60,I Love It,7,0.322
+Overall performance of sound system,G70,I Love It,7,0.243
+Design and integration of speakers,G60,I Hate It,1,0.015
+Design and integration of speakers,G70,I Hate It,1,0.067
+Design and integration of speakers,G60,A Failure,2,0.014
+Design and integration of speakers,G70,A Failure,2,0.013
+Design and integration of speakers,G60,Unsatisfactory,3,0.01
+Design and integration of speakers,G70,Unsatisfactory,3,0.016
+Design and integration of speakers,G60,Satisfactory,4,0.125
+Design and integration of speakers,G70,Satisfactory,4,0.282
+Design and integration of speakers,G60,Excellent,5,0.273
+Design and integration of speakers,G70,Excellent,5,0.226
+Design and integration of speakers,G60,Delightful,6,0.263
+Design and integration of speakers,G70,Delightful,6,0.149
+Design and integration of speakers,G60,I Love It,7,0.3
+Design and integration of speakers,G70,I Love It,7,0.247
+Audio clarity,G60,I Hate It,1,0.013
+Audio clarity,G70,I Hate It,1,0.067
+Audio clarity,G60,A Failure,2,0.01
+Audio clarity,G70,A Failure,2,0.006
+Audio clarity,G60,Unsatisfactory,3,0.017
+Audio clarity,G70,Unsatisfactory,3,0.013
+Audio clarity,G60,Satisfactory,4,0.152
+Audio clarity,G70,Satisfactory,4,0.265
+Audio clarity,G60,Excellent,5,0.244
+Audio clarity,G70,Excellent,5,0.284
+Audio clarity,G60,Delightful,6,0.181
+Audio clarity,G70,Delightful,6,0.096
+Audio clarity,G60,I Love It,7,0.383
+Audio clarity,G70,I Love It,7,0.269
+Bass performance,G60,I Hate It,1,0.014
+Bass performance,G70,I Hate It,1,0.074
+Bass performance,G60,A Failure,2,0.007
+Bass performance,G70,A Failure,2,0.013
+Bass performance,G60,Unsatisfactory,3,0.016
+Bass performance,G70,Unsatisfactory,3,0.014
+Bass performance,G60,Satisfactory,4,0.177
+Bass performance,G70,Satisfactory,4,0.249
+Bass performance,G60,Excellent,5,0.237
+Bass performance,G70,Excellent,5,0.307
+Bass performance,G60,Delightful,6,0.221
+Bass performance,G70,Delightful,6,0.105
+Bass performance,G60,I Love It,7,0.328
+Bass performance,G70,I Love It,7,0.238
+Placement/ ease of reading and using controls,G60,I Hate It,1,0.044
+Placement/ ease of reading and using controls,G70,I Hate It,1,0.1
+Placement/ ease of reading and using controls,G60,A Failure,2,0.009000000000000001
+Placement/ ease of reading and using controls,G70,A Failure,2,0.003
+Placement/ ease of reading and using controls,G60,Unsatisfactory,3,0.043
+Placement/ ease of reading and using controls,G70,Unsatisfactory,3,0.141
+Placement/ ease of reading and using controls,G60,Satisfactory,4,0.221
+Placement/ ease of reading and using controls,G70,Satisfactory,4,0.284
+Placement/ ease of reading and using controls,G60,Excellent,5,0.257
+Placement/ ease of reading and using controls,G70,Excellent,5,0.174
+Placement/ ease of reading and using controls,G60,Delightful,6,0.224
+Placement/ ease of reading and using controls,G70,Delightful,6,0.114
+Placement/ ease of reading and using controls,G60,I Love It,7,0.202
+Placement/ ease of reading and using controls,G70,I Love It,7,0.184
+Intuitiveness of controls,G60,I Hate It,1,0.014
+Intuitiveness of controls,G70,I Hate It,1,0.105
+Intuitiveness of controls,G60,A Failure,2,0.008
+Intuitiveness of controls,G70,A Failure,2,0.014
+Intuitiveness of controls,G60,Unsatisfactory,3,0.058
+Intuitiveness of controls,G70,Unsatisfactory,3,0.145
+Intuitiveness of controls,G60,Satisfactory,4,0.227
+Intuitiveness of controls,G70,Satisfactory,4,0.303
+Intuitiveness of controls,G60,Excellent,5,0.271
+Intuitiveness of controls,G70,Excellent,5,0.184
+Intuitiveness of controls,G60,Delightful,6,0.221
+Intuitiveness of controls,G70,Delightful,6,0.08600000000000001
+Intuitiveness of controls,G60,I Love It,7,0.201
+Intuitiveness of controls,G70,I Love It,7,0.163
+Overall noise/vibration/harshness,G60,I Hate It,1,0.013
+Overall noise/vibration/harshness,G70,I Hate It,1,0.012
+Overall noise/vibration/harshness,G60,A Failure,2,0.008
+Overall noise/vibration/harshness,G70,A Failure,2,0.011
+Overall noise/vibration/harshness,G60,Unsatisfactory,3,0.011
+Overall noise/vibration/harshness,G70,Unsatisfactory,3,0.015
+Overall noise/vibration/harshness,G60,Satisfactory,4,0.168
+Overall noise/vibration/harshness,G70,Satisfactory,4,0.044
+Overall noise/vibration/harshness,G60,Excellent,5,0.216
+Overall noise/vibration/harshness,G70,Excellent,5,0.322
+Overall noise/vibration/harshness,G60,Delightful,6,0.253
+Overall noise/vibration/harshness,G70,Delightful,6,0.269
+Overall noise/vibration/harshness,G60,I Love It,7,0.331
+Overall noise/vibration/harshness,G70,I Love It,7,0.327
+Overall vehicle sound,G60,I Hate It,1,0.003
+Overall vehicle sound,G70,I Hate It,1,0.013
+Overall vehicle sound,G60,A Failure,2,0.041
+Overall vehicle sound,G70,A Failure,2,0.015
+Overall vehicle sound,G60,Unsatisfactory,3,0.013
+Overall vehicle sound,G70,Unsatisfactory,3,0.009000000000000001
+Overall vehicle sound,G60,Satisfactory,4,0.126
+Overall vehicle sound,G70,Satisfactory,4,0.063
+Overall vehicle sound,G60,Excellent,5,0.258
+Overall vehicle sound,G70,Excellent,5,0.352
+Overall vehicle sound,G60,Delightful,6,0.256
+Overall vehicle sound,G70,Delightful,6,0.227
+Overall vehicle sound,G60,I Love It,7,0.303
+Overall vehicle sound,G70,I Love It,7,0.321
+Active noise cancellation,G60,I Hate It,1,0.003
+Active noise cancellation,G70,I Hate It,1,0.005
+Active noise cancellation,G60,A Failure,2,0.003
+Active noise cancellation,G70,A Failure,2,0.013
+Active noise cancellation,G60,Unsatisfactory,3,0.06
+Active noise cancellation,G70,Unsatisfactory,3,0.006
+Active noise cancellation,G60,Satisfactory,4,0.284
+Active noise cancellation,G70,Satisfactory,4,0.31
+Active noise cancellation,G60,Excellent,5,0.179
+Active noise cancellation,G70,Excellent,5,0.201
+Active noise cancellation,G60,Delightful,6,0.204
+Active noise cancellation,G70,Delightful,6,0.22
+Active noise cancellation,G60,I Love It,7,0.267
+Active noise cancellation,G70,I Love It,7,0.245
+Freedom from squeaks and rattles,G60,I Hate It,1,0.008
+Freedom from squeaks and rattles,G70,I Hate It,1,0.011
+Freedom from squeaks and rattles,G60,A Failure,2,0.046
+Freedom from squeaks and rattles,G70,A Failure,2,0.006
+Freedom from squeaks and rattles,G60,Unsatisfactory,3,0.026
+Freedom from squeaks and rattles,G70,Unsatisfactory,3,0.008
+Freedom from squeaks and rattles,G60,Satisfactory,4,0.151
+Freedom from squeaks and rattles,G70,Satisfactory,4,0.047
+Freedom from squeaks and rattles,G60,Excellent,5,0.202
+Freedom from squeaks and rattles,G70,Excellent,5,0.298
+Freedom from squeaks and rattles,G60,Delightful,6,0.218
+Freedom from squeaks and rattles,G70,Delightful,6,0.252
+Freedom from squeaks and rattles,G60,I Love It,7,0.349
+Freedom from squeaks and rattles,G70,I Love It,7,0.378
+Sound of engine,G60,I Hate It,1,0.006
+Sound of engine,G70,I Hate It,1,0.006
+Sound of engine,G60,A Failure,2,0.005
+Sound of engine,G70,A Failure,2,0.011
+Sound of engine,G60,Unsatisfactory,3,0.02
+Sound of engine,G70,Unsatisfactory,3,0.007
+Sound of engine,G60,Satisfactory,4,0.207
+Sound of engine,G70,Satisfactory,4,0.067
+Sound of engine,G60,Excellent,5,0.177
+Sound of engine,G70,Excellent,5,0.271
+Sound of engine,G60,Delightful,6,0.297
+Sound of engine,G70,Delightful,6,0.249
+Sound of engine,G60,I Love It,7,0.288
+Sound of engine,G70,I Love It,7,0.389
+Freedom from wind and road noise,G60,I Hate It,1,0.003
+Freedom from wind and road noise,G70,I Hate It,1,0.004
+Freedom from wind and road noise,G60,A Failure,2,0.015
+Freedom from wind and road noise,G70,A Failure,2,0.005
+Freedom from wind and road noise,G60,Unsatisfactory,3,0.041
+Freedom from wind and road noise,G70,Unsatisfactory,3,0.046
+Freedom from wind and road noise,G60,Satisfactory,4,0.132
+Freedom from wind and road noise,G70,Satisfactory,4,0.038
+Freedom from wind and road noise,G60,Excellent,5,0.252
+Freedom from wind and road noise,G70,Excellent,5,0.266
+Freedom from wind and road noise,G60,Delightful,6,0.299
+Freedom from wind and road noise,G70,Delightful,6,0.293
+Freedom from wind and road noise,G60,I Love It,7,0.258
+Freedom from wind and road noise,G70,I Love It,7,0.348
+Smoothness of transmission,G60,I Hate It,1,0.006
+Smoothness of transmission,G70,I Hate It,1,0.005
+Smoothness of transmission,G60,A Failure,2,0.009000000000000001
+Smoothness of transmission,G70,A Failure,2,0.008
+Smoothness of transmission,G60,Unsatisfactory,3,0.015
+Smoothness of transmission,G70,Unsatisfactory,3,0.008
+Smoothness of transmission,G60,Satisfactory,4,0.22
+Smoothness of transmission,G70,Satisfactory,4,0.081
+Smoothness of transmission,G60,Excellent,5,0.155
+Smoothness of transmission,G70,Excellent,5,0.284
+Smoothness of transmission,G60,Delightful,6,0.202
+Smoothness of transmission,G70,Delightful,6,0.166
+Smoothness of transmission,G60,I Love It,7,0.393
+Smoothness of transmission,G70,I Love It,7,0.448
+Overall impression of durability/reliability,G60,I Hate It,1,0.013
+Overall impression of durability/reliability,G70,I Hate It,1,0.064
+Overall impression of durability/reliability,G60,A Failure,2,0.003
+Overall impression of durability/reliability,G70,A Failure,2,0.012
+Overall impression of durability/reliability,G60,Unsatisfactory,3,0.019
+Overall impression of durability/reliability,G70,Unsatisfactory,3,0.003
+Overall impression of durability/reliability,G60,Satisfactory,4,0.139
+Overall impression of durability/reliability,G70,Satisfactory,4,0.114
+Overall impression of durability/reliability,G60,Excellent,5,0.166
+Overall impression of durability/reliability,G70,Excellent,5,0.251
+Overall impression of durability/reliability,G60,Delightful,6,0.166
+Overall impression of durability/reliability,G70,Delightful,6,0.179
+Overall impression of durability/reliability,G60,I Love It,7,0.494
+Overall impression of durability/reliability,G70,I Love It,7,0.377
+Solid vehicle construction,G60,I Hate It,1,0.009000000000000001
+Solid vehicle construction,G70,I Hate It,1,0.066
+Solid vehicle construction,G60,A Failure,2,0.002
+Solid vehicle construction,G70,A Failure,2,0.009000000000000001
+Solid vehicle construction,G60,Unsatisfactory,3,0.005
+Solid vehicle construction,G70,Unsatisfactory,3,0.016
+Solid vehicle construction,G60,Satisfactory,4,0.119
+Solid vehicle construction,G70,Satisfactory,4,0.077
+Solid vehicle construction,G60,Excellent,5,0.291
+Solid vehicle construction,G70,Excellent,5,0.201
+Solid vehicle construction,G60,Delightful,6,0.16
+Solid vehicle construction,G70,Delightful,6,0.216
+Solid vehicle construction,G60,I Love It,7,0.414
+Solid vehicle construction,G70,I Love It,7,0.415
+Freedom from electrical problems,G60,I Hate It,1,0.007
+Freedom from electrical problems,G70,I Hate It,1,0.067
+Freedom from electrical problems,G60,A Failure,2,0.004
+Freedom from electrical problems,G70,A Failure,2,0.068
+Freedom from electrical problems,G60,Unsatisfactory,3,0.021
+Freedom from electrical problems,G70,Unsatisfactory,3,0.006
+Freedom from electrical problems,G60,Satisfactory,4,0.208
+Freedom from electrical problems,G70,Satisfactory,4,0.163
+Freedom from electrical problems,G60,Excellent,5,0.351
+Freedom from electrical problems,G70,Excellent,5,0.202
+Freedom from electrical problems,G60,Delightful,6,0.107
+Freedom from electrical problems,G70,Delightful,6,0.163
+Freedom from electrical problems,G60,I Love It,7,0.302
+Freedom from electrical problems,G70,I Love It,7,0.331
+Overall safety of the vehicle,G60,I Hate It,1,0.003
+Overall safety of the vehicle,G70,I Hate It,1,0.048
+Overall safety of the vehicle,G60,A Failure,2,0.01
+Overall safety of the vehicle,G70,A Failure,2,0.006
+Overall safety of the vehicle,G60,Unsatisfactory,3,0.005
+Overall safety of the vehicle,G70,Unsatisfactory,3,0.007
+Overall safety of the vehicle,G60,Satisfactory,4,0.126
+Overall safety of the vehicle,G70,Satisfactory,4,0.074
+Overall safety of the vehicle,G60,Excellent,5,0.275
+Overall safety of the vehicle,G70,Excellent,5,0.309
+Overall safety of the vehicle,G60,Delightful,6,0.191
+Overall safety of the vehicle,G70,Delightful,6,0.131
+Overall safety of the vehicle,G60,I Love It,7,0.39
+Overall safety of the vehicle,G70,I Love It,7,0.425
+Front visibility,G60,I Hate It,1,0.008
+Front visibility,G70,I Hate It,1,0.067
+Front visibility,G60,A Failure,2,0.007
+Front visibility,G70,A Failure,2,0.007
+Front visibility,G60,Unsatisfactory,3,0.013
+Front visibility,G70,Unsatisfactory,3,0.003
+Front visibility,G60,Satisfactory,4,0.14
+Front visibility,G70,Satisfactory,4,0.097
+Front visibility,G60,Excellent,5,0.206
+Front visibility,G70,Excellent,5,0.231
+Front visibility,G60,Delightful,6,0.21
+Front visibility,G70,Delightful,6,0.112
+Front visibility,G60,I Love It,7,0.416
+Front visibility,G70,I Love It,7,0.483
+Rear visibility,G60,I Hate It,1,0.006
+Rear visibility,G70,I Hate It,1,0.011
+Rear visibility,G60,A Failure,2,0.013
+Rear visibility,G70,A Failure,2,0.003
+Rear visibility,G60,Unsatisfactory,3,0.042
+Rear visibility,G70,Unsatisfactory,3,0.014
+Rear visibility,G60,Satisfactory,4,0.175
+Rear visibility,G70,Satisfactory,4,0.347
+Rear visibility,G60,Excellent,5,0.194
+Rear visibility,G70,Excellent,5,0.245
+Rear visibility,G60,Delightful,6,0.193
+Rear visibility,G70,Delightful,6,0.101
+Rear visibility,G60,I Love It,7,0.377
+Rear visibility,G70,I Love It,7,0.279
+Braking,G60,I Hate It,1,0.005
+Braking,G70,I Hate It,1,0.054
+Braking,G60,A Failure,2,0.01
+Braking,G70,A Failure,2,0.009000000000000001
+Braking,G60,Unsatisfactory,3,0.006
+Braking,G70,Unsatisfactory,3,0.009000000000000001
+Braking,G60,Satisfactory,4,0.172
+Braking,G70,Satisfactory,4,0.117
+Braking,G60,Excellent,5,0.257
+Braking,G70,Excellent,5,0.362
+Braking,G60,Delightful,6,0.198
+Braking,G70,Delightful,6,0.141
+Braking,G60,I Love It,7,0.352
+Braking,G70,I Love It,7,0.308
+Warranty coverage,G60,I Hate It,1,0.006
+Warranty coverage,G70,I Hate It,1,0.079
+Warranty coverage,G60,A Failure,2,0.005
+Warranty coverage,G70,A Failure,2,0.006
+Warranty coverage,G60,Unsatisfactory,3,0.01
+Warranty coverage,G70,Unsatisfactory,3,0.014
+Warranty coverage,G60,Satisfactory,4,0.34
+Warranty coverage,G70,Satisfactory,4,0.44
+Warranty coverage,G60,Excellent,5,0.193
+Warranty coverage,G70,Excellent,5,0.2
+Warranty coverage,G60,Delightful,6,0.15
+Warranty coverage,G70,Delightful,6,0.109
+Warranty coverage,G60,I Love It,7,0.296
+Warranty coverage,G70,I Love It,7,0.152
+Headlight function/ brightness,G60,I Hate It,1,0.01
+Headlight function/ brightness,G70,I Hate It,1,0.068
+Headlight function/ brightness,G60,A Failure,2,0.006
+Headlight function/ brightness,G70,A Failure,2,0.011
+Headlight function/ brightness,G60,Unsatisfactory,3,0.013
+Headlight function/ brightness,G70,Unsatisfactory,3,0.017
+Headlight function/ brightness,G60,Satisfactory,4,0.104
+Headlight function/ brightness,G70,Satisfactory,4,0.081
+Headlight function/ brightness,G60,Excellent,5,0.164
+Headlight function/ brightness,G70,Excellent,5,0.21
+Headlight function/ brightness,G60,Delightful,6,0.291
+Headlight function/ brightness,G70,Delightful,6,0.257
+Headlight function/ brightness,G60,I Love It,7,0.412
+Headlight function/ brightness,G70,I Love It,7,0.356
+Technical innovations,G60,I Hate It,1,0.011
+Technical innovations,G70,I Hate It,1,0.062
+Technical innovations,G60,A Failure,2,0.007
+Technical innovations,G70,A Failure,2,0.077
+Technical innovations,G60,Unsatisfactory,3,0.006
+Technical innovations,G70,Unsatisfactory,3,0.017
+Technical innovations,G60,Satisfactory,4,0.199
+Technical innovations,G70,Satisfactory,4,0.052
+Technical innovations,G60,Excellent,5,0.3
+Technical innovations,G70,Excellent,5,0.31
+Technical innovations,G60,Delightful,6,0.215
+Technical innovations,G70,Delightful,6,0.168
+Technical innovations,G60,I Love It,7,0.262
+Technical innovations,G70,I Love It,7,0.314
+Level of standard equipment,G60,I Hate It,1,0.015
+Level of standard equipment,G70,I Hate It,1,0.053
+Level of standard equipment,G60,A Failure,2,0.004
+Level of standard equipment,G70,A Failure,2,0.012
+Level of standard equipment,G60,Unsatisfactory,3,0.006
+Level of standard equipment,G70,Unsatisfactory,3,0.028
+Level of standard equipment,G60,Satisfactory,4,0.216
+Level of standard equipment,G70,Satisfactory,4,0.164
+Level of standard equipment,G60,Excellent,5,0.376
+Level of standard equipment,G70,Excellent,5,0.217
+Level of standard equipment,G60,Delightful,6,0.103
+Level of standard equipment,G70,Delightful,6,0.094
+Level of standard equipment,G60,I Love It,7,0.28
+Level of standard equipment,G70,I Love It,7,0.432
+Overall value for money,G60,I Hate It,1,0.009000000000000001
+Overall value for money,G70,I Hate It,1,0.056
+Overall value for money,G60,A Failure,2,0.006
+Overall value for money,G70,A Failure,2,0.004
+Overall value for money,G60,Unsatisfactory,3,0.033
+Overall value for money,G70,Unsatisfactory,3,0.014
+Overall value for money,G60,Satisfactory,4,0.288
+Overall value for money,G70,Satisfactory,4,0.346
+Overall value for money,G60,Excellent,5,0.288
+Overall value for money,G70,Excellent,5,0.309
+Overall value for money,G60,Delightful,6,0.108
+Overall value for money,G70,Delightful,6,0.133
+Overall value for money,G60,I Love It,7,0.268
+Overall value for money,G70,I Love It,7,0.138
+Price/deal offered,G60,I Hate It,1,0.01
+Price/deal offered,G70,I Hate It,1,0.119
+Price/deal offered,G60,A Failure,2,0.012
+Price/deal offered,G70,A Failure,2,0.008
+Price/deal offered,G60,Unsatisfactory,3,0.035
+Price/deal offered,G70,Unsatisfactory,3,0.036
+Price/deal offered,G60,Satisfactory,4,0.381
+Price/deal offered,G70,Satisfactory,4,0.396
+Price/deal offered,G60,Excellent,5,0.199
+Price/deal offered,G70,Excellent,5,0.298
+Price/deal offered,G60,Delightful,6,0.162
+Price/deal offered,G70,Delightful,6,0.069
+Price/deal offered,G60,I Love It,7,0.201
+Price/deal offered,G70,I Love It,7,0.074
+Future trade-in or resale value,G60,I Hate It,1,0.01
+Future trade-in or resale value,G70,I Hate It,1,0.12
+Future trade-in or resale value,G60,A Failure,2,0.03
+Future trade-in or resale value,G70,A Failure,2,0.111
+Future trade-in or resale value,G60,Unsatisfactory,3,0.094
+Future trade-in or resale value,G70,Unsatisfactory,3,0.106
+Future trade-in or resale value,G60,Satisfactory,4,0.319
+Future trade-in or resale value,G70,Satisfactory,4,0.407
+Future trade-in or resale value,G60,Excellent,5,0.188
+Future trade-in or resale value,G70,Excellent,5,0.124
+Future trade-in or resale value,G60,Delightful,6,0.158
+Future trade-in or resale value,G70,Delightful,6,0.062
+Future trade-in or resale value,G60,I Love It,7,0.201
+Future trade-in or resale value,G70,I Love It,7,0.07
+Gas or electric mileage (fuel economy),G60,I Hate It,1,0.005
+Gas or electric mileage (fuel economy),G70,I Hate It,1,0.052
+Gas or electric mileage (fuel economy),G60,A Failure,2,0.03
+Gas or electric mileage (fuel economy),G70,A Failure,2,0.013
+Gas or electric mileage (fuel economy),G60,Unsatisfactory,3,0.035
+Gas or electric mileage (fuel economy),G70,Unsatisfactory,3,0.008
+Gas or electric mileage (fuel economy),G60,Satisfactory,4,0.183
+Gas or electric mileage (fuel economy),G70,Satisfactory,4,0.329
+Gas or electric mileage (fuel economy),G60,Excellent,5,0.267
+Gas or electric mileage (fuel economy),G70,Excellent,5,0.277
+Gas or electric mileage (fuel economy),G60,Delightful,6,0.119
+Gas or electric mileage (fuel economy),G70,Delightful,6,0.06
+Gas or electric mileage (fuel economy),G60,I Love It,7,0.361
+Gas or electric mileage (fuel economy),G70,I Love It,7,0.261
+Economical to own (cost of ownership),G60,I Hate It,1,0.005
+Economical to own (cost of ownership),G70,I Hate It,1,0.148
+Economical to own (cost of ownership),G60,A Failure,2,0.011
+Economical to own (cost of ownership),G70,A Failure,2,0.013
+Economical to own (cost of ownership),G60,Unsatisfactory,3,0.052
+Economical to own (cost of ownership),G70,Unsatisfactory,3,0.084
+Economical to own (cost of ownership),G60,Satisfactory,4,0.345
+Economical to own (cost of ownership),G70,Satisfactory,4,0.445
+Economical to own (cost of ownership),G60,Excellent,5,0.306
+Economical to own (cost of ownership),G70,Excellent,5,0.147
+Economical to own (cost of ownership),G60,Delightful,6,0.093
+Economical to own (cost of ownership),G70,Delightful,6,0.053
+Economical to own (cost of ownership),G60,I Love It,7,0.188
+Economical to own (cost of ownership),G70,I Love It,7,0.11
+Affordable to buy,G60,I Hate It,1,0.005
+Affordable to buy,G70,I Hate It,1,0.164
+Affordable to buy,G60,A Failure,2,0.007
+Affordable to buy,G70,A Failure,2,0.004
+Affordable to buy,G60,Unsatisfactory,3,0.068
+Affordable to buy,G70,Unsatisfactory,3,0.064
+Affordable to buy,G60,Satisfactory,4,0.453
+Affordable to buy,G70,Satisfactory,4,0.536
+Affordable to buy,G60,Excellent,5,0.27
+Affordable to buy,G70,Excellent,5,0.169
+Affordable to buy,G60,Delightful,6,0.06
+Affordable to buy,G70,Delightful,6,0.014
+Affordable to buy,G60,I Love It,7,0.137
+Affordable to buy,G70,I Love It,7,0.049
+Overall brand image,G60,I Hate It,1,0.015
+Overall brand image,G70,I Hate It,1,0.053
+Overall brand image,G60,A Failure,2,0.01
+Overall brand image,G70,A Failure,2,0.013
+Overall brand image,G60,Unsatisfactory,3,0.003
+Overall brand image,G70,Unsatisfactory,3,0.005
+Overall brand image,G60,Satisfactory,4,0.131
+Overall brand image,G70,Satisfactory,4,0.102
+Overall brand image,G60,Excellent,5,0.144
+Overall brand image,G70,Excellent,5,0.205
+Overall brand image,G60,Delightful,6,0.319
+Overall brand image,G70,Delightful,6,0.149
+Overall brand image,G60,I Love It,7,0.378
+Overall brand image,G70,I Love It,7,0.473
+Reputation/prestige of manufacturer,G60,I Hate It,1,0.003
+Reputation/prestige of manufacturer,G70,I Hate It,1,0.05
+Reputation/prestige of manufacturer,G60,A Failure,2,0.007
+Reputation/prestige of manufacturer,G70,A Failure,2,0.009000000000000001
+Reputation/prestige of manufacturer,G60,Unsatisfactory,3,0.003
+Reputation/prestige of manufacturer,G70,Unsatisfactory,3,0.008
+Reputation/prestige of manufacturer,G60,Satisfactory,4,0.117
+Reputation/prestige of manufacturer,G70,Satisfactory,4,0.024
+Reputation/prestige of manufacturer,G60,Excellent,5,0.165
+Reputation/prestige of manufacturer,G70,Excellent,5,0.254
+Reputation/prestige of manufacturer,G60,Delightful,6,0.18
+Reputation/prestige of manufacturer,G70,Delightful,6,0.201
+Reputation/prestige of manufacturer,G60,I Love It,7,0.525
+Reputation/prestige of manufacturer,G70,I Love It,7,0.454
+Overall vehicle image,G60,I Hate It,1,0.012
+Overall vehicle image,G70,I Hate It,1,0.055
+Overall vehicle image,G60,A Failure,2,0.003
+Overall vehicle image,G70,A Failure,2,0.003
+Overall vehicle image,G60,Unsatisfactory,3,0.002
+Overall vehicle image,G70,Unsatisfactory,3,0.014
+Overall vehicle image,G60,Satisfactory,4,0.135
+Overall vehicle image,G70,Satisfactory,4,0.046
+Overall vehicle image,G60,Excellent,5,0.228
+Overall vehicle image,G70,Excellent,5,0.322
+Overall vehicle image,G60,Delightful,6,0.17
+Overall vehicle image,G70,Delightful,6,0.117
+Overall vehicle image,G60,I Love It,7,0.45
+Overall vehicle image,G70,I Love It,7,0.443
+Overall driver assist features,G60,I Hate It,1,0.007
+Overall driver assist features,G70,I Hate It,1,0.055
+Overall driver assist features,G60,A Failure,2,0.003
+Overall driver assist features,G70,A Failure,2,0.012
+Overall driver assist features,G60,Unsatisfactory,3,0.007
+Overall driver assist features,G70,Unsatisfactory,3,0.015
+Overall driver assist features,G60,Satisfactory,4,0.165
+Overall driver assist features,G70,Satisfactory,4,0.3
+Overall driver assist features,G60,Excellent,5,0.358
+Overall driver assist features,G70,Excellent,5,0.092
+Overall driver assist features,G60,Delightful,6,0.125
+Overall driver assist features,G70,Delightful,6,0.157
+Overall driver assist features,G60,I Love It,7,0.335
+Overall driver assist features,G70,I Love It,7,0.369
+"If applicable: Backup system (camera, sensors, etc.)",G60,I Hate It,1,0.003
+"If applicable: Backup system (camera, sensors, etc.)",G70,I Hate It,1,0.07200000000000001
+"If applicable: Backup system (camera, sensors, etc.)",G60,A Failure,2,0.003
+"If applicable: Backup system (camera, sensors, etc.)",G70,A Failure,2,0.004
+"If applicable: Backup system (camera, sensors, etc.)",G60,Unsatisfactory,3,0.005
+"If applicable: Backup system (camera, sensors, etc.)",G70,Unsatisfactory,3,0.005
+"If applicable: Backup system (camera, sensors, etc.)",G60,Satisfactory,4,0.108
+"If applicable: Backup system (camera, sensors, etc.)",G70,Satisfactory,4,0.119
+"If applicable: Backup system (camera, sensors, etc.)",G60,Excellent,5,0.297
+"If applicable: Backup system (camera, sensors, etc.)",G70,Excellent,5,0.292
+"If applicable: Backup system (camera, sensors, etc.)",G60,Delightful,6,0.229
+"If applicable: Backup system (camera, sensors, etc.)",G70,Delightful,6,0.125
+"If applicable: Backup system (camera, sensors, etc.)",G60,I Love It,7,0.355
+"If applicable: Backup system (camera, sensors, etc.)",G70,I Love It,7,0.383
+"Safety monitoring features (blid spot warning, lane departure warning, etc)",G60,I Hate It,1,0.003
+"Safety monitoring features (blid spot warning, lane departure warning, etc)",G70,I Hate It,1,0.064
+"Safety monitoring features (blid spot warning, lane departure warning, etc)",G60,A Failure,2,0.01
+"Safety monitoring features (blid spot warning, lane departure warning, etc)",G70,A Failure,2,0.011
+"Safety monitoring features (blid spot warning, lane departure warning, etc)",G60,Unsatisfactory,3,0.003
+"Safety monitoring features (blid spot warning, lane departure warning, etc)",G70,Unsatisfactory,3,0.006
+"Safety monitoring features (blid spot warning, lane departure warning, etc)",G60,Satisfactory,4,0.154
+"Safety monitoring features (blid spot warning, lane departure warning, etc)",G70,Satisfactory,4,0.297
+"Safety monitoring features (blid spot warning, lane departure warning, etc)",G60,Excellent,5,0.259
+"Safety monitoring features (blid spot warning, lane departure warning, etc)",G70,Excellent,5,0.104
+"Safety monitoring features (blid spot warning, lane departure warning, etc)",G60,Delightful,6,0.217
+"Safety monitoring features (blid spot warning, lane departure warning, etc)",G70,Delightful,6,0.127
+"Safety monitoring features (blid spot warning, lane departure warning, etc)",G60,I Love It,7,0.354
+"Safety monitoring features (blid spot warning, lane departure warning, etc)",G70,I Love It,7,0.391
+"Adaptive driving assists (lane keeping, cruise, braking)",G60,I Hate It,1,0.005
+"Adaptive driving assists (lane keeping, cruise, braking)",G70,I Hate It,1,0.064
+"Adaptive driving assists (lane keeping, cruise, braking)",G60,A Failure,2,0.006
+"Adaptive driving assists (lane keeping, cruise, braking)",G70,A Failure,2,0.011
+"Adaptive driving assists (lane keeping, cruise, braking)",G60,Unsatisfactory,3,0.007
+"Adaptive driving assists (lane keeping, cruise, braking)",G70,Unsatisfactory,3,0.005
+"Adaptive driving assists (lane keeping, cruise, braking)",G60,Satisfactory,4,0.198
+"Adaptive driving assists (lane keeping, cruise, braking)",G70,Satisfactory,4,0.248
+"Adaptive driving assists (lane keeping, cruise, braking)",G60,Excellent,5,0.172
+"Adaptive driving assists (lane keeping, cruise, braking)",G70,Excellent,5,0.174
+"Adaptive driving assists (lane keeping, cruise, braking)",G60,Delightful,6,0.2
+"Adaptive driving assists (lane keeping, cruise, braking)",G70,Delightful,6,0.133
+"Adaptive driving assists (lane keeping, cruise, braking)",G60,I Love It,7,0.412
+"Adaptive driving assists (lane keeping, cruise, braking)",G70,I Love It,7,0.365
+Overall driver-vehicle interaction (HMI),G60,I Hate It,1,0.005
+Overall driver-vehicle interaction (HMI),G70,I Hate It,1,0.063
+Overall driver-vehicle interaction (HMI),G60,A Failure,2,0.009000000000000001
+Overall driver-vehicle interaction (HMI),G70,A Failure,2,0.007
+Overall driver-vehicle interaction (HMI),G60,Unsatisfactory,3,0.024
+Overall driver-vehicle interaction (HMI),G70,Unsatisfactory,3,0.02
+Overall driver-vehicle interaction (HMI),G60,Satisfactory,4,0.156
+Overall driver-vehicle interaction (HMI),G70,Satisfactory,4,0.318
+Overall driver-vehicle interaction (HMI),G60,Excellent,5,0.355
+Overall driver-vehicle interaction (HMI),G70,Excellent,5,0.225
+Overall driver-vehicle interaction (HMI),G60,Delightful,6,0.163
+Overall driver-vehicle interaction (HMI),G70,Delightful,6,0.05
+Overall driver-vehicle interaction (HMI),G60,I Love It,7,0.288
+Overall driver-vehicle interaction (HMI),G70,I Love It,7,0.317
+If applicable: Navigation system,G60,I Hate It,1,0.007
+If applicable: Navigation system,G70,I Hate It,1,0.109
+If applicable: Navigation system,G60,A Failure,2,0.003
+If applicable: Navigation system,G70,A Failure,2,0.016
+If applicable: Navigation system,G60,Unsatisfactory,3,0.019
+If applicable: Navigation system,G70,Unsatisfactory,3,0.007
+If applicable: Navigation system,G60,Satisfactory,4,0.239
+If applicable: Navigation system,G70,Satisfactory,4,0.269
+If applicable: Navigation system,G60,Excellent,5,0.202
+If applicable: Navigation system,G70,Excellent,5,0.211
+If applicable: Navigation system,G60,Delightful,6,0.217
+If applicable: Navigation system,G70,Delightful,6,0.159
+If applicable: Navigation system,G60,I Love It,7,0.313
+If applicable: Navigation system,G70,I Love It,7,0.229
+Bluetooth/ smartphone pairing,G60,I Hate It,1,0.009000000000000001
+Bluetooth/ smartphone pairing,G70,I Hate It,1,0.077
+Bluetooth/ smartphone pairing,G60,A Failure,2,0.003
+Bluetooth/ smartphone pairing,G70,A Failure,2,0.07200000000000001
+Bluetooth/ smartphone pairing,G60,Unsatisfactory,3,0.016
+Bluetooth/ smartphone pairing,G70,Unsatisfactory,3,0.019
+Bluetooth/ smartphone pairing,G60,Satisfactory,4,0.248
+Bluetooth/ smartphone pairing,G70,Satisfactory,4,0.206
+Bluetooth/ smartphone pairing,G60,Excellent,5,0.158
+Bluetooth/ smartphone pairing,G70,Excellent,5,0.165
+Bluetooth/ smartphone pairing,G60,Delightful,6,0.215
+Bluetooth/ smartphone pairing,G70,Delightful,6,0.123
+Bluetooth/ smartphone pairing,G60,I Love It,7,0.351
+Bluetooth/ smartphone pairing,G70,I Love It,7,0.338
+WiFi hotspot in vehicle,G60,I Hate It,1,0.012
+WiFi hotspot in vehicle,G70,I Hate It,1,0.088
+WiFi hotspot in vehicle,G60,A Failure,2,0.06
+WiFi hotspot in vehicle,G70,A Failure,2,0.094
+WiFi hotspot in vehicle,G60,Unsatisfactory,3,0.062
+WiFi hotspot in vehicle,G70,Unsatisfactory,3,0.013
+WiFi hotspot in vehicle,G60,Satisfactory,4,0.29
+WiFi hotspot in vehicle,G70,Satisfactory,4,0.261
+WiFi hotspot in vehicle,G60,Excellent,5,0.193
+WiFi hotspot in vehicle,G70,Excellent,5,0.265
+WiFi hotspot in vehicle,G60,Delightful,6,0.148
+WiFi hotspot in vehicle,G70,Delightful,6,0.132
+WiFi hotspot in vehicle,G60,I Love It,7,0.235
+WiFi hotspot in vehicle,G70,I Love It,7,0.147
+Mirroring of smartphone content on vehicle display,G60,I Hate It,1,0.007
+Mirroring of smartphone content on vehicle display,G70,I Hate It,1,0.075
+Mirroring of smartphone content on vehicle display,G60,A Failure,2,0.005
+Mirroring of smartphone content on vehicle display,G70,A Failure,2,0.006
+Mirroring of smartphone content on vehicle display,G60,Unsatisfactory,3,0.04
+Mirroring of smartphone content on vehicle display,G70,Unsatisfactory,3,0.029
+Mirroring of smartphone content on vehicle display,G60,Satisfactory,4,0.201
+Mirroring of smartphone content on vehicle display,G70,Satisfactory,4,0.384
+Mirroring of smartphone content on vehicle display,G60,Excellent,5,0.248
+Mirroring of smartphone content on vehicle display,G70,Excellent,5,0.173
+Mirroring of smartphone content on vehicle display,G60,Delightful,6,0.189
+Mirroring of smartphone content on vehicle display,G70,Delightful,6,0.117
+Mirroring of smartphone content on vehicle display,G60,I Love It,7,0.31
+Mirroring of smartphone content on vehicle display,G70,I Love It,7,0.216
+Place for phone,G60,I Hate It,1,0.006
+Place for phone,G70,I Hate It,1,0.06
+Place for phone,G60,A Failure,2,0.006
+Place for phone,G70,A Failure,2,0.025
+Place for phone,G60,Unsatisfactory,3,0.034
+Place for phone,G70,Unsatisfactory,3,0.084
+Place for phone,G60,Satisfactory,4,0.233
+Place for phone,G70,Satisfactory,4,0.257
+Place for phone,G60,Excellent,5,0.191
+Place for phone,G70,Excellent,5,0.308
+Place for phone,G60,Delightful,6,0.244
+Place for phone,G70,Delightful,6,0.017
+Place for phone,G60,I Love It,7,0.286
+Place for phone,G70,I Love It,7,0.249
+Phone charging,G60,I Hate It,1,0.013
+Phone charging,G70,I Hate It,1,0.066
+Phone charging,G60,A Failure,2,0.064
+Phone charging,G70,A Failure,2,0.015
+Phone charging,G60,Unsatisfactory,3,0.025
+Phone charging,G70,Unsatisfactory,3,0.103
+Phone charging,G60,Satisfactory,4,0.188
+Phone charging,G70,Satisfactory,4,0.201
+Phone charging,G60,Excellent,5,0.146
+Phone charging,G70,Excellent,5,0.23
+Phone charging,G60,Delightful,6,0.181
+Phone charging,G70,Delightful,6,0.066
+Phone charging,G60,I Love It,7,0.383
+Phone charging,G70,I Love It,7,0.319
+Ease of reading and using screen interface,G60,I Hate It,1,0.02
+Ease of reading and using screen interface,G70,I Hate It,1,0.05
+Ease of reading and using screen interface,G60,A Failure,2,0.013
+Ease of reading and using screen interface,G70,A Failure,2,0.006
+Ease of reading and using screen interface,G60,Unsatisfactory,3,0.047
+Ease of reading and using screen interface,G70,Unsatisfactory,3,0.137
+Ease of reading and using screen interface,G60,Satisfactory,4,0.244
+Ease of reading and using screen interface,G70,Satisfactory,4,0.206
+Ease of reading and using screen interface,G60,Excellent,5,0.178
+Ease of reading and using screen interface,G70,Excellent,5,0.249
+Ease of reading and using screen interface,G60,Delightful,6,0.288
+Ease of reading and using screen interface,G70,Delightful,6,0.117
+Ease of reading and using screen interface,G60,I Love It,7,0.21
+Ease of reading and using screen interface,G70,I Love It,7,0.235
+Head-up Display,G60,I Hate It,1,0.005
+Head-up Display,G70,I Hate It,1,0.009000000000000001
+Head-up Display,G60,A Failure,2,0.012
+Head-up Display,G70,A Failure,2,0.091
+Head-up Display,G60,Unsatisfactory,3,0.005
+Head-up Display,G70,Unsatisfactory,3,0.01
+Head-up Display,G60,Satisfactory,4,0.228
+Head-up Display,G70,Satisfactory,4,0.147
+Head-up Display,G60,Excellent,5,0.151
+Head-up Display,G70,Excellent,5,0.228
+Head-up Display,G60,Delightful,6,0.162
+Head-up Display,G70,Delightful,6,0.081
+Head-up Display,G60,I Love It,7,0.437
+Head-up Display,G70,I Love It,7,0.434
+Position/ integration of displays in dashboard,G60,I Hate It,1,0.039
+Position/ integration of displays in dashboard,G70,I Hate It,1,0.054
+Position/ integration of displays in dashboard,G60,A Failure,2,0.013
+Position/ integration of displays in dashboard,G70,A Failure,2,0.005
+Position/ integration of displays in dashboard,G60,Unsatisfactory,3,0.035
+Position/ integration of displays in dashboard,G70,Unsatisfactory,3,0.04
+Position/ integration of displays in dashboard,G60,Satisfactory,4,0.19
+Position/ integration of displays in dashboard,G70,Satisfactory,4,0.31
+Position/ integration of displays in dashboard,G60,Excellent,5,0.297
+Position/ integration of displays in dashboard,G70,Excellent,5,0.229
+Position/ integration of displays in dashboard,G60,Delightful,6,0.24
+Position/ integration of displays in dashboard,G70,Delightful,6,0.107
+Position/ integration of displays in dashboard,G60,I Love It,7,0.186
+Position/ integration of displays in dashboard,G70,I Love It,7,0.255
+Menu structure of infotainment system,G60,I Hate It,1,0.05
+Menu structure of infotainment system,G70,I Hate It,1,0.078
+Menu structure of infotainment system,G60,A Failure,2,0.017
+Menu structure of infotainment system,G70,A Failure,2,0.074
+Menu structure of infotainment system,G60,Unsatisfactory,3,0.059
+Menu structure of infotainment system,G70,Unsatisfactory,3,0.058
+Menu structure of infotainment system,G60,Satisfactory,4,0.261
+Menu structure of infotainment system,G70,Satisfactory,4,0.297
+Menu structure of infotainment system,G60,Excellent,5,0.256
+Menu structure of infotainment system,G70,Excellent,5,0.174
+Menu structure of infotainment system,G60,Delightful,6,0.205
+Menu structure of infotainment system,G70,Delightful,6,0.117
+Menu structure of infotainment system,G60,I Love It,7,0.152
+Menu structure of infotainment system,G70,I Love It,7,0.202
+"If applicable: Interactive information system (e.g., OnStar, mbrace, iDrive)",G60,I Hate It,1,0.005
+"If applicable: Interactive information system (e.g., OnStar, mbrace, iDrive)",G70,I Hate It,1,0.078
+"If applicable: Interactive information system (e.g., OnStar, mbrace, iDrive)",G60,A Failure,2,0.04
+"If applicable: Interactive information system (e.g., OnStar, mbrace, iDrive)",G70,A Failure,2,0.006
+"If applicable: Interactive information system (e.g., OnStar, mbrace, iDrive)",G60,Unsatisfactory,3,0.021
+"If applicable: Interactive information system (e.g., OnStar, mbrace, iDrive)",G70,Unsatisfactory,3,0.017
+"If applicable: Interactive information system (e.g., OnStar, mbrace, iDrive)",G60,Satisfactory,4,0.263
+"If applicable: Interactive information system (e.g., OnStar, mbrace, iDrive)",G70,Satisfactory,4,0.274
+"If applicable: Interactive information system (e.g., OnStar, mbrace, iDrive)",G60,Excellent,5,0.314
+"If applicable: Interactive information system (e.g., OnStar, mbrace, iDrive)",G70,Excellent,5,0.347
+"If applicable: Interactive information system (e.g., OnStar, mbrace, iDrive)",G60,Delightful,6,0.144
+"If applicable: Interactive information system (e.g., OnStar, mbrace, iDrive)",G70,Delightful,6,0.08600000000000001
+"If applicable: Interactive information system (e.g., OnStar, mbrace, iDrive)",G60,I Love It,7,0.213
+"If applicable: Interactive information system (e.g., OnStar, mbrace, iDrive)",G70,I Love It,7,0.192
+Performance of voice recognition,G60,I Hate It,1,0.005
+Performance of voice recognition,G70,I Hate It,1,0.065
+Performance of voice recognition,G60,A Failure,2,0.016
+Performance of voice recognition,G70,A Failure,2,0.011
+Performance of voice recognition,G60,Unsatisfactory,3,0.142
+Performance of voice recognition,G70,Unsatisfactory,3,0.106
+Performance of voice recognition,G60,Satisfactory,4,0.219
+Performance of voice recognition,G70,Satisfactory,4,0.3
+Performance of voice recognition,G60,Excellent,5,0.233
+Performance of voice recognition,G70,Excellent,5,0.156
+Performance of voice recognition,G60,Delightful,6,0.208
+Performance of voice recognition,G70,Delightful,6,0.159
+Performance of voice recognition,G60,I Love It,7,0.177
+Performance of voice recognition,G70,I Love It,7,0.203
+Vehicle's Mobile App,G60,I Hate It,1,0.006
+Vehicle's Mobile App,G70,I Hate It,1,0.066
+Vehicle's Mobile App,G60,A Failure,2,0.012
+Vehicle's Mobile App,G70,A Failure,2,0.013
+Vehicle's Mobile App,G60,Unsatisfactory,3,0.014
+Vehicle's Mobile App,G70,Unsatisfactory,3,0.026
+Vehicle's Mobile App,G60,Satisfactory,4,0.156
+Vehicle's Mobile App,G70,Satisfactory,4,0.293
+Vehicle's Mobile App,G60,Excellent,5,0.275
+Vehicle's Mobile App,G70,Excellent,5,0.209
+Vehicle's Mobile App,G60,Delightful,6,0.19
+Vehicle's Mobile App,G70,Delightful,6,0.136
+Vehicle's Mobile App,G60,I Love It,7,0.347
+Vehicle's Mobile App,G70,I Love It,7,0.257
+Overall environmental friendliness,G60,I Hate It,1,0.002
+Overall environmental friendliness,G70,I Hate It,1,0.058
+Overall environmental friendliness,G60,A Failure,2,0.012
+Overall environmental friendliness,G70,A Failure,2,0.015
+Overall environmental friendliness,G60,Unsatisfactory,3,0.015
+Overall environmental friendliness,G70,Unsatisfactory,3,0.005
+Overall environmental friendliness,G60,Satisfactory,4,0.3
+Overall environmental friendliness,G70,Satisfactory,4,0.345
+Overall environmental friendliness,G60,Excellent,5,0.164
+Overall environmental friendliness,G70,Excellent,5,0.2
+Overall environmental friendliness,G60,Delightful,6,0.157
+Overall environmental friendliness,G70,Delightful,6,0.129
+Overall environmental friendliness,G60,I Love It,7,0.35
+Overall environmental friendliness,G70,I Love It,7,0.248
+"If applicable: Flat tire preparedness (spare, run flat, etc.)",G60,I Hate It,1,0.026
+"If applicable: Flat tire preparedness (spare, run flat, etc.)",G70,I Hate It,1,0.169
+"If applicable: Flat tire preparedness (spare, run flat, etc.)",G60,A Failure,2,0.06
+"If applicable: Flat tire preparedness (spare, run flat, etc.)",G70,A Failure,2,0.097
+"If applicable: Flat tire preparedness (spare, run flat, etc.)",G60,Unsatisfactory,3,0.096
+"If applicable: Flat tire preparedness (spare, run flat, etc.)",G70,Unsatisfactory,3,0.055
+"If applicable: Flat tire preparedness (spare, run flat, etc.)",G60,Satisfactory,4,0.32
+"If applicable: Flat tire preparedness (spare, run flat, etc.)",G70,Satisfactory,4,0.225
+"If applicable: Flat tire preparedness (spare, run flat, etc.)",G60,Excellent,5,0.145
+"If applicable: Flat tire preparedness (spare, run flat, etc.)",G70,Excellent,5,0.185
+"If applicable: Flat tire preparedness (spare, run flat, etc.)",G60,Delightful,6,0.228
+"If applicable: Flat tire preparedness (spare, run flat, etc.)",G70,Delightful,6,0.014
+"If applicable: Flat tire preparedness (spare, run flat, etc.)",G60,I Love It,7,0.125
+"If applicable: Flat tire preparedness (spare, run flat, etc.)",G70,I Love It,7,0.255
+If applicable: Sunroof/ moonroof,G60,I Hate It,1,0.013
+If applicable: Sunroof/ moonroof,G70,I Hate It,1,0.007
+If applicable: Sunroof/ moonroof,G60,A Failure,2,0.003
+If applicable: Sunroof/ moonroof,G70,A Failure,2,0.013
+If applicable: Sunroof/ moonroof,G60,Unsatisfactory,3,0.014
+If applicable: Sunroof/ moonroof,G70,Unsatisfactory,3,0.034
+If applicable: Sunroof/ moonroof,G60,Satisfactory,4,0.373
+If applicable: Sunroof/ moonroof,G70,Satisfactory,4,0.434
+If applicable: Sunroof/ moonroof,G60,Excellent,5,0.206
+If applicable: Sunroof/ moonroof,G70,Excellent,5,0.192
+If applicable: Sunroof/ moonroof,G60,Delightful,6,0.132
+If applicable: Sunroof/ moonroof,G70,Delightful,6,0.015
+If applicable: Sunroof/ moonroof,G60,I Love It,7,0.259
+If applicable: Sunroof/ moonroof,G70,I Love It,7,0.305
+If applicable: Ease of customization,G60,I Hate It,1,0.002
+If applicable: Ease of customization,G70,I Hate It,1,0.179
+If applicable: Ease of customization,G60,A Failure,2,0.007
+If applicable: Ease of customization,G70,A Failure,2,0.006
+If applicable: Ease of customization,G60,Unsatisfactory,3,0.067
+If applicable: Ease of customization,G70,Unsatisfactory,3,0.117
+If applicable: Ease of customization,G60,Satisfactory,4,0.289
+If applicable: Ease of customization,G70,Satisfactory,4,0.23
+If applicable: Ease of customization,G60,Excellent,5,0.198
+If applicable: Ease of customization,G70,Excellent,5,0.192
+If applicable: Ease of customization,G60,Delightful,6,0.225
+If applicable: Ease of customization,G70,Delightful,6,0.016
+If applicable: Ease of customization,G60,I Love It,7,0.212
+If applicable: Ease of customization,G70,I Love It,7,0.26

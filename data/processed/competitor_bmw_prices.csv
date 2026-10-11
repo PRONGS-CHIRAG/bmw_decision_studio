@@ -1,0 +1,8 @@
+model,variant,powertrain,power_kw,amount,page,entry,ref
+F70,116,ICE,90.0,34250.0,4,True,F70_OptionList.PDF
+G60,i5 eDrive40,BEV,250.0,70900.0,4,False,G60_OptionList.PDF
+G60,520i,ICE,153.0,60000.0,5,True,G60_OptionList.PDF
+G60,530e,PHEV,220.0,66700.0,4,False,G60_OptionList.PDF
+G70,i7 50xDrive,BEV,335.0,121400.0,4,False,G70_OptionList.PDF
+G70,740 xDrive,ICE,294.0,117900.0,5,True,G70_OptionList.PDF
+G70,750e xDrive,PHEV,360.0,133900.0,4,False,G70_OptionList.PDF

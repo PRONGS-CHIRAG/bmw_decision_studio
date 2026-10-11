@@ -1,0 +1,1106 @@
+{
+ "built_at": "2026-10-11T05:13:41",
+ "data_hash": "21fca42fed85",
+ "records": {
+  "rows": 2359,
+  "valid": 2355,
+  "duplicates": 2,
+  "errors": 0,
+  "models": 77,
+  "overridden_models": [
+   "au_market.jsonl:95: bentley-sedan {'brand': 'Bentley', 'model': 'Sedan (VFACTS grouping of Bentley saloons)', 'segment': 'luxury'} -> canonical {'brand': 'Bentley', 'model': 'saloons (VFACTS group)', 'segment': 'luxury'}",
+   "reviews_b.jsonl:1: lexus-lbx {'brand': 'Lexus', 'model': 'LBX', 'segment': 'compact_premium'} -> canonical {'brand': 'Lexus', 'model': 'LBX', 'segment': 'suv'}"
+  ],
+  "by_table": {
+   "model": 83,
+   "sales": 282,
+   "price": 150,
+   "spec": 588,
+   "equipment": 185,
+   "review": 840,
+   "rating": 147,
+   "rival": 80
+  },
+  "dropped_invalid": 0
+ },
+ "invalid_rows": [],
+ "sales_conflicts": [
+  {
+   "key": {
+    "model_id": "bmw-5-series",
+    "market": "US",
+    "region": "United States",
+    "year": "2024",
+    "period": "FY"
+   },
+   "values": [
+    {
+     "units": 25315,
+     "source_id": "sda017e1b68",
+     "tier": "manufacturer"
+    },
+    {
+     "units": 25317,
+     "source_id": "s89c54ae2bf",
+     "tier": "aggregator"
+    }
+   ]
+  },
+  {
+   "key": {
+    "model_id": "bmw-5-series",
+    "market": "US",
+    "region": "United States",
+    "year": "2025",
+    "period": "FY"
+   },
+   "values": [
+    {
+     "units": 27107,
+     "source_id": "sda017e1b68",
+     "tier": "manufacturer"
+    },
+    {
+     "units": 26861,
+     "source_id": "s89c54ae2bf",
+     "tier": "aggregator"
+    }
+   ]
+  },
+  {
+   "key": {
+    "model_id": "bmw-7-series",
+    "market": "CN",
+    "region": "China",
+    "year": "2025",
+    "period": "FY"
+   },
+   "values": [
+    {
+     "units": 10460,
+     "source_id": "s53e604a46e",
+     "tier": "press"
+    },
+    {
+     "units": 9535,
+     "source_id": "sbb30d19c79",
+     "tier": "press"
+    }
+   ]
+  },
+  {
+   "key": {
+    "model_id": "bmw-7-series",
+    "market": "US",
+    "region": "United States",
+    "year": "2024",
+    "period": "FY"
+   },
+   "values": [
+    {
+     "units": 10714,
+     "source_id": "sda017e1b68",
+     "tier": "manufacturer"
+    },
+    {
+     "units": 10715,
+     "source_id": "s299dacd854",
+     "tier": "aggregator"
+    }
+   ]
+  },
+  {
+   "key": {
+    "model_id": "bmw-7-series",
+    "market": "US",
+    "region": "United States",
+    "year": "2025",
+    "period": "FY"
+   },
+   "values": [
+    {
+     "units": 11393,
+     "source_id": "sda017e1b68",
+     "tier": "manufacturer"
+    },
+    {
+     "units": 11303,
+     "source_id": "s299dacd854",
+     "tier": "aggregator"
+    }
+   ]
+  },
+  {
+   "key": {
+    "model_id": "maextro-s800",
+    "market": "CN",
+    "region": "China",
+    "year": "2025",
+    "period": "FY"
+   },
+   "values": [
+    {
+     "units": 11300,
+     "source_id": "s4a24dbfb59",
+     "tier": "aggregator"
+    },
+    {
+     "units": 11930,
+     "source_id": "s53e604a46e",
+     "tier": "press"
+    }
+   ]
+  },
+  {
+   "key": {
+    "model_id": "mercedes-maybach-s-class",
+    "market": "CN",
+    "region": "China",
+    "year": "2025",
+    "period": "FY"
+   },
+   "values": [
+    {
+     "units": 11310,
+     "source_id": "s53e604a46e",
+     "tier": "press"
+    },
+    {
+     "units": 11311,
+     "source_id": "sbb30d19c79",
+     "tier": "press"
+    }
+   ]
+  },
+  {
+   "key": {
+    "model_id": "mercedes-s-class",
+    "market": "CN",
+    "region": "China",
+    "year": "2025",
+    "period": "FY"
+   },
+   "values": [
+    {
+     "units": 9710,
+     "source_id": "s53e604a46e",
+     "tier": "press"
+    },
+    {
+     "units": 9658,
+     "source_id": "sbb30d19c79",
+     "tier": "press"
+    }
+   ]
+  },
+  {
+   "key": {
+    "model_id": "nio-et9",
+    "market": "CN",
+    "region": "China",
+    "year": "2025",
+    "period": "FY"
+   },
+   "values": [
+    {
+     "units": 2509,
+     "source_id": "s049eab7ca8",
+     "tier": "aggregator"
+    },
+    {
+     "units": 2940,
+     "source_id": "s53e604a46e",
+     "tier": "press"
+    }
+   ]
+  },
+  {
+   "key": {
+    "model_id": "porsche-panamera",
+    "market": "CN",
+    "region": "China",
+    "year": "2025",
+    "period": "FY"
+   },
+   "values": [
+    {
+     "units": 12370,
+     "source_id": "s53e604a46e",
+     "tier": "press"
+    },
+    {
+     "units": 12396,
+     "source_id": "sbb30d19c79",
+     "tier": "press"
+    }
+   ]
+  },
+  {
+   "key": {
+    "model_id": "porsche-taycan",
+    "market": "CN",
+    "region": "China",
+    "year": "2025",
+    "period": "FY"
+   },
+   "values": [
+    {
+     "units": 1010,
+     "source_id": "s53e604a46e",
+     "tier": "press"
+    },
+    {
+     "units": 1008,
+     "source_id": "sbb30d19c79",
+     "tier": "press"
+    }
+   ]
+  },
+  {
+   "key": {
+    "model_id": "yangwang-u7",
+    "market": "CN",
+    "region": "China",
+    "year": "2025",
+    "period": "FY"
+   },
+   "values": [
+    {
+     "units": 1866,
+     "source_id": "s049eab7ca8",
+     "tier": "aggregator"
+    },
+    {
+     "units": 1900,
+     "source_id": "s53e604a46e",
+     "tier": "press"
+    }
+   ]
+  }
+ ],
+ "tables": {
+  "models": 77,
+  "sets": 50,
+  "sales": 282,
+  "prices": 150,
+  "specs": 588,
+  "equipment": 185,
+  "reviews": 840,
+  "ratings": 147,
+  "rivals": 80,
+  "sources": 403,
+  "bmw_prices": 7,
+  "bmw_specs": 121,
+  "bmw_equipment": 66
+ },
+ "sources": {
+  "n": 403,
+  "retrieved_from": "2026-10-11T01:46:25+0200",
+  "retrieved_to": "2026-10-11T05:00:49+0200",
+  "publishers": {
+   "adac.de": 111,
+   "car.autohome.com.cn": 34,
+   "caranddriver.com": 30,
+   "autoexpress.co.uk": 25,
+   "carwow.co.uk": 24,
+   "goodcarbadcar.net": 23,
+   "drive.com.au": 22,
+   "edmunds.com (archived copy)": 17,
+   "k.autohome.com.cn": 16,
+   "productreview.com.au": 13,
+   "jdpower.com": 9,
+   "parkers.co.uk": 9,
+   "carexpert.com.au": 5,
+   "xl.16888.com": 4,
+   "mbusa.com": 4,
+   "carnewschina.com": 4,
+   "genesis.com": 3,
+   "bmwusa.com": 3,
+   "best-selling-cars.com": 3,
+   "autocar.co.uk": 3,
+   "topgear.com": 3,
+   "lucidmotors.com": 3,
+   "professional.auto-motor-und-sport.de": 3,
+   "whatcar.com": 3,
+   "kba.de": 2,
+   "media.mbpassion.de": 2,
+   "atlas.carexpert.com.au": 2,
+   "chejiahao.m.autohome.com.cn": 2,
+   "motortrend.com": 2,
+   "drivingenthusiast.com.au": 2,
+   "configurator.porsche.com": 2,
+   "press.bmwgroup.com": 2,
+   "news.ifeng.com": 1,
+   "porsche.com": 1,
+   "ithome.com": 1,
+   "autohome.com.cn": 1,
+   "media.audi.com": 1,
+   "sohu.com": 1,
+   "autoevolution.com": 1,
+   "m.jiemian.com": 1,
+   "lexus.com": 1,
+   "bmwblog.com": 1,
+   "tech.ifeng.com": 1,
+   "chejiahao.autohome.com.cn": 1,
+   "ev-database.org": 1
+  }
+ },
+ "sets": [
+  {
+   "series": "F70",
+   "market": "EU",
+   "status": "ok",
+   "competitors": [
+    "audi-a3",
+    "mercedes-a-class",
+    "ds-4",
+    "mercedes-cla",
+    "vw-golf"
+   ],
+   "basis": [
+    "rival_mentions",
+    "sales",
+    "sales_other_segment"
+   ]
+  },
+  {
+   "series": "F70",
+   "market": "US",
+   "status": "not_sold",
+   "competitors": [],
+   "basis": [
+    "not_sold"
+   ]
+  },
+  {
+   "series": "F70",
+   "market": "CN",
+   "status": "not_sold",
+   "competitors": [],
+   "basis": [
+    "not_sold"
+   ]
+  },
+  {
+   "series": "F70",
+   "market": "RoW",
+   "status": "ok",
+   "competitors": [
+    "audi-a3",
+    "mercedes-a-class",
+    "mercedes-cla"
+   ],
+   "basis": [
+    "sales",
+    "sales_other_segment"
+   ]
+  },
+  {
+   "series": "G60",
+   "market": "EU",
+   "status": "ok",
+   "competitors": [
+    "audi-a6",
+    "mercedes-e-class",
+    "audi-a7",
+    "audi-a6-e-tron",
+    "genesis-g80"
+   ],
+   "basis": [
+    "rival_mentions",
+    "sales",
+    "sales_other_segment"
+   ]
+  },
+  {
+   "series": "G60",
+   "market": "US",
+   "status": "ok",
+   "competitors": [
+    "lexus-es",
+    "mercedes-e-class",
+    "audi-a6",
+    "tesla-model-s",
+    "genesis-g80"
+   ],
+   "basis": [
+    "sales"
+   ]
+  },
+  {
+   "series": "G60",
+   "market": "CN",
+   "status": "ok",
+   "competitors": [
+    "audi-a6",
+    "mercedes-e-class",
+    "lexus-es",
+    "zeekr-001",
+    "avatr-12"
+   ],
+   "basis": [
+    "sales",
+    "sales_other_source"
+   ]
+  },
+  {
+   "series": "G60",
+   "market": "RoW",
+   "status": "ok",
+   "competitors": [
+    "mercedes-e-class",
+    "im-im5",
+    "audi-a6",
+    "mercedes-eqe",
+    "audi-a7"
+   ],
+   "basis": [
+    "sales"
+   ]
+  },
+  {
+   "series": "G70",
+   "market": "EU",
+   "status": "ok",
+   "competitors": [
+    "mercedes-s-class",
+    "porsche-taycan",
+    "porsche-panamera",
+    "audi-a8",
+    "audi-e-tron-gt"
+   ],
+   "basis": [
+    "sales"
+   ]
+  },
+  {
+   "series": "G70",
+   "market": "US",
+   "status": "ok",
+   "competitors": [
+    "lucid-air",
+    "mercedes-s-class",
+    "porsche-panamera",
+    "porsche-taycan",
+    "mercedes-eqs"
+   ],
+   "basis": [
+    "sales"
+   ]
+  },
+  {
+   "series": "G70",
+   "market": "CN",
+   "status": "ok",
+   "competitors": [
+    "porsche-panamera",
+    "maextro-s800",
+    "mercedes-maybach-s-class",
+    "mercedes-s-class",
+    "audi-a8"
+   ],
+   "basis": [
+    "sales"
+   ]
+  },
+  {
+   "series": "G70",
+   "market": "RoW",
+   "status": "ok",
+   "competitors": [
+    "porsche-panamera",
+    "mercedes-s-class",
+    "lexus-ls",
+    "bentley-sedan",
+    "mercedes-amg-gt-4-door"
+   ],
+   "basis": [
+    "sales"
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "series": "F70",
+   "market": "EU",
+   "rank": 1,
+   "model_id": "audi-a3",
+   "price": true,
+   "sales": true,
+   "specs": 12,
+   "equipment_items": 4,
+   "reviews": 18,
+   "ratings": 3
+  },
+  {
+   "series": "F70",
+   "market": "EU",
+   "rank": 2,
+   "model_id": "mercedes-a-class",
+   "price": true,
+   "sales": true,
+   "specs": 12,
+   "equipment_items": 16,
+   "reviews": 24,
+   "ratings": 3
+  },
+  {
+   "series": "F70",
+   "market": "EU",
+   "rank": 3,
+   "model_id": "ds-4",
+   "price": true,
+   "sales": true,
+   "specs": 17,
+   "equipment_items": 0,
+   "reviews": 13,
+   "ratings": 2
+  },
+  {
+   "series": "F70",
+   "market": "EU",
+   "rank": 4,
+   "model_id": "mercedes-cla",
+   "price": true,
+   "sales": true,
+   "specs": 35,
+   "equipment_items": 4,
+   "reviews": 14,
+   "ratings": 3
+  },
+  {
+   "series": "F70",
+   "market": "EU",
+   "rank": 5,
+   "model_id": "vw-golf",
+   "price": true,
+   "sales": true,
+   "specs": 12,
+   "equipment_items": 4,
+   "reviews": 22,
+   "ratings": 3
+  },
+  {
+   "series": "F70",
+   "market": "RoW",
+   "rank": 1,
+   "model_id": "audi-a3",
+   "price": true,
+   "sales": true,
+   "specs": 12,
+   "equipment_items": 4,
+   "reviews": 8,
+   "ratings": 2
+  },
+  {
+   "series": "F70",
+   "market": "RoW",
+   "rank": 2,
+   "model_id": "mercedes-a-class",
+   "price": true,
+   "sales": true,
+   "specs": 12,
+   "equipment_items": 16,
+   "reviews": 9,
+   "ratings": 2
+  },
+  {
+   "series": "F70",
+   "market": "RoW",
+   "rank": 3,
+   "model_id": "mercedes-cla",
+   "price": true,
+   "sales": true,
+   "specs": 35,
+   "equipment_items": 4,
+   "reviews": 8,
+   "ratings": 1
+  },
+  {
+   "series": "G60",
+   "market": "EU",
+   "rank": 1,
+   "model_id": "audi-a6",
+   "price": true,
+   "sales": true,
+   "specs": 14,
+   "equipment_items": 4,
+   "reviews": 14,
+   "ratings": 2
+  },
+  {
+   "series": "G60",
+   "market": "EU",
+   "rank": 2,
+   "model_id": "mercedes-e-class",
+   "price": true,
+   "sales": true,
+   "specs": 14,
+   "equipment_items": 18,
+   "reviews": 14,
+   "ratings": 2
+  },
+  {
+   "series": "G60",
+   "market": "EU",
+   "rank": 3,
+   "model_id": "audi-a7",
+   "price": false,
+   "sales": true,
+   "specs": 0,
+   "equipment_items": 0,
+   "reviews": 12,
+   "ratings": 2
+  },
+  {
+   "series": "G60",
+   "market": "EU",
+   "rank": 4,
+   "model_id": "audi-a6-e-tron",
+   "price": true,
+   "sales": false,
+   "specs": 28,
+   "equipment_items": 4,
+   "reviews": 14,
+   "ratings": 2
+  },
+  {
+   "series": "G60",
+   "market": "EU",
+   "rank": 5,
+   "model_id": "genesis-g80",
+   "price": true,
+   "sales": true,
+   "specs": 11,
+   "equipment_items": 12,
+   "reviews": 14,
+   "ratings": 2
+  },
+  {
+   "series": "G60",
+   "market": "US",
+   "rank": 1,
+   "model_id": "lexus-es",
+   "price": true,
+   "sales": true,
+   "specs": 18,
+   "equipment_items": 0,
+   "reviews": 13,
+   "ratings": 3
+  },
+  {
+   "series": "G60",
+   "market": "US",
+   "rank": 2,
+   "model_id": "mercedes-e-class",
+   "price": true,
+   "sales": true,
+   "specs": 14,
+   "equipment_items": 18,
+   "reviews": 13,
+   "ratings": 3
+  },
+  {
+   "series": "G60",
+   "market": "US",
+   "rank": 3,
+   "model_id": "audi-a6",
+   "price": true,
+   "sales": true,
+   "specs": 14,
+   "equipment_items": 4,
+   "reviews": 8,
+   "ratings": 3
+  },
+  {
+   "series": "G60",
+   "market": "US",
+   "rank": 4,
+   "model_id": "tesla-model-s",
+   "price": true,
+   "sales": true,
+   "specs": 16,
+   "equipment_items": 0,
+   "reviews": 16,
+   "ratings": 3
+  },
+  {
+   "series": "G60",
+   "market": "US",
+   "rank": 5,
+   "model_id": "genesis-g80",
+   "price": true,
+   "sales": true,
+   "specs": 11,
+   "equipment_items": 12,
+   "reviews": 15,
+   "ratings": 3
+  },
+  {
+   "series": "G60",
+   "market": "CN",
+   "rank": 1,
+   "model_id": "audi-a6",
+   "price": true,
+   "sales": true,
+   "specs": 14,
+   "equipment_items": 4,
+   "reviews": 0,
+   "ratings": 1
+  },
+  {
+   "series": "G60",
+   "market": "CN",
+   "rank": 2,
+   "model_id": "mercedes-e-class",
+   "price": true,
+   "sales": true,
+   "specs": 14,
+   "equipment_items": 18,
+   "reviews": 0,
+   "ratings": 1
+  },
+  {
+   "series": "G60",
+   "market": "CN",
+   "rank": 3,
+   "model_id": "lexus-es",
+   "price": true,
+   "sales": true,
+   "specs": 18,
+   "equipment_items": 0,
+   "reviews": 0,
+   "ratings": 1
+  },
+  {
+   "series": "G60",
+   "market": "CN",
+   "rank": 4,
+   "model_id": "zeekr-001",
+   "price": true,
+   "sales": true,
+   "specs": 0,
+   "equipment_items": 0,
+   "reviews": 0,
+   "ratings": 1
+  },
+  {
+   "series": "G60",
+   "market": "CN",
+   "rank": 5,
+   "model_id": "avatr-12",
+   "price": true,
+   "sales": true,
+   "specs": 0,
+   "equipment_items": 0,
+   "reviews": 0,
+   "ratings": 1
+  },
+  {
+   "series": "G60",
+   "market": "RoW",
+   "rank": 1,
+   "model_id": "mercedes-e-class",
+   "price": true,
+   "sales": true,
+   "specs": 14,
+   "equipment_items": 18,
+   "reviews": 6,
+   "ratings": 2
+  },
+  {
+   "series": "G60",
+   "market": "RoW",
+   "rank": 2,
+   "model_id": "im-im5",
+   "price": true,
+   "sales": true,
+   "specs": 0,
+   "equipment_items": 0,
+   "reviews": 7,
+   "ratings": 1
+  },
+  {
+   "series": "G60",
+   "market": "RoW",
+   "rank": 3,
+   "model_id": "audi-a6",
+   "price": true,
+   "sales": true,
+   "specs": 14,
+   "equipment_items": 4,
+   "reviews": 8,
+   "ratings": 2
+  },
+  {
+   "series": "G60",
+   "market": "RoW",
+   "rank": 4,
+   "model_id": "mercedes-eqe",
+   "price": true,
+   "sales": true,
+   "specs": 33,
+   "equipment_items": 16,
+   "reviews": 8,
+   "ratings": 1
+  },
+  {
+   "series": "G60",
+   "market": "RoW",
+   "rank": 5,
+   "model_id": "audi-a7",
+   "price": false,
+   "sales": true,
+   "specs": 0,
+   "equipment_items": 0,
+   "reviews": 6,
+   "ratings": 1
+  },
+  {
+   "series": "G70",
+   "market": "EU",
+   "rank": 1,
+   "model_id": "mercedes-s-class",
+   "price": true,
+   "sales": true,
+   "specs": 12,
+   "equipment_items": 22,
+   "reviews": 11,
+   "ratings": 2
+  },
+  {
+   "series": "G70",
+   "market": "EU",
+   "rank": 2,
+   "model_id": "porsche-taycan",
+   "price": false,
+   "sales": true,
+   "specs": 23,
+   "equipment_items": 17,
+   "reviews": 0,
+   "ratings": 0
+  },
+  {
+   "series": "G70",
+   "market": "EU",
+   "rank": 3,
+   "model_id": "porsche-panamera",
+   "price": true,
+   "sales": true,
+   "specs": 12,
+   "equipment_items": 18,
+   "reviews": 13,
+   "ratings": 2
+  },
+  {
+   "series": "G70",
+   "market": "EU",
+   "rank": 4,
+   "model_id": "audi-a8",
+   "price": false,
+   "sales": true,
+   "specs": 14,
+   "equipment_items": 0,
+   "reviews": 13,
+   "ratings": 2
+  },
+  {
+   "series": "G70",
+   "market": "EU",
+   "rank": 5,
+   "model_id": "audi-e-tron-gt",
+   "price": false,
+   "sales": true,
+   "specs": 18,
+   "equipment_items": 16,
+   "reviews": 12,
+   "ratings": 2
+  },
+  {
+   "series": "G70",
+   "market": "US",
+   "rank": 1,
+   "model_id": "lucid-air",
+   "price": true,
+   "sales": true,
+   "specs": 25,
+   "equipment_items": 2,
+   "reviews": 14,
+   "ratings": 2
+  },
+  {
+   "series": "G70",
+   "market": "US",
+   "rank": 2,
+   "model_id": "mercedes-s-class",
+   "price": true,
+   "sales": true,
+   "specs": 12,
+   "equipment_items": 22,
+   "reviews": 13,
+   "ratings": 2
+  },
+  {
+   "series": "G70",
+   "market": "US",
+   "rank": 3,
+   "model_id": "porsche-panamera",
+   "price": true,
+   "sales": true,
+   "specs": 12,
+   "equipment_items": 18,
+   "reviews": 6,
+   "ratings": 2
+  },
+  {
+   "series": "G70",
+   "market": "US",
+   "rank": 4,
+   "model_id": "porsche-taycan",
+   "price": true,
+   "sales": true,
+   "specs": 23,
+   "equipment_items": 17,
+   "reviews": 15,
+   "ratings": 3
+  },
+  {
+   "series": "G70",
+   "market": "US",
+   "rank": 5,
+   "model_id": "mercedes-eqs",
+   "price": true,
+   "sales": true,
+   "specs": 28,
+   "equipment_items": 24,
+   "reviews": 17,
+   "ratings": 2
+  },
+  {
+   "series": "G70",
+   "market": "CN",
+   "rank": 1,
+   "model_id": "porsche-panamera",
+   "price": true,
+   "sales": true,
+   "specs": 12,
+   "equipment_items": 18,
+   "reviews": 0,
+   "ratings": 1
+  },
+  {
+   "series": "G70",
+   "market": "CN",
+   "rank": 2,
+   "model_id": "maextro-s800",
+   "price": true,
+   "sales": true,
+   "specs": 9,
+   "equipment_items": 0,
+   "reviews": 0,
+   "ratings": 1
+  },
+  {
+   "series": "G70",
+   "market": "CN",
+   "rank": 3,
+   "model_id": "mercedes-maybach-s-class",
+   "price": true,
+   "sales": true,
+   "specs": 7,
+   "equipment_items": 0,
+   "reviews": 0,
+   "ratings": 1
+  },
+  {
+   "series": "G70",
+   "market": "CN",
+   "rank": 4,
+   "model_id": "mercedes-s-class",
+   "price": true,
+   "sales": true,
+   "specs": 12,
+   "equipment_items": 22,
+   "reviews": 0,
+   "ratings": 1
+  },
+  {
+   "series": "G70",
+   "market": "CN",
+   "rank": 5,
+   "model_id": "audi-a8",
+   "price": true,
+   "sales": true,
+   "specs": 14,
+   "equipment_items": 0,
+   "reviews": 0,
+   "ratings": 1
+  },
+  {
+   "series": "G70",
+   "market": "RoW",
+   "rank": 1,
+   "model_id": "porsche-panamera",
+   "price": true,
+   "sales": true,
+   "specs": 12,
+   "equipment_items": 18,
+   "reviews": 8,
+   "ratings": 1
+  },
+  {
+   "series": "G70",
+   "market": "RoW",
+   "rank": 2,
+   "model_id": "mercedes-s-class",
+   "price": true,
+   "sales": true,
+   "specs": 12,
+   "equipment_items": 22,
+   "reviews": 10,
+   "ratings": 2
+  },
+  {
+   "series": "G70",
+   "market": "RoW",
+   "rank": 3,
+   "model_id": "lexus-ls",
+   "price": true,
+   "sales": true,
+   "specs": 7,
+   "equipment_items": 0,
+   "reviews": 8,
+   "ratings": 2
+  },
+  {
+   "series": "G70",
+   "market": "RoW",
+   "rank": 4,
+   "model_id": "bentley-sedan",
+   "price": false,
+   "sales": true,
+   "specs": 0,
+   "equipment_items": 0,
+   "reviews": 0,
+   "ratings": 0
+  },
+  {
+   "series": "G70",
+   "market": "RoW",
+   "rank": 5,
+   "model_id": "mercedes-amg-gt-4-door",
+   "price": false,
+   "sales": true,
+   "specs": 0,
+   "equipment_items": 0,
+   "reviews": 0,
+   "ratings": 0
+  }
+ ],
+ "checks": {
+  "sets_at_most_five": true,
+  "no_duplicate_competitor_in_a_set": true,
+  "every_sold_tuple_has_a_set_or_reason": true,
+  "one_currency_per_reference_country": true
+ }
+}

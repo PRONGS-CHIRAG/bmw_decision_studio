@@ -5,7 +5,19 @@ import { ErrorState } from "./marks";
 const HIDE = new Set(["shape"]);
 
 /** One knowledge-graph node: provenance first, then attributes, then its relations. */
-export default function NodeInspector({ nodeId, onSelect }: { nodeId: string; onSelect: (id: string) => void }) {
+export default function NodeInspector({
+  nodeId,
+  onSelect,
+  full = false,
+  onExpand,
+  expanding = false,
+}: {
+  nodeId: string;
+  onSelect: (id: string) => void;
+  full?: boolean;                     // full-screen page: list every connection the API returns
+  onExpand?: () => void;              // add this node's connections to the picture
+  expanding?: boolean;
+}) {
   const { data, error, loading } = useApi<NodeView>(`/api/graph/node/${encodeURIComponent(nodeId)}`);
   if (error) return <ErrorState message={error} />;
   if (loading || !data) return <p className="small muted">Loading {nodeId}…</p>;
@@ -37,7 +49,7 @@ export default function NodeInspector({ nodeId, onSelect }: { nodeId: string; on
       {text && <blockquote className="quote">“{text}”</blockquote>}
       {attrs.length > 0 && (
         <dl className="kv">
-          {attrs.slice(0, 18).map(([k, v]) => (
+          {attrs.slice(0, full ? attrs.length : 18).map(([k, v]) => (
             <Attr key={k} k={k} v={v} />
           ))}
         </dl>
@@ -61,13 +73,26 @@ export default function NodeInspector({ nodeId, onSelect }: { nodeId: string; on
         </table>
       )}
       <div className="stack">
+        {full && (
+          <div className="inspector__conn">
+            <p className="caption">
+              {data.neighbours.reduce((a, g) => a + g.total, 0).toLocaleString("en-GB")} connections in {data.neighbours.length} relations
+            </p>
+            {onExpand && (
+              <button type="button" className="btn btn--small" onClick={onExpand} disabled={expanding}>
+                {expanding ? "Adding…" : "Show its connections"}
+              </button>
+            )}
+          </div>
+        )}
         {data.neighbours.map((g) => (
           <div key={`${g.direction}-${g.rel}`}>
             <p className="caption">
               {g.direction === "out" ? "→" : "←"} {g.rel} · {g.total}
+              {full && g.total > g.items.length ? ` (first ${g.items.length} shown)` : ""}
             </p>
             <div className="chips">
-              {g.items.slice(0, 6).map((n) => (
+              {g.items.slice(0, full ? g.items.length : 6).map((n) => (
                 <button key={n.id} className="chip chip--small" onClick={() => onSelect(n.id)} title={n.id}>
                   {n.label.length > 34 ? `${n.label.slice(0, 33)}…` : n.label}
                 </button>

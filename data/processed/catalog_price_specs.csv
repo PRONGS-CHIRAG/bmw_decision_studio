@@ -1,0 +1,194 @@
+model,page,block,group,variant,attribute,value,table
+F70,4,Petrol,,116,Getriebe,"7-Gang, automatisch",prices
+F70,4,Petrol,,120,Getriebe,"7-Gang, automatisch",prices
+F70,4,Petrol,,123 xDrive,Getriebe,"7-Gang, automatisch",prices
+F70,4,Petrol,,M135 xDrive,Getriebe,"7-Gang, automatisch",prices
+F70,4,Petrol,,116,"Zylinder/Hubraum, Anzahl/cm",3 / 1.499,prices
+F70,4,Petrol,,120,"Zylinder/Hubraum, Anzahl/cm",3 / 1.499,prices
+F70,4,Petrol,,123 xDrive,"Zylinder/Hubraum, Anzahl/cm",4 / 1.998,prices
+F70,4,Petrol,,M135 xDrive,"Zylinder/Hubraum, Anzahl/cm",4 / 1.998,prices
+F70,4,Petrol,,116,Leistung Gesamtfahrzeugantrieb in kW (PS),90 (122),prices
+F70,4,Petrol,,120,Leistung Gesamtfahrzeugantrieb in kW (PS),125 (170),prices
+F70,4,Petrol,,123 xDrive,Leistung Gesamtfahrzeugantrieb in kW (PS),160 (218),prices
+F70,4,Petrol,,M135 xDrive,Leistung Gesamtfahrzeugantrieb in kW (PS),221 (300),prices
+F70,4,Petrol,,116,Mit 48 V Mild-Hybrid-Technologie in kW (PS),–,prices
+F70,4,Petrol,,120,Mit 48 V Mild-Hybrid-Technologie in kW (PS),15(20),prices
+F70,4,Petrol,,123 xDrive,Mit 48 V Mild-Hybrid-Technologie in kW (PS),15(20),prices
+F70,4,Petrol,,M135 xDrive,Mit 48 V Mild-Hybrid-Technologie in kW (PS),–,prices
+F70,4,Petrol,Pflichtangaben gemäß Pkw EnVKV,116,"Kraftstoffverbrauch, kombiniert WLTP in l/100 km","6,5 – 6,3",prices
+F70,4,Petrol,Pflichtangaben gemäß Pkw EnVKV,120,"Kraftstoffverbrauch, kombiniert WLTP in l/100 km","5,9 – 5,8",prices
+F70,4,Petrol,Pflichtangaben gemäß Pkw EnVKV,123 xDrive,"Kraftstoffverbrauch, kombiniert WLTP in l/100 km","6,6 – 6,3",prices
+F70,4,Petrol,Pflichtangaben gemäß Pkw EnVKV,M135 xDrive,"Kraftstoffverbrauch, kombiniert WLTP in l/100 km","8,2",prices
+F70,4,Petrol,Pflichtangaben gemäß Pkw EnVKV,116,"CO2-Emissionen, kombiniert WLTP in g/km",148 – 144,prices
+F70,4,Petrol,Pflichtangaben gemäß Pkw EnVKV,120,"CO2-Emissionen, kombiniert WLTP in g/km",135 – 130,prices
+F70,4,Petrol,Pflichtangaben gemäß Pkw EnVKV,123 xDrive,"CO2-Emissionen, kombiniert WLTP in g/km",149 – 144,prices
+F70,4,Petrol,Pflichtangaben gemäß Pkw EnVKV,M135 xDrive,"CO2-Emissionen, kombiniert WLTP in g/km",185,prices
+F70,4,Petrol,Pflichtangaben gemäß Pkw EnVKV,116,CO2-Klasse,E,prices
+F70,4,Petrol,Pflichtangaben gemäß Pkw EnVKV,120,CO2-Klasse,D,prices
+F70,4,Petrol,Pflichtangaben gemäß Pkw EnVKV,123 xDrive,CO2-Klasse,E,prices
+F70,4,Petrol,Pflichtangaben gemäß Pkw EnVKV,M135 xDrive,CO2-Klasse,G,prices
+F70,4,Petrol,Pflichtangaben gemäß Pkw EnVKV,116,FAHRZEUGGRUNDPREIS,"34.250,– [28.781,51]",prices
+F70,4,Petrol,Pflichtangaben gemäß Pkw EnVKV,120,FAHRZEUGGRUNDPREIS,"39.150,– [32.899,16]",prices
+F70,4,Petrol,Pflichtangaben gemäß Pkw EnVKV,123 xDrive,FAHRZEUGGRUNDPREIS,"45.350,– [38.109,24]",prices
+F70,4,Petrol,Pflichtangaben gemäß Pkw EnVKV,M135 xDrive,FAHRZEUGGRUNDPREIS,"57.150,– [48.025,21]",prices
+F70,4,Diesel,Pflichtangaben gemäß Pkw EnVKV,118d,Getriebe,"7-Gang, automatisch",prices
+F70,4,Diesel,Pflichtangaben gemäß Pkw EnVKV,120d,Getriebe,"7-Gang, automatisch",prices
+F70,4,Diesel,Pflichtangaben gemäß Pkw EnVKV,118d,"Zylinder/Hubraum, Anzahl/cm",4 / 1.995,prices
+F70,4,Diesel,Pflichtangaben gemäß Pkw EnVKV,120d,"Zylinder/Hubraum, Anzahl/cm",4 / 1.995,prices
+F70,4,Diesel,Pflichtangaben gemäß Pkw EnVKV,118d,Leistung Gesamtfahrzeugantrieb in kW (PS),110 (150),prices
+F70,4,Diesel,Pflichtangaben gemäß Pkw EnVKV,120d,Leistung Gesamtfahrzeugantrieb in kW (PS),120 (163),prices
+F70,4,Diesel,Pflichtangaben gemäß Pkw EnVKV,118d,Mit 48 V Mild-Hybrid-Technologie in kW (PS),–,prices
+F70,4,Diesel,Pflichtangaben gemäß Pkw EnVKV,120d,Mit 48 V Mild-Hybrid-Technologie in kW (PS),15(20),prices
+F70,4,Diesel,Pflichtangaben gemäß Pkw EnVKV,118d,"Kraftstoffverbrauch, kombiniert WLTP in l/100 km","5,2 – 5,0",prices
+F70,4,Diesel,Pflichtangaben gemäß Pkw EnVKV,120d,"Kraftstoffverbrauch, kombiniert WLTP in l/100 km","4,8 – 4,6",prices
+F70,4,Diesel,Pflichtangaben gemäß Pkw EnVKV,118d,"CO2-Emissionen, kombiniert WLTP in g/km",136 – 131,prices
+F70,4,Diesel,Pflichtangaben gemäß Pkw EnVKV,120d,"CO2-Emissionen, kombiniert WLTP in g/km",125 – 121,prices
+F70,4,Diesel,Pflichtangaben gemäß Pkw EnVKV,118d,CO2-Klasse,E – D,prices
+F70,4,Diesel,Pflichtangaben gemäß Pkw EnVKV,120d,CO2-Klasse,D,prices
+F70,4,Diesel,Pflichtangaben gemäß Pkw EnVKV,118d,FAHRZEUGGRUNDPREIS,"39.350,– [33.067,23]",prices
+F70,4,Diesel,Pflichtangaben gemäß Pkw EnVKV,120d,FAHRZEUGGRUNDPREIS,"41.750,– [35.084,03]",prices
+G60,4,Electric,,i5 eDrive40,Getriebe,"1-Gang, automatisch",prices
+G60,4,Electric,,i5 xDrive40,Getriebe,"1-Gang, automatisch",prices
+G60,4,Electric,,i5 M60 xDrive,Getriebe,"1-Gang, automatisch",prices
+G60,4,Electric,,i5 eDrive40,Motor,1 E-Motor,prices
+G60,4,Electric,,i5 xDrive40,Motor,2 E-Motoren,prices
+G60,4,Electric,,i5 M60 xDrive,Motor,2 E-Motoren,prices
+G60,4,Electric,,i5 eDrive40,Leistung Gesamtfahrzeugantrieb in kW (PS),250 (340),prices
+G60,4,Electric,,i5 xDrive40,Leistung Gesamtfahrzeugantrieb in kW (PS),290 (394),prices
+G60,4,Electric,,i5 M60 xDrive,Leistung Gesamtfahrzeugantrieb in kW (PS),442 (601),prices
+G60,4,Electric,Pflichtangaben gemäß Pkw EnVKV,i5 eDrive40,"Energieverbrauch, kombiniert WLTP in kWh/100 km","17,9",prices
+G60,4,Electric,Pflichtangaben gemäß Pkw EnVKV,i5 xDrive40,"Energieverbrauch, kombiniert WLTP in kWh/100 km","18,8",prices
+G60,4,Electric,Pflichtangaben gemäß Pkw EnVKV,i5 M60 xDrive,"Energieverbrauch, kombiniert WLTP in kWh/100 km","19,5 – 19,4",prices
+G60,4,Electric,Pflichtangaben gemäß Pkw EnVKV,i5 eDrive40,"CO2-Emissionen, kombiniert WLTP in g/km",0,prices
+G60,4,Electric,Pflichtangaben gemäß Pkw EnVKV,i5 xDrive40,"CO2-Emissionen, kombiniert WLTP in g/km",0,prices
+G60,4,Electric,Pflichtangaben gemäß Pkw EnVKV,i5 M60 xDrive,"CO2-Emissionen, kombiniert WLTP in g/km",0,prices
+G60,4,Electric,Pflichtangaben gemäß Pkw EnVKV,i5 eDrive40,CO2-Klasse,A,prices
+G60,4,Electric,Pflichtangaben gemäß Pkw EnVKV,i5 xDrive40,CO2-Klasse,A,prices
+G60,4,Electric,Pflichtangaben gemäß Pkw EnVKV,i5 M60 xDrive,CO2-Klasse,A,prices
+G60,4,Electric,Pflichtangaben gemäß Pkw EnVKV,i5 eDrive40,FAHRZEUGGRUNDPREIS,"70.900,– [59.579,83]",prices
+G60,4,Electric,Pflichtangaben gemäß Pkw EnVKV,i5 xDrive40,FAHRZEUGGRUNDPREIS,"76.300,– [64.117,65]",prices
+G60,4,Electric,Pflichtangaben gemäß Pkw EnVKV,i5 M60 xDrive,FAHRZEUGGRUNDPREIS,"100.200,– [84.201,68]",prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,530e,Getriebe,8-Gang Steptronic mit Schaltwippen,prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,530e xDrive,Getriebe,8-Gang Steptronic mit Schaltwippen,prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,550e xDrive,Getriebe,8-Gang Steptronic mit Schaltwippen,prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,530e,"Zylinder/Hubraum, Anzahl/cm",4 / 1.998,prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,530e xDrive,"Zylinder/Hubraum, Anzahl/cm",4 / 1.998,prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,550e xDrive,"Zylinder/Hubraum, Anzahl/cm",6 / 2.998,prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,530e,Leistung Gesamtfahrzeugantrieb in kW (PS),220 (299),prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,530e xDrive,Leistung Gesamtfahrzeugantrieb in kW (PS),220 (299),prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,550e xDrive,Leistung Gesamtfahrzeugantrieb in kW (PS),360 (489),prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,530e,Verbrennungsmotor in kW (PS),140 (190),prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,530e xDrive,Verbrennungsmotor in kW (PS),140 (190),prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,550e xDrive,Verbrennungsmotor in kW (PS),230 (313),prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,530e,E-Motor kW (PS),135 (184),prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,530e xDrive,E-Motor kW (PS),135 (184),prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,550e xDrive,E-Motor kW (PS),145 (197),prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,530e,"Energieverbrauch, kombiniert WLTP in kWh/100 km","16,8",prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,530e xDrive,"Energieverbrauch, kombiniert WLTP in kWh/100 km","16,1",prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,550e xDrive,"Energieverbrauch, kombiniert WLTP in kWh/100 km","17,7",prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,530e,"Kraftstoffverbrauch, kombiniert WLTP in l/100 km","2,6",prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,530e xDrive,"Kraftstoffverbrauch, kombiniert WLTP in l/100 km","3,0",prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,550e xDrive,"Kraftstoffverbrauch, kombiniert WLTP in l/100 km","3,3",prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,530e,"CO2-Emissionen, kombiniert WLTP in g/km",58,prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,530e xDrive,"CO2-Emissionen, kombiniert WLTP in g/km",68,prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,550e xDrive,"CO2-Emissionen, kombiniert WLTP in g/km",74,prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,530e,CO2-Klasse bei entladener Batterie /kombiniert,F / B,prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,530e xDrive,CO2-Klasse bei entladener Batterie /kombiniert,G / B,prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,550e xDrive,CO2-Klasse bei entladener Batterie /kombiniert,G / B,prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,530e,"Kraftstoffverbrauch bei entladener Batterie, WLTP kombiniert l/100km","7,1",prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,530e xDrive,"Kraftstoffverbrauch bei entladener Batterie, WLTP kombiniert l/100km","7,8",prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,550e xDrive,"Kraftstoffverbrauch bei entladener Batterie, WLTP kombiniert l/100km","8,2",prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,530e,FAHRZEUGGRUNDPREIS,"66.700,– [56.050,42]",prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,530e xDrive,FAHRZEUGGRUNDPREIS,"69.300,– [58.235,29]",prices
+G60,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,550e xDrive,FAHRZEUGGRUNDPREIS,"78.700,– [66.134,45]",prices
+G60,5,Petrol,,520i,Getriebe,8-Gang Steptronic mit Schaltwippen,prices
+G60,5,Petrol,,520i,"Zylinder/Hubraum, Anzahl/cm",4 / 1.998,prices
+G60,5,Petrol,,520i,Leistung Gesamtfahrzeugantrieb in kW (PS),153 (208),prices
+G60,5,Petrol,,520i,Mit 48 V Mild-Hybrid-Technologie in kW (PS),13 (18),prices
+G60,5,Petrol,Pflichtangaben gemäß Pkw EnVKV,520i,"Kraftstoffverbrauch, kombiniert WLTP in l/100 km","6,3",prices
+G60,5,Petrol,Pflichtangaben gemäß Pkw EnVKV,520i,"CO2-Emissionen, kombiniert WLTP in g/km",142,prices
+G60,5,Petrol,Pflichtangaben gemäß Pkw EnVKV,520i,CO2-Klasse,E,prices
+G60,5,Petrol,Pflichtangaben gemäß Pkw EnVKV,520i,FAHRZEUGGRUNDPREIS,"60.000,– [50.420,17]",prices
+G60,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,520d,Getriebe,8-Gang Steptronic mit Schaltwippen,prices
+G60,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,520d xDrive,Getriebe,8-Gang Steptronic mit Schaltwippen,prices
+G60,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,540d xDrive,Getriebe,8-Gang Steptronic mit Schaltwippen,prices
+G60,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,520d,"Zylinder/Hubraum, Anzahl/cm",4 / 1.995,prices
+G60,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,520d xDrive,"Zylinder/Hubraum, Anzahl/cm",4 / 1.995,prices
+G60,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,540d xDrive,"Zylinder/Hubraum, Anzahl/cm",6 / 2.993,prices
+G60,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,520d,Leistung Gesamtfahrzeugantrieb in kW (PS),145 (197),prices
+G60,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,520d xDrive,Leistung Gesamtfahrzeugantrieb in kW (PS),145 (197),prices
+G60,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,540d xDrive,Leistung Gesamtfahrzeugantrieb in kW (PS),223 (303),prices
+G60,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,520d,Mit 48 V Mild-Hybrid-Technologie in kW (PS),8 (11),prices
+G60,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,520d xDrive,Mit 48 V Mild-Hybrid-Technologie in kW (PS),8 (11),prices
+G60,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,540d xDrive,Mit 48 V Mild-Hybrid-Technologie in kW (PS),13 (18),prices
+G60,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,520d,"Kraftstoffverbrauch, kombiniert WLTP in l/100 km","5,5",prices
+G60,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,520d xDrive,"Kraftstoffverbrauch, kombiniert WLTP in l/100 km","5,9",prices
+G60,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,540d xDrive,"Kraftstoffverbrauch, kombiniert WLTP in l/100 km","6,2",prices
+G60,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,520d,"CO2-Emissionen, kombiniert WLTP in g/km",145,prices
+G60,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,520d xDrive,"CO2-Emissionen, kombiniert WLTP in g/km",155,prices
+G60,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,540d xDrive,"CO2-Emissionen, kombiniert WLTP in g/km",163,prices
+G60,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,520d,CO2-Klasse,E,prices
+G60,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,520d xDrive,CO2-Klasse,E,prices
+G60,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,540d xDrive,CO2-Klasse,F,prices
+G60,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,520d,FAHRZEUGGRUNDPREIS,"62.300,– [52.352,94]",prices
+G60,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,520d xDrive,FAHRZEUGGRUNDPREIS,"64.900,– [54.537,82]",prices
+G60,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,540d xDrive,FAHRZEUGGRUNDPREIS,"71.900,– [60.420,17]",prices
+G70,4,Electric,,i7 50xDrive,Getriebe,"1-Gang, automatisch",prices
+G70,4,Electric,,i7 60xDrive,Getriebe,"1-Gang, automatisch",prices
+G70,4,Electric,,i7 M70 xDrive,Getriebe,"1-Gang, automatisch",prices
+G70,4,Electric,,i7 50xDrive,Motor,E-Motor,prices
+G70,4,Electric,,i7 60xDrive,Motor,E-Motor,prices
+G70,4,Electric,,i7 M70 xDrive,Motor,E-Motor,prices
+G70,4,Electric,,i7 50xDrive,Leistung Gesamtfahrzeugantrieb in kW (PS),335 (455),prices
+G70,4,Electric,,i7 60xDrive,Leistung Gesamtfahrzeugantrieb in kW (PS),400 (544),prices
+G70,4,Electric,,i7 M70 xDrive,Leistung Gesamtfahrzeugantrieb in kW (PS),500 (680),prices
+G70,4,Electric,Pflichtangaben gemäß Pkw EnVKV,i7 50xDrive,"Energieverbrauch, kombiniert WLTP in kWh/100 km","20,4",prices
+G70,4,Electric,Pflichtangaben gemäß Pkw EnVKV,i7 60xDrive,"Energieverbrauch, kombiniert WLTP in kWh/100 km","20,5",prices
+G70,4,Electric,Pflichtangaben gemäß Pkw EnVKV,i7 M70 xDrive,"Energieverbrauch, kombiniert WLTP in kWh/100 km","20,8",prices
+G70,4,Electric,Pflichtangaben gemäß Pkw EnVKV,i7 50xDrive,"CO2-Emissionen, kombiniert WLTP in g/km",–,prices
+G70,4,Electric,Pflichtangaben gemäß Pkw EnVKV,i7 60xDrive,"CO2-Emissionen, kombiniert WLTP in g/km",–,prices
+G70,4,Electric,Pflichtangaben gemäß Pkw EnVKV,i7 M70 xDrive,"CO2-Emissionen, kombiniert WLTP in g/km",–,prices
+G70,4,Electric,Pflichtangaben gemäß Pkw EnVKV,i7 50xDrive,CO2-Klasse,A,prices
+G70,4,Electric,Pflichtangaben gemäß Pkw EnVKV,i7 60xDrive,CO2-Klasse,A,prices
+G70,4,Electric,Pflichtangaben gemäß Pkw EnVKV,i7 M70 xDrive,CO2-Klasse,A,prices
+G70,4,Electric,Pflichtangaben gemäß Pkw EnVKV,i7 50xDrive,FAHRZEUGGRUNDPREIS,"121.400,– [102.016,81]",prices
+G70,4,Electric,Pflichtangaben gemäß Pkw EnVKV,i7 60xDrive,FAHRZEUGGRUNDPREIS,"140.100,– [117.731,09]",prices
+G70,4,Electric,Pflichtangaben gemäß Pkw EnVKV,i7 M70 xDrive,FAHRZEUGGRUNDPREIS,"182.400,- [153.277,31]",prices
+G70,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,750e xDrive,Getriebe,8-Gang Steptronic Sport,prices
+G70,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,M760e xDrive,Getriebe,8-Gang Steptronic Sport,prices
+G70,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,750e xDrive,"Zylinder/Hubraum, Anzahl/cm",6 / 2.998,prices
+G70,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,M760e xDrive,"Zylinder/Hubraum, Anzahl/cm",6 / 2.998,prices
+G70,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,750e xDrive,Leistung Gesamtfahrzeugantrieb in kW (PS),360 (489),prices
+G70,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,M760e xDrive,Leistung Gesamtfahrzeugantrieb in kW (PS),450 (612),prices
+G70,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,750e xDrive,Verbrennungsmotor in kW (PS),230 (313),prices
+G70,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,M760e xDrive,Verbrennungsmotor in kW (PS),313 (426),prices
+G70,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,750e xDrive,E-Motor kW (PS),145 (197),prices
+G70,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,M760e xDrive,E-Motor kW (PS),145 (197),prices
+G70,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,750e xDrive,"Energieverbrauch, kombiniert WLTP in kWh/100 km","17,5 – 16,0",prices
+G70,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,M760e xDrive,"Energieverbrauch, kombiniert WLTP in kWh/100 km","18,2 – 16,7",prices
+G70,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,750e xDrive,"Kraftstoffverbrauch, kombiniert WLTP in l/100 km","6,1 – 5,0",prices
+G70,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,M760e xDrive,"Kraftstoffverbrauch, kombiniert WLTP in l/100 km","6,8 – 5,6",prices
+G70,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,750e xDrive,"CO2-Emissionen, kombiniert WLTP in g/km",138 – 113,prices
+G70,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,M760e xDrive,"CO2-Emissionen, kombiniert WLTP in g/km",154 – 128,prices
+G70,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,750e xDrive,CO2-Klasse bei entladener Batterie /kombiniert,G / B,prices
+G70,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,M760e xDrive,CO2-Klasse bei entladener Batterie /kombiniert,G / B,prices
+G70,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,750e xDrive,"Kraftstoffverbrauch bei entladener Batterie, WLTP kombiniert l/100km","8,5",prices
+G70,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,M760e xDrive,"Kraftstoffverbrauch bei entladener Batterie, WLTP kombiniert l/100km","9,0 – 8,9",prices
+G70,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,750e xDrive,FAHRZEUGGRUNDPREIS,"133.900,– [112.521,01]",prices
+G70,4,Plug-in hybrid,Pflichtangaben gemäß Pkw EnVKV,M760e xDrive,FAHRZEUGGRUNDPREIS,"159.900,– [134.369,75]",prices
+G70,5,Petrol,,740 xDrive,Getriebe,8-Gang Steptronic,prices
+G70,5,Petrol,,740 xDrive,"Zylinder/Hubraum, Anzahl/cm",6 /2.998,prices
+G70,5,Petrol,,740 xDrive,Leistung Gesamtfahrzeugantrieb in kW (PS),294 (400),prices
+G70,5,Petrol,,740 xDrive,Mit 48 V Mild-Hybrid-Technologie in kW (PS),13 (18),prices
+G70,5,Petrol,Pflichtangaben gemäß Pkw EnVKV,740 xDrive,"Kraftstoffverbrauch, kombiniert WLTP in l/100 km","8,4",prices
+G70,5,Petrol,Pflichtangaben gemäß Pkw EnVKV,740 xDrive,"CO2-Emissionen, kombiniert WLTP in g/km",191,prices
+G70,5,Petrol,Pflichtangaben gemäß Pkw EnVKV,740 xDrive,CO2-Klasse,F,prices
+G70,5,Petrol,Pflichtangaben gemäß Pkw EnVKV,740 xDrive,FAHRZEUGGRUNDPREIS,"117.900,– [99.075,63]",prices
+G70,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,740d xDrive,Getriebe,8-Gang Steptronic Sport,prices
+G70,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,740d xDrive,"Zylinder/Hubraum, Anzahl/cm",6 /2.993,prices
+G70,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,740d xDrive,Leistung Gesamtfahrzeugantrieb in kW (PS),230 (313),prices
+G70,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,740d xDrive,Mit 48 V Mild-Hybrid-Technologie in kW (PS),13 (18),prices
+G70,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,740d xDrive,"Kraftstoffverbrauch, kombiniert WLTP in l/100 km","7,2 – 6,5",prices
+G70,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,740d xDrive,"CO2-Emissionen, kombiniert WLTP in g/km",191 – 172,prices
+G70,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,740d xDrive,CO2-Klasse,F,prices
+G70,5,Diesel,Pflichtangaben gemäß Pkw EnVKV,740d xDrive,FAHRZEUGGRUNDPREIS,"122.900,– [103.277,31]",prices

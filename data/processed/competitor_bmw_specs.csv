@@ -1,0 +1,122 @@
+model,variant,powertrain,attribute,value,page
+F70,116,ICE,power_kw,90.0,4
+F70,120,ICE,power_kw,125.0,4
+F70,123 xDrive,ICE,power_kw,160.0,4
+F70,M135 xDrive,ICE,power_kw,221.0,4
+F70,118d,ICE,power_kw,110.0,4
+F70,120d,ICE,power_kw,120.0,4
+G60,i5 eDrive40,BEV,power_kw,250.0,4
+G60,i5 xDrive40,BEV,power_kw,290.0,4
+G60,i5 M60 xDrive,BEV,power_kw,442.0,4
+G60,530e,PHEV,power_kw,220.0,4
+G60,530e xDrive,PHEV,power_kw,220.0,4
+G60,550e xDrive,PHEV,power_kw,360.0,4
+G60,520i,ICE,power_kw,153.0,5
+G60,520d,ICE,power_kw,145.0,5
+G60,520d xDrive,ICE,power_kw,145.0,5
+G60,540d xDrive,ICE,power_kw,223.0,5
+G70,i7 50xDrive,BEV,power_kw,335.0,4
+G70,i7 60xDrive,BEV,power_kw,400.0,4
+G70,i7 M70 xDrive,BEV,power_kw,500.0,4
+G70,750e xDrive,PHEV,power_kw,360.0,4
+G70,M760e xDrive,PHEV,power_kw,450.0,4
+G70,740 xDrive,ICE,power_kw,294.0,5
+G70,740d xDrive,ICE,power_kw,230.0,5
+F70,118d,ICE,torque_nm,360.0,20
+F70,120d,ICE,torque_nm,400.0,20
+F70,116,ICE,torque_nm,230.0,20
+F70,120,ICE,torque_nm,280.0,20
+F70,123 xDrive,ICE,torque_nm,360.0,20
+F70,M135 xDrive,ICE,torque_nm,400.0,20
+G60,i5 eDrive40,BEV,torque_nm,400.0,21
+G60,i5 xDrive40,BEV,torque_nm,590.0,21
+G60,i5 M60 xDrive,BEV,torque_nm,795.0,21
+G60,530e,PHEV,torque_nm,450.0,22
+G60,530e xDrive,PHEV,torque_nm,450.0,22
+G60,550e xDrive,PHEV,torque_nm,700.0,22
+G60,520i,ICE,torque_nm,330.0,24
+G60,520d,ICE,torque_nm,400.0,24
+G60,520d xDrive,ICE,torque_nm,400.0,24
+G60,540d xDrive,ICE,torque_nm,670.0,24
+G70,i7 50xDrive,BEV,torque_nm,660.0,24
+G70,i7 60xDrive,BEV,torque_nm,745.0,24
+G70,i7 M70 xDrive,BEV,torque_nm,1015.0,24
+G70,740 xDrive,ICE,torque_nm,580.0,25
+F70,118d,ICE,accel_0_100_s,8.3,20
+F70,120d,ICE,accel_0_100_s,7.9,20
+F70,116,ICE,accel_0_100_s,9.8,20
+F70,120,ICE,accel_0_100_s,7.8,20
+F70,123 xDrive,ICE,accel_0_100_s,6.3,20
+F70,M135 xDrive,ICE,accel_0_100_s,4.9,20
+G60,i5 eDrive40,BEV,accel_0_100_s,6.0,21
+G60,i5 xDrive40,BEV,accel_0_100_s,5.4,21
+G60,i5 M60 xDrive,BEV,accel_0_100_s,3.8,21
+G60,530e,PHEV,accel_0_100_s,6.3,22
+G60,530e xDrive,PHEV,accel_0_100_s,6.3,22
+G60,550e xDrive,PHEV,accel_0_100_s,4.3,22
+G60,520i,ICE,accel_0_100_s,7.5,24
+G60,520d,ICE,accel_0_100_s,7.3,24
+G60,520d xDrive,ICE,accel_0_100_s,7.3,24
+G60,540d xDrive,ICE,accel_0_100_s,5.2,24
+G70,i7 50xDrive,BEV,accel_0_100_s,5.5,24
+G70,i7 60xDrive,BEV,accel_0_100_s,4.8,24
+G70,i7 M70 xDrive,BEV,accel_0_100_s,3.8,24
+G70,740 xDrive,ICE,accel_0_100_s,5.1,25
+F70,118d,ICE,top_speed_kmh,222.0,20
+F70,120d,ICE,top_speed_kmh,222.0,20
+F70,116,ICE,top_speed_kmh,210.0,20
+F70,120,ICE,top_speed_kmh,226.0,20
+F70,123 xDrive,ICE,top_speed_kmh,246.0,20
+F70,M135 xDrive,ICE,top_speed_kmh,250.0,20
+G60,i5 eDrive40,BEV,top_speed_kmh,193.0,21
+G60,i5 xDrive40,BEV,top_speed_kmh,215.0,21
+G60,i5 M60 xDrive,BEV,top_speed_kmh,230.0,21
+G60,530e,PHEV,top_speed_kmh,230.0,22
+G60,530e xDrive,PHEV,top_speed_kmh,225.0,22
+G60,550e xDrive,PHEV,top_speed_kmh,250.0,22
+G60,520i,ICE,top_speed_kmh,230.0,24
+G60,520d,ICE,top_speed_kmh,233.0,24
+G60,520d xDrive,ICE,top_speed_kmh,228.0,24
+G60,540d xDrive,ICE,top_speed_kmh,250.0,24
+G70,i7 50xDrive,BEV,top_speed_kmh,210.0,24
+G70,i7 60xDrive,BEV,top_speed_kmh,240.0,24
+G70,i7 M70 xDrive,BEV,top_speed_kmh,250.0,24
+G70,740 xDrive,ICE,top_speed_kmh,250.0,25
+F70,118d,ICE,boot_l,380.0,20
+F70,120d,ICE,boot_l,300.0,20
+F70,116,ICE,boot_l,380.0,20
+F70,120,ICE,boot_l,300.0,20
+F70,123 xDrive,ICE,boot_l,300.0,20
+F70,M135 xDrive,ICE,boot_l,380.0,20
+G60,i5 eDrive40,BEV,boot_l,490.0,21
+G60,i5 xDrive40,BEV,boot_l,490.0,21
+G60,i5 M60 xDrive,BEV,boot_l,490.0,21
+G60,530e,PHEV,boot_l,520.0,23
+G60,530e xDrive,PHEV,boot_l,520.0,23
+G60,550e xDrive,PHEV,boot_l,520.0,23
+G60,520i,ICE,boot_l,520.0,24
+G60,520d,ICE,boot_l,520.0,24
+G60,520d xDrive,ICE,boot_l,520.0,24
+G60,540d xDrive,ICE,boot_l,520.0,24
+G70,i7 50xDrive,BEV,boot_l,500.0,24
+G70,i7 60xDrive,BEV,boot_l,500.0,24
+G70,i7 M70 xDrive,BEV,boot_l,500.0,24
+G70,740 xDrive,ICE,boot_l,540.0,25
+G60,i5 eDrive40,BEV,range_km_wltp,627.0,21
+G60,i5 xDrive40,BEV,range_km_wltp,581.0,21
+G60,i5 M60 xDrive,BEV,range_km_wltp,539.0,21
+G70,i7 50xDrive,BEV,range_km_wltp,727.0,24
+G70,i7 60xDrive,BEV,range_km_wltp,727.0,24
+G70,i7 M70 xDrive,BEV,range_km_wltp,686.0,24
+G60,i5 eDrive40,BEV,battery_kwh_net,81.2,21
+G60,i5 xDrive40,BEV,battery_kwh_net,81.2,21
+G60,i5 M60 xDrive,BEV,battery_kwh_net,81.2,21
+G70,i7 50xDrive,BEV,battery_kwh_net,112.5,24
+G70,i7 60xDrive,BEV,battery_kwh_net,112.5,24
+G70,i7 M70 xDrive,BEV,battery_kwh_net,112.4,24
+G60,i5 eDrive40,BEV,dc_charge_kw,205.0,21
+G60,i5 xDrive40,BEV,dc_charge_kw,205.0,21
+G60,i5 M60 xDrive,BEV,dc_charge_kw,205.0,21
+G70,i7 50xDrive,BEV,dc_charge_kw,250.0,24
+G70,i7 60xDrive,BEV,dc_charge_kw,250.0,24
+G70,i7 M70 xDrive,BEV,dc_charge_kw,250.0,24
