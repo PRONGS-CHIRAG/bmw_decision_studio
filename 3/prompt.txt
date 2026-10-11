@@ -1,0 +1,130 @@
+# Challenge Overview
+
+- Hackathon challenge: “AI for Product Decision Making” (BMW track)
+- Core goal: objectify BMW product managers’ feature prioritization decisions
+  - Currently every PM follows the same general process but applies personal preference
+  - System should produce consistent, explainable outputs regardless of who runs it
+- Scope: BMW Series 1, 5, and 7 across EU, China, and US markets
+- Judging criteria confirmed from posted evaluation rubric:
+  - Decision and scoring logic
+  - Traceability and auditability (no black-box outputs)
+  - Workflow and human decision-making integration
+  - Solution quality, usability, and feasibility
+  - Innovation, scalability, and business impact
+
+---
+
+# Data Sources: Confirmed Structure
+
+# Sales Volume
+
+- Covers 4 markets: EU, China, US, Rest of World
+- Years: 2023, 2024, 2025, 2030 (prediction)
+- Models: F70, G60, G68, G70
+  - F70: EU data only, no China or US figures
+  - G60/G68 have the highest combined sales volume; G70 the lowest
+  - EU is the dominant market across all models
+- Sheets are per model; G60 and G68 are closely grouped
+
+# Customer Studies
+
+- Separate sheets per market: China, EU, US (2025 only, no 2024)
+- Structured survey scores across dimensions:
+  - Exterior and interior styling, quality of materials, level of equipment
+  - Safety, freedom of faults, value for money, reliability
+  - Ease of instruments, all-round visibility, braking, sportiness, luggage, interior versatility
+- Same car model (e.g. BMW 7 Series G70) appears twice in some sheets
+  - Confirmed: different entries reflect market-specific variants, not a data error
+  - Complexity noted: car configurations differ per market, making cross-market comparison non-trivial
+
+# Feedback Hackathon
+
+- ~4,000 rows of open-ended customer feedback per model
+- Feedback pre-classified into four types: Likes, Defects, Wants, Difficult to Use
+- Additional fields: model ID, source country (incl. Great Britain, Japan, Singapore), derivative/e-code (engine/drivetrain type, incl. ICE)
+- VFC columns explained by Thomas (data colleague):
+  - VFC Level 2: component category (e.g. “Steering Wheel”)
+  - VFC Level 3: sub-component (e.g. “Steering Wheel Heating”)
+  - Combined “VFC Level 2, 3” column: concatenation of both, redundant
+  - Recommendation: extract unique values per column, build a taxonomy, then a knowledge graph
+- Data quality issues noted:
+  - Naming conventions inconsistent (freehand category labels, mixed structured/unstructured fields)
+  - No standardized VFC classification applied uniformly
+
+# Option List (PDFs)
+
+- ~23–28 pages per car model
+- Contains: technical specifications, car variants (Benziner/diesel), feature tables, and technical sketches
+- Public-facing documents; equivalents exist for competitor cars
+- Confirmed useful for: understanding what features each car has, feeding into the comparison logic
+- Not yet fully parsed; extraction method still to be determined
+
+---
+
+# PM Guidance: Prioritization Logic
+
+- Complaints and defects always outrank wish-list features
+  - “If a lot of people complain, it’s an alarm bell. If it’s a nice-to-have, it’s lower priority.”
+- Features benefiting a small user segment rank lower than broadly applicable ones
+  - Example given: easy-to-clean carpets matter for dog owners but not universally
+- Market-specific weighting is essential:
+  - Sustainability: high priority in some EU markets, low elsewhere
+  - Safety features (e.g. emergency alert): relevant in high-crime regions, not universal
+  - Car series matters: Series 1 (entry-level) vs. Series 7 (high luxury) have different viable feature sets
+- Adjustability built into the system is desirable:
+  - PM should be able to tune market weights within the logic
+  - Different PMs covering different regions should reach similar conclusions using the same framework
+
+---
+
+# Proposed Solution Architecture
+
+- Input: PM enters a feature idea (e.g. “vacuum for pet hair removal”)
+- System checks across:
+  - BMW’s own sales and feedback data (structured + unstructured)
+  - Competitor product specs and public reviews
+  - Market-specific demand signals
+- Output: objective yes/no recommendation with full reasoning
+  - Includes regional nuance: “viable in EU, not recommended for China”
+  - Reasoning must be traceable to specific data points, not LLM inference alone
+- Must generalize to any feature input, not just predefined examples
+- Explainability requirement: black-box LLM output alone is insufficient
+  - Proposed approach: train a lightweight ML classifier (e.g. XGBoost or Explainable Boosting Machine) on LLM-labeled data
+  - Advantage: fast training (under 2 minutes), no GPU needed, produces global and local explainability
+  - LLM used for initial classification and labeling; ML model used for scalable, explainable inference
+
+---
+
+# Competitor Research Plan
+
+- Find BMW-competing cars for Series 1, 5, and 7 in EU, China, and US
+- Per competitor car, gather:
+  - Official spec PDFs (equivalent to BMW Option List)
+  - Public reviews and feedback: Google Reviews, Reddit, brand websites
+  - Structured extraction of: complaints, defects, desires, praises
+- Use ChatGPT to identify competitor models and locate sources
+- Output: structured dataset matching BMW’s internal data format for cross-comparison
+
+---
+
+# Open Questions
+
+- VFC data: Thomas to explain full dataset assembly and classification logic in a follow-up session
+- G70 appearing twice in Customer Studies: confirmed as market variants, but column labeling still unclear
+- Great Britain, Japan, Singapore in Feedback Hackathon: not in the stated EU/China/US scope; classification unclear
+- Option List extraction: no method confirmed yet for parsing PDFs at scale
+- LLM vs. ML pipeline: explainability approach (XGBoost vs. EBM vs. SHAP) not yet decided
+
+---
+
+# Next Steps
+
+- **Extract unique VFC Level 2 and Level 3 values and build taxonomy**
+- **Research competitor cars for Series 1, 5, and 7 across EU, China, and US**
+- **Follow up with Thomas on full Feedback Hackathon dataset structure**
+- **Determine PDF extraction method for Option List files**
+- **Decide on explainability approach for the classifier**
+
+---
+
+now what i want you to do is first tell me if you already have factored in all the specifications and dataa from the pdfs like F70_OptionList.pdf, G60_OptionList.PDF and G70_OptionList.PDF. If not i want you to update the classifier models by taking all of that into account and build a frontend and backend for this not just an artifact and the frontend should have a design system same as that of BMW and feel free to do web search and use all skills installed to do it. No placeholder data and do not invent any values, it should be based on the data we have in the repo
