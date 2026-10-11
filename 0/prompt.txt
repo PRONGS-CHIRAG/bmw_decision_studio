@@ -1,0 +1,17 @@
+git pull all changes
+
+---
+
+i want to deploy the app on vercel, should i deploy backend also or can i just use vercel for deploying? Give me step by step instructions
+
+---
+
+i am using render web gui give instructions for that
+
+---
+
+SHOULD $PORT be an actual number?
+
+---
+
+commit and push changes
