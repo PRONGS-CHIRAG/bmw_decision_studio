@@ -3,3 +3,7 @@ read the repo, i want to do the pitch, give me the pitch script for 3 minutes wi
 ---
 
 convert this thing to a claude artifact i can view on my browser, do not do anything else
+
+---
+
+i want you to add the real bmw logo on the frontend instead of the one currently there.
