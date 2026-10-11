@@ -20,7 +20,8 @@ from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
-from . import config, scoring, taxonomy
+from . import config, scoring, taxonomy, tracker
+from .competitors import build as competitor_build
 from .decision import DEFAULT_POLICY, MARKETS, DecisionEngine, PolicyError, read_decisions, record_decision
 
 STATE = {}
@@ -60,6 +61,7 @@ async def lifespan(_app):
     from .agents.competition import CompetitionService
     STATE["competition"] = CompetitionService(graph=pipe.g, llm_getter=lambda: STATE["pipeline"]._current_llm(),
                                               ctx=engine.ctx)
+    STATE["competitor_hash"] = (competitor_build.load_quality() or {}).get("data_hash")
     yield
 
 
@@ -180,6 +182,8 @@ class DecisionRequest(BaseModel):
     policy: dict | None = None
     policy_hash: str
     data_hash: str
+    scope: dict | None = None            # {models, markets} the evaluation covered
+    snapshot: dict | None = None         # per-cell values the tracker compares against later
 
 
 @app.get("/api/decisions")
@@ -189,8 +193,77 @@ def decisions():
 
 @app.post("/api/decisions")
 def add_decision(req: DecisionRequest):
+    entry = req.model_dump()
+    if entry.get("scope") and entry.get("snapshot") is None:
+        _refresh_competitors()
+        # The tracker's baseline is computed here from the stored policy and scope (deterministic), not sent by the page
+        try:
+            entry["snapshot"] = tracker.today_snapshot(STATE["engine"], {**entry, "id": None},
+                                                       STATE.get("competitor_hash"))
+        except (LookupError, PolicyError, KeyError):
+            entry["snapshot"] = None
     try:
-        return jsonable(record_decision(req.model_dump()))
+        return jsonable(record_decision(entry))
+    except ValueError as e:
+        raise HTTPException(400, str(e))
+
+
+# ---------------------------------------------------------------------- tracker (recorded decisions over time)
+class StatusRequest(BaseModel):
+    pm: str
+    status: str
+    note: str
+
+
+class ReviewRequest(BaseModel):
+    pm: str
+    note: str
+
+
+def _decision(decision_id: str) -> dict:
+    found = next((d for d in read_decisions() if d.get("id") == decision_id), None)
+    if found is None:
+        raise HTTPException(404, f"No recorded decision {decision_id!r}.")
+    return found
+
+
+def _refresh_competitors() -> None:
+    """Pick up rebuilt competitor tables (`competitors build`) without a restart, so the tracker sees the change."""
+    current = (competitor_build.load_quality() or {}).get("data_hash")
+    if current != STATE.get("competitor_hash"):
+        STATE["engine"].comp = competitor_build.load_tables()
+        STATE["competitor_hash"] = current
+
+
+@app.get("/api/tracker")
+def tracker_view():
+    """Every recorded decision, recomputed with its own policy on today's data, and what changed since."""
+    _refresh_competitors()
+    return jsonable(tracker.view(STATE["engine"], read_decisions(), tracker.read_events(), STATE.get("competitor_hash")))
+
+
+@app.post("/api/tracker/{decision_id}/status")
+def tracker_status(decision_id: str, req: StatusRequest):
+    _decision(decision_id)
+    try:
+        return jsonable(tracker.record_event({"type": "status", "decision_id": decision_id, **req.model_dump()},
+                                             {decision_id}))
+    except ValueError as e:
+        raise HTTPException(400, str(e))
+
+
+@app.post("/api/tracker/{decision_id}/review")
+def tracker_review(decision_id: str, req: ReviewRequest):
+    """The PM has looked at the new metrics: today's values become the baseline (stored in the event)."""
+    d = _decision(decision_id)
+    _refresh_competitors()
+    try:
+        snap = tracker.today_snapshot(STATE["engine"], d, STATE.get("competitor_hash"))
+    except (LookupError, PolicyError) as e:
+        raise HTTPException(409, f"Cannot recompute this decision: {e}")
+    try:
+        return jsonable(tracker.record_event({"type": "reviewed", "decision_id": decision_id, "snapshot": snap,
+                                              **req.model_dump()}, {decision_id}))
     except ValueError as e:
         raise HTTPException(400, str(e))
 

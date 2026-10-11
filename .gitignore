@@ -87,3 +87,6 @@ out/
 *.sqlite
 *.sqlite3
 *.db
+
+# Motion film built from confidential BMW data -- never commit
+motion-video/

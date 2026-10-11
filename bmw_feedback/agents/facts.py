@@ -277,6 +277,19 @@ class FactBuilder:
             self.add(f"{cp}.survey", "survey", f"Customer study {where}: {sv.get('status')}.", None,
                      node=nid("feature", f), kind="derived", ref="taxonomy survey maps", feature=f, series=m,
                      market=k)
+        cpt = s.get("competitors") or {}
+        if cpt.get("score") is not None:
+            listed = "; ".join(f"{r['name']}: {r['status'].replace('_', ' ')}" for r in cpt["rivals"])
+            self.add(f"{cp}.competitors", "competitor", f"Competitors {where} ({cpt['basis']}): BMW "
+                     f"{cpt['bmw_tier'].replace('_', ' ')} for {cpt['item_label'].lower()}; top-5 rivals: {listed}. "
+                     f"Gap score {_n2(cpt['score'])} (rival average {_n2(cpt['rival_mean'])} minus BMW "
+                     f"{_n2(cpt['bmw_points'])}).", cpt["score"], node=nid("feature", f), kind="table",
+                     ref="data/processed/competitor_equipment.csv + competitor_sets.csv", key=cpt["item"],
+                     feature=f, series=m, market=k)
+        else:
+            self.add(f"{cp}.competitors", "competitor", f"Competitors {where}: no signal "
+                     f"({cpt.get('status', 'no data')}).", None, node=nid("feature", f), kind="derived",
+                     ref="DecisionEngine signals", feature=f, series=m, market=k)
         if c.get("action"):
             fnode = nid("fitment", f, m)
             self.add(f"{cp}.action", "price", f"Suggested move {where}: {c['action']['type']} "
@@ -455,7 +468,8 @@ class FactBuilder:
         pol = self.result["policy"]
         w, th = pol["weights"], pol["thresholds"]
         self.add("policy", "policy", f"Decision policy {self.result['policy_hash']}: weights complaints {w['complaints']:.2f}, "
-                 f"breadth {w['breadth']:.2f}, requests {w['requests']:.2f}, survey {w['survey']:.2f}; 'Prioritise' "
+                 f"breadth {w['breadth']:.2f}, requests {w['requests']:.2f}, survey {w['survey']:.2f}, competitors "
+                 f"{w.get('competitors', 0):.2f}; 'Prioritise' "
                  f"at score >= {th['prioritise']:.2f}, 'Consider' at >= {th['consider']:.2f}; a recommendation needs "
                  f"{th['min_coverage'] * 100:.0f}% of the weighted evidence; sales year {pol['volume_year']}.",
                  self.result["policy_hash"], node=None, kind="config", ref="decision.DEFAULT_POLICY + PM overrides")

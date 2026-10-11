@@ -1,15 +1,17 @@
 """Feature-idea decision engine: one PM question in, a traceable per-market answer out.
 
     idea text -> matched VFC features (alias / name / text classifier, PM confirms)
-              -> per (model, market) cell: four evidence signals in [0, 1]
+              -> per (model, market) cell: five evidence signals in [0, 1]
               -> weighted score -> Prioritise / Consider / Low priority
               -> action type from the DE price list (fix, make standard, introduce)
 
 Signals (each cites its source rows; a missing signal is shown, never imputed)
-    complaints  channel-adjusted complaint verdict of the feature in that model + market
-    breadth     how many of the model's customers raise the feature at all (percentile)
-    requests    channel-adjusted request index ('Wants') in that model + market
-    survey      how weak the matching survey attribute is in that model + market (percentile)
+    complaints   channel-adjusted complaint verdict of the feature in that model + market
+    breadth      how many of the model's customers raise the feature at all (percentile)
+    requests     channel-adjusted request index ('Wants') in that model + market
+    survey       how weak the matching survey attribute is in that model + market (percentile)
+    competitors  how far BMW is behind the market's top-5 rivals on the matching equipment item
+                 (German equipment data, used for every market and labelled so)
 
 Weights, market multipliers and thresholds are policy, not data: they live in
 DEFAULT_POLICY, are returned with every result and hashed, so two PMs with the
@@ -33,8 +35,8 @@ SALES_GROUP = {"F70": "F70", "G60": "G60_G68", "G70": "G70"}
 CN_SURVEY_MODEL = {"G60": "G68", "G70": "G70"}       # the CN survey covers the long-wheelbase G68, not G60
 
 DEFAULT_POLICY = {
-    "version": "1.0",
-    "weights": {"complaints": 0.4, "breadth": 0.2, "requests": 0.2, "survey": 0.2},
+    "version": "1.1",
+    "weights": {"complaints": 0.35, "breadth": 0.15, "requests": 0.15, "survey": 0.2, "competitors": 0.15},
     "market_multipliers": {"EU": 1.0, "US": 1.0, "CN": 1.0, "RoW": 1.0},
     "volume_year": 2025,
     "thresholds": {"prioritise": 0.6, "consider": 0.35, "min_coverage": 0.5},
@@ -46,10 +48,16 @@ DEFAULT_POLICY = {
         "min_comments_for_signal": config.MIN_MENTIONS_FOR_VERDICT,
         "survey_weakness": "(rank - 1) / (attributes - 1); rank 1 = best-rated attribute of that series in that market",
         "breadth": "percentile of the feature's comment count among the series' features (all markets)",
+        "competitor_points": {"rivals": "standard 1, standard on some variants 0.75, optional or package 0.5, "
+                                        "not available 0; rivals without data are left out",
+                              "bmw": "standard on all variants 1, on some 0.75, optional 0.5, not listed 0",
+                              "score": "max(0, mean(rival points) - BMW points); needs 3 rivals with data",
+                              "basis": "German equipment data, used for every market"},
     },
     "rationale": {
-        "weights": "Complaints weigh twice as much as requests (PM guidance: complaints and defects outrank "
-                   "wish-list features). Breadth rewards features many customers raise over niche ones.",
+        "weights": "Complaints weigh most (PM guidance: complaints and defects outrank wish-list features). "
+                   "Breadth rewards features many customers raise over niche ones. Competitors raise the priority "
+                   "when the market's top-5 rivals offer the item and BMW does not. The weights always sum to 1.",
         "market_multipliers": "1.0 = market weighted by its sales volume. Raise a market to emphasise it "
                               "(e.g. a regional strategy); lower to de-emphasise.",
         "thresholds": "A cell needs at least half of the weighted evidence present to get a recommendation.",
@@ -58,7 +66,30 @@ DEFAULT_POLICY = {
                      "feedback in the data and configurations differ by market, so it does not borrow by default.",
     },
 }
-SIGNALS = ["complaints", "breadth", "requests", "survey"]
+SIGNALS = ["complaints", "breadth", "requests", "survey", "competitors"]
+
+# Competitor signal: points per equipment status (German equipment data)
+RIVAL_POINTS = {"standard": 1.0, "standard_some": 0.75, "optional": 0.5, "package": 0.5, "not_available": 0.0}
+BMW_POINTS = {"standard_all": 1.0, "standard_some": 0.75, "optional": 0.5, "not_listed": 0.0}
+MIN_KNOWN_RIVALS = 3
+EQUIPMENT_BASIS = "German equipment data"
+
+
+def competitor_gap(rivals: dict, bmw_tier: str | None) -> dict:
+    """How far BMW is behind its rivals on one item: max(0, mean rival points - BMW points), 0..1.
+
+    rivals maps model_id -> status (None = no data for that rival, left out). Pure: no I/O.
+    """
+    known = {m: s for m, s in rivals.items() if s in RIVAL_POINTS}
+    bmw_points = BMW_POINTS.get(bmw_tier or "not_listed", 0.0)
+    out = {"n_known": len(known), "n_rivals": len(rivals), "bmw_points": bmw_points,
+           "bmw_tier": bmw_tier or "not_listed"}
+    if len(known) < MIN_KNOWN_RIVALS:
+        return {**out, "score": None, "rival_mean": None,
+                "status": f"only {len(known)} of {len(rivals)} rivals have equipment data (needs {MIN_KNOWN_RIVALS})"}
+    mean = sum(RIVAL_POINTS[s] for s in known.values()) / len(known)
+    return {**out, "score": round(max(0.0, min(1.0, mean - bmw_points)), 3), "rival_mean": round(mean, 3),
+            "status": "ok"}
 
 
 def _hash(obj) -> str:
@@ -103,6 +134,10 @@ def check_weights(weights: dict) -> None:
 
 def merge_policy(overrides: dict | None) -> dict:
     policy = copy.deepcopy(DEFAULT_POLICY)
+    if (overrides or {}).get("weights"):
+        # Weights are one whole: an override is the complete set, and a signal it does not name counts 0
+        # (so a decision stored under policy 1.0, before the competitor signal, recomputes with its own weights).
+        policy["weights"] = {k: 0.0 for k in policy["weights"]}
     for key in ("weights", "market_multipliers", "thresholds"):
         for k, v in ((overrides or {}).get(key) or {}).items():
             if k in policy[key] and v is not None:
@@ -121,8 +156,13 @@ def merge_policy(overrides: dict | None) -> dict:
 
 
 class DecisionEngine:
-    def __init__(self, ctx=None):
+    def __init__(self, ctx=None, competitor_tables="load"):
+        """competitor_tables: the dict from competitors.build.load_tables(); "load" reads it; None = not built."""
         self.ctx = ctx or load_context()
+        if isinstance(competitor_tables, str):
+            from .competitors.build import load_tables
+            competitor_tables = load_tables()
+        self.comp = competitor_tables
         p = config.PROCESSED_DIR
         self.catalog = self.ctx.catalog or load_catalog()
         self.sales = pd.read_csv(p / "sales.csv")
@@ -160,6 +200,48 @@ class DecisionEngine:
                          overall_top2=g["top2_box"].mean())
             out[("US", model)] = g.set_index("attribute")
         return out
+
+    def _rival_status(self, mid: str, item: str) -> str | None:
+        """Best equipment status of a rival for one item, reduced as CompetitorEngine._equipment does."""
+        e = self.comp["equipment"]
+        rows = e[(e["model_id"] == mid) & (e["item"] == item)]
+        if rows.empty:
+            return None
+        order = {"standard": 0, "optional": 1, "package": 2, "not_available": 3}
+        best = min(rows.itertuples(), key=lambda r: (order[r.status], not _blank(r.variant_scope),
+                                                    0 if _blank(r.price_eur) else float(r.price_eur)))
+        return "standard_some" if best.status == "standard" and not _blank(best.variant_scope) else best.status
+
+    def _competitors(self, feature, model, market):
+        """Signal 5: how far BMW is behind the market's top-5 rivals on the feature's equipment item."""
+        from .competitors import registry as CR
+        base = {"basis": EQUIPMENT_BASIS}
+        if self.comp is None:
+            return {**base, "score": None,
+                    "status": "competitor data not built (run `python -m bmw_feedback competitors build`)"}
+        items = CR.FEATURE_ITEMS.get(feature, [])
+        if not items:
+            return {**base, "score": None, "status": "no competitor equipment data for this feature"}
+        sets = self.comp["sets"]
+        g = sets[(sets["series"] == model) & (sets["market"] == market)].sort_values("rank")
+        g = g[g["model_id"].notna()]
+        if g.empty:
+            return {**base, "score": None, "status": f"no competitor set for the {model} in {market}"}
+        names = self.comp["models"].set_index("model_id")["name"]
+        bmw = self.comp["bmw_equipment"]
+        best = None
+        for item in items:
+            b = bmw[(bmw["model"] == model) & (bmw["item"] == item)]
+            tier = None if b.empty else str(b["tier"].iloc[0])
+            statuses = {mid: self._rival_status(mid, item) for mid in g["model_id"]}
+            gap = competitor_gap(statuses, tier)
+            cand = {**base, **gap, "item": item, "item_label": CR.EQUIPMENT_ITEMS[item]["label"],
+                    "rivals": [{"model_id": m, "name": str(names.get(m, m)), "status": st or "unknown",
+                                "points": RIVAL_POINTS.get(st) if st else None} for m, st in statuses.items()]}
+            rank = (lambda c: -1.0 if c["score"] is None else c["score"])
+            if best is None or rank(cand) > rank(best):
+                best = cand
+        return best
 
     # ------------------------------------------------------------------ idea -> features
     def resolve_idea(self, idea: str, top_k: int = 6) -> dict:
@@ -388,7 +470,8 @@ class DecisionEngine:
                 signals = {"complaints": self._complaints(feature, model, market, policy),
                            "breadth": self._breadth(feature, model, market, policy),
                            "requests": self._requests(feature, model, market, policy),
-                           "survey": self._survey(feature, model, market)}
+                           "survey": self._survey(feature, model, market),
+                           "competitors": self._competitors(feature, model, market)}
                 disc = policy["borrowing"]["discount"]
                 eff = {k: w[k] * (disc if signals[k].get("level") == "borrowed" else 1.0) for k in SIGNALS}
                 avail = [k for k in SIGNALS if signals[k].get("score") is not None]
@@ -444,6 +527,10 @@ def _aliases():
 
 def _num(v):
     return None if v is None or pd.isna(v) else round(float(v), 2)
+
+
+def _blank(v) -> bool:
+    return v is None or (isinstance(v, float) and pd.isna(v)) or v == ""
 
 
 def _action(signals, fit, market) -> dict | None:
@@ -509,6 +596,15 @@ def _reasons(feature, model, market, s, rec, coverage) -> list:
                    f"{worst['rank']} of {worst['of']} attributes.")
     else:
         out.append(f"Survey: {sv.get('status')}.")
+    cp = s.get("competitors") or {}
+    if cp.get("score") is not None:
+        offering = sum(1 for r in cp["rivals"] if r["status"] in ("standard", "standard_some", "optional", "package"))
+        standard = sum(1 for r in cp["rivals"] if r["status"] in ("standard", "standard_some"))
+        out.append(f"Competitors ({cp['basis']}): {offering} of {cp['n_known']} rivals with data offer "
+                   f"{cp['item_label'].lower()} ({standard} as standard); BMW: {cp['bmw_tier'].replace('_', ' ')} "
+                   f"(gap {cp['score']:.2f}).")
+    else:
+        out.append(f"Competitors: {cp.get('status', 'no data')}.")
     if rec == "Insufficient evidence":
         out.append(f"Only {coverage:.0%} of the weighted evidence is available here - no recommendation.")
     return out
