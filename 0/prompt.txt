@@ -1,0 +1,5 @@
+Explain be the logic and backend in very simple words with the scoring and what is priority and how it decides evrything
+
+---
+
+how can the pm change the rules? where
