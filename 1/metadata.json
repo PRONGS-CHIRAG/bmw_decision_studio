@@ -1,0 +1,117 @@
+{
+  "cli_version": "0.11.4",
+  "checkpoint_id": "01M4MVRDWAJFNN7R1YK0NP2A8W",
+  "session_id": "bc38d2d0-a128-45bb-8edf-0cbb1df3afc9",
+  "strategy": "manual-commit",
+  "created_at": "2026-10-11T06:52:44.753946Z",
+  "branch": "main",
+  "checkpoints_count": 2,
+  "save_step_count": 2,
+  "files_touched": [
+    ".gitignore"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-opus-5-5",
+  "turn_id": "226d739087bb",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 78,
+    "cache_creation_tokens": 208559,
+    "cache_read_tokens": 6437030,
+    "output_tokens": 57487,
+    "api_call_count": 38
+  },
+  "session_metrics": {
+    "turn_count": 2
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-10-11T06:52:44.688652Z",
+    "agent_lines": 0,
+    "agent_removed": 0,
+    "human_added": 31,
+    "human_modified": 5,
+    "human_removed": 0,
+    "total_committed": 31,
+    "total_lines_changed": 43,
+    "agent_percentage": 0,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 854,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".claude/skills/motion-design/LICENSE": 21,
+        ".claude/skills/motion-design/SKILL.md": 175,
+        ".claude/skills/motion-design/scripts/analyze_song.py": 19,
+        ".claude/skills/motion-design/scripts/audio_template.py": 45,
+        ".claude/skills/motion-design/scripts/mcp21_client.py": 41,
+        ".claude/skills/motion-design/scripts/mixkit_sfx_search.py": 13,
+        ".claude/skills/motion-design/scripts/remake/BRIEF_TEMPLATE.md": 25,
+        ".claude/skills/motion-design/scripts/remake/core.js": 134,
+        ".claude/skills/motion-design/scripts/remake/index.html": 22,
+        ".claude/skills/motion-design/scripts/remake/remake_analyze.py": 44,
+        ".claude/skills/motion-design/scripts/remake/remake_qa.py": 27,
+        ".claude/skills/motion-design/scripts/remake/remake_render.py": 70,
+        ".claude/skills/motion-design/scripts/remake/remake_stub.py": 14,
+        ".claude/skills/motion-design/scripts/remake/remake_sync.py": 33,
+        ".claude/skills/motion-design/scripts/render_template.py": 150,
+        ".claude/skills/motion-design/scripts/svgl_logos.py": 18,
+        ".gitignore": 3
+      }
+    },
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 851,
+      "user_lines_removed": 0,
+      "agent_lines_added": 3,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".claude/skills/motion-design/LICENSE": 21,
+        ".claude/skills/motion-design/SKILL.md": 175,
+        ".claude/skills/motion-design/scripts/analyze_song.py": 19,
+        ".claude/skills/motion-design/scripts/audio_template.py": 45,
+        ".claude/skills/motion-design/scripts/mcp21_client.py": 41,
+        ".claude/skills/motion-design/scripts/mixkit_sfx_search.py": 13,
+        ".claude/skills/motion-design/scripts/remake/BRIEF_TEMPLATE.md": 25,
+        ".claude/skills/motion-design/scripts/remake/core.js": 134,
+        ".claude/skills/motion-design/scripts/remake/index.html": 22,
+        ".claude/skills/motion-design/scripts/remake/remake_analyze.py": 44,
+        ".claude/skills/motion-design/scripts/remake/remake_qa.py": 27,
+        ".claude/skills/motion-design/scripts/remake/remake_render.py": 70,
+        ".claude/skills/motion-design/scripts/remake/remake_stub.py": 14,
+        ".claude/skills/motion-design/scripts/remake/remake_sync.py": 33,
+        ".claude/skills/motion-design/scripts/render_template.py": 150,
+        ".claude/skills/motion-design/scripts/svgl_logos.py": 18
+      }
+    },
+    {
+      "checkpoint_number": 3,
+      "user_lines_added": 851,
+      "user_lines_removed": 0,
+      "agent_lines_added": 3,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".claude/skills/motion-design/LICENSE": 21,
+        ".claude/skills/motion-design/SKILL.md": 175,
+        ".claude/skills/motion-design/scripts/analyze_song.py": 19,
+        ".claude/skills/motion-design/scripts/audio_template.py": 45,
+        ".claude/skills/motion-design/scripts/mcp21_client.py": 41,
+        ".claude/skills/motion-design/scripts/mixkit_sfx_search.py": 13,
+        ".claude/skills/motion-design/scripts/remake/BRIEF_TEMPLATE.md": 25,
+        ".claude/skills/motion-design/scripts/remake/core.js": 134,
+        ".claude/skills/motion-design/scripts/remake/index.html": 22,
+        ".claude/skills/motion-design/scripts/remake/remake_analyze.py": 44,
+        ".claude/skills/motion-design/scripts/remake/remake_qa.py": 27,
+        ".claude/skills/motion-design/scripts/remake/remake_render.py": 70,
+        ".claude/skills/motion-design/scripts/remake/remake_stub.py": 14,
+        ".claude/skills/motion-design/scripts/remake/remake_sync.py": 33,
+        ".claude/skills/motion-design/scripts/render_template.py": 150,
+        ".claude/skills/motion-design/scripts/svgl_logos.py": 18
+      }
+    }
+  ]
+}
