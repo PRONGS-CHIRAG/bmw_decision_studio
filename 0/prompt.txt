@@ -1,0 +1,1 @@
+in step 6 i cannot click on record the decision button , make it clickable and tracker should identify it and show the decision and update the tracker webpage, do not break anything.
