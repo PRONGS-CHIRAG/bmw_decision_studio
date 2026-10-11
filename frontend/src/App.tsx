@@ -51,8 +51,8 @@ function About({ status }: { status: AgentStatus | null }) {
           </section>
         </div>
         <p className="disclaimer about__legal">
-          Internal prototype on BMW hackathon data. The BMW logo and BMW Type Next are BMW trademarks / licensed assets, loaded locally and not
-          distributed with this code.
+          Internal prototype on BMW hackathon data. The BMW logo is a BMW trademark, used here for the BMW hackathon. BMW Type Next is a
+          licensed typeface, loaded locally and not distributed with this code.
         </p>
       </div>
     </main>

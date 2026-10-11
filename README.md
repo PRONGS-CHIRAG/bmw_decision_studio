@@ -50,9 +50,9 @@ OPENAI_PRESENTER_MODEL=...                # competitor presenter; defaults to th
 
 `python -m bmw_feedback agent --check` lists which configured models the key can use. A model the key cannot use is reported with the available ones; it is never swapped silently. `python -m bmw_feedback agent "your idea"` runs the whole pipeline in the terminal.
 
-### BMW logo and font (local only)
+### BMW logo and font
 
-The official BMW logo and BMW Type Next are BMW's trademark and licensed font. They are not in the repository. `frontend/scripts/fetch-brand-assets.cjs` fetches them from bmw.de into the git-ignored `frontend/public/brand` and `frontend/public/fonts` for local use (it needs Playwright). Without them the app shows a text wordmark and uses Barlow.
+The official BMW logo and BMW Type Next are BMW's trademark and licensed font. The colour roundel (`frontend/public/brand/bmw-logo-colour.svg`, from bmw.de) is in the repository so the deployed app shows it in the header. The white logo and the font are not: `frontend/scripts/fetch-brand-assets.cjs` fetches them from bmw.de into the git-ignored `frontend/public/brand` and `frontend/public/fonts` for local use (it needs Playwright). Without the font the app uses Barlow.
 
 For frontend development, run `npm run dev` in `frontend/` (port 5173). It proxies `/api` to the server on port 8000.
 

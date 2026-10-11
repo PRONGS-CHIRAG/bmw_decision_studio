@@ -1,8 +1,9 @@
 // Fetch the official BMW logo SVGs and the BMW Type Next web font from bmw.de for LOCAL use.
 //
-// The BMW roundel is a trademark and BMW Type Next is a licensed typeface; the files are
-// git-ignored (frontend/public/brand, frontend/public/fonts) and must not be redistributed.
-// Without them the app falls back to a text wordmark and Barlow.
+// The BMW roundel is a trademark and BMW Type Next is a licensed typeface. Only the colour
+// roundel (public/brand/bmw-logo-colour.svg) is committed, so the deployed header shows it; the
+// white logo and the fonts are git-ignored and must not be redistributed. Without the fonts the
+// app falls back to Barlow.
 //
 // bmw.de sits behind bot protection that drops plain HTTP clients, so a real browser loads
 // the home page first and downloads each file from inside it.

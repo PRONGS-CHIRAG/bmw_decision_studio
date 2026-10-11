@@ -63,8 +63,10 @@ Thumbs.db
 # Legacy procurement (Demandra) code moved out of the way; recoverable from git history
 archive/
 
-# BMW brand assets fetched locally by frontend/scripts/fetch-brand-assets.cjs - trademark / licensed, never commit
-frontend/public/brand/
+# BMW brand assets fetched locally by frontend/scripts/fetch-brand-assets.cjs - trademark / licensed.
+# Only the colour roundel is committed, so the deployed header shows it; the white logo and the font stay local.
+frontend/public/brand/*
+!frontend/public/brand/bmw-logo-colour.svg
 frontend/public/fonts/
 
 # TypeScript incremental build cache
