@@ -1,4 +1,4 @@
-import { MARKET_NAMES, MODEL_NAMES, fmtNum } from "./api";
+import { MARKET_NAMES, MODEL_NAMES } from "./api";
 import type { Cell, FeatureResult } from "./types";
 
 // Plain-English wording for engine results. Everything here is derived from engine fields;
@@ -70,10 +70,23 @@ export const VERDICT_WORDS: Record<string, string> = {
   "Not enough data": "Too few comments to say",
 };
 
+/** The complaint index as a percentage difference from a typical topic: 0.48 -> 52% fewer, 1.4 -> 40% more. */
+export function complaintDiff(index: number | null): { pct: number; dir: "fewer" | "more" | "same" } | null {
+  if (index === null) return null;
+  const pct = Math.round(Math.abs(index - 1) * 100);
+  return { pct, dir: pct < 5 ? "same" : index < 1 ? "fewer" : "more" };
+}
+
+export function complaintReason(index: number | null): string {
+  const d = complaintDiff(index);
+  if (!d) return "Too few comments to judge";
+  return d.dir === "same" ? "About as many complaints as a typical topic" : `${d.pct}% ${d.dir} complaints than a typical topic`;
+}
+
 /** Complaint index read with its 95% interval: only a clear difference is called more or fewer. */
 export function complaintWords(o: FeatureResult["overall"]): string {
-  const ix = fmtNum(o.complaint_index);
-  if (o.ci_low > 1) return `More complaints than expected (index ${ix}; 1.00 is normal, and the difference is clear).`;
-  if (o.ci_high < 1) return `Fewer complaints than expected (index ${ix}; 1.00 is normal, and the difference is clear).`;
-  return `About as many complaints as expected (index ${ix}; 1.00 is normal, and the difference is within normal variation).`;
+  const d = complaintDiff(o.complaint_index);
+  const amount = !d || d.dir === "same" ? "about as many complaints as" : `${d.pct}% ${d.dir} complaints than`;
+  if (o.ci_low > 1 || o.ci_high < 1) return `Customers raise ${amount} for a typical topic. The difference is clear, not chance.`;
+  return `Customers raise ${amount} for a typical topic, but the difference is within normal variation.`;
 }

@@ -1,22 +1,22 @@
 import { MARKET_NAMES, SERIES_LABELS, fmtInt } from "../api";
 import type { Candidate, IdeaSpec, InterpretResult } from "../types";
-import { VERDICT_COLORS } from "./marks";
-import { VERDICT_WORDS } from "../plain";
+import { VERDICT_COLORS, Verdict } from "./marks";
+import { complaintDiff, complaintReason } from "../plain";
 
 const MAX_FEATURES = 3;
 const DARK_FILL = new Set(["Good", "Bad"]);
 
-/** The number behind the verdict: complaints compared with a typical feature (1.0x = typical). */
+/** The verdict, with the number behind it: complaints compared with a typical topic, in percent. */
 function VerdictDial({ c }: { c: Candidate }) {
-  const known = c.verdict !== "Not enough data" && c.complaint_index !== null;
+  const d = c.verdict !== "Not enough data" ? complaintDiff(c.complaint_index) : null;
   const fill = VERDICT_COLORS[c.verdict] ?? "transparent";
   return (
-    <span className="dial" aria-label={known ? `${c.complaint_index!.toFixed(1)} times the complaints of a typical feature` : "Too few comments to judge"}>
-      <span className={`dial__circle ${known ? "" : "dial__circle--empty"}`}
-        style={{ background: known ? fill : undefined, color: DARK_FILL.has(c.verdict) ? "#fff" : "var(--heading)" }}>
-        <span className="dial__num num">{known ? `${c.complaint_index!.toFixed(1)}×` : "?"}</span>
+    <span className="dial" aria-label={d ? `${c.verdict}: ${complaintReason(c.complaint_index)}` : "Too few comments to judge"}>
+      <span className={`dial__circle ${d ? "" : "dial__circle--empty"}`}
+        style={{ background: d ? fill : undefined, color: DARK_FILL.has(c.verdict) ? "#fff" : "var(--heading)" }}>
+        <span className="dial__num num">{!d ? "?" : d.dir === "same" ? "≈" : `${d.dir === "fewer" ? "−" : "+"}${d.pct}%`}</span>
+        <span className="dial__unit">{!d ? "" : d.dir === "same" ? "typical" : "complaints"}</span>
       </span>
-      <span className="dial__cap">{known ? "complaints vs. typical" : "too few comments"}</span>
     </span>
   );
 }
@@ -85,8 +85,8 @@ export default function SpecReview({
         <legend className="review__legend">
           Related topics customers talk about <span className="caption">choose up to {MAX_FEATURES}</span>
         </legend>
-        <p className="caption">The circle shows how much customers complain about each topic compared with a typical one: below 1.0× is better
-          than usual, above 1.0× is worse. Its colour is the overall verdict.</p>
+        <p className="caption">Each topic shows what customers think of it today, and why: how many more or fewer complaints it gets than a
+          typical topic in the feedback.</p>
         {interp.candidates.length === 0 && <p className="small muted">Nothing related was found in the customer feedback.</p>}
         <div className="tiles">
           {interp.candidates.map((c) => (
@@ -105,8 +105,9 @@ export default function SpecReview({
                     <span className="tile__title">{c.feature}</span>
                   </span>
                   <span className="caption">{c.domain}</span>
-                  <span className="tile__verdict">{VERDICT_WORDS[c.verdict] ?? c.verdict}</span>
-                  <span className="caption num">{fmtInt(c.n_comments)} customer comments</span>
+                  <span className="tile__verdict"><Verdict verdict={c.verdict} /></span>
+                  <span className="tile__why">{c.verdict === "Not enough data" ? "Too few comments to judge" : complaintReason(c.complaint_index)}</span>
+                  <span className="caption num">Based on {fmtInt(c.n_comments)} customer comments</span>
                   {suggested.has(c.feature) && <span className="tile__tag">Suggested</span>}
                   {c.umbrella && <span className="caption">General praise is also filed here.</span>}
                 </span>

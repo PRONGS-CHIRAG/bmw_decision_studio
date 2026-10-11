@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "react";
 import { MARKET_NAMES, MODEL_NAMES, fmtInt, fmtNum } from "../api";
 import type { AgentEvaluation, AgentStatus, Explained, IdeaSpec, InterpretResult } from "../types";
-import { REC_INFO, REC_ORDER, VERDICT_WORDS, bottomLine, groupCells, placesText, type RecGroup } from "../plain";
+import { REC_INFO, REC_ORDER, bottomLine, complaintReason, groupCells, placesText, type RecGroup } from "../plain";
 
 // The pipeline as a horizontal flowchart. The backend answers in three blocking requests
 // (interpret, evaluate, explain), so a card shows "running" with the real elapsed time while its
@@ -154,9 +154,9 @@ function buildNodes(p: Props): FlowNode[] {
       retriever.lines.push({ text: `Schema check, attempt ${a.attempt}: ${a.ok ? "passed" : `failed (${a.errors[0] ?? "invalid"})`}`, status: a.ok ? "ok" : "fail" });
     const sorted = [...interp.candidates].sort((a, b) => Number(picked.has(b.feature)) - Number(picked.has(a.feature)));
     retriever.kids = sorted.map((c) => ({
-      key: c.feature, label: c.feature, sub: `${picked.has(c.feature) ? "Suggested · " : ""}${VERDICT_WORDS[c.verdict] ?? c.verdict}`,
+      key: c.feature, label: c.feature, sub: `${picked.has(c.feature) ? "Suggested · " : ""}${c.verdict}`,
       tone: picked.has(c.feature) ? "ok" : "info",
-      body: <Rows rows={[["Area", c.domain], ["Customers", `${VERDICT_WORDS[c.verdict] ?? c.verdict} (${fmtInt(c.n_comments)} comments)`],
+      body: <Rows rows={[["Area", c.domain], ["Customers", `${c.verdict}: ${c.verdict === "Not enough data" ? "too few comments to judge" : complaintReason(c.complaint_index).toLowerCase()} (${fmtInt(c.n_comments)} comments)`],
         ["Suggested", picked.has(c.feature) ? "Yes" : "No"], ["Found by", c.how.join(", ")]]} />,
     }));
     retriever.handover = `${plural(interp.candidates.length, "related topic")} for you to choose from`;

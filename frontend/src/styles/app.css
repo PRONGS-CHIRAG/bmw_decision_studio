@@ -224,3 +224,7 @@
 .dial__circle--empty { border: 2px dashed var(--muted-soft); background: transparent; color: var(--muted); }
 .dial__num { font-size: 19px; font-weight: 700; letter-spacing: -0.02em; }
 .dial__cap { font-size: 10.5px; line-height: 1.2; text-align: center; color: var(--disclaimer); }
+.tile__why { font-size: var(--fs-small); color: var(--copy-text); }
+.dial__circle { width: 72px; height: 72px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; }
+.dial__num { font-size: 18px; line-height: 1.1; }
+.dial__unit { font-size: 9.5px; line-height: 1.1; opacity: 0.85; }
