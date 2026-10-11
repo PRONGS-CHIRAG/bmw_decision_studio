@@ -197,7 +197,7 @@ export default function SpecReview({
             <button type="button" className="tile tile--compact" role="radio" aria-checked={adjust} aria-pressed={adjust}
               onClick={() => setAdjust(true)}>
               <span className="tile__title">Yes, adjust the weights</span>
-              <span className="caption">Four linked sliders that always total 100%</span>
+              <span className="caption">Linked sliders that always total 100%</span>
             </button>
           </div>
           {adjust && <WeightSliders idPrefix="sw" weights={weights} defaults={defaultWeights} onChange={onWeights} />}

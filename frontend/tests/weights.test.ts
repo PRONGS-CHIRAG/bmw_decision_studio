@@ -57,3 +57,11 @@ test("fromPercents gives weights the backend accepts (sum within 1e-6 of 1)", ()
   const w = fromPercents({ complaints: 35, breadth: 15, requests: 15, survey: 35 });
   assert.ok(Math.abs(Object.values(w).reduce((a, b) => a + b, 0) - 1) < 1e-6);
 });
+
+test("five signals (with competitors) also always total 100", () => {
+  const five = toPercents({ complaints: 0.35, breadth: 0.15, requests: 0.15, survey: 0.2, competitors: 0.15 });
+  assert.deepEqual(five, { complaints: 35, breadth: 15, requests: 15, survey: 20, competitors: 15 });
+  const p = rebalance(five, "competitors", 40);
+  assert.equal(p.competitors, 40);
+  assert.equal(sum(p), 100);
+});

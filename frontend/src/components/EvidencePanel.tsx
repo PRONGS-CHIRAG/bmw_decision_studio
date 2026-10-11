@@ -7,6 +7,7 @@ const SIGNAL_NAMES: Record<string, string> = {
   breadth: "Breadth",
   requests: "Requests",
   survey: "Survey weakness",
+  competitors: "Competitors",
 };
 
 export default function EvidencePanel({ cell, fitment }: { cell: Cell; fitment?: Fitment }) {
@@ -201,6 +202,12 @@ function signalDetail(kind: string, s: Signal): React.ReactNode {
     return `${fmtInt(s.n_comments)} of ${fmtInt(s.model_comments)} comments on this model (all markets)${
       s.rank_among_features ? `, rank ${s.rank_among_features} of ${s.n_features} features` : ""
     }`;
+  }
+  if (kind === "competitors") {
+    const offer = (s.rivals ?? []).filter((r) => ["standard", "standard_some", "optional", "package"].includes(r.status));
+    const std = offer.filter((r) => r.status.startsWith("standard"));
+    return `${s.basis}: ${offer.length} of ${s.n_known} rivals with data offer ${s.item_label?.toLowerCase()} (${std.length} as standard: ${
+      std.map((r) => r.name).join(", ") || "none"}); BMW ${s.bmw_tier?.replace(/_/g, " ")}`;
   }
   if (kind === "survey") {
     if (s.score === null) return s.status;

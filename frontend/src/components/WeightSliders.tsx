@@ -1,14 +1,18 @@
 import { fromPercents, rebalance, toPercents } from "../weights";
 
-const SIGNAL_SHORT: Record<string, string> = { complaints: "Complaints", breadth: "Breadth", requests: "Requests", survey: "Survey" };
+const SIGNAL_SHORT: Record<string, string> = {
+  complaints: "Complaints", breadth: "Breadth", requests: "Requests", survey: "Survey", competitors: "Competitors",
+};
 const SIGNAL_HINT: Record<string, string> = {
   complaints: "more complaints than a typical topic",
   breadth: "how many customers raise it",
   requests: "customers asking for it",
   survey: "rated weakly in the customer study",
+  competitors: "top-5 rivals offer it and BMW does not (German equipment data)",
 };
 const SIGNAL_COLOR: Record<string, string> = {
   complaints: "var(--coral)", breadth: "var(--data-blue)", requests: "var(--apricot)", survey: "var(--violet)",
+  competitors: "var(--g-competitor)",
 };
 const STEP = 5;
 

@@ -42,6 +42,15 @@ export interface Signal {
   n_features?: number;
   sheet?: string;
   survey_model?: string;
+  // competitors (German equipment data)
+  basis?: string;
+  item?: string;
+  item_label?: string;
+  rivals?: { model_id: string; name: string; status: string; points: number | null }[];
+  bmw_tier?: string;
+  bmw_points?: number;
+  rival_mean?: number | null;
+  n_known?: number;
   note?: string | null;
   attributes?: {
     attribute: string;
@@ -169,6 +178,51 @@ export interface Decision {
   system_recommendation?: Record<string, unknown> | null;
   policy_hash: string;
   data_hash: string;
+  scope?: { models: string[]; markets: string[] } | null;
+}
+
+// ---------------------------------------------------------------------- tracker
+export interface SnapshotCell {
+  model: string;
+  market: string;
+  recommendation: string | null;
+  score: number | null;
+  signals: Record<string, number | null>;
+  rivals: { item: string; item_label: string; statuses: Record<string, string>; names: Record<string, string> } | null;
+}
+export interface Snapshot {
+  rollup_score: number | null;
+  cells: SnapshotCell[];
+  competitor_data_hash?: string | null;
+}
+export interface TrackerChange {
+  type: "recommendation" | "score" | "rollup" | "competitor";
+  text: string;
+  model?: string;
+  market?: string;
+}
+export interface LifecycleEntry {
+  status: string;
+  pm: string;
+  note: string;
+  recorded_at: string;
+  id: string;
+}
+export interface TrackerItem {
+  decision: Decision;
+  scope: { models: string[]; markets: string[] };
+  lifecycle: { status: string; history: LifecycleEntry[] };
+  baseline: Snapshot & { source: { kind: "decision" | "reviewed"; pm?: string; recorded_at?: string; note?: string } };
+  today: Snapshot | null;
+  status: "ok" | "cannot_recompute";
+  reason?: string;
+  changes: TrackerChange[];
+  needs_review: boolean;
+}
+export interface TrackerView {
+  decisions: TrackerItem[];
+  n_needs_review: number;
+  competitor_data_hash: string | null;
 }
 
 // ---------------------------------------------------------------------- agents

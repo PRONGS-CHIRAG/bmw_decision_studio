@@ -1,22 +1,51 @@
-import { useState } from "react";
-import { fmtInt, useApi } from "./api";
-import type { AgentStatus } from "./types";
+import { useCallback, useEffect, useState } from "react";
+import { fmtInt, getJSON, useApi } from "./api";
+import type { AgentStatus, TrackerView } from "./types";
 import BrandHeader, { type View } from "./components/BrandHeader";
+import { TRACKER_CHANGED } from "./components/DecisionForm";
 import IdeaEvaluation from "./pages/IdeaEvaluation";
+import Tracker from "./pages/Tracker";
 
 export default function App() {
   const { data: status } = useApi<AgentStatus>("/api/agent/status");
   const [view, setView] = useState<View>("evaluate");
+  const tracker = useTracker();
+  // opening the Tracker re-checks the market, so the page never shows a stale comparison
+  const open = (v: View) => {
+    setView(v);
+    if (v === "tracker") tracker.reload();
+  };
   return (
     <div className="app">
-      <BrandHeader status={status} view={view} onView={setView} />
-      {/* the evaluation stays mounted while About is open, so no work is lost */}
+      <BrandHeader status={status} view={view} onView={open} toReview={tracker.data?.n_needs_review ?? 0} />
+      {/* the evaluation stays mounted while another view is open, so no work is lost */}
       <main className="app__main" hidden={view !== "evaluate"}>
         <IdeaEvaluation status={status} />
       </main>
+      {view === "tracker" && <Tracker {...tracker} />}
       {view === "about" && <About status={status} />}
     </div>
   );
+}
+
+/** Tracker data, loaded on start and reloaded whenever a decision, status or review is recorded. */
+function useTracker() {
+  const [data, setData] = useState<TrackerView | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+  const reload = useCallback(() => {
+    setLoading(true);
+    getJSON<TrackerView>("/api/tracker")
+      .then((d) => { setData(d); setError(null); })
+      .catch((e: Error) => setError(e.message))
+      .finally(() => setLoading(false));
+  }, []);
+  useEffect(() => {
+    reload();
+    window.addEventListener(TRACKER_CHANGED, reload);
+    return () => window.removeEventListener(TRACKER_CHANGED, reload);
+  }, [reload]);
+  return { data, error, loading, reload };
 }
 
 function About({ status }: { status: AgentStatus | null }) {
