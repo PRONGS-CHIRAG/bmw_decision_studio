@@ -51,3 +51,33 @@
 .side__step--on, .side__step--on.side__step--now { background: var(--coral); color: #fff; }
 /* steps not started yet: a faint fill so the card still reads as a card */
 .fnode--waiting { background: rgba(28, 25, 23, 0.04); }
+
+/* ------------------------------------------------------------------ no underlines */
+a, a:hover, .linkbtn, .linkbtn:hover, .textlink, .side__back:hover { text-decoration: none !important; }
+/* links stay recognisable by colour and weight instead */
+.linkbtn, .comp__sources a, .side__back { color: var(--cta); font-weight: var(--w-clickable); }
+.linkbtn:hover, .comp__sources a:hover, .side__back:hover { color: var(--heading); }
+/* selected report tab: a filled pill instead of an underline bar */
+.tabs { gap: 6px; }
+.tab { padding: 6px 14px; border-radius: var(--radius-pill); }
+.tab[aria-selected="true"] { background: var(--cta-fill); color: var(--on-cta); }
+.tab[aria-selected="true"]::after { display: none; }
+/* selected step card: its icon fills Apricot instead of a bar under the card */
+.fnode[aria-pressed="true"]::after { display: none; }
+.fnode[aria-pressed="true"] .fnode__icon { background: var(--cta-fill); color: var(--on-cta); }
+
+/* ------------------------------------------------------------------ workspace views: Process | Results */
+.wstabs { display: flex; gap: 6px; padding: 4px; background: var(--zone); border-radius: var(--radius-pill); align-self: flex-start; }
+.wstab { display: inline-flex; align-items: center; gap: 8px; border: 0; background: none; padding: 7px 18px; border-radius: var(--radius-pill);
+  font-size: var(--fs-ui); font-weight: var(--w-clickable); color: var(--text-2); cursor: pointer; }
+.wstab:hover { color: var(--heading); }
+.wstab[aria-selected="true"] { background: var(--cta-fill); color: var(--on-cta); }
+.wstab__badge { font-size: 11px; font-weight: 600; padding: 1px 8px; border-radius: var(--radius-pill); background: var(--raised); color: var(--heading); }
+.ws__view { min-height: 0; }
+
+/* ------------------------------------------------------------------ choose what to check: lighter greens */
+.dial--good .dial__circle { background: #A7F3D0; color: #065F46; }      /* 6.6:1 */
+.dial--leangood .dial__circle { background: #ECFDF5; color: #047857; }  /* 5.2:1 */
+.vlabel--good { background: #A7F3D0; color: #065F46; }
+.vlabel--leangood { background: #ECFDF5; color: #047857; }
+.ws__report .tabs { column-gap: 6px; row-gap: 6px; padding: 4px 0 10px; }

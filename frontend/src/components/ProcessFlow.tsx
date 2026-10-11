@@ -285,11 +285,11 @@ function buildNodes(p: Props): FlowNode[] {
     id: "brief", title: "Your decision", who: "Report and decision log",
     state: explainState === "done" ? "done" : explainState === "stale" ? "stale"
       : (explainState === "unavailable" || explainState === "error") && evaluation ? "off" : "waiting",
-    about: "Read the report below and record your decision in the side panel.",
+    about: "Read the report in Results and report, then record your decision in the side panel.",
     lines: [], kids: [],
   };
   if (evaluation && (explainState === "done" || explainState === "unavailable" || explainState === "error" || explainState === "stale")) {
-    brief.summary = explainState === "done" ? "Report ready below. Record your decision in the side panel" : "Numbers ready below; the AI brief is missing";
+    brief.summary = explainState === "done" ? "Report ready in Results and report. Record your decision in the side panel" : "Numbers ready in Results and report; the AI brief is missing";
     for (const f of evaluation.result.features) {
       const bl = bottomLine(f);
       brief.kids.push({ key: f.feature, label: "Short answer", sub: f.feature, tone: bl.tone === "go" || bl.tone === "maybe" ? "ok" : "info",

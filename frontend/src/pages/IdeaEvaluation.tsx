@@ -57,6 +57,7 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
   const [cellKey, setCellKey] = useState<string | null>(null);
   const [panel, setPanel] = useState<StepId>("retriever");   // side panel; follows each real step transition
   const [tab, setTab] = useState<Tab>("summary");
+  const [view, setView] = useState<"process" | "results">("process");   // workspace: the process flowchart, or the results
   const shown = useRef<string | null>(null);          // evaluation id on screen; late agent answers for others are dropped
   const [graphOpen, setGraphOpen] = useState(false);  // the knowledge graph on a page of its own
   const [pdfBusy, setPdfBusy] = useState(false);
@@ -107,6 +108,7 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
     setCompError(null);
     setPanel("retriever");
     setTab("summary");
+    setView("process");
     const t = performance.now();
     try {
       const r = await postJSON<InterpretResult>("/api/agent/interpret", { idea: text });
@@ -150,6 +152,7 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
       setExplained(x);
       setExplainState("done");
       setPanel("brief");
+      setView("results");
     } catch (e) {
       if (shown.current !== eid) return;
       endRun("explain", true);
@@ -159,6 +162,7 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
       setExplainError(err.message);
       setExplainState(off ? "unavailable" : "error");
       setPanel("brief");
+      setView("results");
     }
   }
 
@@ -279,6 +283,7 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
   };
   const showNode = (id: string) => {
     setFocus(id);
+    setView("results");
     setTab("graph");
     requestAnimationFrame(() => document.getElementById("report")?.scrollIntoView({ behavior: "smooth", block: "start" }));
   };
@@ -353,12 +358,31 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
       <div className="ws__main">
         <IdeaBar idea={idea} setIdea={setIdea} onSubmit={interpret} busy={busy} />
         {error && <p className="note note--error small">Something went wrong: {error}</p>}
+        <div className="wstabs" role="tablist" aria-label="Workspace">
+          <button type="button" role="tab" id="view-process" className="wstab" aria-selected={view === "process"} aria-controls="view-panel"
+            onClick={() => setView("process")}>
+            Process
+            {(busy || explainState === "running") && <span className="spinner spinner--sm" aria-label="running" />}
+          </button>
+          <button type="button" role="tab" id="view-results" className="wstab" aria-selected={view === "results"} aria-controls="view-panel"
+            onClick={() => setView("results")}>
+            Results and report
+            {evaluation && final && view !== "results" && <span className="wstab__badge">Ready</span>}
+          </button>
+        </div>
+        <div id="view-panel" role="tabpanel" aria-labelledby={`view-${view}`} className="ws__view">
+        {view === "process" && (
         <section aria-label="Process" className="ws__flow">
           <ProcessFlow status={status} idea={submitted} phase={phase} interp={interp} draft={draft} evaluation={evaluation}
             explained={explained} explainState={explainState} explainError={explainError} interpretError={interpretError}
             evaluateError={evaluateError} runs={runs} trace={trace} selected={panel} onSelect={selectStep} />
+          {final && evaluation && (
+            <button type="button" className="btn btn--small" style={{ marginTop: 12 }} onClick={() => setView("results")}>See the results</button>
+          )}
         </section>
+        )}
 
+        {view === "results" && (
         <section id="report" className="ws__report anchor" aria-labelledby="report-title">
           <div className="report__top">
             <h2 id="report-title" className="report__title">Report</h2>
@@ -460,6 +484,8 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
             </>
           )}
         </section>
+        )}
+        </div>
       </div>
 
       {graphOpen && evaluation && (
