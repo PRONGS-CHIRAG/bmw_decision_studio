@@ -541,6 +541,11 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
           {panel === "you" && (
             interp && draft ? (
               <SpecReview compact interp={interp} draft={draft} setDraft={setDraft} busy={phase === "evaluating"}
+                weights={policy?.weights} defaultWeights={policyData?.default.weights} appliedWeights={evaluation?.result.policy.weights ?? null}
+                onWeights={(weights) => {
+                  policyEdited.current = false;   // applied by the check button, not re-run on every slider move
+                  if (policy) setPolicy({ ...policy, weights });
+                }}
                 onEvaluate={() => evaluate(draft, policy, true)} confirmed={phase === "evaluating" || phase === "done"} />
             ) : <Waiting>This step opens once your idea has been broken down into topics.</Waiting>
           )}

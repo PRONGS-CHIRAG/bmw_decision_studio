@@ -3,6 +3,7 @@ import { MARKET_NAMES, SERIES_LABELS, fmtInt } from "../api";
 import type { Candidate, IdeaSpec, InterpretResult } from "../types";
 import { CalcPopup, VerdictDial, VerdictLabel } from "./VerdictCalc";
 import { complaintReason } from "../plain";
+import WeightSliders, { weightSummary } from "./WeightSliders";
 
 const MAX_FEATURES = 3;
 /** Step 1 output, editable: the PM confirms what the retriever read before anything is evaluated. */
@@ -14,6 +15,10 @@ export default function SpecReview({
   busy,
   compact = false,
   confirmed = false,
+  weights,
+  defaultWeights,
+  appliedWeights,
+  onWeights,
 }: {
   interp: InterpretResult;
   draft: IdeaSpec;
@@ -22,12 +27,22 @@ export default function SpecReview({
   busy: boolean;
   compact?: boolean;
   confirmed?: boolean;
+  /** Optional signal-weight step: shown when all three are given. */
+  weights?: Record<string, number>;
+  defaultWeights?: Record<string, number>;
+  /** Weights of the evaluation on screen, to say when an edit is not applied yet. */
+  appliedWeights?: Record<string, number> | null;
+  onWeights?: (w: Record<string, number>) => void;
 }) {
   const chosen = new Set(draft.features.map((f) => f.feature));
   const failed = interp.attempts.filter((a) => !a.ok);
   const byLLM = interp.method.startsWith("llm:");
   const suggested = new Set(interp.spec.features.map((f) => f.feature));
   const [calc, setCalc] = useState<Candidate | null>(null);
+  const sameWeights = (a?: Record<string, number> | null, b?: Record<string, number> | null) =>
+    !!a && !!b && weightSummary(a) === weightSummary(b);
+  const [adjust, setAdjust] = useState(() => !!weights && !!defaultWeights && !sameWeights(weights, defaultWeights));
+  const pending = !!appliedWeights && !!weights && !sameWeights(weights, appliedWeights);
 
   function toggleFeature(c: Candidate) {
     let features = draft.features;
@@ -165,6 +180,31 @@ export default function SpecReview({
             ))}
           </ul>
         </div>
+      )}
+
+      {weights && defaultWeights && onWeights && (
+        <fieldset className="review__group">
+          <legend className="review__legend">
+            Signal weights <span className="caption">optional</span>
+          </legend>
+          <p className="small">Do you want to change how much each signal counts in the priority score?</p>
+          <div className="weights__choice" role="radiogroup" aria-label="Signal weights">
+            <button type="button" className="tile tile--compact" role="radio" aria-checked={!adjust} aria-pressed={!adjust}
+              onClick={() => { setAdjust(false); onWeights({ ...defaultWeights }); }}>
+              <span className="tile__title">No, use the defaults</span>
+              <span className="caption">{weightSummary(defaultWeights)}</span>
+            </button>
+            <button type="button" className="tile tile--compact" role="radio" aria-checked={adjust} aria-pressed={adjust}
+              onClick={() => setAdjust(true)}>
+              <span className="tile__title">Yes, adjust the weights</span>
+              <span className="caption">Four linked sliders that always total 100%</span>
+            </button>
+          </div>
+          {adjust && <WeightSliders idPrefix="sw" weights={weights} defaults={defaultWeights} onChange={onWeights} />}
+          {pending && (
+            <p className="note note--info">The results on screen use {weightSummary(appliedWeights!)}. Run the check again to apply the new weights.</p>
+          )}
+        </fieldset>
       )}
 
       <div className="row">

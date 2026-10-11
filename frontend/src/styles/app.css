@@ -205,6 +205,15 @@
 .policy__group { border: 0; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--s-4); min-width: 0; }
 .policy__group legend { margin-bottom: var(--s-3); font-weight: var(--w-clickable); color: var(--heading); }
 .slider input[type="range"] { width: 100%; accent-color: var(--cta); margin-top: 4px; }
+.weights { display: flex; flex-direction: column; gap: var(--s-3); }
+.weights__bar { display: flex; height: 26px; border-radius: var(--radius-control); overflow: hidden; background: var(--surface-soft); }
+.weights__seg { display: flex; align-items: center; justify-content: center; min-width: 0; transition: flex-grow 120ms var(--ease); }
+.weights__seglabel { font-size: 11px; font-weight: var(--w-clickable); color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 0 4px; }
+.weights__total { margin: 0; }
+.weights__choice { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.weights__choice .tile { width: 100%; align-items: flex-start; }
+.weights__check { color: var(--success); font-weight: var(--w-clickable); margin-right: 4px; }
+.weights__swatch { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
 .decision-form { background: var(--raised); border: 1px solid var(--border); box-shadow: var(--shadow-sm); border-radius: var(--radius-card); padding: var(--s-6); display: flex; flex-direction: column; gap: var(--s-5); }
 .decision-form h3 { font-size: var(--fs-sub1); }
 .decision-form__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: var(--s-5); }

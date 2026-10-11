@@ -99,6 +99,17 @@ def test_policy_change_changes_hash_and_scores(client):
     assert [c["score"] for c in base["features"][0]["cells"]] != [c["score"] for c in alt["features"][0]["cells"]]
 
 
+@pytest.mark.parametrize("path,body", [
+    ("/api/evaluate", {"features": ["Vehicle, climatization"]}),
+    ("/api/agent/evaluate", {"spec": {"idea": "better climate control", "summary": "climate", "features": [], "novelty": "new_to_data"}}),
+])
+def test_weights_not_summing_to_one_are_rejected_with_400(client, path, body):
+    bad = {"weights": {"complaints": 0.5, "breadth": 0.5, "requests": 0.5, "survey": 0}}
+    r = client.post(path, json={**body, "policy": bad})
+    assert r.status_code == 400
+    assert "sum to 1" in r.json()["detail"]
+
+
 def test_unknown_idea_reports_no_direct_evidence(client):
     r = client.post("/api/evaluate", json={"idea": "vacuum for pet hair removal"}).json()
     assert r["status"] == "no_direct_evidence" and r["features"] == []

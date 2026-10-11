@@ -1,12 +1,7 @@
 import { MARKET_NAMES, fmtNum } from "../api";
 import type { Policy } from "../types";
+import WeightSliders from "./WeightSliders";
 
-const SIGNAL_LABELS: Record<string, string> = {
-  complaints: "Complaints",
-  breadth: "Breadth (how many customers raise it)",
-  requests: "Requests (unmet needs)",
-  survey: "Survey weakness",
-};
 const THRESHOLD_LABELS: Record<string, string> = {
   prioritise: "Prioritise at score ≥",
   consider: "Consider at score ≥",
@@ -27,7 +22,7 @@ export default function PolicyPanel({
   onReset: () => void;
 }) {
   const changed = JSON.stringify(stripRationale(policy)) !== JSON.stringify(stripRationale(defaults));
-  const set = (section: "weights" | "market_multipliers" | "thresholds", key: string, value: number) =>
+  const set = (section: "market_multipliers" | "thresholds", key: string, value: number) =>
     onChange({ ...policy, [section]: { ...policy[section], [key]: value } });
 
   return (
@@ -48,19 +43,8 @@ export default function PolicyPanel({
       <div className="policy__grid">
         <fieldset className="policy__group">
           <legend className="label">Signal weights</legend>
-          {Object.keys(policy.weights).map((k) => (
-            <Slider
-              key={k}
-              id={`w-${k}`}
-              label={SIGNAL_LABELS[k] ?? k}
-              value={policy.weights[k]}
-              def={defaults.weights[k]}
-              min={0}
-              max={1}
-              step={0.05}
-              onChange={(v) => set("weights", k, v)}
-            />
-          ))}
+          <WeightSliders idPrefix="pw" weights={policy.weights} defaults={defaults.weights}
+            onChange={(weights) => onChange({ ...policy, weights })} />
           <p className="caption">{defaults.rationale.weights}</p>
         </fieldset>
 

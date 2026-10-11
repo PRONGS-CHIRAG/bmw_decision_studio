@@ -14,14 +14,14 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from . import config, scoring, taxonomy
-from .decision import DEFAULT_POLICY, MARKETS, DecisionEngine, read_decisions, record_decision
+from .decision import DEFAULT_POLICY, MARKETS, DecisionEngine, PolicyError, read_decisions, record_decision
 
 STATE = {}
 FRONTEND = config.ROOT / "frontend" / "dist"
@@ -64,6 +64,14 @@ async def lifespan(_app):
 
 
 app = FastAPI(title="BMW Product Decision Studio API", lifespan=lifespan)
+
+
+@app.exception_handler(PolicyError)
+def _policy_error(_: Request, e: PolicyError):
+    """A refused policy override (e.g. weights not summing to 1) is the caller's error, never a silent fix."""
+    return JSONResponse(status_code=400, content={"detail": str(e)})
+
+
 app.add_middleware(GZipMiddleware, minimum_size=4096)       # the entire-graph payload is ~2.6 MB raw
 
 

@@ -84,6 +84,23 @@ def policy_hash(policy: dict) -> str:
                                          "borrowing", "scoring")})
 
 
+class PolicyError(ValueError):
+    """A policy override the engine refuses (e.g. signal weights that do not sum to 1)."""
+
+
+WEIGHT_SUM_TOLERANCE = 1e-6
+
+
+def check_weights(weights: dict) -> None:
+    """Signal weights are shares of one whole: none negative, all together exactly 1."""
+    negative = sorted(k for k, v in weights.items() if v < 0)
+    if negative:
+        raise PolicyError(f"signal weights cannot be negative: {', '.join(negative)}")
+    total = sum(weights.values())
+    if abs(total - 1.0) > WEIGHT_SUM_TOLERANCE:
+        raise PolicyError(f"signal weights must sum to 1 (got {total:.4f})")
+
+
 def merge_policy(overrides: dict | None) -> dict:
     policy = copy.deepcopy(DEFAULT_POLICY)
     for key in ("weights", "market_multipliers", "thresholds"):
@@ -99,6 +116,7 @@ def merge_policy(overrides: dict | None) -> dict:
         policy["borrowing"]["discount"] = min(max(float(b["discount"]), 0.0), 1.0)
     if (overrides or {}).get("volume_year") in (2024, 2025, 2030):
         policy["volume_year"] = int(overrides["volume_year"])
+    check_weights(policy["weights"])
     return policy
 
 
