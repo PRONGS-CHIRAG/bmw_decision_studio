@@ -65,3 +65,8 @@ frontend/public/fonts/
 # TypeScript incremental build cache
 *.tsbuildinfo
 .pytest_cache/
+
+# Competitor web snapshots (raw pages/PDFs and their text): public but third-party content, re-fetchable from
+# the manifest in data/processed/competitor_sources.csv. The extracted rows in competitor-data/extracted/ are tracked.
+competitor-data/raw/
+competitor-data/text/

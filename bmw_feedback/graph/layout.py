@@ -22,9 +22,12 @@ import numpy as np
 _LOCK = threading.Lock()
 _CACHE: dict = {}
 
-LEAF_TYPES = {"Comment", "VerdictCell", "OptionItem", "TechSpec", "SurveyScore", "FitmentSummary", "Reason"}
-# Which neighbour a leaf is drawn next to, in order of preference.
-ANCHOR_PREF = ["Feature", "SurveyAttribute", "Variant", "ReasonFamily", "Series", "Domain", "Market", "Powertrain"]
+LEAF_TYPES = {"Comment", "VerdictCell", "OptionItem", "TechSpec", "SurveyScore", "FitmentSummary", "Reason",
+              "CompetitorPrice", "CompetitorSales", "CompetitorSpec", "CompetitorEquipment", "CompetitorReview",
+              "CompetitorRating"}
+# Which neighbour a leaf is drawn next to, in order of preference (competitor values sit around their model).
+ANCHOR_PREF = ["CompetitorModel", "Feature", "SurveyAttribute", "Variant", "ReasonFamily", "Series", "Domain", "Market",
+               "Powertrain"]
 GOLDEN = math.pi * (3 - math.sqrt(5))
 SPACING = 5.0           # distance between leaves on a disc
 SCALE = 1000.0          # radius of the initial backbone layout, before packing

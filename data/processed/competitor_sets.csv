@@ -1,0 +1,51 @@
+series,market,rank,model_id,basis,units,year,region,sales_source_id,segment_label,n_rival_mentions,note
+F70,EU,1.0,audi-a3,sales,34046.0,2025.0,Germany,s03e4926394,KBA segment Kompaktklasse,,
+F70,EU,2.0,mercedes-a-class,sales,18480.0,2025.0,Germany,s03e4926394,KBA segment Kompaktklasse,,
+F70,EU,3.0,ds-4,sales,612.0,2025.0,Germany,s03e4926394,KBA segment Kompaktklasse,,
+F70,EU,4.0,mercedes-cla,sales_other_segment,20951.0,2025.0,Germany,s03e4926394,KBA segment Mittelklasse,,ranked after the BMW's segment table ('KBA segment Kompaktklasse') of kba.de: this model is in its table 'KBA segment Mittelklasse'
+F70,EU,5.0,vw-golf,rival_mentions,,,,,,5.0,named as a F70 rival by 5 publisher(s); no same-segment sales figure for this market
+F70,US,,,not_sold,,,,,,,BMW sells no F70 in United States (sales_volumes.xlsx)
+F70,CN,,,not_sold,,,,,,,BMW sells no F70 in China (sales_volumes.xlsx)
+F70,RoW,1.0,audi-a3,sales,2331.0,2025.0,Australia,se09b2ac8ae,"Small above $40,000",,
+F70,RoW,2.0,mercedes-a-class,sales,2121.0,2025.0,Australia,se09b2ac8ae,"Small above $40,000",,
+F70,RoW,3.0,mercedes-cla,sales_other_segment,554.0,2025.0,Australia,se09b2ac8ae,"Medium above $60,000",,"ranked after the BMW's segment table ('Small above $40,000') of drivingenthusiast.com.au: this model is in its table 'Medium above $60,000'"
+G60,EU,1.0,audi-a6,sales,37505.0,2025.0,Germany,s03e4926394,KBA segment Obere Mittelklasse,,
+G60,EU,2.0,mercedes-e-class,sales,32137.0,2025.0,Germany,s03e4926394,KBA segment Obere Mittelklasse,,
+G60,EU,3.0,audi-a7,sales_other_segment,1388.0,2025.0,Germany,s03e4926394,KBA segment Oberklasse,,ranked after the BMW's segment table ('KBA segment Obere Mittelklasse') of kba.de: this model is in its table 'KBA segment Oberklasse'
+G60,EU,4.0,audi-a6-e-tron,rival_mentions,,,,,,1.0,named as a G60 rival by 1 publisher(s); no same-segment sales figure for this market
+G60,EU,5.0,genesis-g80,rival_mentions,,,,,,1.0,named as a G60 rival by 1 publisher(s); no same-segment sales figure for this market
+G60,US,1.0,lexus-es,sales,39926.0,2025.0,United States,sd8c797b51e,Midsize Luxury Car,,
+G60,US,2.0,mercedes-e-class,sales,13575.0,2025.0,United States,sd078330fbc,Midsize Luxury Car,,
+G60,US,3.0,audi-a6,sales,10494.0,2025.0,United States,s84ca930ddc,Midsize Luxury Car,,
+G60,US,4.0,tesla-model-s,sales,9129.0,2025.0,United States,s3595ecf10a,Midsize Luxury Car,,
+G60,US,5.0,genesis-g80,sales,3830.0,2025.0,United States,s017c66c00f,Midsize Luxury Car,,
+G60,CN,1.0,audi-a6,sales,170821.0,2025.0,China,s614e4d6fc0,中大型车,,
+G60,CN,2.0,mercedes-e-class,sales,130810.0,2025.0,China,s614e4d6fc0,中大型车,,
+G60,CN,3.0,lexus-es,sales_other_source,118700.0,2025.0,China,s62c8d80049,,,"not in xl.16888.com's tables (which may not cover it, e.g. imports); its figure comes from m.jiemian.com (insurance registrations)"
+G60,CN,4.0,zeekr-001,sales,41580.0,2025.0,China,s614e4d6fc0,中大型车,,
+G60,CN,5.0,avatr-12,sales,19739.0,2025.0,China,s614e4d6fc0,中大型车,,
+G60,RoW,1.0,mercedes-e-class,sales,519.0,2025.0,Australia,se09b2ac8ae,"Large above $70,000",,
+G60,RoW,2.0,im-im5,sales,164.0,2025.0,Australia,se09b2ac8ae,"Large above $70,000",,
+G60,RoW,3.0,audi-a6,sales,159.0,2025.0,Australia,se09b2ac8ae,"Large above $70,000",,
+G60,RoW,4.0,mercedes-eqe,sales,117.0,2025.0,Australia,se09b2ac8ae,"Large above $70,000",,
+G60,RoW,5.0,audi-a7,sales,46.0,2025.0,Australia,se09b2ac8ae,"Large above $70,000",,
+G70,EU,1.0,mercedes-s-class,sales,3887.0,2025.0,Germany,s03e4926394,KBA segment Oberklasse,,
+G70,EU,2.0,porsche-taycan,sales,2800.0,2025.0,Germany,s03e4926394,KBA segment Oberklasse,,
+G70,EU,3.0,porsche-panamera,sales,2001.0,2025.0,Germany,s03e4926394,KBA segment Oberklasse,,
+G70,EU,4.0,audi-a8,sales,1252.0,2025.0,Germany,s03e4926394,KBA segment Oberklasse,,
+G70,EU,5.0,audi-e-tron-gt,sales,1064.0,2025.0,Germany,s03e4926394,KBA segment Oberklasse,,
+G70,US,1.0,lucid-air,sales,7933.0,2025.0,United States,s83ec6794b2,Large Luxury Car,,
+G70,US,2.0,mercedes-s-class,sales,7408.0,2025.0,United States,s2ff4008712,Large Luxury Car,,
+G70,US,3.0,porsche-panamera,sales,3944.0,2025.0,United States,s611ce1a80f,Large Luxury Car,,
+G70,US,4.0,porsche-taycan,sales,3579.0,2025.0,United States,sabef213029,Large Luxury Car,,
+G70,US,5.0,mercedes-eqs,sales,1785.0,2025.0,United States,s929b48062d,Large Luxury Car,,
+G70,CN,1.0,porsche-panamera,sales,12370.0,2025.0,China,s53e604a46e,70万元以上超豪华轿车,,
+G70,CN,2.0,maextro-s800,sales,11930.0,2025.0,China,s53e604a46e,70万元以上超豪华轿车,,
+G70,CN,3.0,mercedes-maybach-s-class,sales,11310.0,2025.0,China,s53e604a46e,70万元以上超豪华轿车,,
+G70,CN,4.0,mercedes-s-class,sales,9710.0,2025.0,China,s53e604a46e,70万元以上超豪华轿车,,
+G70,CN,5.0,audi-a8,sales,6180.0,2025.0,China,s53e604a46e,70万元以上超豪华轿车,,
+G70,RoW,1.0,porsche-panamera,sales,82.0,2025.0,Australia,se09b2ac8ae,"Upper large above $100,000",,
+G70,RoW,2.0,mercedes-s-class,sales,80.0,2025.0,Australia,se09b2ac8ae,"Upper large above $100,000",,
+G70,RoW,3.0,lexus-ls,sales,13.0,2025.0,Australia,se09b2ac8ae,"Upper large above $100,000",,
+G70,RoW,4.0,bentley-sedan,sales,12.0,2025.0,Australia,se09b2ac8ae,"Upper large above $100,000",,
+G70,RoW,5.0,mercedes-amg-gt-4-door,sales,6.0,2025.0,Australia,se09b2ac8ae,"Upper large above $100,000",,

@@ -18,7 +18,7 @@ export interface RunTiming {
 export type Runs = Partial<Record<RunKey, RunTiming>>;
 
 export type StepId = "retriever" | "you" | "engine" | "explainer" | "verifier" | "brief";
-export type Actor = StepId | "system";
+export type Actor = StepId | "system" | "analyst" | "presenter";
 export interface TraceEvent {
   id: number;
   at: number;             // performance.now()
@@ -64,7 +64,7 @@ const STATE_TEXT: Record<NodeState, string> = {
 
 export const ACTOR_LABEL: Record<Actor, string> = {
   you: "You", retriever: "Retriever agent", engine: "Decision engine", explainer: "Explainer agent", verifier: "Verifier agent",
-  brief: "Brief", system: "System",
+  brief: "Brief", system: "System", analyst: "Competitor analyst", presenter: "Presenter agent",
 };
 
 const RULE_TEXT: Record<string, string> = {
@@ -84,6 +84,8 @@ const ICON_PATHS: Record<Actor, ReactNode> = {
   verifier: (<><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z" /><path d="M9 12l2 2 4-4" /></>),
   brief: (<><path d="M6 3h9l4 4v14H6z" /><path d="M15 3v4h4" /><path d="M9 12h7M9 16h7" /></>),
   system: (<><circle cx="12" cy="12" r="8.5" /><path d="M12 7.5V12l3 2" /></>),
+  analyst: (<><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" /></>),
+  presenter: (<><rect x="3" y="4" width="18" height="12" rx="2" /><path d="M12 16v4M8 20h8" /></>),
 };
 
 export function ActorIcon({ actor, size = 16 }: { actor: Actor; size?: number }) {

@@ -56,7 +56,10 @@ async def lifespan(_app):
     STATE["engine"] = engine
     STATE["ctx"] = engine.ctx
     STATE["catalog"] = engine.catalog
-    STATE["pipeline"] = Pipeline(engine)
+    STATE["pipeline"] = pipe = Pipeline(engine)
+    from .agents.competition import CompetitionService
+    STATE["competition"] = CompetitionService(graph=pipe.g, llm_getter=lambda: STATE["pipeline"]._current_llm(),
+                                              ctx=engine.ctx)
     yield
 
 
@@ -401,6 +404,42 @@ def graph_node(node_id: str):
     if view is None:
         raise HTTPException(404, f"No node {node_id!r} in the knowledge graph.")
     return jsonable(view)
+
+
+# ---------------------------------------------------------------------- competitors (Agents 4 + 5)
+class CompareRequest(BaseModel):
+    series: list[str] = Field(default_factory=list)       # empty = all series
+    markets: list[str] = Field(default_factory=list)      # empty = all markets
+    features: list[str] = Field(default_factory=list, max_length=10)
+    idea: str = Field(default="", max_length=2000)
+    move: str = ""
+
+
+class CompetitorAnalyseRequest(BaseModel):
+    competition_id: str
+    force: bool = False
+
+
+@app.get("/api/competitors/status")
+def competitors_status():
+    return jsonable(STATE["competition"].status())
+
+
+@app.post("/api/competitors/compare")
+def competitors_compare(req: CompareRequest):
+    """BMW vs its top five competitors per series x market in scope, with the facts (deterministic, no LLM)."""
+    return jsonable(STATE["competition"].compare(req.series, req.markets, req.features, req.idea, req.move))
+
+
+@app.post("/api/agent/competitors")
+def agent_competitors(req: CompetitorAnalyseRequest):
+    from .agents.llm import LLMError
+    try:
+        return jsonable(STATE["competition"].analyse(req.competition_id, force=req.force))
+    except KeyError:
+        raise HTTPException(404, "Unknown competitor comparison; load the comparison again.")
+    except LLMError as e:
+        raise _llm_http_error(e)
 
 
 # ---------------------------------------------------------------------- frontend

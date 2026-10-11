@@ -18,6 +18,9 @@ Groups of node types:
     survey       SurveyAttribute, SurveyScore
     model_output VerdictCell, ModelArtifact, EBMTerm
     caveat       Caveat  (limits of the data, computed from the data itself)
+    competitor   CompetitorModel, CompetitorPrice, CompetitorSales, CompetitorSpec, CompetitorEquipment,
+                 CompetitorReview, CompetitorRating  (public web data, only when the competitor tables exist)
+    web          WebSource (the saved page each competitor value is quoted from)
 """
 
 import json
@@ -39,6 +42,8 @@ TYPES = {
     "survey": "SurveyAttribute", "surveyscore": "SurveyScore", "option": "OptionItem", "package": "Package",
     "spec": "TechSpec", "fitment": "FitmentSummary", "verdict": "VerdictCell", "model": "ModelArtifact",
     "ebmterm": "EBMTerm", "caveat": "Caveat", "powertrain": "Powertrain", "coverage": "FeedbackCoverage",
+    "competitor": "CompetitorModel", "cprice": "CompetitorPrice", "csales": "CompetitorSales", "cspec": "CompetitorSpec",
+    "cequip": "CompetitorEquipment", "creview": "CompetitorReview", "crating": "CompetitorRating", "source": "WebSource",
 }
 GROUPS = {
     "Series": "product", "Variant": "product", "OptionItem": "price", "Package": "price", "FitmentSummary": "price",
@@ -46,6 +51,9 @@ GROUPS = {
     "Reason": "feedback", "ReasonFamily": "feedback", "Comment": "feedback", "SurveyAttribute": "survey",
     "SurveyScore": "survey", "VerdictCell": "model_output", "ModelArtifact": "model_output",
     "EBMTerm": "model_output", "Caveat": "caveat", "Powertrain": "product", "FeedbackCoverage": "market",
+    "CompetitorModel": "competitor", "CompetitorPrice": "competitor", "CompetitorSales": "competitor",
+    "CompetitorSpec": "competitor", "CompetitorEquipment": "competitor", "CompetitorReview": "competitor",
+    "CompetitorRating": "competitor", "WebSource": "web",
 }
 MARKET_NAMES = {"EU": "Europe", "US": "United States", "CN": "China", "RoW": "Rest of world"}
 SALES_GROUP_SERIES = {"F70": ["F70"], "G60_G68": ["G60", "G68"], "G70": ["G70"]}
@@ -93,7 +101,7 @@ def _clean(v):
 
 
 def prov(kind: str, ref: str, key: str | None = None, page=None) -> dict:
-    """kind: table | pdf | xlsx | model | derived | config."""
+    """kind: table | pdf | xlsx | model | derived | config | web."""
     return {"kind": kind, "ref": ref, "key": key, "page": None if page is None or pd.isna(page) else int(page)}
 
 
@@ -144,6 +152,8 @@ def load_inputs() -> dict:
                  "feature_specs", "feature_fitment", "feature_fitment_summary", "feature_fitment_by_engine"):
         t[name] = pd.read_csv(P / f"catalog_{name}.csv")
     t["comments"]["text"] = t["comments"]["text"].fillna("")
+    from ..competitors.build import load_tables
+    t["competitors"] = load_tables()             # None until `competitors build` has run
     return t
 
 
@@ -158,6 +168,8 @@ def build_graph(t: dict | None = None) -> tuple[nx.MultiDiGraph, dict]:
     _catalog(b, t)
     _model_outputs(b, t)
     _caveats(b, t)
+    if t.get("competitors") is not None:
+        _competitors(b, t["competitors"])
     checks = validate(b.g, t)
     meta = {"built_at": time.strftime("%Y-%m-%dT%H:%M:%S"), "checks": checks, "not_in_graph": NOT_IN_GRAPH,
             **schema_of(b.g)}
@@ -534,6 +546,89 @@ def _caveats(b: GraphBuilder, t: dict) -> None:
     cav("sales-forecast", "Volumes after 2025 are planning figures from sales_volumes.xlsx, not actual sales.", future)
 
 
+def _competitors(b: GraphBuilder, c: dict) -> None:
+    """Competitor web data: models, the top-5 sets, and one node per extracted value with its source page."""
+    from ..competitors import registry as CR
+
+    def entity(mid):
+        return nid("series", CR.SELF_SERIES[mid]) if mid in CR.SELF_SERIES else nid("competitor", mid)
+
+    def src(sid):
+        return nid("source", sid)
+
+    for r in c["sources"].itertuples():
+        b.node("source", [r.source_id], f"{r.publisher}: {str(r.title or r.url)[:70]}",
+               prov("web", r.url, r.retrieved_at), url=r.url, final_url=r.final_url, publisher=r.publisher,
+               title=r.title, retrieved_at=r.retrieved_at, kind=r.kind, sha256=r.sha256)
+    for r in c["models"].itertuples():
+        if r.model_id in CR.SELF_SERIES:
+            continue
+        b.node("competitor", [r.model_id], r.name, prov("table", "data/processed/competitor_models.csv", r.model_id),
+               brand=r.brand, model=r.model, segment=r.segment, body=r.body, generation=r.generation)
+    for r in c["sets"].dropna(subset=["model_id"]).itertuples():
+        b.edge(nid("series", r.series), entity(r.model_id), "COMPETES_WITH", market=r.market, rank=int(r.rank),
+               basis=r.basis, units=r.units, year=r.year, region=r.region, segment_label=r.segment_label)
+    for r in c["rivals"].itertuples():
+        b.edge(entity(r.model_id), nid("series", r.bmw_series), "NAMED_RIVAL_OF", publisher=r.publisher,
+               market=r.market, evidence=r.evidence, source=r.source_id)
+
+    def row_node(prefix, table, r, label, rel, extra):
+        attrs = {k: getattr(r, k) for k in extra if hasattr(r, k)}
+        n = b.node(prefix, [r.row_id], label, prov("web", f"data/processed/competitor_{table}.csv", r.row_id),
+                   model_id=r.model_id, source_id=r.source_id, evidence=getattr(r, "evidence", None), **attrs)
+        b.edge(n, entity(r.model_id), rel)
+        b.edge(n, src(r.source_id), "FROM_SOURCE")
+        market = getattr(r, "market", None)
+        if isinstance(market, str) and market in MARKET_NAMES:
+            b.edge(n, nid("market", market), "IN_MARKET")
+        return n
+
+    for r in c["prices"].itertuples():
+        row_node("cprice", "prices", r, f"{r.variant}: {r.currency} {r.amount:,.0f}", "PRICE_OF",
+                 ["market", "country", "currency", "variant", "amount", "powertrain", "price_type", "tax_basis",
+                  "model_year", "as_of", "power_kw"])
+    for r in c["sales"].itertuples():
+        row_node("csales", "sales", r, f"{r.region} {r.year}: {int(r.units):,} units", "SALES_OF",
+                 ["market", "region", "year", "period", "units", "basis", "tier", "segment_label"])
+    for r in c["specs"].itertuples():
+        row_node("cspec", "specs", r, f"{r.attribute}: {r.value:g} {r.unit} ({r.variant})", "SPEC_OF",
+                 ["variant", "attribute", "value", "unit", "powertrain", "market"])
+    for r in c["equipment"].itertuples():
+        n = row_node("cequip", "equipment", r, f"{r.item}: {r.status}", "EQUIPMENT_OF",
+                     ["country", "item", "status", "price_eur", "item_name", "variant_scope"])
+        b.edge(n, nid("feature", r.feature), "FOR_FEATURE", item=r.item)
+    for r in c["reviews"].itertuples():
+        n = row_node("creview", "reviews", r, f"{r.kind}: {str(r.text)[:60]}", "REVIEW_OF",
+                     ["market", "country", "kind", "text", "rating", "rating_scale", "sentiment", "sentiment_basis",
+                      "pred_feedback_type", "pred_domain", "pred_domain_p", "topic", "pred_feature", "pred_feature_p"])
+        if nid("feature", r.pred_feature) in b.g:
+            b.edge(n, nid("feature", r.pred_feature), "CLASSIFIED_AS", p=r.pred_feature_p,
+                   model=nid("model", "feature_classifier"))
+    for r in c["ratings"].itertuples():
+        row_node("crating", "ratings", r, f"{r.rating_kind}: {r.score:g}/{r.scale_max:g}", "RATING_OF",
+                 ["market", "country", "rating_kind", "score", "scale_max", "n_reviews", "model_year"])
+
+
+def _competitor_checks(g: nx.MultiDiGraph, c: dict, types, rels) -> list:
+    from ..competitors import registry as CR
+    return [
+        ("CompetitorModel nodes = rows of competitor_models.csv without the BMW series",
+         types.get("CompetitorModel", 0), int((~c["models"]["model_id"].isin(CR.SELF_SERIES)).sum())),
+        ("COMPETES_WITH edges = competitor set rows", rels.get("COMPETES_WITH", 0), int(c["sets"]["model_id"].notna().sum())),
+        ("CompetitorPrice nodes = rows of competitor_prices.csv", types.get("CompetitorPrice", 0), len(c["prices"])),
+        ("CompetitorSales nodes = rows of competitor_sales.csv", types.get("CompetitorSales", 0), len(c["sales"])),
+        ("CompetitorSpec nodes = rows of competitor_specs.csv", types.get("CompetitorSpec", 0), len(c["specs"])),
+        ("CompetitorEquipment nodes = rows of competitor_equipment.csv", types.get("CompetitorEquipment", 0),
+         len(c["equipment"])),
+        ("CompetitorReview nodes = rows of competitor_reviews.csv", types.get("CompetitorReview", 0), len(c["reviews"])),
+        ("CompetitorRating nodes = rows of competitor_ratings.csv", types.get("CompetitorRating", 0), len(c["ratings"])),
+        ("WebSource nodes = rows of competitor_sources.csv", types.get("WebSource", 0), len(c["sources"])),
+        ("NAMED_RIVAL_OF edges = rows of competitor_rivals.csv", rels.get("NAMED_RIVAL_OF", 0), len(c["rivals"])),
+        ("CLASSIFIED_AS edges = competitor reviews with a predicted feature", rels.get("CLASSIFIED_AS", 0),
+         int(c["reviews"]["pred_feature"].map(lambda f: nid("feature", f) in g).sum()) if len(c["reviews"]) else 0),
+    ]
+
+
 # ---------------------------------------------------------------------- validation
 def validate(g: nx.MultiDiGraph, t: dict) -> list:
     """Counts in the graph against the tables it was built from. Raises on any mismatch."""
@@ -578,6 +673,8 @@ def validate(g: nx.MultiDiGraph, t: dict) -> list:
         ("Package nodes = distinct packages", types.get("Package", 0),
          len(t["packages"].drop_duplicates(["model", "package"]))),
     ]
+    if t.get("competitors") is not None:
+        expected += _competitor_checks(g, t["competitors"], types, rels)
     checks = [{"check": name, "graph": int(a), "source": int(e), "ok": int(a) == int(e)} for name, a, e in expected]
     missing_prov = [n for n, d in g.nodes(data=True) if not d.get("prov") or not d.get("type")]
     checks.append({"check": "Every node has a type and provenance", "graph": len(missing_prov), "source": 0,

@@ -1,6 +1,7 @@
 import { Document, Font, Image, Page, StyleSheet, Text, View } from "@react-pdf/renderer";
 import { MODEL_NAMES, MOVE_LABELS, fmtEur, fmtInt, fmtNum, fmtPct } from "../api";
-import type { AgentEvaluation, AgentStatus, Cell, Claim, Explained, Fact, FeatureResult, Fitment } from "../types";
+import type { AgentEvaluation, AgentStatus, Cell, Claim, CompTuple, CompareResult, CompetitorAnalysis, Explained, Fact, FeatureResult, Fitment } from "../types";
+import { BASIS_LABEL, BRIEF_SECTIONS as COMP_SECTIONS, type CompState, VOLUME_WORDS, compCitations, equipText, gapText, money, specRange } from "../components/CompetitorPanel";
 import type { ExplainState } from "../components/ProcessFlow";
 import { TITLES, citationNumbers } from "../components/claims";
 import { tierLabel } from "../components/marks";
@@ -37,8 +38,9 @@ const SWAP: Record<string, string> = {
   " ": " ", " ": " ", " ": " ",
 };
 const CP1252 = new Set("€‚ƒ„…†‡ˆ‰Š‹ŒŽ‘’“”•–—˜™š›œžŸ");
+const CJK_RUN = /[\u2e80-\u9fff\uf900-\ufaff\uff00-\uffef]+(?:[\s\d.,:/()-]*[\u2e80-\u9fff\uf900-\ufaff\uff00-\uffef]+)*/g;
 export function safe(s: unknown): string {
-  return [...String(s ?? "")]
+  return [...String(s ?? "").replace(CJK_RUN, "[Chinese text]")]
     .map((ch) => {
       if (SWAP[ch] !== undefined) return SWAP[ch];
       const c = ch.codePointAt(0)!;
@@ -93,6 +95,7 @@ const s = StyleSheet.create({
   tr: { flexDirection: "row", borderTopWidth: 0.5, borderTopColor: C.border },
   th: { flexDirection: "row", backgroundColor: C.soft },
   thText: { fontSize: 7, fontFamily: "Helvetica-Bold", color: C.muted, textTransform: "uppercase", letterSpacing: 0.4 },
+  thCompact: { fontSize: 7, fontFamily: "Helvetica-Bold", color: C.muted, lineHeight: "9pt" },   // wraps: rival names
   td: { paddingVertical: 5, paddingHorizontal: 6, fontSize: 8.5 },
   tdNote: { paddingHorizontal: 6, paddingBottom: 6, fontSize: 7.5, color: C.muted, lineHeight: "10.5pt" },
   num: { textAlign: "right" },
@@ -133,7 +136,15 @@ export interface GraphPictures {
   legend: { label: string; color: string }[];
 }
 
+export interface CompetitorsInput {
+  compare: CompareResult | null;
+  analysis: CompetitorAnalysis | null;
+  state: CompState;
+  error: string | null;
+}
+
 export interface ReportInput {
+  competitors?: CompetitorsInput;
   evaluation: AgentEvaluation;
   explained: Explained | null;
   explainState: ExplainState;
@@ -143,7 +154,7 @@ export interface ReportInput {
   generatedAt: Date;
 }
 
-export default function ReportDocument({ evaluation, explained, explainState, explainError, status, pictures, generatedAt }: ReportInput) {
+export default function ReportDocument({ evaluation, explained, explainState, explainError, status, pictures, generatedAt, competitors }: ReportInput) {
   const spec = evaluation.spec;
   const result = evaluation.result;
   const features = result.features;
@@ -154,7 +165,9 @@ export default function ReportDocument({ evaluation, explained, explainState, ex
   const toc = [
     ...features.map((f) => `Evidence for ${f.feature}`),
     ...(features.length === 0 ? ["Closest features in the data"] : []),
-    "The written brief", "Knowledge graph", "Verification", "Appendix: sources and facts", "Technical details",
+    ...(competitors?.compare?.available ? ["Competitors"] : []),
+    "The written brief", "Knowledge graph", "Verification", "Appendix: sources and facts",
+    ...(competitors?.compare?.available ? ["Appendix: competitor sources"] : []), "Technical details",
   ];
 
   return (
@@ -219,6 +232,19 @@ export default function ReportDocument({ evaluation, explained, explainState, ex
               <Text style={s.h1sub}>No customer comments, survey questions or price-list items match the idea directly. Pick one of these in the scope step to see its evidence.</Text>
               <Table cols={[["Feature", 36], ["Domain", 30], ["Verdict", 18], ["Comments", 16, true]]}
                 rows={evaluation.candidates.slice(0, 8).map((c) => [c.feature, c.domain, c.verdict, fmtInt(c.n_comments)])} />
+            </View>
+          )}
+
+          {/* ---- competitors */}
+          {competitors?.compare?.available && <CompetitorSection input={competitors} />}
+          {competitors && !competitors.compare?.available && competitors.state !== "idle" && (
+            <View style={{ marginTop: 18 }} wrap={false}>
+              <Text style={s.h2}>Competitors</Text>
+              <Text style={s.note}>
+                {safe(competitors.state === "loading" ? "The competitor comparison was still loading when this PDF was exported. Export again in a moment to include it."
+                  : competitors.state === "error" ? `The competitor comparison could not be loaded${competitors.error ? `: ${competitors.error}` : ""}.`
+                  : competitors.compare?.comparison.message ?? "No competitor data is available.")}
+              </Text>
             </View>
           )}
 
@@ -293,6 +319,9 @@ export default function ReportDocument({ evaluation, explained, explainState, ex
             </Text>
             <Sources facts={evaluation.facts} numbers={numbers} />
           </View>
+
+          {/* ---- competitor sources */}
+          {competitors?.compare?.available && <CompetitorSources input={competitors} />}
 
           {/* ---- technical */}
           <View break={false} style={{ marginTop: 18 }} wrap={false}>
@@ -460,13 +489,13 @@ function Ladder({ ladder }: { ladder: Fitment[] }) {
   );
 }
 
-function Table({ cols, rows }: { cols: [string, number, boolean?][]; rows: string[][] }) {
+function Table({ cols, rows, compactHead = false }: { cols: [string, number, boolean?][]; rows: string[][]; compactHead?: boolean }) {
   return (
     <View style={s.table}>
       <View style={s.th}>
-        {cols.map(([h, w, r]) => (
-          <View key={h} style={[s.td, { width: `${w}%` }]}>
-            <Text style={[s.thText, r ? s.num : {}]}>{h}</Text>
+        {cols.map(([h, w, r], i) => (
+          <View key={`${h}|${i}`} style={[s.td, { width: `${w}%` }]}>
+            <Text style={[compactHead ? s.thCompact : s.thText, r ? s.num : {}]}>{safe(h)}</Text>
           </View>
         ))}
       </View>
@@ -605,3 +634,184 @@ function Sources({ facts, numbers }: { facts: Fact[]; numbers: Map<string, numbe
     </>
   );
 }
+
+// ---------------------------------------------------------------------- competitors
+/** Helvetica prints WinAnsi only: text that is mostly another script (Chinese names) gets a readable fallback. */
+function latin(text: string | null | undefined, fallback = "(name in Chinese; see the app)"): string {
+  const t = String(text ?? "");
+  const other = [...t].filter((ch) => (ch.codePointAt(0) ?? 0) > 0x24f).length;
+  return other > 0 && other / Math.max(t.length, 1) > 0.2 ? fallback : t;
+}
+const COMP_STATE_TEXT: Record<string, string> = {
+  running: "The competitor agents were still working when this PDF was exported; the tables come straight from the data. Export again to include the written comparison.",
+  unavailable: "The competitor agents were not available, so there is no written comparison. The tables come straight from the data.",
+  error: "The written comparison could not be produced. Nothing unchecked is shown; the tables come straight from the data.",
+  loading: "The competitor comparison was still loading when this PDF was exported.",
+  idle: "", done: "", nodata: "",
+};
+
+function CompetitorSection({ input }: { input: CompetitorsInput }) {
+  const c = input.compare!.comparison;
+  const a = input.state === "done" ? input.analysis : null;
+  const numbers = compCitations(a);
+  const sections = a?.brief?.sections ?? {};
+  const tuples = c.tuples;
+  return (
+    <View break>
+      <Text style={s.h1}>Competitors</Text>
+      <Text style={s.h1sub}>
+        {safe(`BMW against its top five competitors per series and market: rivals ranked by sales in the same segment, with prices, German-market equipment, product data and reviews from public web sources${c.retrieved_to ? ` retrieved ${String(c.retrieved_from ?? "").slice(0, 10)} to ${c.retrieved_to.slice(0, 10)}` : ""}. Prices are compared within one market and currency, never converted. Citations [C1], [C2] ... point to the competitor sources appendix.`)}
+      </Text>
+      {COMP_STATE_TEXT[input.state] ? <Text style={s.note}>{safe(COMP_STATE_TEXT[input.state])}</Text> : null}
+      {a && !a.brief && <Text style={s.note}>{safe(a.message ?? "No finding passed verification.")}</Text>}
+      {a?.brief && (
+        <View>
+          {(sections.headline ?? []).map((cl) => <CompClaimLine key={cl.id} claim={cl} numbers={numbers} bullet={false} />)}
+          {COMP_SECTIONS.filter((x) => (sections[x.key] ?? []).length).map((x) => (
+            <View key={x.key} style={s.briefsec}>
+              <Text style={s.briefTitle} minPresenceAhead={40}>{x.title}</Text>
+              {sections[x.key].map((cl) => <CompClaimLine key={cl.id} claim={cl} numbers={numbers} />)}
+            </View>
+          ))}
+          <Text style={[s.small, { marginBottom: 6 }]}>
+            {safe(`Written by ${a.brief.model} from ${a.analysis.findings.length} verified findings of ${a.analysis.model} (${a.analysis.removed.length} removed); ${a.verification?.n_presented_verified ?? 0} sentences verified, ${a.verification?.n_presented_replaced ?? 0} replaced by the analyst's finding.`)}
+          </Text>
+        </View>
+      )}
+      {tuples.map((t) => <CompTupleBlock key={`${t.series}|${t.market}`} t={t} items={c.items ?? []} />)}
+      {(c.caveats ?? []).length > 0 && (
+        <View style={{ marginTop: 8 }} wrap={false}>
+          <Text style={s.briefTitle}>Limits of this comparison</Text>
+          {c.caveats!.map((cv) => <Text key={cv.id} style={[s.small, { marginBottom: 2 }]}>{safe(`- ${cv.text}`)}</Text>)}
+        </View>
+      )}
+    </View>
+  );
+}
+
+function latinRule(t: CompTuple): string {
+  // the rule names the source's segment label; in the PDF a Chinese label is replaced by its English gloss
+  let rule = t.selection_rule || "as listed";
+  for (const c of t.competitors) {
+    const { segment_text: st, segment_english: en } = c.selection;
+    if (st && en && st !== en) rule = rule.split(st).join(en);
+  }
+  return latin(rule, "ranked by sales in the source's segment table");
+}
+
+function CompClaimLine({ claim, numbers, bullet = true }: { claim: Claim; numbers: Map<string, number>; bullet?: boolean }) {
+  const refs = claim.fact_ids.map((id) => numbers.get(id)).filter((n): n is number => n !== undefined);
+  return (
+    <View style={s.claim} wrap={false}>
+      {bullet && <Text style={s.bullet}>•</Text>}
+      <Text style={[s.claimText, bullet ? {} : { fontSize: 10.5, fontFamily: "Helvetica-Bold", color: C.ink, lineHeight: "14.5pt" }]}>
+        {safe(claim.text)}
+        {refs.length > 0 && <Text style={s.cite}>{`  [${refs.map((n) => `C${n}`).join(", ")}]`}</Text>}
+      </Text>
+    </View>
+  );
+}
+
+const BRAND_SHORT: Record<string, string> = {
+  "Mercedes-Benz": "Mercedes", "Mercedes-Maybach": "Maybach", "Mercedes-AMG": "AMG", "DS Automobiles": "DS", "IM Motors": "IM",
+  Volkswagen: "VW",
+};
+/** 'Mercedes E-Class' rather than 'Mercedes-Benz E-Class': matrix headers wrap at spaces only. */
+function shortName(c: { name: string; brand?: string | null; model?: string | null }): string {
+  if (!c.brand || !c.model) return c.name;
+  const model = c.model.replace(/\s*\(.*\)$/, "");
+  return `${BRAND_SHORT[c.brand] ?? c.brand} ${model}`;
+}
+
+function CompTupleBlock({ t, items }: { t: CompTuple; items: { key: string; label: string }[] }) {
+  if (t.status !== "ok" || !t.bmw)
+    return (
+      <View wrap={false} style={{ marginTop: 10 }}>
+        <Text style={s.h2}>{safe(`${t.series_name} in ${t.market_name}`)}</Text>
+        <Text style={s.small}>{safe(t.note ?? "No competitor set.")}</Text>
+      </View>
+    );
+  const cur = t.reference.currency;
+  const bmw = t.bmw;
+  const comps = t.competitors;
+  const pr = t.summary?.price;
+  const w = Math.floor(78 / (comps.length + 1));
+  return (
+    <View style={{ marginTop: 6 }}>
+      <Text style={s.h2} minPresenceAhead={120}>{safe(`${t.series_name} in ${t.market_name}`)}</Text>
+      <Text style={s.hint}>
+        {safe(`Rivals ${latinRule(t)}. Prices: ${t.reference.country_name}, ${cur}${t.market === "EU" ? " (BMW from its own DE price list)" : ""}.${pr ? ` Entry price rank ${pr.bmw_rank_from_cheapest} of ${pr.n_models} (1 = cheapest; ${latin(pr.bmw_variant, "cheapest version")}, ${money(pr.bmw_amount, cur)}); ${gapText({ abs: pr.bmw_vs_median_abs, pct: pr.bmw_vs_median_pct, direction: pr.bmw_vs_median_abs > 0 ? "above" : pr.bmw_vs_median_abs < 0 ? "below" : "equal" }, cur)} vs the rivals' median${BASIS_LABEL[pr.basis] ? ` (${BASIS_LABEL[pr.basis]})` : ""}.` : ""}`)}
+      </Text>
+      <Table cols={[["Model", 24], ["Entry version", 22], ["Entry price", 15, true], ["vs BMW", 19, true], ["Sold", 10, true], ["Rating", 10]]}
+        rows={[
+          [bmw.name, bmw.entry ? `${latin(bmw.entry.variant, "cheapest version")} (${bmw.entry.powertrain})` : "-", money(bmw.entry?.amount, cur), "-",
+            comps.find((c) => c.bmw_sales)?.bmw_sales ? fmtInt(comps.find((c) => c.bmw_sales)!.bmw_sales!.units) : "-",
+            bmw.ratings.map((r) => `${r.score}/${r.scale_max}`).join("; ") || "-"],
+          ...comps.map((c) => [`${c.rank}. ${c.name}`, c.entry ? `${latin(c.entry.variant, "cheapest version")} (${c.entry.powertrain})` : "no price found",
+            money(c.entry?.amount, cur),
+            `${gapText(c.gap, cur)}${c.gap && c.bmw_ref && bmw.entry && (c.bmw_ref.basis !== bmw.entry.basis || c.bmw_ref.variant !== bmw.entry.variant) ? ` vs ${c.bmw_ref.variant} ${money(c.bmw_ref.amount, cur)}${BASIS_LABEL[c.bmw_ref.basis] ? ` (${BASIS_LABEL[c.bmw_ref.basis]})` : ""}` : ""}`,
+            c.sales ? fmtInt(c.sales.units) : "-",
+            c.ratings.map((r) => `${r.score}/${r.scale_max}`).join("; ") || "-"]),
+        ]} />
+      {(t.set_notes ?? []).length > 0 && <Text style={[s.small, { marginTop: 3 }]}>{safe(t.set_notes!.map((n) => n[0].toUpperCase() + n.slice(1)).join(". ") + ".")}</Text>}
+      {comps.some((c) => c.sales) && (
+        <Text style={[s.small, { marginTop: 3 }]}>
+          {safe(`Sold: ${VOLUME_WORDS[comps.find((c) => c.sales)?.sales?.basis ?? ""] ?? "units sold"} in ${comps.find((c) => c.sales)?.sales?.region} in ${comps.find((c) => c.sales)?.sales?.year} (${comps.find((c) => c.sales)?.sales?.source?.publisher ?? ""}).`)}
+        </Text>
+      )}
+      {items.length > 0 && (
+        <View style={{ marginTop: 6 }}>
+          <Text style={s.briefTitle} minPresenceAhead={60}>Equipment for this idea (German market)</Text>
+          <Table compactHead cols={[["Item", 22], [seriesName(t.series), w], ...comps.map((c) => [shortName(c), w] as [string, number])]}
+            rows={items.map((it) => [it.label, equipText(bmw.equipment[it.key]), ...comps.map((c) => equipText(c.equipment[it.key]))])} />
+        </View>
+      )}
+      <View style={{ marginTop: 6 }}>
+        <Text style={s.briefTitle} minPresenceAhead={60}>Product</Text>
+        <Table compactHead cols={[["Attribute", 22], [seriesName(t.series), w], ...comps.map((c) => [shortName(c), w] as [string, number])]}
+          rows={["power_kw", "accel_0_100_s", "length_mm", "boot_l", "range_km_wltp"].filter((k) => bmw.specs[k] || comps.some((c) => c.specs[k]))
+            .map((k) => [(bmw.specs[k] ?? comps.find((c) => c.specs[k])?.specs[k])?.label ?? k, specRange(bmw.specs[k]), ...comps.map((c) => specRange(c.specs[k]))])} />
+      </View>
+    </View>
+  );
+}
+
+function CompetitorSources({ input }: { input: CompetitorsInput }) {
+  const cmp = input.compare!;
+  const a = input.state === "done" ? input.analysis : null;
+  const numbers = compCitations(a);
+  const facts = new Map(cmp.facts.map((f) => [f.id, f]));
+  const cited = [...numbers.entries()].sort((x, y) => x[1] - y[1]).map(([id, n]) => ({ id, n, f: facts.get(id) }));
+  const srcs = cmp.comparison.sources ?? [];
+  return (
+    <View break>
+      <Text style={s.h1}>Appendix: competitor sources</Text>
+      <Text style={s.h1sub}>The competitor facts cited in the written comparison, and every web page the comparison above draws on. Each value was quoted from a saved copy of its page.</Text>
+      {cited.length > 0 && (
+        <>
+          <Text style={[s.briefTitle, { marginTop: 4 }]}>Cited in the comparison ({cited.length})</Text>
+          {cited.map(({ id, n, f }) => (
+            <View key={id} style={s.src} wrap={false}>
+              <Text style={s.srcN}>{`C${n}`}</Text>
+              <View style={s.srcBody}>
+                <Text>{safe(f ? f.statement : "This fact is not in the bundle.")}</Text>
+                {f && <Text style={s.srcProv}>{safe(`${f.source.kind}: ${f.source.ref}${f.source.key ? ` · ${f.source.key}` : ""}${f.source.page ? ` · page ${f.source.page}` : ""}`)}<Text style={s.srcId}>{`   ${safe(id)}`}</Text></Text>}
+              </View>
+            </View>
+          ))}
+        </>
+      )}
+      <Text style={[s.briefTitle, { marginTop: 12 }]} minPresenceAhead={40}>{`Web sources (${srcs.length})`}</Text>
+      {srcs.map((w) => (
+        <View key={w.source_id} style={s.src} wrap={false}>
+          <Text style={[s.srcN, { width: 60 }]}>{safe(w.publisher ?? "")}</Text>
+          <View style={s.srcBody}>
+            <Text>{safe(w.title || w.url || "")}</Text>
+            <Text style={s.srcProv}>{safe(`${w.url ?? ""} · retrieved ${(w.retrieved_at ?? "").slice(0, 10)}`)}</Text>
+          </View>
+        </View>
+      ))}
+    </View>
+  );
+}
+

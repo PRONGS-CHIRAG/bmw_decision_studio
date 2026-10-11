@@ -1,0 +1,35 @@
+/* ------------------------------------------------------------------ competitor comparison (Price & equipment tab) */
+.comp { display: flex; flex-direction: column; gap: 16px; padding-top: 24px; margin-top: 8px; border-top: 1px solid var(--border); }
+.comp__h { font-size: 15px; font-weight: var(--w-clickable); margin-bottom: 8px; }
+.comp__brief { padding: 16px 18px; border-radius: 14px; border: 1px solid var(--border); background: var(--surface-background-secondary); display: flex; flex-direction: column; gap: 12px; }
+.comp__brief .briefsec { background: #fff; }
+.comp__brief .briefsec--next { background: var(--cta-soft); }
+.comp__headline .claim__text { font-size: 17px; line-height: 1.45; font-weight: 600; color: var(--heading); }
+.comp__tuples { margin-top: 4px; }
+.comp__tuple { padding: 16px 0 0; }
+.comp__table th, .comp__table td { padding-right: 14px; }
+.comp__table th { white-space: normal; min-width: 72px; }
+.comp__table td.num, .comp__table td.r { white-space: nowrap; }
+.comp__bmwrow td { background: var(--cta-soft); }
+.comp__bmwrow td:first-child { border-radius: 8px 0 0 8px; }
+.comp__bmwrow td:last-child { border-radius: 0 8px 8px 0; }
+.comp__eq { display: inline-flex; gap: 6px; align-items: baseline; white-space: nowrap; }
+.comp__strip { margin: 0; max-width: 760px; }
+.comp__strip svg { display: block; overflow: visible; }
+.comp__voices { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.comp__voice { padding: 12px 14px; border-radius: 12px; border: 1px solid var(--border); display: flex; flex-direction: column; gap: 4px; }
+.comp__voice-name { font-weight: var(--w-clickable); color: var(--heading); font-size: 14px; }
+.comp__quote { margin: 4px 0 0; padding: 4px 0 4px 10px; border-left: 3px solid var(--border); font-size: 13px; line-height: 1.5; color: var(--copy-text); }
+.comp__quote--positive { border-left-color: var(--success); }
+.comp__quote--negative { border-left-color: var(--error); }
+.comp__sources ul { margin: 8px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; font-size: 13px; }
+.comp__sources a { color: var(--cta); word-break: break-word; }
+.comp__pub { font-weight: var(--w-clickable); }
+.comp__caveats { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 2px; }
+.comp__verify .table { margin-top: 8px; }
+@media (max-width: 767px) { .comp__headline .claim__text { font-size: 15.5px; } }
+/* the comparison tables have one column per rival: on narrow screens they scroll inside their own box (the page never
+   scrolls sideways), unlike the other report tables, which reflow */
+.ws .comp .table-scroll { overflow-x: auto; max-width: 100%; }
+.ws .comp .comp__table td { word-break: normal; }
+.comp__basis { display: block; white-space: normal; font-size: 11.5px; }

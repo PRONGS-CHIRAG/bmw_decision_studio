@@ -130,7 +130,7 @@ def test_agent_status_reports_graph_and_models(client):
     s = client.get("/api/agent/status").json()
     assert s["graph"]["checks_passed"] is True and s["graph"]["nodes"] > 13000
     assert s["llm_configured"] is False and "OPENAI_API_KEY" in s["message"]
-    assert set(s["models"]) == {"retriever", "explainer", "verifier", "embedding"}
+    assert set(s["models"]) == {"retriever", "explainer", "verifier", "embedding", "analyst", "presenter"}
 
 
 def test_agent_interpret_evaluate_round_trip(client):

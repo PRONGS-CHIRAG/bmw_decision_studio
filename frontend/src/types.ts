@@ -328,3 +328,197 @@ export interface FullGraph {
   nodes: [id: string, type: string, group: string, label: string, x: number, y: number][];
   edges: [source: number, target: number, rel: string][];
 }
+
+// ---------------------------------------------------------------------- competitors (bmw_feedback/competitors, agents/competition.py)
+export interface WebSource {
+  source_id: string;
+  publisher: string | null;
+  url: string | null;
+  title: string | null;
+  retrieved_at: string | null;
+}
+
+export interface CompPrice {
+  model_id: string;
+  variant: string;
+  powertrain: string;
+  group: "combustion" | "plug-in hybrid" | "electric";
+  amount: number;
+  currency: string;
+  basis: string;
+  tax_basis: string | null;
+  power_kw: number | null;
+  model_year?: string | null;
+  row_id: string | null;
+  source: { kind: string; publisher?: string | null; url?: string | null; ref?: string; page?: number; retrieved_at?: string | null };
+}
+
+export interface Gap {
+  abs: number;
+  pct: number;
+  direction: "above" | "below" | "equal";
+}
+
+export interface CompSpec {
+  label: string;
+  unit: string;
+  min: number;
+  max: number;
+  n: number;
+  variants: string[];
+  sources: string[];
+}
+
+export interface CompEquipment {
+  status: "standard" | "standard_some" | "optional" | "package" | "not_available" | "unknown" | "not_listed";
+  price_eur?: number | null;
+  price_item?: string | null;
+  price_status?: string | null;
+  variant_scope?: string | null;
+  rows?: { status: string; price_eur: number | null; item_name: string; variant_scope: string | null; note?: string | null; source: WebSource | null }[];
+  publisher?: string | null;
+  list_date?: string | null;
+  // BMW side (DE price list)
+  n_variants?: number | null;
+  n_standard?: number | null;
+  n_optional?: number | null;
+  via_package?: boolean | null;
+  items?: string | null;
+  pages?: string | null;
+}
+
+export interface CompSales {
+  units: number;
+  year: number;
+  region: string;
+  basis: string;
+  tier: string;
+  segment_label: string | null;
+  segment_text?: string | null;
+  same_source: boolean;
+  source: WebSource | null;
+}
+
+export interface CompRating {
+  publisher: string | null;
+  kind: string;
+  score: number;
+  scale_max: number;
+  n_reviews: number | null;
+  source: WebSource | null;
+  bmw?: CompRating | null;
+}
+
+export interface CompReviews {
+  n: number;
+  positive?: number;
+  negative?: number;
+  request?: number;
+  unassigned?: number;
+  top_praise?: [string, number][];
+  top_criticism?: [string, number][];
+  publishers?: string[];
+  in_domain?: Record<string, { positive: number; negative: number }>;
+  quotes?: { text: string; kind: string; sentiment: string; source: WebSource | null }[];
+}
+
+export interface Competitor {
+  rank: number;
+  model_id: string;
+  name: string;
+  brand?: string | null;
+  model?: string | null;
+  segment: string | null;
+  generation: string | null;
+  basis: "sales" | "sales_other_segment" | "sales_other_source" | "rival_mentions";
+  selection: { units: number | null; year: number | null; region: string | null; segment_label: string | null; segment_text: string | null; segment_english: string | null; n_rival_mentions: number | null; source: WebSource | null; note: string | null };
+  prices: CompPrice[];
+  entry: CompPrice | null;
+  bmw_ref: CompPrice | null;          // the BMW price on the same basis the gap is measured against
+  gap: Gap | null;
+  by_powertrain: { group: string; competitor: CompPrice | null; bmw: CompPrice | null; gap: Gap | null }[];
+  sales: CompSales | null;
+  bmw_sales: CompSales | null;
+  sales_vs_bmw: { abs: number; pct: number; same_source: boolean } | null;
+  specs: Record<string, CompSpec>;
+  equipment: Record<string, CompEquipment>;
+  ratings: CompRating[];
+  reviews: CompReviews;
+}
+
+export interface CompTuple {
+  series: string;
+  series_name: string;
+  market: string;
+  market_name: string;
+  reference: { country: string; country_name: string; currency: string };
+  status: "ok" | "not_sold" | "no_data";
+  note?: string | null;
+  selection_rule?: string;
+  set_notes?: string[];
+  old_equipment_lists?: string[];
+  bmw?: {
+    model_id: string;
+    name: string;
+    prices: CompPrice[];
+    entry: CompPrice | null;
+    specs: Record<string, CompSpec>;
+    equipment: Record<string, CompEquipment>;
+    ratings: CompRating[];
+    reviews: CompReviews;
+  };
+  competitors: Competitor[];
+  summary?: {
+    price?: { bmw_rank_from_cheapest: number; n_models: number; n_competitors_priced: number; median_competitor: number; bmw_vs_median_abs: number; bmw_vs_median_pct: number; currency: string; basis: string; bmw_variant: string; bmw_amount: number; tax_basis: string | null };
+    equipment?: Record<string, Record<string, number>>;
+  };
+}
+
+export interface Comparison {
+  available: boolean;
+  message?: string;
+  data_hash?: string;
+  retrieved_from?: string | null;
+  retrieved_to?: string | null;
+  features?: string[];
+  items?: { key: string; label: string; feature: string }[];
+  features_without_items?: string[];
+  tuples: CompTuple[];
+  sources?: WebSource[];
+  caveats?: { id: string; text: string }[];
+}
+
+export interface CompareResult {
+  competition_id: string | null;
+  available: boolean;
+  comparison: Comparison;
+  facts: Fact[];
+  graph_missing_nodes?: number;
+}
+
+export interface Finding extends Claim {
+  series: string;
+  market: string;
+}
+
+export interface PresentedClaim extends Claim {
+  finding_ids: string[];
+  origin: "presenter" | "analyst_fallback";
+}
+
+export interface CompetitorAnalysis {
+  competition_id: string;
+  analysis: { model: string | null; attempts: number; findings: Finding[]; removed: Finding[]; rewritten: Finding[] };
+  brief: { model: string | null; sections: Record<string, PresentedClaim[]> } | null;
+  verification: {
+    rules: string[];
+    semantic_model: string | null;
+    presented: PresentedClaim[];
+    n_presented_verified: number;
+    n_presented_replaced: number;
+    n_findings_verified: number;
+    n_findings_removed: number;
+  } | null;
+  seconds: number;
+  message: string | null;
+}

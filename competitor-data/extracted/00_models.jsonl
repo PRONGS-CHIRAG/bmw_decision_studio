@@ -1,0 +1,39 @@
+// Canonical models: fixed ids and spellings. Research batches add other models in their own files.
+{"table": "model", "model_id": "bmw-1-series", "brand": "BMW", "model": "1 Series", "segment": "compact_premium", "body": "hatchback", "generation": "F70"}
+{"table": "model", "model_id": "bmw-5-series", "brand": "BMW", "model": "5 Series", "segment": "executive", "body": "saloon / Touring", "generation": "G60 (China: G68 long wheelbase, '5 Series Li')"}
+{"table": "model", "model_id": "bmw-7-series", "brand": "BMW", "model": "7 Series", "segment": "luxury", "body": "saloon", "generation": "G70"}
+{"table": "model", "model_id": "mercedes-a-class", "brand": "Mercedes-Benz", "model": "A-Class", "segment": "compact_premium", "body": "hatchback / saloon", "generation": "W177 / V177"}
+{"table": "model", "model_id": "audi-a3", "brand": "Audi", "model": "A3", "segment": "compact_premium", "body": "Sportback / saloon", "generation": "8Y"}
+{"table": "model", "model_id": "mercedes-cla", "brand": "Mercedes-Benz", "model": "CLA", "segment": "compact_premium", "body": "coupe saloon / shooting brake", "generation": "C178 (from 2025), C118 before"}
+{"table": "model", "model_id": "ds-4", "brand": "DS Automobiles", "model": "DS 4", "segment": "compact_premium", "body": "hatchback", "generation": null}
+{"table": "model", "model_id": "vw-golf", "brand": "Volkswagen", "model": "Golf", "segment": "compact", "body": "hatchback / estate", "generation": "Mk8 (8.5 facelift)"}
+{"table": "model", "model_id": "cupra-leon", "brand": "Cupra", "model": "Leon", "segment": "compact", "body": "hatchback / estate", "generation": null}
+{"table": "model", "model_id": "mazda-3", "brand": "Mazda", "model": "Mazda3", "segment": "compact", "body": "hatchback / saloon", "generation": null}
+{"table": "model", "model_id": "toyota-corolla", "brand": "Toyota", "model": "Corolla", "segment": "compact", "body": "hatchback / saloon / estate", "generation": null}
+{"table": "model", "model_id": "mercedes-e-class", "brand": "Mercedes-Benz", "model": "E-Class", "segment": "executive", "body": "saloon / estate", "generation": "W214 (China: long-wheelbase E-Class L, V214)"}
+{"table": "model", "model_id": "audi-a6", "brand": "Audi", "model": "A6", "segment": "executive", "body": "saloon / Avant", "generation": "C9 from 2025 (China: long-wheelbase A6L)"}
+{"table": "model", "model_id": "audi-a6-e-tron", "brand": "Audi", "model": "A6 e-tron", "segment": "executive", "body": "Sportback / Avant", "generation": "PPE"}
+{"table": "model", "model_id": "mercedes-eqe", "brand": "Mercedes-Benz", "model": "EQE", "segment": "executive", "body": "saloon", "generation": "V295"}
+{"table": "model", "model_id": "lexus-es", "brand": "Lexus", "model": "ES", "segment": "executive", "body": "saloon", "generation": null}
+{"table": "model", "model_id": "genesis-g80", "brand": "Genesis", "model": "G80", "segment": "executive", "body": "saloon", "generation": "RG3"}
+{"table": "model", "model_id": "tesla-model-s", "brand": "Tesla", "model": "Model S", "segment": "executive", "body": "liftback", "generation": null}
+{"table": "model", "model_id": "volvo-s90", "brand": "Volvo", "model": "S90", "segment": "executive", "body": "saloon", "generation": "(China: long-wheelbase S90)"}
+{"table": "model", "model_id": "volvo-es90", "brand": "Volvo", "model": "ES90", "segment": "executive", "body": "fastback saloon", "generation": null}
+{"table": "model", "model_id": "cadillac-ct6", "brand": "Cadillac", "model": "CT6", "segment": "executive", "body": "saloon", "generation": "China-built"}
+{"table": "model", "model_id": "nio-et7", "brand": "NIO", "model": "ET7", "segment": "executive", "body": "saloon", "generation": null}
+{"table": "model", "model_id": "mercedes-s-class", "brand": "Mercedes-Benz", "model": "S-Class", "segment": "luxury", "body": "saloon", "generation": "W223"}
+{"table": "model", "model_id": "mercedes-eqs", "brand": "Mercedes-Benz", "model": "EQS", "segment": "luxury", "body": "saloon", "generation": "V297"}
+{"table": "model", "model_id": "audi-a8", "brand": "Audi", "model": "A8", "segment": "luxury", "body": "saloon", "generation": "D5 (incl. A8 L)"}
+{"table": "model", "model_id": "porsche-panamera", "brand": "Porsche", "model": "Panamera", "segment": "luxury", "body": "liftback", "generation": "G3 (976)"}
+{"table": "model", "model_id": "lexus-ls", "brand": "Lexus", "model": "LS", "segment": "luxury", "body": "saloon", "generation": "XF50"}
+{"table": "model", "model_id": "genesis-g90", "brand": "Genesis", "model": "G90", "segment": "luxury", "body": "saloon", "generation": "RS4"}
+{"table": "model", "model_id": "hongqi-h9", "brand": "Hongqi", "model": "H9", "segment": "luxury", "body": "saloon", "generation": null}
+{"table": "model", "model_id": "lucid-air", "brand": "Lucid", "model": "Air", "segment": "luxury", "body": "saloon", "generation": null}
+{"table": "model", "model_id": "maextro-s800", "brand": "Maextro", "model": "S800", "segment": "luxury", "body": "saloon", "generation": null}
+// Overrides: D-segment models some batches filed as compact; they are 3 Series rivals, outside these sets
+{"table": "model", "model_id": "polestar-2", "brand": "Polestar", "model": "Polestar 2", "segment": "midsize_premium", "body": "fastback"}
+{"table": "model", "model_id": "genesis-g70", "brand": "Genesis", "model": "G70", "segment": "midsize_premium", "body": "saloon"}
+{"table": "model", "model_id": "volvo-60-series", "brand": "Volvo", "model": "60 Series (S60 / V60)", "segment": "midsize_premium", "body": "saloon / estate"}
+{"table": "model", "model_id": "mercedes-cle", "brand": "Mercedes-Benz", "model": "CLE", "segment": "midsize_premium", "body": "coupe / cabriolet", "generation": "C236 (two-door; 4 Series class, KBA files it under Obere Mittelklasse)"}
+{"table": "model", "model_id": "bentley-sedan", "brand": "Bentley", "model": "saloons (VFACTS group)", "segment": "luxury", "body": "saloon", "generation": "VFACTS reports Bentley saloons as one line"}
+{"table": "model", "model_id": "lexus-lbx", "brand": "Lexus", "model": "LBX", "segment": "suv", "body": "small crossover SUV", "generation": "named as a 1 Series rival by drive.com.au; an SUV, so outside the 1 Series sets"}

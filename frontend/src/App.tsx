@@ -27,7 +27,7 @@ function About({ status }: { status: AgentStatus | null }) {
         <div className="about__grid">
           <section className="about__card">
             <h2 className="about__h">Data</h2>
-            <p className="small">Customer feedback exports for the 1, 5 and 7 Series, customer studies 2025, sales volumes 2024–2030 and the German price lists of July 2026 (BMW hackathon data).</p>
+            <p className="small">Customer feedback exports for the 1, 5 and 7 Series, customer studies 2025, sales volumes 2024–2030 and the German price lists of July 2026 (BMW hackathon data), plus public web data on the top five competitors per series and market (sales, prices, equipment, technical data, reviews), each value quoted from a saved copy of its source.</p>
           </section>
           <section className="about__card">
             <h2 className="about__h">Models</h2>
@@ -45,7 +45,7 @@ function About({ status }: { status: AgentStatus | null }) {
             <h2 className="about__h">Agents</h2>
             <p className="small">
               {status
-                ? `Retriever ${status.models.retriever}, explainer ${status.models.explainer}, verifier rules + ${status.models.verifier}${status.llm_configured ? "." : " (offline: no OpenAI key)."}`
+                ? `Retriever ${status.models.retriever}, explainer ${status.models.explainer}, verifier rules + ${status.models.verifier}; competitor analyst ${status.models.analyst ?? status.models.explainer} and presenter ${status.models.presenter ?? status.models.explainer}${status.llm_configured ? "." : " (offline: no OpenAI key)."}`
                 : "Loading…"}
             </p>
           </section>

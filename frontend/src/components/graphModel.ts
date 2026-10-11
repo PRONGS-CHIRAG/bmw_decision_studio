@@ -16,11 +16,15 @@ export const GROUPS: Record<string, { label: string; token: string; shape: strin
   sales: { label: "Sales volumes", token: "--g-sales", shape: "round-hexagon" },
   model_output: { label: "Model outputs", token: "--g-model", shape: "diamond" },
   caveat: { label: "Caveats", token: "--g-caveat", shape: "triangle" },
+  competitor: { label: "Competitors (web data)", token: "--g-competitor", shape: "round-octagon" },
+  web: { label: "Web sources", token: "--g-web", shape: "round-triangle" },
 };
 // Rings from the centre outwards: the idea, its features, recommendations, then the evidence behind them.
 const RING: Record<string, number> = {
   Idea: 5, Feature: 4, Recommendation: 3, VerdictCell: 3, Series: 3, Market: 3, Domain: 3, FitmentSummary: 3, ModelArtifact: 3,
   SurveyScore: 2, SalesVolume: 2, SurveyAttribute: 2, Reason: 2, EBMTerm: 2, OptionItem: 2, TechSpec: 2, Comment: 1, Caveat: 1,
+  CompetitorModel: 3, CompetitorPrice: 2, CompetitorSales: 2, CompetitorEquipment: 2, CompetitorSpec: 1, CompetitorReview: 1,
+  CompetitorRating: 1, WebSource: 1,
 };
 const SCHEMA_RING: Record<string, number> = { Feature: 10 };
 

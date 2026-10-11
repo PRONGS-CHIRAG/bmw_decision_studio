@@ -6,6 +6,8 @@ Configuration (environment variables, or a git-ignored `.env` file in the repo r
     OPENAI_EXPLAINER_MODEL     default gpt-6-terra  (Agent 2: facts -> PM explanation)
     OPENAI_VERIFIER_MODEL      default gpt-6-luna   (Agent 3: semantic check of each claim)
     OPENAI_EMBEDDING_MODEL     default text-embedding-3-small (semantic matching of ideas)
+    OPENAI_ANALYST_MODEL       default: the explainer model  (Agent 4: competitor analysis)
+    OPENAI_PRESENTER_MODEL     default: the explainer model  (Agent 5: competitor brief for the report)
 
 A configured model that the account cannot use is reported with the models it can
 use; it is never replaced by another model silently.
@@ -19,11 +21,13 @@ from pydantic import BaseModel
 
 from .. import config
 
-ROLES = ("retriever", "explainer", "verifier", "embedding")
+ROLES = ("retriever", "explainer", "verifier", "embedding", "analyst", "presenter")
 DEFAULT_MODELS = {"retriever": "gpt-6-luna", "explainer": "gpt-6-terra", "verifier": "gpt-6-luna",
-                  "embedding": "text-embedding-3-small"}
+                  "embedding": "text-embedding-3-small", "analyst": "gpt-6-terra", "presenter": "gpt-6-terra"}
 ENV_VARS = {"retriever": "OPENAI_RETRIEVER_MODEL", "explainer": "OPENAI_EXPLAINER_MODEL",
-            "verifier": "OPENAI_VERIFIER_MODEL", "embedding": "OPENAI_EMBEDDING_MODEL"}
+            "verifier": "OPENAI_VERIFIER_MODEL", "embedding": "OPENAI_EMBEDDING_MODEL",
+            "analyst": "OPENAI_ANALYST_MODEL", "presenter": "OPENAI_PRESENTER_MODEL"}
+FOLLOWS = {"analyst": "explainer", "presenter": "explainer"}     # unset roles use that role's configured model
 
 
 class LLMError(RuntimeError):
@@ -64,7 +68,10 @@ def setting(name: str, default: str | None = None) -> str | None:
 
 
 def model_config() -> dict:
-    return {role: setting(ENV_VARS[role], DEFAULT_MODELS[role]) for role in ROLES}
+    out = {role: setting(ENV_VARS[role], DEFAULT_MODELS[role]) for role in ROLES if role not in FOLLOWS}
+    for role, parent in FOLLOWS.items():
+        out[role] = setting(ENV_VARS[role]) or out[parent]
+    return out
 
 
 class OpenAILLM:

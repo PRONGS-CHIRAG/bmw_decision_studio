@@ -3,6 +3,7 @@ import type { ElementDefinition } from "cytoscape";
 import { pdf } from "@react-pdf/renderer";
 import { getJSON } from "../api";
 import type { AgentEvaluation, AgentStatus, Explained, GraphSchema } from "../types";
+import type { CompetitorsInput } from "./ReportDocument";
 import type { ExplainState } from "../components/ProcessFlow";
 import { GROUPS, concentricLayout, cssVar, evaluationElements, graphStyle, groupOf, schemaElements } from "../components/graphModel";
 import ReportDocument, { type GraphPictures } from "./ReportDocument";
@@ -35,6 +36,7 @@ export async function downloadReport(input: {
   explainState: ExplainState;
   explainError: string | null;
   status: AgentStatus | null;
+  competitors?: CompetitorsInput;
 }): Promise<void> {
   const { evaluation } = input;
   const schema = await getJSON<GraphSchema>("/api/graph/schema").catch(() => null);

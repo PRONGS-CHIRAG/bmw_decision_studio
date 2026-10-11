@@ -1,5 +1,5 @@
 {
- "built_at": "2026-10-10T21:22:36",
+ "built_at": "2026-10-11T05:13:43",
  "checks": [
   {
    "check": "Feature nodes = rows of feature_scorecard.csv",
@@ -134,6 +134,72 @@
    "ok": true
   },
   {
+   "check": "CompetitorModel nodes = rows of competitor_models.csv without the BMW series",
+   "graph": 74,
+   "source": 74,
+   "ok": true
+  },
+  {
+   "check": "COMPETES_WITH edges = competitor set rows",
+   "graph": 48,
+   "source": 48,
+   "ok": true
+  },
+  {
+   "check": "CompetitorPrice nodes = rows of competitor_prices.csv",
+   "graph": 150,
+   "source": 150,
+   "ok": true
+  },
+  {
+   "check": "CompetitorSales nodes = rows of competitor_sales.csv",
+   "graph": 282,
+   "source": 282,
+   "ok": true
+  },
+  {
+   "check": "CompetitorSpec nodes = rows of competitor_specs.csv",
+   "graph": 588,
+   "source": 588,
+   "ok": true
+  },
+  {
+   "check": "CompetitorEquipment nodes = rows of competitor_equipment.csv",
+   "graph": 185,
+   "source": 185,
+   "ok": true
+  },
+  {
+   "check": "CompetitorReview nodes = rows of competitor_reviews.csv",
+   "graph": 840,
+   "source": 840,
+   "ok": true
+  },
+  {
+   "check": "CompetitorRating nodes = rows of competitor_ratings.csv",
+   "graph": 147,
+   "source": 147,
+   "ok": true
+  },
+  {
+   "check": "WebSource nodes = rows of competitor_sources.csv",
+   "graph": 403,
+   "source": 403,
+   "ok": true
+  },
+  {
+   "check": "NAMED_RIVAL_OF edges = rows of competitor_rivals.csv",
+   "graph": 80,
+   "source": 80,
+   "ok": true
+  },
+  {
+   "check": "CLASSIFIED_AS edges = competitor reviews with a predicted feature",
+   "graph": 840,
+   "source": 840,
+   "ok": true
+  },
+  {
    "check": "Every node has a type and provenance",
    "graph": 0,
    "source": 0,
@@ -158,8 +224,8 @@
    "why": "channel baselines used inside scoring.score; their effect is in every VerdictCell"
   }
  ],
- "n_nodes": 15064,
- "n_edges": 57756,
+ "n_nodes": 17733,
+ "n_edges": 64738,
  "node_types": [
   {
    "type": "Comment",
@@ -172,6 +238,11 @@
    "count": 2170
   },
   {
+   "type": "CompetitorReview",
+   "group": "competitor",
+   "count": 840
+  },
+  {
    "type": "TechSpec",
    "group": "spec",
    "count": 748
@@ -180,6 +251,16 @@
    "type": "FitmentSummary",
    "group": "price",
    "count": 672
+  },
+  {
+   "type": "CompetitorSpec",
+   "group": "competitor",
+   "count": 588
+  },
+  {
+   "type": "WebSource",
+   "group": "web",
+   "count": 403
   },
   {
    "type": "SurveyScore",
@@ -192,9 +273,29 @@
    "count": 364
   },
   {
+   "type": "CompetitorSales",
+   "group": "competitor",
+   "count": 282
+  },
+  {
    "type": "Feature",
    "group": "feedback",
    "count": 224
+  },
+  {
+   "type": "CompetitorEquipment",
+   "group": "competitor",
+   "count": 185
+  },
+  {
+   "type": "CompetitorPrice",
+   "group": "competitor",
+   "count": 150
+  },
+  {
+   "type": "CompetitorRating",
+   "group": "competitor",
+   "count": 147
   },
   {
    "type": "SurveyAttribute",
@@ -205,6 +306,11 @@
    "type": "Reason",
    "group": "feedback",
    "count": 84
+  },
+  {
+   "type": "CompetitorModel",
+   "group": "competitor",
+   "count": 74
   },
   {
    "type": "SalesVolume",
@@ -329,6 +435,24 @@
    "count": 1015
   },
   {
+   "source": "CompetitorReview",
+   "rel": "FROM_SOURCE",
+   "target": "WebSource",
+   "count": 840
+  },
+  {
+   "source": "CompetitorReview",
+   "rel": "IN_MARKET",
+   "target": "Market",
+   "count": 840
+  },
+  {
+   "source": "CompetitorReview",
+   "rel": "CLASSIFIED_AS",
+   "target": "Feature",
+   "count": 840
+  },
+  {
    "source": "VerdictCell",
    "rel": "SCORES",
    "target": "Market",
@@ -351,6 +475,24 @@
    "rel": "ON_SERIES",
    "target": "Series",
    "count": 672
+  },
+  {
+   "source": "CompetitorReview",
+   "rel": "REVIEW_OF",
+   "target": "CompetitorModel",
+   "count": 662
+  },
+  {
+   "source": "CompetitorSpec",
+   "rel": "FROM_SOURCE",
+   "target": "WebSource",
+   "count": 588
+  },
+  {
+   "source": "CompetitorSpec",
+   "rel": "SPEC_OF",
+   "target": "CompetitorModel",
+   "count": 576
   },
   {
    "source": "VerdictCell",
@@ -395,10 +537,46 @@
    "count": 361
   },
   {
+   "source": "CompetitorSales",
+   "rel": "FROM_SOURCE",
+   "target": "WebSource",
+   "count": 282
+  },
+  {
+   "source": "CompetitorSales",
+   "rel": "IN_MARKET",
+   "target": "Market",
+   "count": 282
+  },
+  {
+   "source": "CompetitorSales",
+   "rel": "SALES_OF",
+   "target": "CompetitorModel",
+   "count": 252
+  },
+  {
    "source": "Feature",
    "rel": "IN_DOMAIN",
    "target": "Domain",
    "count": 224
+  },
+  {
+   "source": "CompetitorEquipment",
+   "rel": "EQUIPMENT_OF",
+   "target": "CompetitorModel",
+   "count": 185
+  },
+  {
+   "source": "CompetitorEquipment",
+   "rel": "FROM_SOURCE",
+   "target": "WebSource",
+   "count": 185
+  },
+  {
+   "source": "CompetitorEquipment",
+   "rel": "FOR_FEATURE",
+   "target": "Feature",
+   "count": 185
   },
   {
    "source": "Feature",
@@ -407,10 +585,52 @@
    "count": 183
   },
   {
+   "source": "CompetitorReview",
+   "rel": "REVIEW_OF",
+   "target": "Series",
+   "count": 178
+  },
+  {
+   "source": "CompetitorPrice",
+   "rel": "FROM_SOURCE",
+   "target": "WebSource",
+   "count": 150
+  },
+  {
+   "source": "CompetitorPrice",
+   "rel": "IN_MARKET",
+   "target": "Market",
+   "count": 150
+  },
+  {
+   "source": "CompetitorRating",
+   "rel": "FROM_SOURCE",
+   "target": "WebSource",
+   "count": 147
+  },
+  {
+   "source": "CompetitorRating",
+   "rel": "IN_MARKET",
+   "target": "Market",
+   "count": 147
+  },
+  {
    "source": "SurveyAttribute",
    "rel": "MEASURES",
    "target": "Feature",
    "count": 133
+  },
+  {
+   "source": "CompetitorPrice",
+   "rel": "PRICE_OF",
+   "target": "CompetitorModel",
+   "count": 132
+  },
+  {
+   "source": "CompetitorRating",
+   "rel": "RATING_OF",
+   "target": "CompetitorModel",
+   "count": 126
   },
   {
    "source": "Reason",
@@ -419,9 +639,21 @@
    "count": 84
   },
   {
+   "source": "CompetitorModel",
+   "rel": "NAMED_RIVAL_OF",
+   "target": "Series",
+   "count": 80
+  },
+  {
    "source": "Series",
    "rel": "HAS_SALES",
    "target": "SalesVolume",
+   "count": 48
+  },
+  {
+   "source": "Series",
+   "rel": "COMPETES_WITH",
+   "target": "CompetitorModel",
    "count": 48
   },
   {
@@ -443,6 +675,18 @@
    "count": 36
   },
   {
+   "source": "CompetitorSales",
+   "rel": "SALES_OF",
+   "target": "Series",
+   "count": 30
+  },
+  {
+   "source": "CompetitorSpec",
+   "rel": "IN_MARKET",
+   "target": "Market",
+   "count": 26
+  },
+  {
    "source": "Caveat",
    "rel": "QUALIFIES",
    "target": "SalesVolume",
@@ -461,10 +705,28 @@
    "count": 23
   },
   {
+   "source": "CompetitorRating",
+   "rel": "RATING_OF",
+   "target": "Series",
+   "count": 21
+  },
+  {
+   "source": "CompetitorPrice",
+   "rel": "PRICE_OF",
+   "target": "Series",
+   "count": 18
+  },
+  {
    "source": "Caveat",
    "rel": "QUALIFIES",
    "target": "Feature",
    "count": 16
+  },
+  {
+   "source": "CompetitorSpec",
+   "rel": "SPEC_OF",
+   "target": "Series",
+   "count": 12
   },
   {
    "source": "EBMTerm",
