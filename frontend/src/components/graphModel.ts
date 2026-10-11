@@ -74,30 +74,30 @@ export function graphStyle(mode: "evaluation" | "schema", font: string): Stylesh
       selector: "node",
       style: {
         "background-color": "data(color)", shape: "data(shape)" as never, width: "data(size)", height: "data(size)",
-        label: "data(label)", "font-family": font, "font-size": mode === "schema" ? 11 : 10, color: "#111827",
-        "text-background-color": "#ffffff", "text-background-opacity": 0.85, "text-background-padding": "1px",
+        label: "data(label)", "font-family": font, "font-size": mode === "schema" ? 11 : 10, color: "#1C1917",
+        "text-background-color": "#FAF8F5", "text-background-opacity": 0.85, "text-background-padding": "1px",
         "text-valign": "bottom", "text-margin-y": 4, "text-wrap": "wrap", "text-max-width": "120px",
         "border-width": 0, "overlay-opacity": 0,
       },
     },
-    { selector: "node[?cited]", style: { "border-width": 3, "border-color": "#2f6fed" } },
-    { selector: "node:selected", style: { "border-width": 4, "border-color": "#111827" } },
-    { selector: "node.added", style: { "border-width": 2, "border-color": "#98a2b3", "border-style": "dashed" } },
+    { selector: "node[?cited]", style: { "border-width": 3, "border-color": "#DC2626" } },
+    { selector: "node:selected", style: { "border-width": 4, "border-color": "#1C1917" } },
+    { selector: "node.added", style: { "border-width": 2, "border-color": "#A8A097", "border-style": "dashed" } },
     {
       selector: "edge",
       style: {
-        width: 1, "line-color": "#d0d5dd", "target-arrow-color": "#d0d5dd", "target-arrow-shape": "triangle", "arrow-scale": 0.6,
+        width: 1, "line-color": "#D6D0C4", "target-arrow-color": "#D6D0C4", "target-arrow-shape": "triangle", "arrow-scale": 0.6,
         "curve-style": "bezier", ...(mode === "schema"
-          ? { label: "data(rel)", "font-size": 8, color: "#6b7280", "text-rotation": "autorotate", "font-family": font,
-              "text-background-color": "#ffffff", "text-background-opacity": 1, "text-background-padding": "2px" }
+          ? { label: "data(rel)", "font-size": 8, color: "#57534E", "text-rotation": "autorotate", "font-family": font,
+              "text-background-color": "#FAF8F5", "text-background-opacity": 1, "text-background-padding": "2px" }
           : {}),
       },
     },
     {
       selector: "edge.hl",
       style: {
-        "line-color": "#2f6fed", "target-arrow-color": "#2f6fed", width: 2, label: "data(rel)", "font-size": 8, color: "#2f6fed",
-        "font-family": font, "text-rotation": "autorotate", "text-background-color": "#ffffff", "text-background-opacity": 1,
+        "line-color": "#DC2626", "target-arrow-color": "#DC2626", width: 2, label: "data(rel)", "font-size": 8, color: "#DC2626",
+        "font-family": font, "text-rotation": "autorotate", "text-background-color": "#FAF8F5", "text-background-opacity": 1,
         "text-background-padding": "2px",
       },
     },

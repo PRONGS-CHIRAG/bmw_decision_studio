@@ -2,7 +2,7 @@
 .comp { display: flex; flex-direction: column; gap: 16px; padding-top: 24px; margin-top: 8px; border-top: 1px solid var(--border); }
 .comp__h { font-size: 15px; font-weight: var(--w-clickable); margin-bottom: 8px; }
 .comp__brief { padding: 16px 18px; border-radius: 14px; border: 1px solid var(--border); background: var(--surface-background-secondary); display: flex; flex-direction: column; gap: 12px; }
-.comp__brief .briefsec { background: #fff; }
+.comp__brief .briefsec { background: var(--raised); }
 .comp__brief .briefsec--next { background: var(--cta-soft); }
 .comp__headline .claim__text { font-size: 17px; line-height: 1.45; font-weight: 600; color: var(--heading); }
 .comp__tuples { margin-top: 4px; }

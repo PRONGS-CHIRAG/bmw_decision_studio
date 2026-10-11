@@ -29,7 +29,7 @@ strong { font-weight: var(--w-clickable); color: var(--body-strong); }
 a { color: inherit; }
 button, input, select, textarea { font: inherit; color: inherit; }
 table { border-collapse: collapse; width: 100%; }
-:focus-visible { outline: none; box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--cta); }
+:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--linen), 0 0 0 4px var(--focus); }
 
 .num { font-variant-numeric: tabular-nums; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
@@ -54,19 +54,19 @@ table { border-collapse: collapse; width: 100%; }
 /* ------------------------------------------------------------------ buttons (pill) */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: var(--s-2);
-  min-height: 44px; padding: 4px 22px; border: 1px solid var(--cta); border-radius: var(--radius-pill); cursor: pointer;
+  min-height: 44px; padding: 4px 22px; border: 1px solid var(--cta-fill); border-radius: var(--radius-pill); cursor: pointer;
   font-size: var(--fs-ui); font-weight: var(--w-clickable); line-height: 22px; text-decoration: none; white-space: nowrap;
-  background: var(--cta); color: #fff; transition: background-color 0.15s var(--ease), border-color 0.15s var(--ease), transform 0.1s;
+  background: var(--cta-fill); color: var(--on-cta); transition: background-color 0.15s var(--ease), border-color 0.15s var(--ease), transform 0.1s;
 }
 .btn:hover { background: var(--cta-hover); border-color: var(--cta-hover); }
 .btn:active { transform: scale(0.97); }
-.btn:disabled { background: var(--cta-disabled); border-color: var(--cta-disabled); color: #fff; cursor: not-allowed; transform: none; }
-.btn--secondary, .btn--dark { background: var(--nba); border-color: var(--nba); color: #fff; }
+.btn:disabled { background: var(--cta-disabled); border-color: var(--cta-disabled); color: var(--text-2); cursor: not-allowed; transform: none; }
+.btn--secondary, .btn--dark { background: var(--nba); border-color: var(--nba); color: var(--linen); }
 .btn--secondary:hover, .btn--dark:hover { background: var(--nba-hover); border-color: var(--nba-hover); }
 .btn--secondary:disabled, .btn--dark:disabled { background: var(--nba-disabled); border-color: var(--nba-disabled); }
-.btn--outline { background: #fff; color: var(--text-2); border-color: var(--border); box-shadow: var(--shadow-sm); }
+.btn--outline { background: var(--raised); color: var(--text-2); border-color: var(--border); box-shadow: var(--shadow-sm); }
 .btn--outline:hover { background: var(--cta-soft); border-color: var(--cta-border); color: var(--cta); }
-.btn--on-dark { background: #fff; color: var(--text-2); border-color: var(--border); }
+.btn--on-dark { background: var(--raised); color: var(--text-2); border-color: var(--border); }
 .btn--on-dark:hover { background: var(--cta-soft); border-color: var(--cta-border); color: var(--cta); }
 .btn--small { min-height: 34px; padding: 4px 14px; font-size: 13px; }
 .textlink {
@@ -82,7 +82,7 @@ table { border-collapse: collapse; width: 100%; }
 .field label, .label { font-size: var(--fs-small); font-weight: var(--w-input); color: var(--copy-text); }
 .input, .select, .textarea {
   min-height: 44px; padding: 10px 14px; border: 1px solid var(--input-border-color); border-radius: var(--radius-control);
-  background: #fff; color: var(--copy-text); font-weight: var(--w-input); width: 100%;
+  background: var(--raised); color: var(--copy-text); font-weight: var(--w-input); width: 100%;
 }
 .input:hover, .select:hover, .textarea:hover { border-color: var(--input-border-color-hover); }
 .input:focus, .select:focus, .textarea:focus { outline: none; border-color: var(--cta); box-shadow: 0 0 0 3px var(--cta-soft); }
@@ -96,11 +96,11 @@ table { border-collapse: collapse; width: 100%; }
 .chips { display: flex; gap: var(--s-2); flex-wrap: wrap; }
 .chip {
   display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 5px 13px;
-  border: 1px solid var(--border); border-radius: var(--radius-pill); background: #fff; color: var(--text-2);
+  border: 1px solid var(--border); border-radius: var(--radius-pill); background: var(--raised); color: var(--text-2);
   font-size: 13px; font-weight: 500; cursor: pointer; transition: background-color 0.15s, border-color 0.15s, color 0.15s;
 }
 .chip:hover { border-color: var(--cta-border); background: var(--cta-soft); color: var(--cta); }
-.chip[aria-pressed="true"] { background: var(--cta); border-color: var(--cta); color: #fff; }
+.chip[aria-pressed="true"] { background: var(--cta-fill); border-color: var(--cta-fill); color: var(--on-cta); }
 .chip:disabled { background: var(--surface-background-secondary); color: var(--muted-soft); border-color: var(--border); cursor: not-allowed; }
 
 /* ------------------------------------------------------------------ tabs (bmw.de content navigation) */
@@ -110,19 +110,19 @@ table { border-collapse: collapse; width: 100%; }
   font-size: var(--fs-ui); font-weight: var(--w-input); color: var(--disclaimer);
 }
 .tab:hover { color: var(--heading); }
-.tab[aria-selected="true"] { color: var(--cta); font-weight: var(--w-clickable); }
-.tab[aria-selected="true"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; border-radius: 2px; background: var(--cta); }
+.tab[aria-selected="true"] { color: var(--heading); font-weight: var(--w-clickable); }
+.tab[aria-selected="true"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; border-radius: 2px; background: var(--coral); }
 
 /* ------------------------------------------------------------------ cards and tiles (rounded by product choice) */
-.card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-card); padding: var(--s-5); box-shadow: var(--shadow-sm); }
+.card { background: var(--raised); border: 1px solid var(--border); border-radius: var(--radius-card); padding: var(--s-5); box-shadow: var(--shadow-sm); }
 .card--soft { background: var(--surface-background-secondary); border-color: transparent; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--s-3); }
 .tile {
-  text-align: left; background: #fff; border: 1px solid var(--border); border-radius: var(--radius-tile); padding: 14px 18px; cursor: pointer; box-shadow: var(--shadow-sm);
+  text-align: left; background: var(--raised); border: 1px solid var(--border); border-radius: var(--radius-tile); padding: 14px 18px; cursor: pointer; box-shadow: var(--shadow-sm);
   display: flex; flex-direction: column; gap: var(--s-1); color: var(--copy-text); transition: border-color 0.15s ease;
 }
 .tile:hover { border-color: var(--cta-border); }
-.tile[aria-pressed="true"] { border-color: var(--cta); box-shadow: var(--shadow-accent); background: var(--cta-soft); }
+.tile[aria-pressed="true"] { border-color: var(--cta-fill); box-shadow: var(--shadow-accent); background: var(--cta-soft); }
 .tile__title { font-weight: var(--w-clickable); color: var(--heading); font-size: var(--fs-sub2); line-height: 1.35; }
 
 /* ------------------------------------------------------------------ key figures (bmw.de cmp-technicaldatafact) */
@@ -145,7 +145,7 @@ table { border-collapse: collapse; width: 100%; }
 .verdict__mark { width: 10px; height: 10px; flex: none; border-radius: 50%; }
 .rec { display: inline-flex; align-items: center; gap: 6px; font-size: var(--fs-small); font-weight: var(--w-clickable); color: var(--heading); white-space: nowrap; }
 .rec__mark { width: 12px; height: 12px; flex: none; border: 2px solid var(--cta); border-radius: 2px; }
-.rec--prioritise .rec__mark { background: var(--cta); }
+.rec--prioritise .rec__mark { background: var(--cta-fill); }
 .rec--consider .rec__mark { background: var(--information-background); }
 .rec--low .rec__mark { border-color: var(--muted-soft); background: var(--surface-strong); }
 .rec--insufficient .rec__mark { border: 2px dashed var(--muted-soft); }

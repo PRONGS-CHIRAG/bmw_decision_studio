@@ -1,41 +1,60 @@
-/* Design tokens: light product palette (accent #2f6fed, cool greys, soft status pairs), system UI type.
-   Variable names are kept from the earlier bmw.de pass so every component keeps working. */
+/* Design tokens: "The Creative Facilitator" -- warm and creative, on a serious, high-contrast structure.
+   Cream Linen canvas (60%), Soft Sand zones (30%), Midnight Espresso text, Apricot Glow for actions only (10%),
+   Earthy Coral for alerts and active highlights. Accent *fills* carry Espresso text; accent *text* uses the deeper
+   "ink" shade, because Apricot itself is 2:1 on Cream (every text pair below is at least 4.5:1).
+   Variable names are kept from the earlier passes so every component keeps working. */
 
 :root {
   color-scheme: light;
 
-  /* ---- colour */
-  --cta: #2f6fed;               /* primary action */
-  --cta-hover: #2459c9;
-  --cta-disabled: #bfcffb;
-  --cta-soft: #eef3fd;
-  --cta-border: #bfcffb;
-  --nba: #111827;               /* dark secondary button */
-  --nba-hover: #374151;
-  --nba-disabled: #d0d5dd;
-  --heading: #111827;
-  --copy-text: #1f2937;
-  --text-2: #4b5563;
-  --disclaimer: #6b7280;
-  --surface-background-primary: #fff;
-  --surface-background-secondary: #f2f4f9;
-  --neutral-background: #e8eaf2;
-  --border: #e4e7ec;
-  --input-border-color: #d0d5dd;
-  --input-border-color-hover: #98a2b3;
-  --filtertag: #e4e7ec;
-  --filtertag-selected: #2f6fed;
-  --error: #dc2626;
-  --error-background: #fef2f2;
-  --warning: #d97706;
-  --warning-background: #fffbeb;
-  --success: #059669;
-  --success-background: #ecfdf5;
-  --information: #0284c7;
-  --information-background: #eef3fd;
+  /* ---- palette */
+  --linen: #FAF8F5;             /* Cream Linen: app canvas and raised items inside zones */
+  --sand: #EFECE6;              /* Soft Sand: structural zones (panels, sidebars, report) */
+  --espresso: #1C1917;          /* Midnight Espresso: text and navigation (16.5:1 on Linen, 14.8:1 on Sand) */
+  --apricot: #F59E0B;           /* Apricot Glow: primary actions, success, focal points (fills only) */
+  --apricot-ink: #92400E;       /* Apricot as text or icon (6.7:1 on Linen, 6.0:1 on Sand) */
+  --coral: #DC2626;             /* Earthy Coral: alerts, notifications, active highlights (fills, white text 4.8:1) */
+  --coral-ink: #B91C1C;         /* Coral as text, safe on Sand too */
+  --raised: var(--linen);       /* items sitting on a Sand zone */
+  --zone: var(--sand);
+
+  /* ---- colour roles */
+  --cta: var(--apricot-ink);    /* accent text, links, icons */
+  --cta-fill: var(--apricot);   /* primary buttons, pressed toggles */
+  --on-cta: var(--espresso);    /* text on an Apricot fill (8.1:1) */
+  --cta-hover: #E08E0A;
+  --cta-disabled: #F3DDB0;
+  --cta-soft: #FDF0D5;
+  --cta-border: #F2C46D;
+  --nba: #1C1917;               /* dark secondary button */
+  --nba-hover: #44403C;
+  --nba-disabled: #D6D3CE;
+  --heading: #1C1917;
+  --copy-text: #1C1917;
+  --text-2: #57534E;            /* 6.5:1 on Sand */
+  --disclaimer: #6B6359;        /* 5.0:1 on Sand */
+  --surface-background-primary: var(--linen);
+  --surface-background-secondary: var(--sand);
+  --neutral-background: #E6E1D8;
+  --border: #E2DCD1;
+  --input-border-color: #B5ADA1;
+  --input-border-color-hover: #8C847A;
+  --filtertag: #E6E1D8;
+  --filtertag-selected: var(--apricot);
+  --error: var(--coral-ink);
+  --error-fill: var(--coral);
+  --error-background: #FBE9E7;
+  --warning: var(--coral-ink);  /* alerts and "your turn" highlights are Coral; the text says which */
+  --warning-fill: var(--coral);
+  --warning-background: #FCEFEC;
+  --success: var(--apricot-ink);
+  --success-fill: var(--apricot);
+  --success-background: #FDF3E1;
+  --information: #57534E;
+  --information-background: #F5F1EA;
   --violet: #7c3aed;
   --violet-background: #f5f3ff;
-  --stage: #fff;
+  --stage: var(--linen);
 
   /* ---- shape and depth */
   --radius-control: 10px;
@@ -43,9 +62,9 @@
   --radius-float: 12px;
   --radius-tile: 12px;
   --radius-card: 14px;
-  --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.04), 0 2px 6px -1px rgba(16, 24, 40, 0.06);
-  --shadow-float: 0 8px 28px rgba(16, 24, 40, 0.12);
-  --shadow-accent: 0 0 0 1px rgba(47, 111, 237, 0.14), 0 6px 16px -4px rgba(47, 111, 237, 0.22);
+  --shadow-sm: 0 1px 2px rgba(28, 25, 23, 0.04), 0 2px 6px -1px rgba(28, 25, 23, 0.06);
+  --shadow-float: 0 8px 28px rgba(28, 25, 23, 0.14);
+  --shadow-accent: 0 0 0 1px rgba(245, 158, 11, 0.35), 0 6px 16px -4px rgba(245, 158, 11, 0.30);
   --ease: cubic-bezier(0.23, 1, 0.32, 1);
 
   /* ---- type */
@@ -95,7 +114,7 @@
   --g-survey: #0f9d9a;
   --g-price: #2e7d32;
   --g-spec: #8e8e8e;
-  --g-product: #111827;
+  --g-product: #1C1917;
   --g-market: #6b4fa0;
   --g-sales: #9b7fd1;
   --g-model: #dc2626;
@@ -107,21 +126,21 @@
   --canvas: var(--surface-background-primary);
   --surface-soft: var(--surface-background-secondary);
   --surface-card: var(--surface-background-secondary);
-  --surface-strong: #e8eaf2;
+  --surface-strong: #E6E1D8;
   --surface-dark: var(--stage);
   --hairline: var(--border);
-  --hairline-strong: #d0d5dd;
+  --hairline-strong: #D6D0C4;
   --ink: var(--heading);
   --body: var(--copy-text);
-  --body-strong: #111827;
+  --body-strong: #1C1917;
   --muted: var(--disclaimer);
-  --muted-soft: #98a2b3;
+  --muted-soft: #A8A097;
   --on-dark: #fff;
   --on-dark-soft: #e6e6e6;
   --primary: var(--cta);
   --primary-active: var(--cta-hover);
   --primary-disabled: var(--cta-disabled);
-  --focus: var(--cta);
+  --focus: var(--espresso);
   --data-blue: var(--cta);
   --data-blue-track: var(--information-background);
   --status-error: var(--error);
