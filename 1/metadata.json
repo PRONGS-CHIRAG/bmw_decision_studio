@@ -1,0 +1,136 @@
+{
+  "cli_version": "0.11.4",
+  "checkpoint_id": "01M4NB576R9WH1FNGEHN9SVT3J",
+  "session_id": "5cd5e0d0-e7f3-45bd-a832-ed2352a27f70",
+  "strategy": "manual-commit",
+  "created_at": "2026-10-11T11:21:51.901164Z",
+  "branch": "main",
+  "checkpoints_count": 5,
+  "files_touched": [
+    "data/decisions.jsonl"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-opus-5-5",
+  "turn_id": "8791ce57f93a",
+  "checkpoint_transcript_start": 999,
+  "transcript_lines_at_start": 999,
+  "compact_transcript_start": 151,
+  "token_usage": {
+    "input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 0,
+    "output_tokens": 0,
+    "api_call_count": 0
+  },
+  "skill_events_version": 1,
+  "skill_events": [
+    {
+      "id": "claude-skill-toolu_01HsKzCyHPSM6QmGrKrtbHEL",
+      "event_type": "tool_invocation",
+      "skill": {
+        "name": "superpowers:brainstorming"
+      },
+      "source": {
+        "agent": "claude-code",
+        "signal": "skill_tool_use",
+        "confidence": "explicit"
+      },
+      "turn_id": "0c60dc922aeb",
+      "transcript_anchor": {
+        "unit": "line",
+        "start": 121,
+        "end": 122,
+        "entry_ids": [
+          "b676d9ae-7fa2-4215-ba08-09db52b1ca0f"
+        ],
+        "tool_use_id": "toolu_01HsKzCyHPSM6QmGrKrtbHEL"
+      },
+      "native": {
+        "tool_name": "Skill",
+        "tool_use_id": "toolu_01HsKzCyHPSM6QmGrKrtbHEL"
+      },
+      "collapse": {
+        "target": "tool_pair",
+        "label": "Skill: superpowers:brainstorming",
+        "default_collapsed": true
+      }
+    },
+    {
+      "id": "claude-skill-toolu_017qwna48MmkzgfGdDhGxGuL",
+      "event_type": "tool_invocation",
+      "skill": {
+        "name": "playwright-skill:playwright-skill"
+      },
+      "source": {
+        "agent": "claude-code",
+        "signal": "skill_tool_use",
+        "confidence": "explicit"
+      },
+      "turn_id": "0c60dc922aeb",
+      "transcript_anchor": {
+        "unit": "line",
+        "start": 383,
+        "end": 384,
+        "entry_ids": [
+          "d009be00-4831-471c-b0b2-7bca1d66c22c"
+        ],
+        "tool_use_id": "toolu_017qwna48MmkzgfGdDhGxGuL"
+      },
+      "native": {
+        "tool_name": "Skill",
+        "tool_use_id": "toolu_017qwna48MmkzgfGdDhGxGuL"
+      },
+      "collapse": {
+        "target": "tool_pair",
+        "label": "Skill: playwright-skill:playwright-skill",
+        "default_collapsed": true
+      }
+    },
+    {
+      "id": "claude-skill-toolu_01RimdRkBqr63T8JcZvr5p1R",
+      "event_type": "tool_invocation",
+      "skill": {
+        "name": "superpowers:writing-plans"
+      },
+      "source": {
+        "agent": "claude-code",
+        "signal": "skill_tool_use",
+        "confidence": "explicit"
+      },
+      "turn_id": "8791ce57f93a",
+      "transcript_anchor": {
+        "unit": "line",
+        "start": 564,
+        "end": 565,
+        "entry_ids": [
+          "1c68e0dd-81ca-4b22-b1df-1c4a5f1a1de6"
+        ],
+        "tool_use_id": "toolu_01RimdRkBqr63T8JcZvr5p1R"
+      },
+      "native": {
+        "tool_name": "Skill",
+        "tool_use_id": "toolu_01RimdRkBqr63T8JcZvr5p1R"
+      },
+      "collapse": {
+        "target": "tool_pair",
+        "label": "Skill: superpowers:writing-plans",
+        "default_collapsed": true
+      }
+    }
+  ],
+  "session_metrics": {
+    "turn_count": 7
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-10-11T11:21:51.817152Z",
+    "agent_lines": 2,
+    "agent_removed": 0,
+    "human_added": 851,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 853,
+    "total_lines_changed": 853,
+    "agent_percentage": 0.23446658851113714,
+    "metric_version": 2
+  }
+}
