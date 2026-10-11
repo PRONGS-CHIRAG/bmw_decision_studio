@@ -1,0 +1,107 @@
+{
+  "cli_version": "0.11.4",
+  "checkpoint_id": "01M4NB576R9WH1FNGEHN9SVT3J",
+  "session_id": "541f62e6-9f2b-4a0f-8af6-0b99e1975b0d",
+  "strategy": "manual-commit",
+  "created_at": "2026-10-11T11:21:51.759124Z",
+  "branch": "main",
+  "checkpoints_count": 1,
+  "save_step_count": 2,
+  "files_touched": [
+    "data/decisions.jsonl"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-opus-5-5",
+  "turn_id": "9d89e3bb1498",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 72,
+    "cache_creation_tokens": 87713,
+    "cache_read_tokens": 3131965,
+    "output_tokens": 16442,
+    "api_call_count": 36
+  },
+  "skill_events_version": 1,
+  "skill_events": [
+    {
+      "id": "claude-skill-toolu_014RFRfAiweg6fvvAmJBsPtT",
+      "event_type": "tool_invocation",
+      "skill": {
+        "name": "superpowers:systematic-debugging"
+      },
+      "source": {
+        "agent": "claude-code",
+        "signal": "skill_tool_use",
+        "confidence": "explicit"
+      },
+      "turn_id": "8d9fba481831",
+      "transcript_anchor": {
+        "unit": "line",
+        "start": 28,
+        "end": 29,
+        "entry_ids": [
+          "623684fc-b152-4fa8-b467-2de8c7828882"
+        ],
+        "tool_use_id": "toolu_014RFRfAiweg6fvvAmJBsPtT"
+      },
+      "native": {
+        "tool_name": "Skill",
+        "tool_use_id": "toolu_014RFRfAiweg6fvvAmJBsPtT"
+      },
+      "collapse": {
+        "target": "tool_pair",
+        "label": "Skill: superpowers:systematic-debugging",
+        "default_collapsed": true
+      }
+    }
+  ],
+  "session_metrics": {
+    "turn_count": 2
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-10-11T11:21:51.721023Z",
+    "agent_lines": 2,
+    "agent_removed": 0,
+    "human_added": 851,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 853,
+    "total_lines_changed": 853,
+    "agent_percentage": 0.23446658851113714,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0
+    },
+    {
+      "checkpoint_number": 3,
+      "user_lines_added": 851,
+      "user_lines_removed": 0,
+      "agent_lines_added": 2,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".claude/skills/motion-design/LICENSE": 21,
+        ".claude/skills/motion-design/SKILL.md": 175,
+        ".claude/skills/motion-design/scripts/analyze_song.py": 19,
+        ".claude/skills/motion-design/scripts/audio_template.py": 45,
+        ".claude/skills/motion-design/scripts/mcp21_client.py": 41,
+        ".claude/skills/motion-design/scripts/mixkit_sfx_search.py": 13,
+        ".claude/skills/motion-design/scripts/remake/BRIEF_TEMPLATE.md": 25,
+        ".claude/skills/motion-design/scripts/remake/core.js": 134,
+        ".claude/skills/motion-design/scripts/remake/index.html": 22,
+        ".claude/skills/motion-design/scripts/remake/remake_analyze.py": 44,
+        ".claude/skills/motion-design/scripts/remake/remake_qa.py": 27,
+        ".claude/skills/motion-design/scripts/remake/remake_render.py": 70,
+        ".claude/skills/motion-design/scripts/remake/remake_stub.py": 14,
+        ".claude/skills/motion-design/scripts/remake/remake_sync.py": 33,
+        ".claude/skills/motion-design/scripts/render_template.py": 150,
+        ".claude/skills/motion-design/scripts/svgl_logos.py": 18
+      }
+    }
+  ]
+}
