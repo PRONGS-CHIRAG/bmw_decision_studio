@@ -213,3 +213,14 @@
 
 
 .anchor { scroll-margin-top: calc(var(--nav-h) + 16px); }
+
+/* ------------------------------------------------------------------ topic tiles: verdict dial */
+.tile__split { display: flex; align-items: center; gap: var(--s-3); justify-content: space-between; }
+.tile__text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.tile__verdict { font-size: var(--fs-small); font-weight: var(--w-clickable); color: var(--heading); }
+.tile__tag { align-self: flex-start; margin-top: 4px; font-size: 11px; font-weight: 500; color: var(--cta); border: 1px solid var(--cta-border); border-radius: var(--radius-pill); padding: 0 8px; }
+.dial { display: flex; flex-direction: column; align-items: center; gap: 4px; flex: none; width: 76px; }
+.dial__circle { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; border: 1px solid rgba(0, 0, 0, 0.08); }
+.dial__circle--empty { border: 2px dashed var(--muted-soft); background: transparent; color: var(--muted); }
+.dial__num { font-size: 19px; font-weight: 700; letter-spacing: -0.02em; }
+.dial__cap { font-size: 10.5px; line-height: 1.2; text-align: center; color: var(--disclaimer); }

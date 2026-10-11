@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "react";
-import { MARKET_NAMES, MODEL_NAMES, MOVE_LABELS, fmtInt, fmtNum } from "../api";
+import { MARKET_NAMES, MODEL_NAMES, fmtInt, fmtNum } from "../api";
 import type { AgentEvaluation, AgentStatus, Explained, IdeaSpec, InterpretResult } from "../types";
-import { REC_INFO, REC_ORDER, bottomLine, groupCells, placesText } from "../plain";
+import { REC_INFO, REC_ORDER, VERDICT_WORDS, bottomLine, groupCells, placesText, type RecGroup } from "../plain";
 
 // The pipeline as a horizontal flowchart. The backend answers in three blocking requests
 // (interpret, evaluate, explain), so a card shows "running" with the real elapsed time while its
@@ -131,64 +131,66 @@ function buildNodes(p: Props): FlowNode[] {
 
   // 1 retriever
   const retriever: FlowNode = {
-    id: "retriever", title: "Match the idea", who: interp ? interp.method.replace(/^llm:/, "") : llm ? m.retriever ?? "LLM" : "rules (no API key)",
+    id: "retriever", title: "Break down your idea", who: interp ? interp.method.replace(/^llm:/, "") : llm ? m.retriever ?? "LLM" : "rules (no API key)",
     state: phase === "interpreting" ? "running" : interp ? "done" : interpretError ? "error" : "waiting", run: runs.interpret,
-    about: "Finds the features in the customer data that your idea is about.",
+    about: "Looks for topics in existing customer feedback that your idea touches.",
     lines: [], kids: [], note: interpretError ?? undefined,
   };
   if (interp) {
     const picked = new Set(interp.spec.features.map((f) => f.feature));
     const nClass = interp.candidates.filter((c) => c.methods.classifier !== undefined).length;
     const nSem = interp.candidates.filter((c) => c.methods.semantic !== undefined).length;
-    retriever.summary = `Picked ${interp.spec.features.length} of ${interp.candidates.length} candidates`;
-    retriever.lines.push({ text: `Text classifier proposed ${plural(nClass, "candidate")}`, status: "ok" });
+    const others = interp.candidates.length - interp.spec.features.length;
+    retriever.summary = interp.spec.features.length
+      ? `Your idea is about ${interp.spec.features.map((f) => f.feature).join(", ")}${others > 0 ? `, plus ${plural(others, "related topic")}` : ""}`
+      : `No exact match; ${plural(interp.candidates.length, "related topic")} found`;
+    retriever.lines.push({ text: `Found ${plural(interp.candidates.length, "related topic")} in the customer feedback`, status: "ok" });
+    retriever.lines.push({ text: `A text classifier trained on the comments found ${plural(nClass, "topic")}`, status: "ok" });
     retriever.lines.push(interp.semantic_error
-      ? { text: `Embeddings unavailable: ${interp.semantic_error}`, status: "fail" }
-      : { text: `${interp.semantic_method} proposed ${plural(nSem, "candidate")}`, status: "ok" });
-    retriever.lines.push({ text: `${interp.method.startsWith("llm:") ? interp.method.slice(4) : "Rules"} picked ${plural(interp.spec.features.length, "feature")}`, status: interp.spec.features.length ? "ok" : "info" });
+      ? { text: `Search by meaning unavailable: ${interp.semantic_error}`, status: "fail" }
+      : { text: `A search by meaning found ${plural(nSem, "topic")}`, status: "ok" });
+    retriever.lines.push({ text: `${interp.method.startsWith("llm:") ? "The AI" : "Rules"} suggested ${plural(interp.spec.features.length, "topic")}`, status: interp.spec.features.length ? "ok" : "info" });
     for (const a of interp.attempts)
       retriever.lines.push({ text: `Schema check, attempt ${a.attempt}: ${a.ok ? "passed" : `failed (${a.errors[0] ?? "invalid"})`}`, status: a.ok ? "ok" : "fail" });
     const sorted = [...interp.candidates].sort((a, b) => Number(picked.has(b.feature)) - Number(picked.has(a.feature)));
     retriever.kids = sorted.map((c) => ({
-      key: c.feature, label: c.feature, sub: picked.has(c.feature) ? "Picked" : `${c.verdict}, ${fmtInt(c.n_comments)} comments`,
+      key: c.feature, label: c.feature, sub: `${picked.has(c.feature) ? "Suggested · " : ""}${VERDICT_WORDS[c.verdict] ?? c.verdict}`,
       tone: picked.has(c.feature) ? "ok" : "info",
-      body: <Rows rows={[["Area", c.domain], ["Customers", `${c.verdict}, ${fmtInt(c.n_comments)} comments`], ["Found by", c.how.join(", ")],
-        ["Chosen", picked.has(c.feature) ? "Yes, by the retriever" : "No"]]} />,
+      body: <Rows rows={[["Area", c.domain], ["Customers", `${VERDICT_WORDS[c.verdict] ?? c.verdict} (${fmtInt(c.n_comments)} comments)`],
+        ["Suggested", picked.has(c.feature) ? "Yes" : "No"], ["Found by", c.how.join(", ")]]} />,
     }));
-    retriever.handover = `Idea spec with ${plural(interp.spec.features.length, "feature")}`;
+    retriever.handover = `${plural(interp.candidates.length, "related topic")} for you to choose from`;
   }
 
   // 2 you confirm the scope
   const spec: IdeaSpec | null = evaluation?.spec ?? draft;
   const confirmed = phase === "evaluating" || phase === "done";
   const you: FlowNode = {
-    id: "you", title: "Confirm the scope", who: "Product manager",
+    id: "you", title: "Choose what to check", who: "Product manager",
     state: phase === "review" ? "wait" : confirmed && interp ? "done" : "waiting",
-    about: "You check what will be evaluated before anything is computed.",
+    about: "You pick which topics, series and markets your idea is checked against.",
     lines: [], kids: [],
   };
   if (spec && interp) {
-    you.summary = phase === "review" ? "Check and confirm in the side panel" : "Scope confirmed";
-    const feats = spec.features.length ? spec.features.map((f) => f.feature).join(", ") : "No feature selected";
-    you.lines.push({ text: feats, status: spec.features.length ? "ok" : "info" });
-    you.lines.push({ text: seriesText(spec.series), status: "info" });
-    you.lines.push({ text: marketsText(spec.markets), status: "info" });
-    you.lines.push({ text: MOVE_LABELS[spec.move] ?? spec.move, status: "info" });
+    const feats = spec.features.length ? spec.features.map((f) => f.feature).join(", ") : "No topic selected";
+    you.summary = phase === "review" ? "Your turn: pick topics, series and markets in the side panel"
+      : `Checking ${spec.features.length ? feats : "the idea as new"} in ${seriesText(spec.series)}, ${marketsText(spec.markets)}`;
+    you.lines.push({ text: `Topics: ${feats}`, status: spec.features.length ? "ok" : "info" });
+    you.lines.push({ text: `Series: ${seriesText(spec.series)}`, status: "info" });
+    you.lines.push({ text: `Markets: ${marketsText(spec.markets)}`, status: "info" });
     you.kids = [
-      { key: "f", label: "Features", sub: feats, tone: "info", body: <p>{feats}</p> },
+      { key: "f", label: "Topics", sub: feats, tone: "info", body: <p>{feats}</p> },
       { key: "s", label: "Series and markets", sub: `${seriesText(spec.series)}; ${marketsText(spec.markets)}`, tone: "info",
         body: <Rows rows={[["Series", seriesText(spec.series)], ["Markets", marketsText(spec.markets)]]} /> },
-      { key: "m", label: "Move", sub: `${MOVE_LABELS[spec.move] ?? spec.move}${spec.proposed_price_eur ? `, EUR ${fmtInt(spec.proposed_price_eur)}` : ""}`, tone: "info",
-        body: <p>{MOVE_LABELS[spec.move] ?? spec.move}{spec.proposed_price_eur ? ` at EUR ${fmtInt(spec.proposed_price_eur)}` : ", no price proposed"}.</p> },
     ];
-    if (confirmed) you.handover = "Confirmed scope";
+    if (confirmed) you.handover = "Your choice of topics and markets";
   }
 
   // 3 decision engine
   const engine: FlowNode = {
-    id: "engine", title: "Compute the evidence", who: "Deterministic, no LLM",
+    id: "engine", title: "Score against the data", who: "Calculation, no AI",
     state: phase === "evaluating" ? "running" : evaluation ? "done" : evaluateError ? "error" : "waiting", run: runs.evaluate,
-    about: "Scores every series and market from the data and records each number with its source.",
+    about: "Calculates, per series and market, how strongly customers give a reason to act.",
     lines: [], kids: [], note: evaluateError ?? undefined,
   };
   if (evaluation) {
@@ -197,10 +199,14 @@ function buildNodes(p: Props): FlowNode[] {
     const kinds = new Map<string, number>();
     for (const f of evaluation.facts) kinds.set(f.source.kind, (kinds.get(f.source.kind) ?? 0) + 1);
     const kindText = [...kinds.entries()].sort((a, b) => b[1] - a[1]).map(([k, n]) => `${n} ${k}`).join(", ");
-    engine.summary = `${plural(evaluation.facts.length, "fact")}, ${plural(evaluation.graph.n_cited, "graph node")}`;
-    engine.lines.push({ text: cells ? `Scored ${plural(cells, "series × market cell")}` : "No direct evidence to score", status: cells ? "ok" : "info" });
-    engine.lines.push({ text: `Wrote ${plural(evaluation.facts.length, "fact")}: ${kindText}`, status: "ok" });
-    engine.lines.push({ text: `Cited ${plural(evaluation.graph.n_cited, "graph node")}`, status: "ok" });
+    const counts = new Map<RecGroup, number>();
+    for (const f of r.features) for (const [k, cs] of groupCells(f)) counts.set(k, (counts.get(k) ?? 0) + cs.length);
+    const parts = (["prioritise", "consider", "low"] as RecGroup[]).filter((k) => counts.get(k))
+      .map((k) => `${REC_INFO[k].label} in ${plural(counts.get(k)!, "place")}`);
+    engine.summary = parts.length ? parts.join(", ") : cells ? "Not enough feedback to score yet" : "No direct customer data to score";
+    engine.lines.push({ text: cells ? `Scored ${plural(cells, "series and market combination")}` : "No direct evidence to score", status: cells ? "ok" : "info" });
+    engine.lines.push({ text: `Recorded ${plural(evaluation.facts.length, "fact")}, each with its source: ${kindText}`, status: "ok" });
+    engine.lines.push({ text: `Linked ${plural(evaluation.graph.n_cited, "data point")} in the knowledge graph`, status: "ok" });
     engine.lines.push({ text: `Policy ${r.policy_hash}, data ${r.data_hash}`, status: "info" });
     for (const f of r.features) {
       const g = groupCells(f);
@@ -227,18 +233,18 @@ function buildNodes(p: Props): FlowNode[] {
     : explainState === "error" ? "error" : explainState === "stale" ? "stale" : "waiting";
   const explainer: FlowNode = {
     id: "explainer", title: "Write the brief", who: explained ? explained.explanation.model : llm ? m.explainer ?? "LLM" : "needs an OpenAI key",
-    state: agentState, run: runs.explain, about: "Writes the brief from the facts only; every sentence cites its facts.",
+    state: agentState, run: runs.explain, about: "AI writes a short brief using only the calculated facts, citing each one.",
     lines: [], kids: [], note: agentState === "off" || agentState === "error" ? explainError ?? undefined : agentState === "stale" ? "The policy changed after this brief was written." : undefined,
   };
   const verifier: FlowNode = {
-    id: "verifier", title: "Check every sentence", who: explained ? `rules + ${explained.verification.semantic_model ?? "LLM"}` : llm ? `rules + ${m.verifier ?? "LLM"}` : "needs an OpenAI key",
-    state: agentState, run: runs.explain, about: "Checks each sentence against the facts; failures are rewritten once, then removed.",
+    id: "verifier", title: "Fact-check the brief", who: explained ? `rules + ${explained.verification.semantic_model ?? "LLM"}` : llm ? `rules + ${m.verifier ?? "LLM"}` : "needs an OpenAI key",
+    state: agentState, run: runs.explain, about: "Every sentence is checked against the facts. Wrong ones are fixed once, or removed.",
     lines: [], kids: [], note: agentState === "running" ? "Runs in the same request as the explainer." : undefined,
   };
   if (explained) {
     const v = explained.verification;
     const secsWith = Object.entries(explained.explanation.sections).filter(([, c]) => c.length);
-    explainer.summary = `${plural(v.claims.length, "sentence")} in ${plural(secsWith.length, "section")}`;
+    explainer.summary = `Drafted ${plural(v.claims.length, "sentence")} from the facts`;
     explainer.lines.push({ text: `Drafted ${plural(v.claims.length, "claim")}${explained.explanation.attempts > 1 ? " in the final draft" : ""}`, status: "ok" });
     explainer.lines.push({ text: `Covered ${plural(secsWith.length, "section")}`, status: "ok" });
     explainer.lines.push(explained.explanation.attempts > 1
@@ -252,7 +258,7 @@ function buildNodes(p: Props): FlowNode[] {
     }));
     explainer.handover = `${plural(v.claims.length, "sentence")} with fact IDs`;
 
-    verifier.summary = `${fmtInt(v.n_verified)} verified, ${fmtInt(v.n_removed)} removed`;
+    verifier.summary = v.n_removed ? `${fmtInt(v.n_verified)} sentences confirmed, ${fmtInt(v.n_removed)} removed` : `All ${fmtInt(v.n_verified)} sentences confirmed by the data`;
     if (v.rewritten.length)
       verifier.kids.push({
         key: "rewrite", label: "Sent back once", sub: plural(v.rewritten.length, "sentence"), tone: "warn",
@@ -283,7 +289,7 @@ function buildNodes(p: Props): FlowNode[] {
     lines: [], kids: [],
   };
   if (evaluation && (explainState === "done" || explainState === "unavailable" || explainState === "error" || explainState === "stale")) {
-    brief.summary = explainState === "done" ? "Report ready, decide in the side panel" : "Numbers ready, brief missing";
+    brief.summary = explainState === "done" ? "Report ready below. Record your decision in the side panel" : "Numbers ready below; the AI brief is missing";
     for (const f of evaluation.result.features) {
       const bl = bottomLine(f);
       brief.kids.push({ key: f.feature, label: "Short answer", sub: f.feature, tone: bl.tone === "go" || bl.tone === "maybe" ? "ok" : "info",
@@ -335,7 +341,7 @@ export default function ProcessFlow(props: Props) {
   const [logOpen, setLogOpen] = useState(false);
   const [showKids, setShowKids] = useState(() => window.innerHeight >= 800);   // short windows start compact
 
-  const headline = complete ? "How this result was produced" : waiting ? "Your turn: confirm the scope" : running ? "Working on your idea" : "Process";
+  const headline = complete ? "How this result was produced" : waiting ? "Your turn: choose what to check" : running ? "Working on your idea" : "Process";
   const elapsed = (r?: RunTiming) => (r ? secs((r.end ?? now) - r.start) : null);
   const open = (el: HTMLElement, p: Omit<Pop, "anchor">) => setPop((cur) => (cur?.anchor === el ? null : { anchor: el, ...p }));
 

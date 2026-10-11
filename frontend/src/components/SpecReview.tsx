@@ -1,9 +1,25 @@
-import { MARKET_NAMES, MOVE_LABELS, SERIES_LABELS, fmtInt, fmtNum } from "../api";
-import type { Candidate, IdeaSpec, InterpretResult, Move } from "../types";
-import { Verdict } from "./marks";
+import { MARKET_NAMES, SERIES_LABELS, fmtInt } from "../api";
+import type { Candidate, IdeaSpec, InterpretResult } from "../types";
+import { VERDICT_COLORS } from "./marks";
+import { VERDICT_WORDS } from "../plain";
 
 const MAX_FEATURES = 3;
-const METHOD_NAMES: Record<string, string> = { name_or_alias: "name / alias", classifier: "classifier", semantic: "semantic" };
+const DARK_FILL = new Set(["Good", "Bad"]);
+
+/** The number behind the verdict: complaints compared with a typical feature (1.0x = typical). */
+function VerdictDial({ c }: { c: Candidate }) {
+  const known = c.verdict !== "Not enough data" && c.complaint_index !== null;
+  const fill = VERDICT_COLORS[c.verdict] ?? "transparent";
+  return (
+    <span className="dial" aria-label={known ? `${c.complaint_index!.toFixed(1)} times the complaints of a typical feature` : "Too few comments to judge"}>
+      <span className={`dial__circle ${known ? "" : "dial__circle--empty"}`}
+        style={{ background: known ? fill : undefined, color: DARK_FILL.has(c.verdict) ? "#fff" : "var(--heading)" }}>
+        <span className="dial__num num">{known ? `${c.complaint_index!.toFixed(1)}×` : "?"}</span>
+      </span>
+      <span className="dial__cap">{known ? "complaints vs. typical" : "too few comments"}</span>
+    </span>
+  );
+}
 
 /** Step 1 output, editable: the PM confirms what the retriever read before anything is evaluated. */
 export default function SpecReview({
@@ -26,6 +42,7 @@ export default function SpecReview({
   const chosen = new Set(draft.features.map((f) => f.feature));
   const failed = interp.attempts.filter((a) => !a.ok);
   const byLLM = interp.method.startsWith("llm:");
+  const suggested = new Set(interp.spec.features.map((f) => f.feature));
 
   function toggleFeature(c: Candidate) {
     let features = draft.features;
@@ -43,8 +60,9 @@ export default function SpecReview({
     <div className={`review stack-lg ${compact ? "review--compact" : ""}`}>
       <div className="stack">
         {!compact && <p className="eyebrow">Step 1 · Retriever agent</p>}
-        {!compact && <h2 className="section-title">Is this what you want to evaluate?</h2>}
-        {compact && <p className="small muted">Is this what you want to evaluate? Change anything below, then confirm.</p>}
+        {!compact && <h2 className="section-title">Which customer topics should we check your idea against?</h2>}
+        {compact && <p className="small muted">We found these topics in existing customer feedback that relate to your idea. The suggested ones are ticked.
+          Pick up to {MAX_FEATURES}, choose where to look, then run the check.</p>}
         <p className="lead">{draft.summary}</p>
         {!compact && <p className="caption">
           {byLLM ? `Read by ${interp.method.slice(4)}` : "Read by transparent rules (no language model)"}. Candidates come from feature
@@ -65,9 +83,11 @@ export default function SpecReview({
 
       <fieldset className="review__group">
         <legend className="review__legend">
-          Features in the customer data <span className="caption">choose up to {MAX_FEATURES}</span>
+          Related topics customers talk about <span className="caption">choose up to {MAX_FEATURES}</span>
         </legend>
-        {interp.candidates.length === 0 && <p className="small muted">No candidate features were found.</p>}
+        <p className="caption">The circle shows how much customers complain about each topic compared with a typical one: below 1.0× is better
+          than usual, above 1.0× is worse. Its colour is the overall verdict.</p>
+        {interp.candidates.length === 0 && <p className="small muted">Nothing related was found in the customer feedback.</p>}
         <div className="tiles">
           {interp.candidates.map((c) => (
             <button
@@ -78,23 +98,20 @@ export default function SpecReview({
               onClick={() => toggleFeature(c)}
               disabled={!chosen.has(c.feature) && draft.features.length >= MAX_FEATURES}
             >
-              <span className="spread">
-                <span className="tile__title">{c.feature}</span>
-                {chosen.has(c.feature) && <span className="tile__check" aria-hidden />}
-              </span>
-              <span className="caption">{c.domain}</span>
-              <span className="row small" style={{ gap: 12 }}>
-                <Verdict verdict={c.verdict} />
-                <span className="muted num">{fmtInt(c.n_comments)} comments</span>
-              </span>
-              <span className="tile__methods">
-                {Object.entries(c.methods).map(([k, v]) => (
-                  <span key={k} className="method">
-                    {METHOD_NAMES[k] ?? k} <span className="num">{fmtNum(v)}</span>
+              <span className="tile__split">
+                <span className="tile__text">
+                  <span className="row" style={{ gap: 8 }}>
+                    {chosen.has(c.feature) && <span className="tile__check" aria-hidden />}
+                    <span className="tile__title">{c.feature}</span>
                   </span>
-                ))}
+                  <span className="caption">{c.domain}</span>
+                  <span className="tile__verdict">{VERDICT_WORDS[c.verdict] ?? c.verdict}</span>
+                  <span className="caption num">{fmtInt(c.n_comments)} customer comments</span>
+                  {suggested.has(c.feature) && <span className="tile__tag">Suggested</span>}
+                  {c.umbrella && <span className="caption">General praise is also filed here.</span>}
+                </span>
+                <VerdictDial c={c} />
               </span>
-              {c.umbrella && <span className="caption">Umbrella label: general praise is filed here.</span>}
             </button>
           ))}
         </div>
@@ -132,16 +149,6 @@ export default function SpecReview({
           </div>
         </fieldset>
         <div className="field">
-          <label htmlFor="move">Proposed move</label>
-          <select id="move" className="select" value={draft.move} onChange={(e) => setDraft({ ...draft, move: e.target.value as Move })}>
-            {Object.entries(MOVE_LABELS).map(([k, label]) => (
-              <option key={k} value={k}>
-                {label}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="field">
           <label htmlFor="price">Proposed price (EUR, optional)</label>
           <input
             id="price"
@@ -170,10 +177,10 @@ export default function SpecReview({
 
       <div className="row">
         <button className="btn" type="button" onClick={onEvaluate} disabled={busy}>
-          {busy ? "Evaluating…" : confirmed ? "Evaluate again with these changes" : compact ? "Confirm and evaluate" : "Evaluate this idea"}
+          {busy ? "Checking…" : confirmed ? "Check again with these changes" : "Check against the data"}
         </button>
         <span className="caption measure">
-          The decision engine computes every number from the processed data and model outputs. No language model is involved in this step.
+          Next, every number is calculated from the customer data, studies and sales. No AI is involved in that step.
         </span>
       </div>
     </div>

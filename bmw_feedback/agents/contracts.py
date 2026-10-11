@@ -36,6 +36,7 @@ class Candidate(BaseModel):
     domain: str
     verdict: str
     n_comments: int
+    complaint_index: float | None = None   # observed complaints / expected for the channels (1.0 = typical); drives the verdict
     umbrella: bool
     methods: dict[str, float]          # e.g. {"alias": 1.0, "classifier": 0.42, "semantic": 0.61}
     how: list[str]                     # human-readable match reasons

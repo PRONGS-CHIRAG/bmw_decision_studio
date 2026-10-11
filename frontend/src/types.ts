@@ -181,6 +181,7 @@ export interface Candidate {
   domain: string;
   verdict: string;
   n_comments: number;
+  complaint_index: number | null;   // complaints vs. what is typical for the channels (1.0 = typical)
   umbrella: boolean;
   methods: Record<string, number>;
   how: string[];

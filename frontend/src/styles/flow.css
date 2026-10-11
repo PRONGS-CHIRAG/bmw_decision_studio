@@ -346,3 +346,17 @@ html, body, #root { height: 100%; }
   .verify th.verify__rule, .verify td.verify__cell { width: 20px; padding-left: 1px; padding-right: 1px; }
   .ws .table th, .ws .table td { padding-right: 4px; }
 }
+
+/* collapsible report sections: the summary row carries the key numbers so a closed section still informs */
+.report__fold { border: 1px solid var(--border); border-radius: 12px; background: #fff; }
+.report__fold > summary { list-style: none; display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; padding: 14px 18px; }
+.report__fold > summary::-webkit-details-marker { display: none; }
+.report__fold > summary::before { content: "▸"; color: var(--text-2); transition: transform 0.15s ease; display: inline-block; }
+.report__fold[open] > summary::before { transform: rotate(90deg); }
+.report__foldtitle { font-size: 17px; color: var(--heading); }
+.report__foldmeta { font-size: 13px; font-weight: 500; color: var(--text-2); }
+.report__foldbody { padding: 0 18px 18px; display: flex; flex-direction: column; gap: 12px; }
+.report__pending { padding: 28px; border: 1px dashed var(--input-border-color); border-radius: 12px; background: var(--surface-background-secondary); display: flex; flex-direction: column; gap: 6px; }
+.report__pending ol { margin: 6px 0 0; padding-left: 18px; font-size: 13.5px; }
+.linkbtn { background: none; border: 0; padding: 0; font: inherit; color: var(--cta); text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
+.linkbtn:hover { color: var(--heading); }

@@ -19,6 +19,15 @@ from pydantic import ValidationError
 from .contracts import MAX_FEATURES, Candidate, FeaturePick, IdeaSpec, IdeaSpecLLM, InterpretResult
 from .llm import LLMError, LLMOutputInvalid
 
+
+def _index_or_none(v) -> float | None:
+    """A scorecard index as a rounded float; missing or NaN stays unknown."""
+    try:
+        f = float(v)
+    except (TypeError, ValueError):
+        return None
+    return None if f != f else round(f, 2)
+
 MAX_ATTEMPTS = 3
 MAX_CANDIDATES = 12
 
@@ -69,7 +78,9 @@ class Retriever:
                 continue
             row = feats.loc[f]
             out.append(Candidate(feature=f, node_id=f"feature:{f}", domain=row["domain"], verdict=row["verdict"],
-                                 n_comments=int(row["n_comments"]), umbrella=bool(row["is_umbrella"]),
+                                 n_comments=int(row["n_comments"]),
+                                 complaint_index=_index_or_none(row.get("index_negative")),
+                                 umbrella=bool(row["is_umbrella"]),
                                  methods=e["methods"], how=e["how"]))
         out.sort(key=lambda c: (-c.methods.get("name_or_alias", 0), -c.methods.get("classifier", 0),
                                 -c.methods.get("semantic", 0)))
