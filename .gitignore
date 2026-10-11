@@ -1,5 +1,11 @@
-# Raw hackathon data provided by BMW - never commit
+# Confidential BMW material — repo is public, never commit
 BMW-Data/
+BMW_Hackathon_Briefing_Short.pdf
+
+# Secrets
+.env
+.env.*
+!.env.example
 
 # Data files
 *.csv
@@ -38,6 +44,8 @@ build/
 venv/
 .venv/
 env/
+.pytest_cache/
+.ruff_cache/
 
 # IDE
 .vscode/
@@ -55,9 +63,6 @@ Thumbs.db
 # Legacy procurement (Demandra) code moved out of the way; recoverable from git history
 archive/
 
-# Secrets (OpenAI key for the agents)
-.env
-
 # BMW brand assets fetched locally by frontend/scripts/fetch-brand-assets.cjs - trademark / licensed, never commit
 frontend/public/brand/
 frontend/public/fonts/
@@ -70,3 +75,13 @@ frontend/public/fonts/
 # the manifest in data/processed/competitor_sources.csv. The extracted rows in competitor-data/extracted/ are tracked.
 competitor-data/raw/
 competitor-data/text/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+
+# Local data
+*.sqlite
+*.sqlite3
+*.db

@@ -181,6 +181,9 @@ export interface Candidate {
   domain: string;
   verdict: string;
   n_comments: number;
+  complaint_index: number | null;   // complaints vs. what is typical for the channels (1.0 = typical)
+  complaints_observed: number | null;
+  complaints_expected: number | null;
   umbrella: boolean;
   methods: Record<string, number>;
   how: string[];
@@ -213,6 +216,17 @@ export interface InterpretResult {
   semantic_error: string | null;
   method: string;
   attempts: { attempt: number; ok: boolean; errors: string[] }[];
+  verdict_rule: VerdictRule;
+}
+
+/** Complaint-index thresholds behind the verdict labels (from the backend config). */
+export interface VerdictRule {
+  min_mentions: number;
+  good: number;
+  lean_good: number;
+  lean_bad: number;
+  bad: number;
+  prior_strength: number;
 }
 
 export interface Provenance {

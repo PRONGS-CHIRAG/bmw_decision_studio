@@ -1,13 +1,13 @@
 import { fmtNum } from "../api";
 
-// Verdicts use a validated diverging scale: red = more complaints than expected,
-// blue = fewer, grey = as expected. The label always accompanies the colour.
-const VERDICT_COLORS: Record<string, string> = {
-  Bad: "var(--div-red-strong)",
-  "Leaning bad": "var(--div-red-light)",
+// Verdicts use a diverging scale: red = more complaints than expected, green = fewer, grey = as expected.
+// Red and green are hard to tell apart for some colour-blind readers, so the label always accompanies the colour.
+export const VERDICT_COLORS: Record<string, string> = {
+  Bad: "var(--v-bad)",
+  "Leaning bad": "var(--v-leanbad)",
   Mixed: "var(--div-mid)",
-  "Leaning good": "var(--div-blue-light)",
-  Good: "var(--div-blue-strong)",
+  "Leaning good": "var(--v-leangood)",
+  Good: "var(--v-good)",
   "Not enough data": "transparent",
 };
 

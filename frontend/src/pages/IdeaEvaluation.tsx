@@ -1,5 +1,5 @@
 import { Suspense, lazy, useCallback, useEffect, useRef, useState } from "react";
-import { ApiError, MARKET_NAMES, MODEL_NAMES, MOVE_LABELS, fmtInt, fmtNum, postJSON, useApi } from "../api";
+import { ApiError, MARKET_NAMES, MODEL_NAMES, fmtInt, fmtNum, postJSON, useApi } from "../api";
 import type { AgentEvaluation, AgentStatus, CompareResult, CompetitorAnalysis, Explained, FeatureResult, IdeaSpec, InterpretResult, Policy } from "../types";
 import ProcessFlow, { ACTOR_LABEL, ActorIcon, type Actor, type ExplainState, type Phase, type RunKey, type Runs, type StepId, type TraceEvent } from "../components/ProcessFlow";
 import CompetitorPanel, { type CompState } from "../components/CompetitorPanel";
@@ -21,15 +21,15 @@ const GraphPage = lazy(() => import("../components/GraphPage"));
 type Tab = "summary" | "markets" | "equipment" | "graph" | "verification";
 const TABS: { id: Tab; label: string }[] = [
   { id: "summary", label: "Summary" },
-  { id: "markets", label: "Series × markets" },
+  { id: "markets", label: "Metrics" },
   { id: "equipment", label: "Price & equipment" },
   { id: "graph", label: "Knowledge graph" },
   { id: "verification", label: "Verification" },
 ];
 const STEPS: StepId[] = ["retriever", "you", "engine", "explainer", "verifier", "brief"];
 const STEP_TITLE: Record<StepId, string> = {
-  retriever: "Match the idea", you: "Confirm the scope", engine: "Compute the evidence", explainer: "Write the brief",
-  verifier: "Check every sentence", brief: "Your decision",
+  retriever: "Break down your idea", you: "Choose what to check", engine: "Score against the data", explainer: "Write the brief",
+  verifier: "Fact-check the brief", brief: "Your decision",
 };
 const STEP_TAB: Partial<Record<StepId, Tab>> = { engine: "summary", explainer: "summary", verifier: "verification", brief: "summary" };
 
@@ -57,6 +57,7 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
   const [cellKey, setCellKey] = useState<string | null>(null);
   const [panel, setPanel] = useState<StepId>("retriever");   // side panel; follows each real step transition
   const [tab, setTab] = useState<Tab>("summary");
+  const [view, setView] = useState<"process" | "results">("process");   // workspace: the process flowchart, or the results
   const shown = useRef<string | null>(null);          // evaluation id on screen; late agent answers for others are dropped
   const [graphOpen, setGraphOpen] = useState(false);  // the knowledge graph on a page of its own
   const [pdfBusy, setPdfBusy] = useState(false);
@@ -107,6 +108,7 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
     setCompError(null);
     setPanel("retriever");
     setTab("summary");
+    setView("process");
     const t = performance.now();
     try {
       const r = await postJSON<InterpretResult>("/api/agent/interpret", { idea: text });
@@ -117,7 +119,7 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
       log("retriever", `Idea spec returned in ${((performance.now() - t) / 1000).toFixed(1)} s`,
         `${r.spec.features.length ? r.spec.features.map((f) => f.feature).join(", ") : "no feature picked"}; ${r.candidates.length} candidates; ${r.method}${r.semantic_error ? `; embeddings failed: ${r.semantic_error}` : ""}`);
       if (r.spec.ambiguities.length) log("retriever", `${r.spec.ambiguities.length} ambiguity noted`, r.spec.ambiguities.join(" "));
-      log("you", "Waiting for you to confirm the scope", "Check features, series, markets and move, then run the evaluation.", "wait");
+      log("you", "Waiting for you to choose what to check", "Pick topics, series and markets, then run the check.", "wait");
       setPhase("review");
       setPanel("you");
     } catch (e) {
@@ -150,6 +152,7 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
       setExplained(x);
       setExplainState("done");
       setPanel("brief");
+      setView("results");
     } catch (e) {
       if (shown.current !== eid) return;
       endRun("explain", true);
@@ -159,6 +162,7 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
       setExplainError(err.message);
       setExplainState(off ? "unavailable" : "error");
       setPanel("brief");
+      setView("results");
     }
   }
 
@@ -224,7 +228,7 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
     setError(null);
     setEvaluateError(null);
     if (withAgents) {
-      log("you", "Scope confirmed", `${spec.features.map((f) => f.feature).join(", ") || "no feature"}; ${spec.series.map((m) => MODEL_NAMES[m] ?? m).join(", ") || "all series"}; ${spec.markets.map((m) => MARKET_NAMES[m] ?? m).join(", ") || "all markets"}; ${MOVE_LABELS[spec.move] ?? spec.move}`);
+      log("you", "Choice confirmed", `${spec.features.map((f) => f.feature).join(", ") || "no topic"}; ${spec.series.map((m) => MODEL_NAMES[m] ?? m).join(", ") || "all series"}; ${spec.markets.map((m) => MARKET_NAMES[m] ?? m).join(", ") || "all markets"}`);
       setRuns((r) => ({ interpret: r.interpret }));
       setExplainState("idle");
       setExplained(null);
@@ -279,6 +283,7 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
   };
   const showNode = (id: string) => {
     setFocus(id);
+    setView("results");
     setTab("graph");
     requestAnimationFrame(() => document.getElementById("report")?.scrollIntoView({ behavior: "smooth", block: "start" }));
   };
@@ -319,6 +324,8 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
   const firstCell = fr?.cells.find((c) => c.recommendation !== "Not sold" && c.recommendation !== "Insufficient evidence") ?? fr?.cells[0];
   const cell = fr?.cells.find((c) => `${c.model}|${c.market}` === cellKey) ?? firstCell;
   const busy = phase === "interpreting" || phase === "evaluating";
+  // The summary is shown only once the last step has finished (or cannot run), so nothing unchecked is presented as the answer.
+  const final = explainState !== "running" && explainState !== "idle";
 
   // The step the process is actually at (the side panel returns here on every transition).
   const current: StepId = phase === "interpreting" || (phase === "idle" && interpretError) ? "retriever" : phase === "review" ? "you"
@@ -351,12 +358,31 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
       <div className="ws__main">
         <IdeaBar idea={idea} setIdea={setIdea} onSubmit={interpret} busy={busy} />
         {error && <p className="note note--error small">Something went wrong: {error}</p>}
+        <div className="wstabs" role="tablist" aria-label="Workspace">
+          <button type="button" role="tab" id="view-process" className="wstab" aria-selected={view === "process"} aria-controls="view-panel"
+            onClick={() => setView("process")}>
+            Process
+            {(busy || explainState === "running") && <span className="spinner spinner--sm" aria-label="running" />}
+          </button>
+          <button type="button" role="tab" id="view-results" className="wstab" aria-selected={view === "results"} aria-controls="view-panel"
+            onClick={() => setView("results")}>
+            Results and report
+            {evaluation && final && view !== "results" && <span className="wstab__badge">Ready</span>}
+          </button>
+        </div>
+        <div id="view-panel" role="tabpanel" aria-labelledby={`view-${view}`} className="ws__view">
+        {view === "process" && (
         <section aria-label="Process" className="ws__flow">
           <ProcessFlow status={status} idea={submitted} phase={phase} interp={interp} draft={draft} evaluation={evaluation}
             explained={explained} explainState={explainState} explainError={explainError} interpretError={interpretError}
             evaluateError={evaluateError} runs={runs} trace={trace} selected={panel} onSelect={selectStep} />
+          {final && evaluation && (
+            <button type="button" className="btn btn--small" style={{ marginTop: 12 }} onClick={() => setView("results")}>See the results</button>
+          )}
         </section>
+        )}
 
+        {view === "results" && (
         <section id="report" className="ws__report anchor" aria-labelledby="report-title">
           <div className="report__top">
             <h2 id="report-title" className="report__title">Report</h2>
@@ -385,7 +411,7 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
           {!evaluation ? (
             <div className="report__empty">
               <p><strong>The report appears here once the evidence is computed.</strong></p>
-              <p className="small muted">{phase === "review" ? "Confirm the scope in the side panel to start step 3." : "Steps 1 and 2 come first: matching your idea and confirming what to evaluate."}</p>
+              <p className="small muted">{phase === "review" ? "Choose what to check in the side panel to continue." : "First your idea is broken down into topics from customer feedback, then you choose what to check."}</p>
             </div>
           ) : (
             <>
@@ -397,13 +423,27 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
                 ))}
               </div>
               <div id="report-panel" role="tabpanel" aria-labelledby={`tab-${tab}`} className="report__panel">
-                {tab === "summary" && (
+                {tab === "summary" && (final ? (
                   <PlainReport evaluation={evaluation} feature={fr} explained={explained} explainState={explainState} explainError={explainError}
-                    onExplain={() => explain(evaluation.evaluation_id)} onShowNode={showNode} />
-                )}
+                    onExplain={() => explain(evaluation.evaluation_id)} onShowNode={showNode} onOpenMetrics={() => setTab("markets")} />
+                ) : (
+                  <div className="report__pending" role="status">
+                    <p className="side__working-title"><span className="spinner" aria-hidden /> Preparing your summary</p>
+                    <p className="small">The summary appears once the brief has been written and every sentence fact-checked, so you only see checked results.</p>
+                    <ol>
+                      <li>Scored against the data: done</li>
+                      <li>Writing the brief: {explainState === "running" ? "in progress" : "starting"}</li>
+                      <li>Fact-checking every sentence: waiting</li>
+                    </ol>
+                    <p className="caption">The raw numbers are already in the Metrics tab if you want to look now.</p>
+                  </div>
+                ))}
                 {tab === "markets" && (fr && cell ? (
                   <div className="stack">
-                    <p className="small muted measure">One recommendation per series and market, from complaints, how often it comes up, requests and customer-study weakness. Select a cell to see its evidence.</p>
+                    <p className="small muted measure">
+                      The priority score (0 to 1) says how strongly customers give a reason to act, for each series and market. It combines complaints,
+                      how often the topic comes up, requests, customer-study weakness and how many cars are sold there. Select a cell to see its evidence.
+                    </p>
                     <div className="decision-grid">
                       <DecisionMatrix cells={fr.cells} models={evaluation.result.models} markets={evaluation.result.markets} selected={`${cell.model}|${cell.market}`} onSelect={setCellKey} />
                       <EvidencePanel cell={cell} fitment={fr.price_ladder.find((l) => l.model === cell.model)} />
@@ -444,6 +484,8 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
             </>
           )}
         </section>
+        )}
+        </div>
       </div>
 
       {graphOpen && evaluation && (
@@ -475,9 +517,9 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
         <div className="side__body">
           {panel === "retriever" && (
             phase === "interpreting" ? (
-              <Working title="Reading your idea">
-                A text classifier and an embedding search score every feature in the knowledge graph. The language model then picks from those
-                candidates only and its answer is checked against a schema. Takes about 5 seconds.
+              <Working title="Breaking down your idea">
+                We look for topics in existing customer feedback that your idea touches, by name, with a trained text classifier and by meaning.
+                The AI then suggests the best matches from that list only. Takes about 5 seconds.
               </Working>
             ) : interpretError ? (
               <div className="stack">
@@ -488,10 +530,10 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
               <div className="stack">
                 <p>{interp.spec.summary}</p>
                 <p className="small muted">
-                  Picked {interp.spec.features.length ? interp.spec.features.map((f) => f.feature).join(", ") : "no feature"} from {interp.candidates.length} candidates.
-                  Click the nodes under step 1 for details.
+                  {interp.spec.features.length ? `Suggested: ${interp.spec.features.map((f) => f.feature).join(", ")}.` : "No exact match."}{" "}
+                  {interp.candidates.length} related topics were found in the customer feedback for you to choose from.
                 </p>
-                {phase === "review" && <button className="btn btn--small" onClick={() => setPanel("you")}>Next: confirm the scope</button>}
+                {phase === "review" && <button className="btn btn--small" onClick={() => setPanel("you")}>Next: choose what to check</button>}
               </div>
             ) : null
           )}
@@ -500,13 +542,13 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
             interp && draft ? (
               <SpecReview compact interp={interp} draft={draft} setDraft={setDraft} busy={phase === "evaluating"}
                 onEvaluate={() => evaluate(draft, policy, true)} confirmed={phase === "evaluating" || phase === "done"} />
-            ) : <Waiting>This step opens when the retriever has matched your idea.</Waiting>
+            ) : <Waiting>This step opens once your idea has been broken down into topics.</Waiting>
           )}
 
           {panel === "engine" && (
             evaluation ? (
               <div className="stack">
-                {fr ? <EngineSummary feature={fr} /> : <p className="small">No feature matched directly, so there is nothing to score. See the report for the nearest features.</p>}
+                {fr ? <EngineSummary feature={fr} final={final} /> : <p className="small">No topic matched directly, so there is nothing to score. See the report for the nearest topics.</p>}
                 {policy && policyData && (
                   <div className="stack">
                     <button className="btn btn--outline btn--small" onClick={() => setShowPolicy((s) => !s)} aria-expanded={showPolicy}>
@@ -521,8 +563,8 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
                 )}
               </div>
             ) : phase === "evaluating" ? (
-              <Working title="Computing the evidence">The decision engine scores every series and market from the data. No language model is used.</Working>
-            ) : <Waiting>This step starts when you confirm the scope.</Waiting>
+              <Working title="Scoring against the data">Every series and market is scored from customer feedback, studies and sales. No AI is used.</Working>
+            ) : <Waiting>This step starts when you have chosen what to check.</Waiting>
           )}
 
           {(panel === "explainer" || panel === "verifier") && (
@@ -557,12 +599,12 @@ export default function IdeaEvaluation({ status }: { status: AgentStatus | null 
               <div className="stack-lg">
                 {features.map((f) => (
                   <div key={f.feature} className="stack">
-                    <p className="side__answer">{bottomLine(f).text}</p>
+                    {final && <p className="side__answer">{bottomLine(f).text}</p>}
                     <DecisionForm result={evaluation.result} feature={f} />
                   </div>
                 ))}
-                {features.length === 0 && <p className="small muted">Pick a related feature in step 2 to record a decision against its evidence.</p>}
-                {explainState === "running" && <p className="caption">The written brief is still being prepared; you can read the numbers in the report already.</p>}
+                {features.length === 0 && <p className="small muted">Pick a related topic in step 2 to record a decision against its evidence.</p>}
+                {!final && <p className="caption">The summary appears once the brief is written and fact-checked.</p>}
               </div>
             ) : <Waiting>Your decision comes last, after the report is ready.</Waiting>
           )}
@@ -612,11 +654,11 @@ function Waiting({ children }: { children: React.ReactNode }) {
   return <p className="side__waiting">{children}</p>;
 }
 
-function EngineSummary({ feature }: { feature: FeatureResult }) {
+function EngineSummary({ feature, final }: { feature: FeatureResult; final: boolean }) {
   const g = groupCells(feature);
   return (
     <div className="stack">
-      <p className="side__answer">{bottomLine(feature).text}</p>
+      {final ? <p className="side__answer">{bottomLine(feature).text}</p> : <p className="small">Places per recommendation. The summary follows after the fact-check.</p>}
       <ul className="side__groups">
         {REC_ORDER.filter((k) => g.get(k)?.length).map((k) => (
           <li key={k} className={`side__group side__group--${REC_INFO[k].tone}`}>
